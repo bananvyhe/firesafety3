@@ -1,0 +1,81 @@
+
+
+ @hamster {
+
+    /*  Base settings */
+    font-size: 26px;
+    line-height: 1.5;
+
+    font-ratio: minor-third;
+    remove-comments: true;
+
+    /*  Vertical Rythm settings */
+
+    unit: em;
+    px-fallback: true;
+    properties: extend;
+    ruler-style: switch ruler-debug;
+    ruler-color: rgba(19, 134, 191, .8);
+    ruler-icon-colors: #F0FAFF #ACFF0D;
+    ruler-icon-position: "position: absolute;top: 1.5em;left: 1.5em;";
+    ruler-background: png;
+    /*ruler-output: images/ruler.png;*/
+    ruler-pattern: 1 0 0 0;
+    ruler-scale: 4;
+    ruler-thickness: 1;
+
+    /*  Custom contants */
+
+    font-weight: 400;
+    font-color: #44576a;
+    header-color: #1386BF;
+    background-color: #FAFDFF;
+    block-color: #F0FAFF;
+    hover-color: #1BBA13;
+    footer-color: #1B2633;
+    font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Arial, sans-serif;
+
+};
+
+.phone {
+    &_title {
+        width: 500px;
+        @media (max-width: 500px) {
+            width: auto;
+        }
+        body.is_dark & {
+            color: white;
+        }
+    }
+    img {
+        display: block;
+    }
+}
+
+@reset;
+ $blue: #056ef0;
+$column: 200px;
+
+.menu {
+  width: calc(4 * $column);
+}
+
+.menu_link {
+  background: $blue;
+  width: $column;
+}
+
+ 
+.precss {
+  @if 3 < 5 {
+    background: green;
+  }
+  @else {
+    background: blue;
+  }
+}
+
+body {
+  background: resolve('1.jpg');
+
+}
