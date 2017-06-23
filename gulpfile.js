@@ -27,9 +27,17 @@ gulp.task('css', function () {
      
 });
 
-gulp.task('watch', function() {
+gulp.task('html', function () {
+   return gulp.src('app/views/indexpage/index.html.erb')
+    .pipe(gulp.dest(''))
+    .pipe(livereload());
+     
+});
+
+gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('app/assets/stylesheets/postcss/application.css', ['css']);
+  gulp.watch('app/views/indexpage/index.html.erb', ['html']);
 });
 
 gulp.task('default', ['watch']);
