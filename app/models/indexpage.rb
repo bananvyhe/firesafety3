@@ -1,0 +1,2 @@
+class Indexpage < ApplicationRecord
+end
