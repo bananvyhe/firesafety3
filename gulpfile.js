@@ -6,9 +6,13 @@ var precss = require('precss');
 var hamster = require('postcss-hamster');
 var livereload = require('gulp-livereload');
 var lost = require('lost');
+var assets  = require('postcss-assets');
  
 gulp.task('css', function () {
   var plugins = [
+    assets({
+      loadPaths: ['app/assets/images/']
+    }),
     precss({
       "lookup": false
     }),
