@@ -73,6 +73,13 @@ html {
         line-height: 1.5em;
 }
 
+
+
+.grid-item {
+ 
+ }
+
+
 .menu {
   width: calc(4 * 200px);
 }
@@ -88,48 +95,76 @@ html {
 }
 
 
+@media (min-width: 500px) and (max-width: 1200px) {
+  .blur {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+}
+
 .blur {
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
+
 .dropshadow {
- -webkit-filter: drop-shadow(1px 1px 2px grey);
-         filter: drop-shadow(1px 1px 2px grey);   
+  -webkit-filter: drop-shadow(1px 1px 2px grey);
+          filter: drop-shadow(1px 1px 2px grey);   
 }
 
-body {
-  background: url('/app/assets/images/1.jpg');
+body *:not(input):not(textarea):not(select) {
+        background-color: rgba(0, 0, 255, 0.1);
+}
+
+section {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1%;
+  padding-right: 1%;
 
 }
 
-div { background-color: #ada; 
-  
-  width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
+section:before {
+        content: '';
+        display: table;
+
+}
+
+section:after {
+        content: '';
+        display: table;
+        clear: both;
+
+}
+
+div { 
+  -webkit-box-flex: 0; 
+          flex-grow: 0; 
+  flex-shrink: 0; 
+  flex-basis: calc(99.9% * 1/2 - (1% - 1% * 1/2)); 
+  width: calc(99.9% * 1/2 - (1% - 1% * 1/2));;
+   
+  margin-bottom: 1%;
 }
 
 div:nth-child(1n) {
-        float: left;
-        margin-right: 30px;
-        clear: none;
+        margin-right: 1%;
+        margin-left: 0;
 }
 
 div:last-child {
         margin-right: 0;
 }
 
-div:nth-child(3n) {
+div:nth-child(2n) {
         margin-right: 0;
-        float: right;
+        margin-left: auto;
 }
 
-div:nth-child(3n + 1) {
-        clear: both;
-}
-
-@media (min-width: 500px) and (max-width: 1200px) {
-    .blur {
-        -webkit-filter: blur(10px);
-                filter: blur(10px);
-    }
-}
 /*# sourceMappingURL=application.css.map */

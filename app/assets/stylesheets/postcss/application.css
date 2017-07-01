@@ -53,8 +53,15 @@
 }
 
 @reset;
- $blue: #056ef0;
+$blue: #056ef0;
 $column: 200px;
+
+
+
+.grid-item {
+ 
+ }
+
 
 .menu {
   width: calc(4 * $column);
@@ -76,25 +83,32 @@ $column: 200px;
 }
 
 
-.blur {
-    filter: blur(5px);
+@media (width >= 500px) and (width <= 1200px) {
+  .blur {
+    filter: blur(10px);
+  }
 }
+
+.blur {
+  filter: blur(5px);
+}
+
 .dropshadow {
- filter: drop-shadow(1px 1px 2px grey);   
+  filter: drop-shadow(1px 1px 2px grey);   
 }
 
 body {
-  background: resolve('1.jpg');
+  lost-utility: edit;
+}
+
+section {
+  lost-utility: clearfix;
+  lost-center: 1140px 1% flex;
 
 }
 
-div { background-color: #ada; 
-  
-  lost-column: 1/3;
-}
-
-@media (width >= 500px) and (width <= 1200px) {
-    .blur {
-        filter: blur(10px);
-    }
+div { 
+  lost-column: 1/2 2 1% flex;;
+   
+  margin-bottom: 1%;
 }
