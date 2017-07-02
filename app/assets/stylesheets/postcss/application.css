@@ -98,17 +98,53 @@ $column: 200px;
 }
 
 body {
-  lost-utility: edit;
+  lost-utility: edit rgb(15, 150, 25);
 }
 
 section {
-  lost-utility: clearfix;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
   lost-center: 1140px 1% flex;
-
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
 }
 
 div { 
-  lost-column: 1/2 2 1% flex;;
-   
-  margin-bottom: 1%;
+  lost-column: 1/2 2 1% flex;
+  margin-top: 0.5%; 
+  margin-bottom: 0.5%;
 }
+
+logo {
+  lost-column: 1/2 2 1% flex;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+}
+
+.header {
+  
+}
+
+righthead {
+  lost-flex-container: row;
+  lost-column: 1/2 2 1% flex;
+
+   
+  margin-bottom: 0.5%;
+  margin-top: 0.5%; 
+   
+   
+  telpanel {
+   
+    lost-column: 1/1 1 1% flex;
+    margin-bottom: 0.5%;
+  }
+  headmenu {
+
+    lost-column: 1/1 1 1% flex;
+    margin-top: 0.5%;
+  }
+}
+
+
+

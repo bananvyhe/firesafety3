@@ -113,10 +113,12 @@ html {
 }
 
 body *:not(input):not(textarea):not(select) {
-        background-color: rgba(0, 0, 255, 0.1);
+        background-color: rgba(15, 150, 25, 0.1);
 }
 
 section {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -127,20 +129,8 @@ section {
   margin-right: auto;
   padding-left: 1%;
   padding-right: 1%;
-
-}
-
-section:before {
-        content: '';
-        display: table;
-
-}
-
-section:after {
-        content: '';
-        display: table;
-        clear: both;
-
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
 }
 
 div { 
@@ -148,9 +138,9 @@ div {
           flex-grow: 0; 
   flex-shrink: 0; 
   flex-basis: calc(99.9% * 1/2 - (1% - 1% * 1/2)); 
-  width: calc(99.9% * 1/2 - (1% - 1% * 1/2));;
-   
-  margin-bottom: 1%;
+  width: calc(99.9% * 1/2 - (1% - 1% * 1/2));
+  margin-top: 0.5%; 
+  margin-bottom: 0.5%;
 }
 
 div:nth-child(1n) {
@@ -166,5 +156,113 @@ div:nth-child(2n) {
         margin-right: 0;
         margin-left: auto;
 }
+
+logo {
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(99.9% * 1/2 - (1% - 1% * 1/2));
+  width: calc(99.9% * 1/2 - (1% - 1% * 1/2));
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+}
+
+logo:nth-child(1n) {
+        margin-right: 1%;
+        margin-left: 0;
+}
+
+logo:last-child {
+        margin-right: 0;
+}
+
+logo:nth-child(2n) {
+        margin-right: 0;
+        margin-left: auto;
+}
+
+.header {
+  
+}
+
+righthead {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(99.9% * 1/2 - (1% - 1% * 1/2));
+  width: calc(99.9% * 1/2 - (1% - 1% * 1/2));
+
+   
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+}
+
+righthead:nth-child(1n) {
+        margin-right: 1%;
+        margin-left: 0;
+}
+
+righthead:last-child {
+        margin-right: 0;
+}
+
+righthead:nth-child(2n) {
+        margin-right: 0;
+        margin-left: auto;
+}
+
+righthead telpanel {
+        -webkit-box-flex: 0;
+                flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(99.9% * 1/1 - (1% - 1% * 1/1));
+        width: calc(99.9% * 1/1 - (1% - 1% * 1/1));
+        margin-bottom: 0.5%;
+}
+
+righthead telpanel:nth-child(1n) {
+        margin-right: 1%;
+        margin-left: 0;
+}
+
+righthead telpanel:last-child {
+        margin-right: 0;
+}
+
+righthead telpanel:nth-child(1n) {
+        margin-right: 0;
+        margin-left: auto;
+}
+
+righthead headmenu {
+        -webkit-box-flex: 0;
+                flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(99.9% * 1/1 - (1% - 1% * 1/1));
+        width: calc(99.9% * 1/1 - (1% - 1% * 1/1));
+        margin-top: 0.5%;
+}
+
+righthead headmenu:nth-child(1n) {
+        margin-right: 1%;
+        margin-left: 0;
+}
+
+righthead headmenu:last-child {
+        margin-right: 0;
+}
+
+righthead headmenu:nth-child(1n) {
+        margin-right: 0;
+        margin-left: auto;
+}
+
+
+
 
 /*# sourceMappingURL=application.css.map */
