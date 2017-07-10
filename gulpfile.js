@@ -7,6 +7,7 @@ var hamster = require('postcss-hamster');
 var livereload = require('gulp-livereload');
 var lost = require('lost');
 var assets  = require('postcss-assets');
+var postutil = require('postcss-utilities');
  
 gulp.task('css', function () {
   var plugins = [
@@ -16,6 +17,7 @@ gulp.task('css', function () {
     precss({
       "lookup": false
     }),
+    postutil,
     postcssgulp,
     hamster(),
     lost(),
