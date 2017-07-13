@@ -8,6 +8,7 @@ var livereload = require('gulp-livereload');
 var lost = require('lost');
 var assets  = require('postcss-assets');
 var postutil = require('postcss-utilities');
+var flexbox = require('postcss-flexbox');
  
 gulp.task('css', function () {
   var plugins = [
@@ -17,6 +18,7 @@ gulp.task('css', function () {
     precss({
       "lookup": false
     }),
+    flexbox,
     postutil,
     postcssgulp,
     hamster(),
@@ -37,10 +39,17 @@ gulp.task('html', function () {
     .pipe(livereload());
 });
 
+gulp.task('js', function () {
+   return gulp.src('app/assets/javascripts/application.js')
+    .pipe(gulp.dest(''))
+    .pipe(livereload());
+});
+
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('app/assets/stylesheets/postcss/application.css', ['css']);
   gulp.watch('app/views/indexpage/index.html.erb', ['html']);
+  gulp.watch('app/assets/javascripts/application.js', ['js']);
 });
 
 gulp.task('default', ['watch']);

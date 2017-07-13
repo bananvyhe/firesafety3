@@ -4,7 +4,7 @@
 
     /*  Base settings */
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.2;
 
     font-ratio: minor-third;
     remove-comments: true;
@@ -56,15 +56,27 @@
 $blue: #056ef0;
 $column: 200px;
 
-
+#grid-one {
+   
+   
+}
 
 .grid-item {
- 
+  height: 200px;
+  @util border-top-radius(0.6em);
+  @util border-bottom-radius(0.6em);
+   
+  p {
+     @util center;
+     padding: 0.4em;
+  }
+
  }
 
 
 .menu {
   width: calc(4 * $column);
+
 }
 
 .menu_link {
@@ -110,16 +122,18 @@ section {
 }
 
 div { 
-  lost-column: 1/2 2 1% flex;
-  margin-top: 0.5%; 
-  margin-bottom: 0.5%;
+  lost-column: 1/2 2 2% flex;
+  margin-top: 1%; 
+  margin-bottom: 1%;
+
 }
 
 logo {
-  lost-column: 1/4 2 1% flex;
-  margin-bottom: 0.5%;
-  margin-top: 0.5%;
-  @util border-top-radius(8px);
+  lost-column: 1/4 2 2% flex;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  @util border-top-radius(0.6em);
+  @util border-bottom-radius(0.6em);
 }
 
 @keyframes scale-up-ver-top {
@@ -189,27 +203,29 @@ logo {
 }
 
 .header {
-
+  height: 15vh;
 }
 
 righthead {
   lost-flex-container: row;
-  lost-column: 3/4 2 1% flex;
+  lost-column: 3/4 2 2% flex;
 
    
-  margin-bottom: 0.5%;
-  margin-top: 0.5%; 
+  margin-bottom: 1%;
+  margin-top: 1%; 
    
    
   telpanel {
    
     lost-column: 1/1 1 1% flex;
-    margin-bottom: 0.5%;
+    margin-bottom: 1%;
+    @util border-bottom-radius(0.6em);
   }
   headmenu {
 
     lost-column: 1/1 1 1% flex;
-    margin-top: 0.5%;
+    margin-top: 1%;
+    @util border-top-radius(0.6em);
   }
 }
 

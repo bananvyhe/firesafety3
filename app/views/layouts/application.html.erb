@@ -6,9 +6,29 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
     <%= yield %>
+
+    <script>
+$(document).on('turbolinks:load', function() {
+
+   window.sr = ScrollReveal();
+    
+  sr.reveal('.grid-item', {
+    reset: true
+  }); 
+ 
+
+});
+ 
+     
+ 
+
+</script>
+
+     
   </body>
 </html>
