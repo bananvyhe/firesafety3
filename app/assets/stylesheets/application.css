@@ -73,28 +73,7 @@ html {
         line-height: 1.2em;
 }
 
-#grid-one {
-   
-   
-}
 
-.grid-item {
-  height: 200px;
-  border-top-left-radius: 0.6em;
-  border-top-right-radius: 0.6em;
-  border-bottom-left-radius: 0.6em;
-  border-bottom-right-radius: 0.6em;
-
- }
-
-.grid-item p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        padding: 0.4em;
-}
 
 
 .menu {
@@ -350,6 +329,51 @@ logo:nth-child(2n) {
   -webkit-animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
           animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
+
+#grid-one {
+   
+   
+}
+
+.grid-item {
+  height: 200px;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  border-bottom-left-radius: 0.6em;
+  border-bottom-right-radius: 0.6em;
+
+ }
+
+.grid-item p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        padding: 0.4em;
+}
+ 
+ .grid-itemL, .grid-itemR  {
+  opacity: 0;
+  height: 30px;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  border-bottom-left-radius: 0.6em;
+  border-bottom-right-radius: 0.6em;
+
+ }
+ 
+ .grid-itemL p, .grid-itemR p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        padding: 0.4em;
+}
+
+  
 
 .header {
   height: 15vh;
