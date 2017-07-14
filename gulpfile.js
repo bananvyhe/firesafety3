@@ -9,9 +9,10 @@ var lost = require('lost');
 var assets  = require('postcss-assets');
 var postutil = require('postcss-utilities');
 var flexbox = require('postcss-flexbox');
- 
+var fonts = require('postcss-font-magician')({ /* options */ });
 gulp.task('css', function () {
   var plugins = [
+
     assets({
       loadPaths: ['app/assets/images/']
     }),
@@ -21,8 +22,10 @@ gulp.task('css', function () {
     flexbox,
     postutil,
     postcssgulp,
+
     hamster(),
     lost(),
+    fonts,
     autoprefixer({browsers: ["> 0.5%"]})
   ];
   return gulp.src('app/assets/stylesheets/postcss/application.css')
