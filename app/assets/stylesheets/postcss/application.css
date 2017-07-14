@@ -194,6 +194,7 @@ logo {
 }
 
 .grid-item {
+  overflow: hidden;
   height: 200px;
   @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);

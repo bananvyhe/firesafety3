@@ -27,18 +27,37 @@ $(document).on('turbolinks:load', function() {
     reset: true,
     duration: 1500
   });
-  sr.reveal('.grid-itemR', { 
+  sr.reveal('#JQSecuence', { 
     
     reset: true,
      
     afterReveal  : function (domEl) {
-      $('.grid-itemL').addClass("slide-in-elliptic-left-fwd"); // add new class at exist class   
-      $('.grid-itemR').addClass("slide-in-elliptic-right-fwd");
+    //$('.grid-itemL').addClass("slide-in-elliptic-left-fwd"); // add new class at exist class   
+    //$('.grid-itemR').addClass("slide-in-elliptic-right-fwd");
+
+      
+      $('#JQSecuence .grid-itemL').each(function(i) {
+        var num = (i % 4) + 1;
+        var neely = 700 * parseInt(i);
+        $(this).delay(neely).queue(function () {
+          $(this).addClass('slide-in-elliptic-left-fwd');
+        });
+      });
+
+      $('#JQSecuence .grid-itemR').each(function(i) {
+        var num = (i % 4) + 1;
+        var neely = 700 * parseInt(i)+350;
+        $(this).delay(neely).queue(function () {
+          $(this).addClass('slide-in-elliptic-right-fwd');
+        });
+      });
+      
+
     },
-    afterReset  : function (domEl) {
-      $('.grid-itemL').removeClass("slide-in-elliptic-left-fwd"); //  delete early added class
-      $('.grid-itemR').removeClass("slide-in-elliptic-right-fwd");
-    },
+    // afterReset  : function (domEl) {
+    //   $('.grid-itemL').removeClass("slide-in-elliptic-left-fwd"); //  delete early added class
+    //   $('.grid-itemR').removeClass("slide-in-elliptic-right-fwd");
+    // },
      
   }); 
 

@@ -337,6 +337,7 @@ logo:nth-child(2n) {
 }
 
 .grid-item {
+  overflow: hidden;
   height: 200px;
   border-top-left-radius: 0.6em;
   border-top-right-radius: 0.6em;
