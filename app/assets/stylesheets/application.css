@@ -1,5 +1,10 @@
+@font-face {
+  font-family: UbuntuR;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Ubuntu/Ubuntu-Regular.woff2) format("woff2");};
 
- .phone img {
+.phone img {
   display: block;};
 
 .phone_title {
@@ -125,9 +130,9 @@ html {
 }
 
 body {
-  font-family: @font-family;
-  color: #44576a;
-  font-weight: @font-weight;
+  
+   
+  font-family: "UbuntuR";
   font-size: 100%;
   line-height: 1.3em;
 }

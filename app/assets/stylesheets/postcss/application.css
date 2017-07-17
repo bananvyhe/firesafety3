@@ -26,7 +26,7 @@
 
     /*  Custom contants */
 
-     
+    
     font-color: #44576a;
     header-color: #1386BF;
     background-color: #FAFDFF;
@@ -98,9 +98,9 @@ $column: 200px;
 }
 
 body {
-  font-family: @font-family;
-  color: @font-color;
-  font-weight: @font-weight;
+  
+   
+  font-family: "UbuntuR"; 
   lost-utility: edit rgb(15, 150, 25);
   @baseline;
 }

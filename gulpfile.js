@@ -9,7 +9,25 @@ var lost = require('lost');
 var assets  = require('postcss-assets');
 var postutil = require('postcss-utilities');
 var flexbox = require('postcss-flexbox');
-var fonts = require('postcss-font-magician')({ /* options */ });
+var fonts = require('postcss-font-magician')({
+    
+   custom: {
+      'UbuntuR': {
+         variants: {
+            normal: {
+               400: {
+                  url: {
+                     woff2: 'fonts/Ubuntu/Ubuntu-Regular.woff2'
+                      
+                  }
+               }
+               
+            }
+            
+         }
+      }
+   }
+});
 gulp.task('css', function () {
   var plugins = [
 
@@ -21,11 +39,13 @@ gulp.task('css', function () {
     }),
     flexbox,
     postutil,
-    postcssgulp,
 
-    hamster(),
-    lost(),
+    postcssgulp,
     fonts,
+    hamster(),
+     
+    lost(),
+
     autoprefixer({browsers: ["> 0.5%"]})
   ];
   return gulp.src('app/assets/stylesheets/postcss/application.css')
