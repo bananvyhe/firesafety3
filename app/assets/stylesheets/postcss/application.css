@@ -88,7 +88,7 @@ section {
   font-family: "RobotoCon"; 
   padding-top: 0.5%;
   padding-bottom: 0.5%;
-  lost-center: 1140px 1% flex;
+  lost-center: 1366px 1% flex;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
 }
@@ -98,6 +98,23 @@ div {
   margin-top: 1%; 
   margin-bottom: 1%;
 }
+
+.font1 {
+  font-family: "RobotoCon"; 
+  /*@util hide-visually;*/
+}
+.font2 {
+  font-family: "PTSansNar"; 
+}
+
+.font3 {
+  font-family: "PTSansNar"; 
+  font-style: bold;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+ 
 
 .header {
    
@@ -126,10 +143,10 @@ righthead {
   headmenu {
     lost-column: 1/1 1 1% flex;
     margin-top: 1%;
-    @util border-top-radius(0.6em);
+     
     ul {
       list-style: none;    
-      text-align: center;
+       
       padding: 0;
       margin: 0;  
       li {
@@ -143,70 +160,119 @@ righthead {
 
 /* helpers/align.css */
 
-.align {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-
+$color-1: #FFF;
+$color-2: #f57c00;
+$color-3: #ef6c00;
  
-
-/* modules/anchor.css */
-
-a {
-  outline: 0;
-  text-decoration: none;
-  transition: color 0.3s, background-color 0.3s;
-}
-
-/* modules/navigation.css */
-
-.navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation > ul {
-  display: flex;
-}
-
-.navigation li {
+.greedy-nav {
   position: relative;
+  
+   
+  
+  a {
+    display: block;
+    padding: 20px 30px;
+    color: $color-1;
+    text-decoration: none;
+    
+    &:hover {
+      color: $color-3;
+    }
+  }
+  
+  button {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    padding: 0 15px;
+    border: 0;
+    outline: none;
+    background-color: $color-2;
+    color: #fff;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $color-3;
+    }
+    
+    &::after {
+      content: attr(count);
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: -16px;
+      top: 12px;
+      text-align: center;
+      background-color: $color-3;
+      color: #fff;
+      font-size: 14px;
+      line-height: 28px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      font-weight: bold;
+    }
+    
+    &:hover::after {
+      transform: scale(1.075);
+    }
+  }
+  
+  .hamburger {
+    position: relative;
+    width: 32px;
+    height: 4px;
+    background: #fff;
+    margin: auto;
+    
+    &:before, 
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 4px;
+      background: #fff;
+    }
+    
+    &:before {
+      top: -8px;
+    }
+    
+    &:after {
+      bottom: -8px;
+    }
+  }
+  
+  .visible-links {
+    display: inline-table;
+    
+    li {
+      display: table-cell;
+      border-left: 1px solid $color-1; 
+    }
+  }
+  
+  .hidden-links {
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    
+    li {
+      display: block;
+      border-top: 1px solid $color-1;
+    }
+  }
+  
+  .visible-links li:first-child {
+    font-weight: bold;
+    a { color: $color-1 !important; }
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
 }
 
-.navigation li:hover > ul {
-  display: block;
-}
-
-.navigation a {
-  background-color: #406a82;
-  color: inherit;
-  display: block;
-  padding: 0.25em 0.5em;
-}
-
-.navigation a:focus,
-.navigation a:hover {
-  background-color: #365e75;
-}
-
-.navigation__dropdown {
-  display: none;
-  position: absolute;
-}
-
-.navigation__dropdown--left {
-  left: 0;
-  top: 100%;
-}
-
-.navigation__dropdown--right {
-  left: 100%;
-  top: 0;
-}
 
 
 
@@ -220,14 +286,9 @@ logo {
 
 
 
-.font1 {
-  font-family: "RobotoCon"; 
-  /*@util hide-visually;*/
-}
-.font2 {
-  font-family: "PTSansNar"; 
 
-}
+
+
 
 #grid-one {
    

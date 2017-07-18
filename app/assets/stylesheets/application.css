@@ -165,7 +165,7 @@ section {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-flow: row wrap;
-  max-width: 1140px;
+  max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1%;
@@ -195,6 +195,22 @@ div:last-child {
 div:nth-child(2n) {
   margin-right: 0;
   margin-left: auto;}
+
+.font1 {
+  font-family: "RobotoCon";
+}
+.font2 {
+  font-family: "PTSansNar"; 
+}
+
+.font3 {
+  font-family: "PTSansNar"; 
+  font-style: bold;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+ 
 
 .header {
    
@@ -310,9 +326,7 @@ righthead headmenu {
   flex-basis: calc(99.9% * 1/1 - (1% - 1% * 1/1));
   max-width: calc(99.9% * 1/1 - (1% - 1% * 1/1));
   width: calc(99.9% * 1/1 - (1% - 1% * 1/1));
-  margin-top: 1%;
-  border-top-left-radius: 0.6em;
-  border-top-right-radius: 0.6em;}
+  margin-top: 1%;}
 
 
 
@@ -335,7 +349,6 @@ righthead headmenu:nth-child(1n) {
 
 righthead headmenu ul {
   list-style: none;
-  text-align: center;
   padding: 0;
   margin: 0;}
 
@@ -343,69 +356,100 @@ righthead headmenu ul {
 
 righthead headmenu ul li {
   display: inline-block;}
-
-.align {
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
-}
-
-a {
-  outline: 0;
-  text-decoration: none;
-  transition: color 0.3s, background-color 0.3s;
-}
-
-.navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation > ul {
-  display: -webkit-box;
-  display: flex;
-}
-
-.navigation li {
+ 
+.greedy-nav {
   position: relative;
 }
-
-.navigation li:hover > ul {
+ 
+.greedy-nav a {
   display: block;
-}
-
-.navigation a {
-  background-color: #406a82;
-  color: inherit;
-  display: block;
-  padding: 0.25em 0.5em;
-}
-
-.navigation a:focus, .navigation a:hover {
-  background-color: #365e75;
-}
-
-.navigation__dropdown {
-  display: none;
+  padding: 20px 30px;
+  color: #FFF;
+  text-decoration: none}
+ 
+.greedy-nav a:hover {
+  color: #ef6c00;}
+ 
+.greedy-nav button {
   position: absolute;
-}
-
-.navigation__dropdown--left {
+  height: 100%;
+  right: 0;
+  padding: 0 15px;
+  border: 0;
+  outline: none;
+  background-color: #f57c00;
+  color: #fff;
+  cursor: pointer}
+ 
+.greedy-nav button:hover {
+  background-color: #ef6c00;}
+ 
+.greedy-nav button::after {
+  content: attr(count);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -16px;
+  top: 12px;
+  text-align: center;
+  background-color: #ef6c00;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  font-weight: bold;}
+ 
+.greedy-nav button:hover::after {
+  -webkit-transform: scale(1.075);
+          transform: scale(1.075);}
+ 
+.greedy-nav .hamburger {
+  position: relative;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+  margin: auto}
+ 
+.greedy-nav .hamburger:before, .greedy-nav .hamburger:after {
+  content: '';
+  position: absolute;
   left: 0;
-  top: 100%;
-}
+  width: 32px;
+  height: 4px;
+  background: #fff;}
+ 
+.greedy-nav .hamburger:before {
+  top: -8px;}
+ 
+.greedy-nav .hamburger:after {
+  bottom: -8px;}
+ 
+.greedy-nav .visible-links {
+  display: inline-table;}
+ 
+.greedy-nav .visible-links li {
+  display: table-cell;
+  border-left: 1px solid #FFF;}
+ 
+.greedy-nav .hidden-links {
+  position: absolute;
+  right: 0px;
+  top: 100%;}
+ 
+.greedy-nav .hidden-links li {
+  display: block;
+  border-top: 1px solid #FFF;}
+ 
+.greedy-nav .visible-links li:first-child {
+  font-weight: bold;}
+ 
+.greedy-nav .visible-links li:first-child a {
+  color: #FFF !important;}
+ 
+.greedy-nav .hidden {
+  visibility: hidden;}
 
-.navigation__dropdown--right {
-  left: 100%;
-  top: 0;
-}
 
 
 
@@ -426,14 +470,17 @@ logo {
 
 
 
+
 logo:nth-child(1n) {
   margin-right: 2%;
   margin-left: 0;}
 
 
 
+
 logo:last-child {
   margin-right: 0;}
+
 
 
 
@@ -443,13 +490,9 @@ logo:nth-child(2n) {
 
 
 
-.font1 {
-  font-family: "RobotoCon";
-}
-.font2 {
-  font-family: "PTSansNar"; 
 
-}
+
+
 
 #grid-one {
    
