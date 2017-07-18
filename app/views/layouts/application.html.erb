@@ -12,40 +12,34 @@
   <body>
     <%= yield %>
 
-    <script>
-$(document).on('turbolinks:load', function() {
-  window.sr = ScrollReveal();
-  sr.reveal('.grid-item', {
-    reset: true,
-    duration: 1500
-  });
-  sr.reveal('#JQSecuence', { 
-    reset: true,
-    afterReveal  : function (domEl) {
-      $('#JQSecuence .grid-itemL').each(function(i) {
-        var num = (i % 4) + 1;
-        var neely = 700 * parseInt(i);
-        $(this).delay(neely).queue(function () {
-          $(this).addClass('slide-in-elliptic-left-fwd');
+    <!-- <script>
+      $(document).on('turbolinks:load', function() {
+        window.sr = ScrollReveal();
+        sr.reveal('.grid-item', {
+          reset: true,
+          duration: 1500
         });
+        sr.reveal('#JQSecuence', { 
+          reset: true,
+          afterReveal  : function (domEl) {
+            $('#JQSecuence .grid-itemL').each(function(i) {
+              var num = (i % 4) + 1;
+              var neely = 700 * parseInt(i);
+              $(this).delay(neely).queue(function () {
+                $(this).addClass('slide-in-elliptic-left-fwd');
+              });
+            });
+
+            $('#JQSecuence .grid-itemR').each(function(i) {
+              var num = (i % 4) + 1;
+              var neely = 700 * parseInt(i)+350;
+              $(this).delay(neely).queue(function () {
+                $(this).addClass('slide-in-elliptic-right-fwd');
+              });
+            });
+          }
+        }); 
       });
-
-      $('#JQSecuence .grid-itemR').each(function(i) {
-        var num = (i % 4) + 1;
-        var neely = 700 * parseInt(i)+350;
-        $(this).delay(neely).queue(function () {
-          $(this).addClass('slide-in-elliptic-right-fwd');
-        });
-      });
-    }
-  }); 
-});
- 
-     
- 
-
-</script>
-
-     
+      </script> -->
   </body>
 </html>
