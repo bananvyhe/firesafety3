@@ -122,24 +122,14 @@ html {
   font-size: 100%;
   line-height: 1.2em;}
 
-
-
-
-.menu {
-  width: calc(4 * 200px);
-
-}
-
 .menu_link {
   background: $blue;
   width: 200px;
 }
-
  
 .precss {
   background: green
 }
-
 
 @media (min-width: 500px) and (max-width: 1200px) {
   .blur {
@@ -193,7 +183,6 @@ div {
   width: calc(99.9% * 1/2 - (2% - 2% * 1/2));
   margin-top: 1%; 
   margin-bottom: 1%;
-
 }
 
 div:nth-child(1n) {
@@ -208,49 +197,47 @@ div:nth-child(2n) {
   margin-left: auto;}
 
 .header {
-  height: 15vh;
+   
 }
 
 
 
-  righthead {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
-    -webkit-box-flex: 0;
-            flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: calc(99.9% * 3/4 - (2% - 2% * 3/4));
-    max-width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
-    width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
-
-     
-    margin-bottom: 1%;
-    margin-top: 1%;
+righthead {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(99.9% * 3/4 - (2% - 2% * 3/4));
+  max-width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
+  width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 
 
 
-  righthead:nth-child(1n) {
+righthead:nth-child(1n) {
   margin-right: 2%;
   margin-left: 0;}
 
 
 
-  righthead:last-child {
+righthead:last-child {
   margin-right: 0;}
 
 
 
-  righthead:nth-child(2n) {
+righthead:nth-child(2n) {
   margin-right: 0;
   margin-left: auto;}
 
 
 
-  righthead telpanel {
+righthead telpanel {
   -webkit-box-pack: center;
           justify-content: center;
   display: -webkit-box;
@@ -270,24 +257,24 @@ div:nth-child(2n) {
 
 
 
-  righthead telpanel:nth-child(1n) {
+righthead telpanel:nth-child(1n) {
   margin-right: 1%;
   margin-left: 0;}
 
 
 
-  righthead telpanel:last-child {
+righthead telpanel:last-child {
   margin-right: 0;}
 
 
 
-  righthead telpanel:nth-child(1n) {
+righthead telpanel:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;}
 
 
 
-  righthead telpanel div {
+righthead telpanel div {
   text-align: center;
   -webkit-box-flex: 0;
           flex-grow: 0;
@@ -299,24 +286,24 @@ div:nth-child(2n) {
 
 
 
-  righthead telpanel div:nth-child(1n) {
+righthead telpanel div:nth-child(1n) {
   margin-right: 3%;
   margin-left: 0;}
 
 
 
-  righthead telpanel div:last-child {
+righthead telpanel div:last-child {
   margin-right: 0;}
 
 
 
-  righthead telpanel div:nth-child(3n) {
+righthead telpanel div:nth-child(3n) {
   margin-right: 0;
   margin-left: auto;}
 
 
 
-  righthead headmenu {
+righthead headmenu {
   -webkit-box-flex: 0;
           flex-grow: 0;
   flex-shrink: 0;
@@ -329,24 +316,24 @@ div:nth-child(2n) {
 
 
 
-  righthead headmenu:nth-child(1n) {
+righthead headmenu:nth-child(1n) {
   margin-right: 1%;
   margin-left: 0;}
 
 
 
-  righthead headmenu:last-child {
+righthead headmenu:last-child {
   margin-right: 0;}
 
 
 
-  righthead headmenu:nth-child(1n) {
+righthead headmenu:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;}
 
 
 
-  righthead headmenu ul {
+righthead headmenu ul {
   list-style: none;
   text-align: center;
   padding: 0;
@@ -354,7 +341,7 @@ div:nth-child(2n) {
 
 
 
-  righthead headmenu ul li {
+righthead headmenu ul li {
   display: inline-block;}
 
 .align {
@@ -498,8 +485,6 @@ logo:nth-child(2n) {
           transform: translate(-50%, -50%);
   padding: 0.4em;}
 
-
-
 @-webkit-keyframes scale-up-ver-top {
   0% {
     -webkit-transform: scaleY(0);
@@ -514,8 +499,6 @@ logo:nth-child(2n) {
             transform-origin: 100% 0%;
   }
 }
-
-
 
 @keyframes scale-up-ver-top {
   0% {
@@ -621,9 +604,6 @@ logo:nth-child(2n) {
     opacity: 1;
   }
 }
-
-
-
 
 
 .scale-up-ver-top {
