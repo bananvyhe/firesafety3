@@ -4,7 +4,7 @@
     /*  Base settings */
     font-size: 16px;
     line-height: 1.2;
-
+    
     font-ratio: minor-third;
     remove-comments: true;
 
@@ -91,18 +91,34 @@ $column: 200px;
 }
 
 body {
-  
-   
-  font-family: "PTSansNar"; 
-   
-  font-style: regular;
-  font-weight: 400;
   lost-utility: edit rgb(15, 150, 25);
   @baseline;
 }
-@ruler;
+
+headmenu {
+  lost-utility: clearfix; 
+  ul {
+    list-style: none;    
+    text-align: center;
+    padding: 0;
+    margin: 0;  
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.font1 {
+  font-family: "RobotoCon"; 
+  /*@util hide-visually;*/
+}
+.font2 {
+  font-family: "PTSansNar"; 
+
+}
 
 section {
+  font-family: "RobotoCon"; 
   padding-top: 0.5%;
   padding-bottom: 0.5%;
   lost-center: 1140px 1% flex;
@@ -116,6 +132,8 @@ div {
   margin-bottom: 1%;
 
 }
+
+
 
 logo {
   lost-column: 1/4 2 2% flex;
@@ -239,8 +257,17 @@ righthead {
    
    
   telpanel {
-   
+    justify-content: center;
+    lost-flex-container: row;
     lost-column: 1/1 1 1% flex;
+
+    div {
+      text-align: center;
+      lost-column: 1/3 3 3% flex;
+      align-self: center;
+        
+    }
+    
     margin-bottom: 1%;
     @util border-bottom-radius(0.6em);
   }

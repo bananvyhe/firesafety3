@@ -10,6 +10,24 @@
   font-weight: 700;
   src: url(fonts/PT_Sans-Narrow-Web-Bold.woff2) format("woff2");};
 
+@font-face {
+  font-family: RobotoCon;
+  font-style: light;
+  font-weight: 300;
+  src: url(fonts/RobotoCondensed-Light.woff2) format("woff2");};
+
+@font-face {
+  font-family: RobotoCon;
+  font-style: regular;
+  font-weight: 400;
+  src: url(fonts/RobotoCondensed-Regular.woff2) format("woff2");};
+
+@font-face {
+  font-family: RobotoCon;
+  font-style: bold;
+  font-weight: 700;
+  src: url(fonts/RobotoCondensed-Bold.woff2) format("woff2");};
+
 .phone img {
   display: block;};
 
@@ -136,50 +154,41 @@ html {
 }
 
 body {
-  
-   
-  font-family: "PTSansNar"; 
-   
-  font-style: regular;
-  font-weight: 400;
   font-size: 100%;
   line-height: 1.2em;
 }
 
 body *:not(input):not(textarea):not(select) {
   background-color: rgba(15, 150, 25, 0.1);}
-.ruler-debug{
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
+
+headmenu:before {
+  content: '';
+  display: table;}
+
+headmenu:after {
+  content: '';
+  display: table;
+  clear: both;}
+
+headmenu ul {
+  list-style: none;
+  text-align: center;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9900;
-  pointer-events: none;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABMCAYAAABkvzftAAAAMUlEQVR42u3YMREAIAwEwXiIZ2xhIKJoKZOhoNmdufYFfOTadRdTzwMAAAAA0PH9yTq/LyJBzrZ0rAAAAABJRU5ErkJggg==");
-  background-position: left top;
-  background-repeat: repeat;
-  background-size: 4px 19px;}
-input[id="ruler-debug"] {
-  display:none;}
-input[id="ruler-debug"] + label {
-  z-index: 9999;
-  display: inline-block;position: absolute;top: 1.5em;left: 1.5em;
-  margin: 0;
-  padding: 0;
-  width: 1.2em;
-  height: 1.2em;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 viewBox%3D%270 0 24 24%27%3E%3Cpath fill%3D%27%23F0FAFF%27 d%3D%27M18 24c-0.3 0-0.548-0.246-0.548-0.546V18c0-0.3 0.248-0.546 0.548-0.546h5.452  C23.754 17.454 24 17.7 24 18v5.454c0 0.3-0.246 0.546-0.548 0.546H18z M9.271 24c-0.298 0-0.543-0.246-0.543-0.546V18  c0-0.3 0.245-0.546 0.543-0.546h5.457c0.3 0 0.543 0.246 0.543 0.546v5.454c0 0.3-0.243 0.546-0.543 0.546H9.271z M0.548 24  C0.246 24 0 23.754 0 23.454V18c0-0.3 0.246-0.546 0.548-0.546H6c0.302 0 0.548 0.246 0.548 0.546v5.454C6.548 23.754 6.302 24 6 24  H0.548z M18 15.271c-0.3 0-0.548-0.244-0.548-0.542V9.272c0-0.299 0.248-0.545 0.548-0.545h5.452C23.754 8.727 24 8.973 24 9.272  v5.457c0 0.298-0.246 0.542-0.548 0.542H18z M9.271 15.271c-0.298 0-0.543-0.244-0.543-0.542V9.272c0-0.299 0.245-0.545 0.543-0.545  h5.457c0.3 0 0.543 0.246 0.543 0.545v5.457c0 0.298-0.243 0.542-0.543 0.542H9.271z M0.548 15.271C0.246 15.271 0 15.026 0 14.729  V9.272c0-0.299 0.246-0.545 0.548-0.545H6c0.302 0 0.548 0.246 0.548 0.545v5.457c0 0.298-0.246 0.542-0.548 0.542H0.548z M18 6.545  c-0.3 0-0.548-0.245-0.548-0.545V0.545C17.452 0.245 17.7 0 18 0h5.452C23.754 0 24 0.245 24 0.545V6c0 0.3-0.246 0.545-0.548 0.545  H18z M9.271 6.545C8.974 6.545 8.729 6.3 8.729 6V0.545C8.729 0.245 8.974 0 9.271 0h5.457c0.3 0 0.543 0.245 0.543 0.545V6  c0 0.3-0.243 0.545-0.543 0.545H9.271z M0.548 6.545C0.246 6.545 0 6.3 0 6V0.545C0 0.245 0.246 0 0.548 0H6  c0.302 0 0.548 0.245 0.548 0.545V6c0 0.3-0.246 0.545-0.548 0.545H0.548z%27%2F%3E%3C%2Fsvg%3E");}
-input[id="ruler-debug"]:checked + label, input[id="ruler-debug"]:hover + label {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 viewBox%3D%270 0 24 24%27%3E%3Cpath fill%3D%27%23ACFF0D%27 d%3D%27M18 24c-0.3 0-0.548-0.246-0.548-0.546V18c0-0.3 0.248-0.546 0.548-0.546h5.452  C23.754 17.454 24 17.7 24 18v5.454c0 0.3-0.246 0.546-0.548 0.546H18z M9.271 24c-0.298 0-0.543-0.246-0.543-0.546V18  c0-0.3 0.245-0.546 0.543-0.546h5.457c0.3 0 0.543 0.246 0.543 0.546v5.454c0 0.3-0.243 0.546-0.543 0.546H9.271z M0.548 24  C0.246 24 0 23.754 0 23.454V18c0-0.3 0.246-0.546 0.548-0.546H6c0.302 0 0.548 0.246 0.548 0.546v5.454C6.548 23.754 6.302 24 6 24  H0.548z M18 15.271c-0.3 0-0.548-0.244-0.548-0.542V9.272c0-0.299 0.248-0.545 0.548-0.545h5.452C23.754 8.727 24 8.973 24 9.272  v5.457c0 0.298-0.246 0.542-0.548 0.542H18z M9.271 15.271c-0.298 0-0.543-0.244-0.543-0.542V9.272c0-0.299 0.245-0.545 0.543-0.545  h5.457c0.3 0 0.543 0.246 0.543 0.545v5.457c0 0.298-0.243 0.542-0.543 0.542H9.271z M0.548 15.271C0.246 15.271 0 15.026 0 14.729  V9.272c0-0.299 0.246-0.545 0.548-0.545H6c0.302 0 0.548 0.246 0.548 0.545v5.457c0 0.298-0.246 0.542-0.548 0.542H0.548z M18 6.545  c-0.3 0-0.548-0.245-0.548-0.545V0.545C17.452 0.245 17.7 0 18 0h5.452C23.754 0 24 0.245 24 0.545V6c0 0.3-0.246 0.545-0.548 0.545  H18z M9.271 6.545C8.974 6.545 8.729 6.3 8.729 6V0.545C8.729 0.245 8.974 0 9.271 0h5.457c0.3 0 0.543 0.245 0.543 0.545V6  c0 0.3-0.243 0.545-0.543 0.545H9.271z M0.548 6.545C0.246 6.545 0 6.3 0 6V0.545C0 0.245 0.246 0 0.548 0H6  c0.302 0 0.548 0.245 0.548 0.545V6c0 0.3-0.246 0.545-0.548 0.545H0.548z%27%2F%3E%3C%2Fsvg%3E");}
-input[id="ruler-debug"]:checked ~ .ruler-debug{
-  display: block;}
+  margin: 0;}
+
+headmenu ul li {
+  display: inline-block;}
+
+.font1 {
+  font-family: "RobotoCon";
+}
+.font2 {
+  font-family: "PTSansNar"; 
+
+}
 
 section {
+  font-family: "RobotoCon"; 
   padding-top: 0.5%;
   padding-bottom: 0.5%;
   display: -webkit-box;
@@ -219,6 +228,8 @@ div:nth-child(2n) {
   margin-right: 0;
   margin-left: auto;}
 
+
+
 logo {
   -webkit-box-flex: 0;
           flex-grow: 0;
@@ -234,12 +245,18 @@ logo {
   border-bottom-right-radius: 0.6em;
 }
 
+
+
 logo:nth-child(1n) {
   margin-right: 2%;
   margin-left: 0;}
 
+
+
 logo:last-child {
   margin-right: 0;}
+
+
 
 logo:nth-child(2n) {
   margin-right: 0;
@@ -467,6 +484,13 @@ righthead:nth-child(2n) {
   margin-left: auto;}
 
 righthead telpanel {
+  -webkit-box-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
   -webkit-box-flex: 0;
           flex-grow: 0;
   flex-shrink: 0;
@@ -485,6 +509,27 @@ righthead telpanel:last-child {
   margin-right: 0;}
 
 righthead telpanel:nth-child(1n) {
+  margin-right: 0;
+  margin-left: auto;}
+
+righthead telpanel div {
+  text-align: center;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(99.9% * 1/3 - (3% - 3% * 1/3));
+  max-width: calc(99.9% * 1/3 - (3% - 3% * 1/3));
+  width: calc(99.9% * 1/3 - (3% - 3% * 1/3));
+  align-self: center;}
+
+righthead telpanel div:nth-child(1n) {
+  margin-right: 3%;
+  margin-left: 0;}
+
+righthead telpanel div:last-child {
+  margin-right: 0;}
+
+righthead telpanel div:nth-child(3n) {
   margin-right: 0;
   margin-left: auto;}
 

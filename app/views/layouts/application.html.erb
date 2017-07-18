@@ -14,28 +14,14 @@
 
     <script>
 $(document).on('turbolinks:load', function() {
-
   window.sr = ScrollReveal();
-
-
-    
-  
-  
-
-    
   sr.reveal('.grid-item', {
     reset: true,
     duration: 1500
   });
   sr.reveal('#JQSecuence', { 
-    
     reset: true,
-     
     afterReveal  : function (domEl) {
-    //$('.grid-itemL').addClass("slide-in-elliptic-left-fwd"); // add new class at exist class   
-    //$('.grid-itemR').addClass("slide-in-elliptic-right-fwd");
-
-      
       $('#JQSecuence .grid-itemL').each(function(i) {
         var num = (i % 4) + 1;
         var neely = 700 * parseInt(i);
@@ -51,19 +37,8 @@ $(document).on('turbolinks:load', function() {
           $(this).addClass('slide-in-elliptic-right-fwd');
         });
       });
-      
-
-    },
-    // afterReset  : function (domEl) {
-    //   $('.grid-itemL').removeClass("slide-in-elliptic-left-fwd"); //  delete early added class
-    //   $('.grid-itemR').removeClass("slide-in-elliptic-right-fwd");
-    // },
-     
+    }
   }); 
-
-  
- 
-
 });
  
      
