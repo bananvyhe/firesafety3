@@ -207,54 +207,50 @@ div:nth-child(2n) {
   margin-right: 0;
   margin-left: auto;}
 
-headmenu:before {
-  content: '';
-  display: table;}
-
-headmenu:after {
-  content: '';
-  display: table;
-  clear: both;}
-
-headmenu ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  margin: 0;}
-
-headmenu ul li {
-  display: inline-block;}
-
-righthead {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-flex: 0;
-          flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: calc(99.9% * 3/4 - (2% - 2% * 3/4));
-  max-width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
-  width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
-
-   
-  margin-bottom: 1%;
-  margin-top: 1%;
+.header {
+  height: 15vh;
 }
 
-righthead:nth-child(1n) {
+
+
+  righthead {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+    -webkit-box-flex: 0;
+            flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(99.9% * 3/4 - (2% - 2% * 3/4));
+    max-width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
+    width: calc(99.9% * 3/4 - (2% - 2% * 3/4));
+
+     
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+
+
+  righthead:nth-child(1n) {
   margin-right: 2%;
   margin-left: 0;}
 
-righthead:last-child {
+
+
+  righthead:last-child {
   margin-right: 0;}
 
-righthead:nth-child(2n) {
+
+
+  righthead:nth-child(2n) {
   margin-right: 0;
   margin-left: auto;}
 
-righthead telpanel {
+
+
+  righthead telpanel {
   -webkit-box-pack: center;
           justify-content: center;
   display: -webkit-box;
@@ -272,18 +268,26 @@ righthead telpanel {
   border-bottom-left-radius: 0.6em;
   border-bottom-right-radius: 0.6em;}
 
-righthead telpanel:nth-child(1n) {
+
+
+  righthead telpanel:nth-child(1n) {
   margin-right: 1%;
   margin-left: 0;}
 
-righthead telpanel:last-child {
+
+
+  righthead telpanel:last-child {
   margin-right: 0;}
 
-righthead telpanel:nth-child(1n) {
+
+
+  righthead telpanel:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;}
 
-righthead telpanel div {
+
+
+  righthead telpanel div {
   text-align: center;
   -webkit-box-flex: 0;
           flex-grow: 0;
@@ -293,18 +297,26 @@ righthead telpanel div {
   width: calc(99.9% * 1/3 - (3% - 3% * 1/3));
   align-self: center;}
 
-righthead telpanel div:nth-child(1n) {
+
+
+  righthead telpanel div:nth-child(1n) {
   margin-right: 3%;
   margin-left: 0;}
 
-righthead telpanel div:last-child {
+
+
+  righthead telpanel div:last-child {
   margin-right: 0;}
 
-righthead telpanel div:nth-child(3n) {
+
+
+  righthead telpanel div:nth-child(3n) {
   margin-right: 0;
   margin-left: auto;}
 
-righthead headmenu {
+
+
+  righthead headmenu {
   -webkit-box-flex: 0;
           flex-grow: 0;
   flex-shrink: 0;
@@ -315,16 +327,100 @@ righthead headmenu {
   border-top-left-radius: 0.6em;
   border-top-right-radius: 0.6em;}
 
-righthead headmenu:nth-child(1n) {
+
+
+  righthead headmenu:nth-child(1n) {
   margin-right: 1%;
   margin-left: 0;}
 
-righthead headmenu:last-child {
+
+
+  righthead headmenu:last-child {
   margin-right: 0;}
 
-righthead headmenu:nth-child(1n) {
+
+
+  righthead headmenu:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;}
+
+
+
+  righthead headmenu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;}
+
+
+
+  righthead headmenu ul li {
+  display: inline-block;}
+
+.align {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation > ul {
+  display: -webkit-box;
+  display: flex;
+}
+
+.navigation li {
+  position: relative;
+}
+
+.navigation li:hover > ul {
+  display: block;
+}
+
+.navigation a {
+  background-color: #406a82;
+  color: inherit;
+  display: block;
+  padding: 0.25em 0.5em;
+}
+
+.navigation a:focus, .navigation a:hover {
+  background-color: #365e75;
+}
+
+.navigation__dropdown {
+  display: none;
+  position: absolute;
+}
+
+.navigation__dropdown--left {
+  left: 0;
+  top: 100%;
+}
+
+.navigation__dropdown--right {
+  left: 100%;
+  top: 0;
+}
+
+
 
 logo {
   -webkit-box-flex: 0;
@@ -341,12 +437,18 @@ logo {
   border-bottom-right-radius: 0.6em;
 }
 
+
+
 logo:nth-child(1n) {
   margin-right: 2%;
   margin-left: 0;}
 
+
+
 logo:last-child {
   margin-right: 0;}
+
+
 
 logo:nth-child(2n) {
   margin-right: 0;
@@ -396,9 +498,7 @@ logo:nth-child(2n) {
           transform: translate(-50%, -50%);
   padding: 0.4em;}
 
-.header {
-  height: 15vh;
-}
+
 
 @-webkit-keyframes scale-up-ver-top {
   0% {
@@ -414,6 +514,8 @@ logo:nth-child(2n) {
             transform-origin: 100% 0%;
   }
 }
+
+
 
 @keyframes scale-up-ver-top {
   0% {

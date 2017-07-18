@@ -175,7 +175,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('html', function () {
-   return gulp.src('app/views/indexpage/index.html.erb')
+   return gulp.src('app/views/**/*.html.erb')
     .pipe(gulp.dest(''))
     .pipe(livereload());
 });
@@ -195,7 +195,7 @@ gulp.task('ttf2woff2', function(){
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('app/assets/stylesheets/postcss/application.css', ['css']);
-  gulp.watch('app/views/indexpage/index.html.erb', ['html']);
+  gulp.watch('app/views/**/*.html.erb', ['html']);
   gulp.watch('app/assets/javascripts/application.js', ['js']);
 
 });
