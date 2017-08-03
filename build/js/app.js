@@ -19,11 +19,10 @@ var _app2 = _interopRequireDefault(_app);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.use(_lib2.default);
+document.addEventListener('DOMContentLoaded', function () {
+  document.body.appendChild(document.createElement('app'));
+  new _vue2.default().$mount('#app');
 
-new _vue2.default({
-  el: '#app',
-  render: function render(h) {
-    return h(_app2.default);
-  }
+  console.log(app);
 });
 //# sourceMappingURL=app.js.map
