@@ -174,27 +174,28 @@ section {
   margin-bottom: 0.5%;
 }
 
-div { 
-  -webkit-box-flex: 0; 
-          flex-grow: 0; 
-  flex-shrink: 0; 
-  flex-basis: calc(99.9% * 1/2 - (2% - 2% * 1/2)); 
-  max-width: calc(99.9% * 1/2 - (2% - 2% * 1/2)); 
+section div {
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(99.9% * 1/2 - (2% - 2% * 1/2));
+  max-width: calc(99.9% * 1/2 - (2% - 2% * 1/2));
   width: calc(99.9% * 1/2 - (2% - 2% * 1/2));
-  margin-top: 1%; 
-  margin-bottom: 1%;
-}
+  margin-top: 1%;
+  margin-bottom: 1%;}
 
-div:nth-child(1n) {
+section div:nth-child(1n) {
   margin-right: 2%;
   margin-left: 0;}
 
-div:last-child {
+section div:last-child {
   margin-right: 0;}
 
-div:nth-child(2n) {
+section div:nth-child(2n) {
   margin-right: 0;
   margin-left: auto;}
+
+
 
 .font1 {
   font-family: "RobotoCon";

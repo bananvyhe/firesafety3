@@ -1,3 +1,10 @@
 {
-    "presets": [ "vue", "es2015"]
+    "presets": [ "vue", "vue-app", "es2015"],
+    "plugins": [["component", [
+    {
+      "libraryName": "element-ui",
+      "styleLibraryName": "theme-default" 
+       
+    }
+  ]]]
 }

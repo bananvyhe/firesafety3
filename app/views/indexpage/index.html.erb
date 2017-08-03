@@ -1,7 +1,10 @@
-  
-  <div id='app'>
-    <p>{{ message }}</p>
-  </div>
+<div id="app">
+  <el-carousel height="150px">
+      <el-carousel-item v-for="item in 4" :key="item">
+        <h3>{{ item }}</h3>
+      </el-carousel-item>
+    </el-carousel>
+</div>
  
 <section class="header" scale-up-ver-top> <!-- scale-up-ver-top off -->
   <logo class="" scale-up-center> <!-- scale-up-center off -->

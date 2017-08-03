@@ -1,16 +1,10 @@
 import Vue from 'vue'
- 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+import App from './app.vue' 
+Vue.use(ElementUI)
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(document.createElement('app'))
-  const app = new Vue({
-    el: '#app',
-    data: function () {
-      return {
-        message: "Welcome to Pixeltech!"
-      }
-    }
-  })
-
-  console.log(app)
+new Vue({
+  el: '#app',
+  render: h => h(App)
 })
