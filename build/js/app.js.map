@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":["map","n"],"mappings":";;AAAA,CAAC,CAAD,EAAG,CAAH,EAAK,CAAL,EAAQA,GAAR,CAAY;AAAA,SAAKC,IAAI,CAAT;AAAA,CAAZ","file":"app.js","sourcesContent":["[1,2,3].map(n => n + 1);"]}
