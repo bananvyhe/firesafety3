@@ -147,30 +147,8 @@ var babel = require("gulp-babel");
 
 // var ttf2woff2 = require('gulp-ttf2woff2');
 var concat = require("gulp-concat");
+var streamqueue  = require('streamqueue');
 
-var path = {
-  watch: {// за чем следить
-    js: 'src/js/**/*.js',
-    styles: 'src/scss/**/*.scss'
-  },
-  src: {// что брать
-    styles: 'src/scss/main.scss',
-    js: 'src/js/app.js'
-  },
-  build: {// куда складывать
-    js: 'build/js/',
-    styles: 'build/css/'
-  }
-};
-
-gulp.task('scripts', function() {
-  return gulp.src("src/js/app.js")
-  .pipe(sourcemaps.init())
-  .pipe(babel())
-  .pipe(concat("app.js"))
-  .pipe(sourcemaps.write("."))
-  .pipe(gulp.dest(path.build.js));
-});
 
 gulp.task('css', function () {
   var plugins = [
@@ -206,6 +184,32 @@ gulp.task('html', function () {
     .pipe(livereload());
 });
 
+var path = {
+  watch: {// за чем следить
+    js: 'src/js/**/*.js',
+    styles: 'src/scss/**/*.scss'
+  },
+  src: {// что брать
+    styles: 'src/scss/main.scss',
+    js: 'src/js/app.js'
+  },
+  build: {// куда складывать
+    js: 'build/js/',
+    styles: 'build/css/'
+  }
+};
+
+gulp.task('scripts', function() {
+  return streamqueue({ objectMode: true },
+    gulp.src("src/js/app.js").pipe(babel()),
+    gulp.src("src/js/jquery-3.2.1.min.js"))
+  .pipe(sourcemaps.init())
+  
+  .pipe(concat("app.js")) 
+  .pipe(sourcemaps.write("."))
+  .pipe(gulp.dest(path.build.js));
+});
+
 gulp.task('js', function () {
    return gulp.src('app/assets/javascripts/application.js')
     .pipe(gulp.dest(''))
@@ -222,7 +226,7 @@ gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('app/assets/stylesheets/postcss/application.css', ['css']);
   gulp.watch('app/views/**/*.html.erb', ['html']);
-  gulp.watch('app/assets/javascripts/application.js', ['js']);
+  //gulp.watch('app/assets/src/**/*.js', ['js']);
    
   gulp.watch(path.watch.js, ['scripts']);
 

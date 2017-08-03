@@ -65,30 +65,36 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 
- 
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(document.createElement('app'))
-  const app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
+var _vue = __webpack_require__(1);
+
+var _vue2 = _interopRequireDefault(_vue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.body.appendChild(document.createElement('app'));
+  var app = new _vue2.default({
     el: 'app',
     template: '<App/>',
-    components: { App }
-  })
+    components: { App: App }
+  });
 
-  console.log(app)
-})
+  console.log(app);
+});
+//# sourceMappingURL=app.js.map
+
 
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process, global) {/*!
  * Vue.js v2.4.2
  * (c) 2014-2017 Evan You
@@ -7515,7 +7521,7 @@ setTimeout(function () {
 
 /*  */
 
-/* harmony default export */ __webpack_exports__["a"] = (Vue$3);
+/* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2), __webpack_require__(3)))
 

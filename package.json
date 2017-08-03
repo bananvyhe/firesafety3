@@ -31,6 +31,7 @@
     "postcss-scss": "^1.0.1",
     "postcss-utilities": "^0.7.0",
     "precss": "^1.4.0",
+    "streamqueue": "^1.1.1",
     "webpack": "^3.4.1"
   },
   "scripts": {
