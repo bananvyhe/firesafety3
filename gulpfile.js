@@ -148,6 +148,7 @@ var fonts = require('postcss-font-magician')({
 // var ttf2woff2 = require('gulp-ttf2woff2');
 var concat = require("gulp-concat");
 var streamqueue  = require('streamqueue');
+var magic  = require('postcss-magic-animations');
 
 
 gulp.task('css', function () {
@@ -160,6 +161,7 @@ gulp.task('css', function () {
       "lookup": false
     }),
     flexbox,
+    magic,
     postutil,
 
     postcssgulp,

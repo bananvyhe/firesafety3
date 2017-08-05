@@ -79,6 +79,12 @@ $column: 200px;
   filter: drop-shadow(1px 1px 2px grey);   
 }
 
+@media only screen and (min-width: 600px) {
+  .animation {
+    animation-name: magic;
+  }
+}
+
 body {
   lost-utility: edit rgb(15, 150, 25);
   @baseline;
