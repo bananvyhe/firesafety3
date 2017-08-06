@@ -70,8 +70,10 @@
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
+
 */
 // css base code, injected by the css-loader
+ 
 module.exports = function(useSourceMap) {
 	var list = [];
 
