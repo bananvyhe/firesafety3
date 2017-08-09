@@ -150,42 +150,6 @@ var concat = require("gulp-concat");
 var streamqueue  = require('streamqueue');
 var magic  = require('postcss-magic-animations');
 
-
-gulp.task('css', function () {
-  var plugins = [
-
-    assets({
-      loadPaths: ['app/assets/images/']
-    }),
-    precss({
-      "lookup": false
-    }),
-    flexbox,
-    
-    postutil,
-
-    postcssgulp,
-    fonts,
-    hamster(),
-     
-    lost(),
-
-    autoprefixer({browsers: ["> 0.5%"]})
-  ];
-  return gulp.src('app/assets/stylesheets/postcss/application.css')
-   .pipe(sourcemaps.init())
-   .pipe(postcssgulp(plugins))
-   .pipe(sourcemaps.write('.'))
-   .pipe(gulp.dest('app/assets/stylesheets'))
-   .pipe(livereload());
-});
-
-gulp.task('html', function () {
-   return gulp.src('app/views/**/*.html.erb')
-    .pipe(gulp.dest(''))
-    .pipe(livereload());
-});
-
 var path = {
   watch: {// за чем следить
     js: 'src/js/**/*.js',
@@ -204,13 +168,54 @@ var path = {
 gulp.task('scripts', function() {
   return streamqueue({ objectMode: true },
     gulp.src("src/js/app.js").pipe(babel()),
-    gulp.src("src/js/jquery-3.2.1.min.js"))
+    gulp.src("src/js/anotherscripts.js")
+    
+    )
   .pipe(sourcemaps.init())
   
   .pipe(concat("app.js")) 
   .pipe(sourcemaps.write("."))
   .pipe(gulp.dest(path.build.js));
 });
+
+
+gulp.task('css', function () {
+  var plugins = [
+    assets({
+      loadPaths: ['app/assets/images/']
+    }),
+    precss({
+      "lookup": false
+    }),
+    flexbox,
+    postutil,
+    postcssgulp,
+    fonts,
+    hamster(),
+    lost(),
+    autoprefixer({browsers: ["> 0.5%"]})
+  ];
+
+  return streamqueue({ objectMode: true },
+      gulp.src('app/assets/stylesheets/postcss/application.css'),
+      gulp.src('app/assets/stylesheets/postcss/head.css'),
+      gulp.src('app/assets/stylesheets/postcss/headmenu.css')
+    )
+   .pipe(sourcemaps.init())
+   .pipe(concat("application.css")) 
+   .pipe(postcssgulp(plugins))
+   .pipe(sourcemaps.write('.'))
+   .pipe(gulp.dest('app/assets/stylesheets'))
+   .pipe(livereload());
+});
+
+gulp.task('html', function () {
+   return gulp.src('app/views/**/*.html.erb')
+    .pipe(gulp.dest(''))
+    .pipe(livereload());
+});
+
+
 
 gulp.task('js', function () {
    return gulp.src('app/assets/javascripts/application.js')
@@ -226,7 +231,7 @@ gulp.task('ttf2woff2', function(){
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('app/assets/stylesheets/postcss/application.css', ['css']);
+  gulp.watch('app/assets/stylesheets/postcss/*.css', ['css']);
   gulp.watch('app/views/**/*.html.erb', ['html']);
   //gulp.watch('app/assets/src/**/*.js', ['js']);
    

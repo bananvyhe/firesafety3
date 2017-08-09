@@ -1,0 +1,54 @@
+.header {
+   
+}
+
+logo {
+  lost-column: 1/4 2 2% flex;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  @util border-top-radius(0.6em);
+  @util border-bottom-radius(0.6em);
+}
+
+
+righthead {
+  lost-flex-container: row;
+  lost-column: 3/4 2 2% flex;
+  margin-bottom: 1%;
+  margin-top: 1%; 
+  telpanel {
+    justify-content: center;
+    lost-flex-container: row;
+    lost-column: 1/1 1 1% flex;
+
+    div {
+
+      text-align: center;
+      lost-column: 1/3 3 3% flex;
+      align-self: center;
+    }
+    margin-bottom: 1%;
+    @util border-bottom-radius(0.6em);
+  }
+
+
+
+  headmenu {
+    lost-column: 1/1 1 1% flex;
+    margin-top: 1%;
+     
+    ul {
+      list-style: none;    
+       
+      padding: 0;
+      margin: 0;  
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.tel {
+  visibility: hidden;
+} 
