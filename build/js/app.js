@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// -----------------------------------Navigation on Head-----------------------------------------
+// --------------------- -----------Navigation on Head---------- ----------------------------------
 
         var $nav = $('.greedy-nav');
         var $btn = $('.greedy-nav button');
@@ -128,11 +128,10 @@ document.addEventListener('DOMContentLoaded', function () {
  
 
 
-// --------------------------------------Animations Timeoutes-----------------------------------------------
-
+// ------ ---------- --------------Animations Timeoutes-------------------------- 
 setTimeout(function(){
-      $('.tel').css('visibility', 'visible').addClass('tinUpIn');
-    }, 400);
+      $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
+    }, 1300);
      //setTimeout(function(){
     //   $('.mail').css('visibility', 'visible').addClass('slideUpReturn');
     // }, 400);

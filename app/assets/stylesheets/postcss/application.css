@@ -219,6 +219,22 @@ section {
   animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.slideUpReturn {
+  animation-name: slideUpReturn;
+  animation-duration: 6.1s;
+}
+@keyframes slideUpReturn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateY(0%);
+  }
+}
+
  
 
  

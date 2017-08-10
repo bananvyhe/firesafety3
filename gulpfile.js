@@ -223,6 +223,11 @@ gulp.task('js', function () {
     .pipe(livereload());
 });
 
+gulp.task('browreload', function () {
+   return gulp.src('app/assets/javascripts/application.js')
+    .pipe(livereload());
+});
+
 gulp.task('ttf2woff2', function(){
   gulp.src(['app/assets/stylesheets/fonts/*.ttf'])
     .pipe(ttf2woff2())
@@ -234,7 +239,7 @@ gulp.task('watch', function () {
   gulp.watch('app/assets/stylesheets/postcss/*.css', ['css']);
   gulp.watch('app/views/**/*.html.erb', ['html']);
   //gulp.watch('app/assets/src/**/*.js', ['js']);
-   
+  gulp.watch('app/assets/javascripts/application.js', ['browreload']); 
   gulp.watch(path.watch.js, ['scripts']);
 
 });

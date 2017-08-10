@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  watch: true,
   entry: './build/js/app.js',
   output: {
     filename: 'application.js',

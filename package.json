@@ -47,7 +47,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postcss": "postcss input.css -u postcss-utilities -o output.css -w"
+    "postcss": "postcss input.css -u postcss-utilities -o output.css -w" 
+     
+ 
   },
   "repository": {
     "type": "git",
