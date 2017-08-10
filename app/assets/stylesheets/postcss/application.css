@@ -48,6 +48,8 @@ $column: 200px;
 $color-1: #FFF;
 $color-2: #f57c00;
 $color-3: #ef6c00;
+$color-4: #D9271F;
+
 
 /*
 .menu {
@@ -87,7 +89,6 @@ body {
 }
 
 section {
-
   /*padding-top:  0.25em;
   padding-bottom: 0.25em;*/
   lost-center: 1366px 0.5em flex;
@@ -195,6 +196,24 @@ section {
 }
 
  
+.slide-in-bck-center {
+  animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-duration: 0.4s;
+
+}
+
+@keyframes slide-in-bck-center {
+  0% {
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+
 
 
 .scale-up-ver-top {

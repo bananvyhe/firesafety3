@@ -8,23 +8,42 @@
 }
 
 logo {
+   
+   
+  lost-column: 1/4 2 0.2% flex;
+
+   
+   
   font-family: 'Saira'; 
   font-style: bold;
   font-weight: 700;
-  lost-column: 1/4 2 2% flex;
+  
   margin-bottom: 1%;
   margin-top: 1%;
   @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);
+
 }
-.logo1 {
-    background: svg-inline(logo-01);
-}
+ 
 .logo {
+
+     
+    lost-column: 1/1 1 flex; 
     background: svg-load('../../images/logo-01.svg', fill=#000, stroke=#fff);
-    background-size: 100px auto;
+    background-size: 110px auto;
     background-position: center;
+    
     background-repeat: no-repeat;
+    height: 150px;
+     
+}
+
+.logo-text {
+   
+  lost-column: 1/1 1 flex; 
+  color: $color-4; 
+  text-align: center;
+   
 }
 .up {
     background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);
