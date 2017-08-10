@@ -13,6 +13,17 @@ var babel = require("gulp-babel");
 
 var fonts = require('postcss-font-magician')({
   custom: {
+    'Saira': {
+      variants: {
+        bold: {
+           700: {
+              url: {
+                 woff2: 'fonts/Saira-Bold.woff2'
+              }
+           }
+        }
+      }
+    },
     'PTSansNar': {
       variants: {
         regular: {
@@ -26,6 +37,17 @@ var fonts = require('postcss-font-magician')({
            700: {
               url: {
                  woff2: 'fonts/PT_Sans-Narrow-Web-Bold.woff2'
+              }
+           }
+        }
+      }
+    },
+    'UbuntuR': {
+      variants: {
+        normal: {
+           400: {
+              url: {
+                 woff2: 'fonts/Ubuntu-Regular.woff2'
               }
            }
         }
@@ -68,17 +90,7 @@ var fonts = require('postcss-font-magician')({
         }
       }
     },
-    'UbuntuR': {
-      variants: {
-        normal: {
-           400: {
-              url: {
-                 woff2: 'fonts/Ubuntu-Regular.woff2'
-              }
-           }
-        }
-      }
-    },
+    
     'OpenSansRB': {
       variants: {
         light: {
@@ -145,10 +157,10 @@ var fonts = require('postcss-font-magician')({
   }
 });
 
-// var ttf2woff2 = require('gulp-ttf2woff2');
+var ttf2woff2 = require('gulp-ttf2woff2');
 var concat = require("gulp-concat");
 var streamqueue  = require('streamqueue');
-var magic  = require('postcss-magic-animations');
+var svg  = require('postcss-inline-svg');
 
 var path = {
   watch: {// за чем следить
@@ -169,10 +181,8 @@ gulp.task('scripts', function() {
   return streamqueue({ objectMode: true },
     gulp.src("src/js/app.js").pipe(babel()),
     gulp.src("src/js/anotherscripts.js")
-    
     )
   .pipe(sourcemaps.init())
-  
   .pipe(concat("app.js")) 
   .pipe(sourcemaps.write("."))
   .pipe(gulp.dest(path.build.js));
@@ -181,19 +191,24 @@ gulp.task('scripts', function() {
 
 gulp.task('css', function () {
   var plugins = [
+    
     assets({
       loadPaths: ['app/assets/images/']
     }),
+
     precss({
       "lookup": false
     }),
     flexbox,
     postutil,
     postcssgulp,
-    fonts,
+    svg, 
+    
     hamster(),
     lost(),
+    fonts,
     autoprefixer({browsers: ["> 0.5%"]})
+
   ];
 
   return streamqueue({ objectMode: true },
@@ -238,8 +253,10 @@ gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('app/assets/stylesheets/postcss/*.css', ['css']);
   gulp.watch('app/views/**/*.html.erb', ['html']);
-  //gulp.watch('app/assets/src/**/*.js', ['js']);
   gulp.watch('app/assets/javascripts/application.js', ['browreload']); 
+  //gulp.watch('app/assets/src/**/*.js', ['js']);
+  gulp.watch('app/assets/stylesheets/fonts/*.ttf', ['ttf2woff2']); 
+
   gulp.watch(path.watch.js, ['scripts']);
 
 });

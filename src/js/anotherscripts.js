@@ -3,7 +3,15 @@
         window.sr = ScrollReveal();
         sr.reveal('.grid-item', {
           reset: true,
-          duration: 1500
+          duration: 600,
+          distance: '150px',
+          origin: 'bottom',
+          rotate: { x: 0, y: 0, z: 0 },
+          scale: 0.95,
+          mobile: true,
+          viewFactor: 0.2,
+          viewOffset: { top: 30, right: 0, bottom: 30, left: 0 },
+
         });
         sr.reveal('#JQSecuence', { 
           reset: true,
@@ -31,7 +39,7 @@
 
 
 
-// --------------------- -----------Navigation on Head---------- ----------------------------------
+// ---------------------------------Navigation on Head---------------------------------------------
 
         var $nav = $('.greedy-nav');
         var $btn = $('.greedy-nav button');
@@ -101,7 +109,7 @@
  
 
 
-// ------ ---------- --------------Animations Timeoutes-------------------------- 
+// ------ ------- -------------Animations Timeoutes-------------------------- 
 setTimeout(function(){
       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
     }, 1300);

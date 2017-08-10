@@ -23,7 +23,7 @@
   ruler-pattern: 1 0 0 0;
   ruler-scale: 4;
   ruler-thickness: 1;
-};
+} 
 
 .phone {
     &_title {
@@ -72,7 +72,7 @@ $color-3: #ef6c00;
   }
 }
 
-.blur {
+.blur { 
   filter: blur(5px);
 }
 
@@ -80,44 +80,38 @@ $color-3: #ef6c00;
   filter: drop-shadow(1px 1px 2px grey);   
 }
 
-@media only screen and (min-width: 600px) {
-  .animation {
-    animation-name: magic;
-  }
-}
-
+ 
 body {
   lost-utility: edit rgb(15, 150, 25);
   @baseline;
 }
 
 section {
-  font-family: "RobotoCon"; 
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  lost-center: 1366px 1% flex;
+
+  /*padding-top:  0.25em;
+  padding-bottom: 0.25em;*/
+  lost-center: 1366px 0.5em flex;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
   div { 
-    lost-column: 1/2 2 2% flex;
+    lost-column: 1/2 2 1em flex;
     margin-top: 1%; 
     margin-bottom: 1%;
   }
 }
 
-.font1 {
-  font-family: "RobotoCon"; 
-  /*@util hide-visually;*/
-}
+ 
 .font2 {
-  font-family: "PTSansNar"; 
+  
 }
 
 .font3 {
-  font-family: "PTSansNar"; 
-  font-style: bold;
-  font-weight: 700;
+  
   letter-spacing: 0.07em;
+}
+
+.font4 {
+   
 }
  
 #grid-one {

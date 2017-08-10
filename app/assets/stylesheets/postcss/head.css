@@ -1,15 +1,39 @@
-.header {
-   
+
+
+@svg-load logo-01 url(../../images/logo-01.svg) {
+    fill: #000;
+    path:nth-child(2) {
+        fill: #ff0;
+    }
 }
 
 logo {
+  font-family: 'Saira'; 
+  font-style: bold;
+  font-weight: 700;
   lost-column: 1/4 2 2% flex;
   margin-bottom: 1%;
   margin-top: 1%;
   @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);
 }
+.logo1 {
+    background: svg-inline(logo-01);
+}
+.logo {
+    background: svg-load('../../images/logo-01.svg', fill=#000, stroke=#fff);
+    background-size: 100px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.up {
+    background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);
 
+}
+
+.header {
+   
+}
 
 righthead {
   lost-flex-container: row;
@@ -17,6 +41,9 @@ righthead {
   margin-bottom: 1%;
   margin-top: 1%; 
   telpanel {
+    font-family: "PTSansNar"; 
+    font-style: regular;
+    font-weight: 400;
     justify-content: center;
     lost-flex-container: row;
     lost-column: 1/1 1 1% flex;
@@ -34,6 +61,11 @@ righthead {
 
 
   headmenu {
+    font-family: "UbuntuR"; 
+    font-style: normal;
+    font-weight: 400;
+    font-style: bold;
+   
     lost-column: 1/1 1 1% flex;
     margin-top: 1%;
      
