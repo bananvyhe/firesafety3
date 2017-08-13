@@ -145,10 +145,6 @@ body {
   line-height: 1.2em;
 }
 
- 
-body *:not(input):not(textarea):not(select) {
-  background-color: rgba(15, 150, 25, 0.1);}
-
 section {
   display: -webkit-box;
   display: flex;
@@ -771,7 +767,7 @@ logo:nth-child(2n) {
 }
 
 .header {
-   
+   background-color: #2a303a;
 }
 
 righthead {

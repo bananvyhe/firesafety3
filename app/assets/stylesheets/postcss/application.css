@@ -49,6 +49,7 @@ $color-1: #FFF;
 $color-2: #f57c00;
 $color-3: #ef6c00;
 $color-4: #d64933;
+$HeadBackColor: #2a303a;
 
 
 
@@ -85,7 +86,7 @@ $color-4: #d64933;
 
  
 body {
-  lost-utility: edit rgb(15, 150, 25);
+  /*lost-utility: edit rgb(15, 150, 25);*/
   @baseline;
 }
 

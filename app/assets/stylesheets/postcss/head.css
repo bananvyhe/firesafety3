@@ -51,7 +51,7 @@ logo {
 }
 
 .header {
-   
+   background-color: $HeadBackColor;
 }
 
 righthead {
