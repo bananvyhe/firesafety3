@@ -24,6 +24,7 @@ var fonts = require('postcss-font-magician')({
         }
       }
     },
+ 
     'PTSansNar': {
       variants: {
         regular: {

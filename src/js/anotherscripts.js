@@ -39,7 +39,7 @@
 
 
 
-// ---------------------------------Navigation on Head---------------------------------------------
+// ---------------------------------Navigation on Head--------------------------------------------
 
         var $nav = $('.greedy-nav');
         var $btn = $('.greedy-nav button');
@@ -109,7 +109,7 @@
  
 
 
-// ------ ------- -------------Animations Timeoutes-------------------------- 
+// ------------------------------------Animations Timeoutes-------------------------- 
 setTimeout(function(){
       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
     }, 1300);
