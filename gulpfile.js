@@ -202,7 +202,7 @@ gulp.task('css', function () {
     flexbox,
     postutil,
     postcssgulp,
-    svg, 
+    svg({removeFill: true}), 
     
     hamster(),
     lost(),
