@@ -2,26 +2,26 @@
 @hamster {
 
   /*  Base settings */
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.3;
   
-  font-ratio: minor-third;
+   
   remove-comments: true;
 
   /*  Vertical Rythm settings */
-
+ 
   unit: em;
   px-fallback: true;
-  properties: extend;
+  properties:  inline;
   ruler: true;
-  ruler-style: switch ruler-debug;
+  ruler-style: always ruler-debug;
   ruler-color: rgba(19, 134, 191, .8);
   ruler-icon-colors: #F0FAFF #ACFF0D;
   ruler-icon-position: "position: absolute;top: 1.5em;left: 1.5em;";
   ruler-background: png;
   /*ruler-output: images/ruler.png;*/
   ruler-pattern: 1 0 0 0;
-  ruler-scale: 4;
+  ruler-scale: 1;
   ruler-thickness: 1;
 } 
 
@@ -40,10 +40,10 @@
     }
 }
 
-@ruler;
-@reset;
 
+@reset;
 $column: 200px;
+@ruler;
 
 $color-1: #FFF;
 $color-2: #f57c00;
@@ -83,11 +83,13 @@ $HeadBackColor: #2a303a;
 .dropshadow {
   filter: drop-shadow(1px 1px 2px grey);   
 }
-
+.mytext {
+  position: relative;
+}
  
 body {
   /*lost-utility: edit rgb(15, 150, 25);*/
-  @baseline;
+  
 }
 
 section {
@@ -122,8 +124,9 @@ section {
 }
 
 .grid-item {
+  position: relative;/*for hamster*/
   overflow: hidden;
-  height: 200px;
+  height: 380px;
   @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);
    

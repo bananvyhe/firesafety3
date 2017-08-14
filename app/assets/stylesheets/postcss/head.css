@@ -7,17 +7,15 @@
     }
 }
 
-logo {
-   
-   
-  lost-column: 1/4 2 0.2% flex;
+.header {
+   background-color: $HeadBackColor;
+}
 
-   
-   
+logo {
+  lost-column: 1/4 2 0.2% flex;
   font-family: 'Saira'; 
   font-style: bold;
   font-weight: 700;
-  
   margin-bottom: 1%;
   margin-top: 1%;
   @util border-top-radius(0.6em);
@@ -26,16 +24,12 @@ logo {
 }
  
 .logo {
-
-     
     lost-column: 1/1 1 flex; 
     background: svg-load('../../images/logo-01.svg', fill=$color-4, stroke=#fff);
     background-size: 110px auto;
     background-position: center;
-    
     background-repeat: no-repeat;
     height: 150px;
-     
 }
 
 .logo-text {
@@ -43,15 +37,10 @@ logo {
   lost-column: 1/1 1 flex; 
   color: $color-4; 
   text-align: center;
-   
 }
+
 .up {
     background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);
-
-}
-
-.header {
-   background-color: $HeadBackColor;
 }
 
 righthead {
@@ -68,7 +57,6 @@ righthead {
     lost-column: 1/1 1 1% flex;
 
     div {
-
       text-align: center;
       lost-column: 1/3 3 3% flex;
       align-self: center;
