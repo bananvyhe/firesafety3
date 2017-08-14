@@ -11,7 +11,9 @@
 
 <filter  id="NewFilter">
 	<feOffset  in="SourceAlpha" result="offOut" dx="0" dy="0"></feOffset>
-	<feGaussianBlur  in="offOut" result="blurOut" stdDeviation="8"></feGaussianBlur>
+	<feGaussianBlur  in="offOut" result="blurOut" stdDeviation="12"></feGaussianBlur>
+	<feFlood flood-color="#000000" flood-opacity="0.5" result="offsetColor"/>
+<feComposite in="offsetColor" in2="blurOut" operator="in" result="blurOut"/>
 	<feBlend  in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
 </filter>
 <g class="st0">
