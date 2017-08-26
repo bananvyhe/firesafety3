@@ -22,7 +22,9 @@ $blurred-img:"main_03.jpg";
     background-color: rgba(255,255,255,.5);
   }
  
-   
+el-carousel {
+     height: 700px;
+} 
 
 
   overflow: hidden;
