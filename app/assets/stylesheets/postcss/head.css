@@ -72,12 +72,8 @@ lost-column: 1/1 1 flex;
     background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);
 }
 
-righthead {
-  lost-flex-container: row;
-  lost-column: 3/4 2 2% flex;
-  margin-bottom: 1%;
-  margin-top: 1%; 
-  telpanel {
+
+telpanel {
     font-family: "PTSansNar"; 
     font-style: regular;
     font-weight: 400;
@@ -93,6 +89,13 @@ righthead {
     margin-bottom: 1%;
     @util border-bottom-radius(0.6em);
   }
+
+righthead {
+  lost-flex-container: row;
+  lost-column: 3/4 2 2% flex;
+  margin-bottom: 1%;
+  margin-top: 1%; 
+  
 
 
 
