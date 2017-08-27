@@ -1,9 +1,13 @@
 .greedy-nav {
   position: relative;
-  
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  font-style: bold;
    
   
   a {
+    height: 3vh;
     display: block;
     padding: 20px 30px;
     color: $color-1;

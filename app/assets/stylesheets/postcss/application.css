@@ -96,7 +96,8 @@ section {
   }
 }
 
-section1 { lost-flex-container: row;
+section1 { 
+  lost-flex-container: row;
   /*padding-top:  0.25em;
   padding-bottom: 0.25em;*/
   lost-center: 1366px;
