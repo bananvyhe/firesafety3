@@ -23,7 +23,7 @@ $blurred-img:"main_03.jpg";
 }
 
 .underslide {
-  height: 15vh;
+   
 }
  
 logo {
@@ -32,7 +32,6 @@ logo {
   font-weight: 700;
   @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);
-
 }
 
 .logobg { 
@@ -45,11 +44,12 @@ audit {
 }
 
 .logo {
+  $logosize: 22vh;
   background: svg-load('../../images/logo-01-01.svg' );
-  background-size: 200px auto;
-  background-position: center;
+  background-size: $logosize auto;
+  background-position:center;
   background-repeat: no-repeat;
-  height: 10vh; 
+  height: calc(1.1 * $logosize); 
 }
 
 .up {
@@ -69,7 +69,7 @@ telpanel {
     text-align: center;
     align-self: center;
   }
-  
+
   @util border-bottom-radius(0.6em);
 }
 
