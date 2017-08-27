@@ -84,19 +84,16 @@ $HeadBackColor: #2a303a;
  
 body {
  lost-utility: edit rgb(15, 150, 25);
-  
 }
 
 section {
   /*padding-top:  0.25em;
   padding-bottom: 0.25em;*/
   lost-center: 1366px;
-  margin-top: 0.5%;
-  margin-bottom: 0.5%;
-    .trust {
-      lost-column: 1/3 3 1em flex;
-      @util border-top-radius(1.6em);  
-    }
+  .trust {
+    lost-column: 1/3 3 1em flex;
+    @util border-top-radius(1.6em);  
+  }
 }
 
 section1 { lost-flex-container: row;
