@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   new _vue2.default({
     el: '#app1',
     render: function render(h) {
-      return h(_app2.default);
+      return h(_app4.default);
     }
   });
 });

@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(document.createElement('app'))
   new Vue().$mount('#app')
   console.log(app)
-  
+
   new Vue({
     el: '#app1',
-    render: h => h(App)
+    render: h => h(App1)
   })
 })   
