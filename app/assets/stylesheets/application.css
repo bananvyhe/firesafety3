@@ -810,33 +810,13 @@ logo {overflow: visible;
   border-bottom-right-radius: 0.6em;
 }
 
-.logobg { overflow: visible;
-  height: 15vh;
-  width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-}
-
-.logobg:nth-child(1n) {
-	float: left;
-	margin-right: 30px;
-	clear: none;
-}
-
-.logobg:last-child {
-	margin-right: 0;
-}
-
-.logobg:nth-child(2n) {
-	margin-right: 0;
-	float: right;
-}
-
-.logobg:nth-child(2n + 1) {
-	clear: both;
-}
+ 
 
 audit {
   width: calc(99.9% * 3/4 - (30px - 30px * 3/4));
 }
+
+ 
 
 audit:nth-child(1n) {
 	float: left;
@@ -844,14 +824,20 @@ audit:nth-child(1n) {
 	clear: none;
 }
 
+ 
+
 audit:last-child {
 	margin-right: 0;
 }
+
+ 
 
 audit:nth-child(2n) {
 	margin-right: 0;
 	float: right;
 }
+
+ 
 
 audit:nth-child(2n + 1) {
 	clear: both;

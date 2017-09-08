@@ -35,11 +35,7 @@ logo {overflow: visible;
   @util border-bottom-radius(0.6em);
 }
 
-.logobg { overflow: visible;
-  height: 15vh;
-  lost-column: 1/4 2; 
-  /*background: radial-gradient(ellipse at center, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.05) 30%,rgba(255,255,255,0) 74%,rgba(255,255,255,0) 100%);*/
-}
+ 
 
 audit {
   lost-column: 3/4 2;

@@ -20,7 +20,9 @@ module.exports = {
         options: {
           // ...
           postcss: [
-            require('precss')
+            require('precss'),
+            require('postcss-inline-svg'),
+            require('lost')
           ]
         }
       },
