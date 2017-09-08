@@ -16,7 +16,13 @@ module.exports = {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          // ...
+          postcss: [
+            require('precss')
+          ]
+        }
       },
       {
         test: /\.js$/,

@@ -20,6 +20,10 @@ var _app3 = require('./app1.vue');
 
 var _app4 = _interopRequireDefault(_app3);
 
+var _logoApp = require('./logoApp.vue');
+
+var _logoApp2 = _interopRequireDefault(_logoApp);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.use(_lib2.default);
@@ -37,6 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
     el: '#app1',
     render: function render(h) {
       return h(_app4.default);
+    }
+  });
+
+  new _vue2.default({
+    el: '#logoApp',
+    render: function render(h) {
+      return h(_logoApp2.default);
     }
   });
 });

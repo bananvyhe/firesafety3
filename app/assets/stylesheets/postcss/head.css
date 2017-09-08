@@ -24,9 +24,10 @@ $blurred-img:"main_03.jpg";
 
 .underslide {
    
+
 }
  
-logo {
+logo {overflow: visible;
   font-family: 'Saira'; 
   font-style: bold;
   font-weight: 700;
@@ -34,7 +35,8 @@ logo {
   @util border-bottom-radius(0.6em);
 }
 
-.logobg { 
+.logobg { overflow: visible;
+  height: 15vh;
   lost-column: 1/4 2; 
   /*background: radial-gradient(ellipse at center, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.05) 30%,rgba(255,255,255,0) 74%,rgba(255,255,255,0) 100%);*/
 }
@@ -43,14 +45,7 @@ audit {
   lost-column: 3/4 2;
 }
 
-.logo {
-  $logosize: 22vh;
-  background: svg-load('../../images/logo-01-01.svg' );
-  background-size: $logosize auto;
-  background-position:center;
-  background-repeat: no-repeat;
-  height: calc(1.1 * $logosize); 
-}
+
 
 .up {
   background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);
