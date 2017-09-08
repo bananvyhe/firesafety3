@@ -7,9 +7,12 @@ import App1 from './app1.vue'
 Vue.use(ElementUI)
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(document.createElement('app'))
-  new Vue().$mount('#app')
-  console.log(app)
+   
+  new Vue({
+    el: '#app',
+    render: h => h(App)
+  })
+  
 
   new Vue({
     el: '#app1',

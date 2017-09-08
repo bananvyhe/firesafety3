@@ -25,9 +25,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_lib2.default);
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.body.appendChild(document.createElement('app'));
-  new _vue2.default().$mount('#app');
-  console.log(app);
+
+  new _vue2.default({
+    el: '#app',
+    render: function render(h) {
+      return h(_app2.default);
+    }
+  });
 
   new _vue2.default({
     el: '#app1',
@@ -77,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// --------------------------------------Navigation on Head----------------------------------------------
+// --------------------------------------Navigation on Head--------------------------------------------------
         var $nav = $('.greedy-nav');
         var $btn = $('.greedy-nav button');
         var $vlinks = $('.greedy-nav .visible-links');
