@@ -10652,7 +10652,7 @@ sr.reveal('#JQSecuence', {
   }
 });
 
-// --------------------------------------Navigation on Head--------------------------------------------------
+// ------------------------------------------Navigation on Head--------------------------------------------------
 var $nav = $('.greedy-nav');
 var $btn = $('.greedy-nav button');
 var $vlinks = $('.greedy-nav .visible-links');
@@ -11622,11 +11622,16 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
 
 exports.default = {
   data: function data() {
+
     return {
-      status: 'Critical'
+      status: 'Critical',
+      items: ['Комплексные системы безопасности для вашей недвижимости', '123', 'Третий слайд', 'Четвертый слайд', 'Пятый слайд']
+
     };
   }
 };
@@ -11642,7 +11647,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "height": "50vh",
       "indicator-position": "outside"
     }
-  }, _vm._l((6), function(item) {
+  }, _vm._l((_vm.items), function(item) {
     return _c('el-carousel-item', {
       key: item
     }, [_c('h3', [_vm._v(_vm._s(item)), _c('br'), _vm._v(_vm._s(_vm.status))])])

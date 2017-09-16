@@ -1,7 +1,9 @@
 <template>
   <el-carousel height="50vh" indicator-position="outside">
-    <el-carousel-item v-for="item in 6" :key="item">
-      <h3>{{ item }}<br>{{status}}</h3>
+    <el-carousel-item v-for="item in items" :key="item" >
+        <h3>{{item}}<br>{{status}}</h3> 
+       
+      
     </el-carousel-item>
   </el-carousel>
 </template>
@@ -9,8 +11,18 @@
 <script>
   export default {
     data: function () {
+      
       return {
-        status: 'Critical'
+        status: 'Critical',
+        items: [
+       'Комплексные системы безопасности для вашей недвижимости',
+       '123',
+       'Третий слайд',
+       'Четвертый слайд',
+       'Пятый слайд'
+
+      ]
+
       }
     }
   }
