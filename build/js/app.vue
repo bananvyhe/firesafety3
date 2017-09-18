@@ -23,9 +23,11 @@
 </script>
 
 <style scoped>
+
   .onediv {
     background-color: #fdf;
     height: 100%;
+    background-image:url("../../app/assets/images/2.jpg"); 
   }
   .el-carousel__item h3 {
     color: #475669;
