@@ -1,11 +1,16 @@
 const path = require('path');
 
+const PATHS = {
+    app: path.join(__dirname, 'app/assets/images') 
+};
+
 module.exports = {
-  watch: true,
+  watch: true,      
   entry: './build/js/app.js',
   output: {
     filename: 'application.js',
-    path: path.resolve(__dirname, 'app/assets/javascripts')
+    path: path.resolve(__dirname, 'app/assets/javascripts'),
+    publicPath: "app/assets/images"
   },
   resolve: {
     alias: {
@@ -22,7 +27,8 @@ module.exports = {
           postcss: [
             require('precss'),
             require('postcss-inline-svg'),
-            require('lost')
+            require('lost') 
+             
           ]
         }
       },
@@ -36,17 +42,11 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-        loader: 'file-loader'
+        test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif)$/,
+         
+        loader: 'url-loader' 
         
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
-        loader: 'file-loader',
-        query: {
-          name: '[name].[ext]?[hash]'
-        }
-      }
+      } 
     ]
   }
 };
