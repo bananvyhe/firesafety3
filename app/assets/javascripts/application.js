@@ -10595,9 +10595,13 @@ function _interopRequireDefault(obj) {
 _vue2.default.use(_lib2.default);
 
 document.addEventListener('DOMContentLoaded', function () {
+  _vue2.default.component('onediv', {
+    template: '<div><slot></slot></div>'
+  });
 
   new _vue2.default({
     el: '#app',
+
     render: function render(h) {
       return h(_app2.default);
     }
@@ -11566,7 +11570,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.el-carousel__item h3[data-v-cc1e20e4] {\n   \n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, "\n.onediv[data-v-cc1e20e4] {\n  background-color: #fdf;\n  height: 100%;\n}\n.el-carousel__item h3[data-v-cc1e20e4] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11622,16 +11626,11 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
 
 exports.default = {
   data: function data() {
-
     return {
-      status: 'Critical',
-      items: ['Комплексные системы безопасности для вашей недвижимости', '123', 'Третий слайд', 'Четвертый слайд', 'Пятый слайд']
-
+      items: [{ title: 'Посадить дерево1', text: 'какой-нибудь текст1' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст5' }]
     };
   }
 };
@@ -11650,7 +11649,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, _vm._l((_vm.items), function(item) {
     return _c('el-carousel-item', {
       key: item
-    }, [_c('h3', [_vm._v(_vm._s(item)), _c('br'), _vm._v(_vm._s(_vm.status))])])
+    }, [_c('onediv', {
+      staticClass: "onediv"
+    }, [_c('h3', [_vm._v(_vm._s(item.title)), _c('br'), _vm._v(_vm._s(item.text))])])], 1)
   }))
 }
 var staticRenderFns = []

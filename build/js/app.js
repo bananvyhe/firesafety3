@@ -29,9 +29,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_lib2.default);
 
 document.addEventListener('DOMContentLoaded', function () {
+  _vue2.default.component('onediv', {
+    template: '<div><slot></slot></div>'
+  });
 
   new _vue2.default({
     el: '#app',
+
     render: function render(h) {
       return h(_app2.default);
     }
