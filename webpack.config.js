@@ -1,9 +1,5 @@
 const path = require('path');
 
-const PATHS = {
-    app: path.join(__dirname, 'app/assets/images') 
-};
-
 module.exports = {
   watch: true,      
   entry: './build/js/app.js',
