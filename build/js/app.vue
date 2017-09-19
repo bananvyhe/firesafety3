@@ -24,12 +24,17 @@
 </script>
 
 <style scoped>
+  h3 {
 
-  $first_img:"../../app/assets/images/1.jpg";
+  }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center bottom; 
   }
   .onediv {
+    filter: blur(4px);
     background-image: url(../../app/assets/images/1.jpg);
   }
   .twodiv {
