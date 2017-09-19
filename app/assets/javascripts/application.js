@@ -10595,6 +10595,7 @@ function _interopRequireDefault(obj) {
 _vue2.default.use(_lib2.default);
 
 document.addEventListener('DOMContentLoaded', function () {
+
   _vue2.default.component('onediv', {
     template: '<div><slot></slot></div>'
   });
@@ -11657,13 +11658,24 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 
+
+var mq = window.matchMedia('all and (max-width: 700px)');
+if (mq.matches) {
+  // the width of browser is more then 700px
+  var visota = 20;
+} else {
+  // the width of browser is less then 700px
+  var visota = 60;
+}
 exports.default = {
+
   data: function data() {
     return {
-      visota: '60',
+      visota: visota,
       items: [{ title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст5', class: 'fivediv' }]
     };
   }
+
 };
 
 /***/ }),
@@ -11678,9 +11690,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "indicator-position": "outside"
     }
   }, _vm._l((_vm.items), function(item) {
-    return _c('el-carousel-item', {
-      key: item
-    }, [_c('onediv', {
+    return _c('el-carousel-item', [_c('onediv', {
       class: item.class
     }, [_c('h3', [_vm._v(_vm._s(item.title)), _c('br'), _vm._v(_vm._s(item.text))])])], 1)
   }))

@@ -6,15 +6,21 @@ import App1 from './app1.vue'
 import LogoApp from './logoApp.vue'
 
 Vue.use(ElementUI)
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
+  
   Vue.component('onediv', {
       template: '<div><slot></slot></div>'
   }) 
+
+
    
   new Vue({
     el: '#app',
+     
     
+     
+       
     
     render: h => h(App)
   })

@@ -1,16 +1,26 @@
 <template>
   <el-carousel :height="visota + 'vh'" indicator-position="outside">
-    <el-carousel-item v-for="item in items" :key="item" >
+    <el-carousel-item v-for="item in items">
         <onediv :class="item.class" ><h3>{{item.title}}<br>{{item.text}}</h3></onediv>
     </el-carousel-item>
   </el-carousel>
 </template>
 
 <script>
+   
+  var mq = window.matchMedia('all and (max-width: 700px)');
+  if(mq.matches) {
+      // the width of browser is more then 700px
+      var visota = 20;
+  } else {
+      // the width of browser is less then 700px
+      var visota = 60;
+  }
   export default {
+
     data: function () {
       return {
-        visota: '60',
+        visota: visota,
         items: [
           { title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' },
           { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
@@ -20,7 +30,9 @@
         ]
       }
     }
+    
   }
+  
 </script>
 
 <style scoped>
