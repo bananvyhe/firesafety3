@@ -10656,7 +10656,7 @@ sr.reveal('#JQSecuence', {
   }
 });
 
-// ------------------------------------------Navigation on Head--------------------------------------------------
+// ----------------------------------------------------
 var $nav = $('.greedy-nav');
 var $btn = $('.greedy-nav button');
 var $vlinks = $('.greedy-nav .visible-links');
@@ -11570,7 +11570,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\nh3[data-v-cc1e20e4] {\n}\n.onediv[data-v-cc1e20e4], .twodiv[data-v-cc1e20e4], .threediv[data-v-cc1e20e4], .fourdiv[data-v-cc1e20e4], .fivediv[data-v-cc1e20e4] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n  background-position: center bottom;\n}\n.onediv[data-v-cc1e20e4] {\n  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"4\" /></filter></svg>#filter');\n  -webkit-filter: blur(4px);\n          filter: blur(4px);\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-cc1e20e4] {\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.threediv[data-v-cc1e20e4] {\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-cc1e20e4] {\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.fivediv[data-v-cc1e20e4] {\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.el-carousel__item h3[data-v-cc1e20e4] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, "\nh3[data-v-cc1e20e4] {\n}\n.onediv[data-v-cc1e20e4], .twodiv[data-v-cc1e20e4], .threediv[data-v-cc1e20e4], .fourdiv[data-v-cc1e20e4], .fivediv[data-v-cc1e20e4] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n}\n.onediv[data-v-cc1e20e4] {\n   background-position: right bottom;\n  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"4\" /></filter></svg>#filter');\n  -webkit-filter: blur(4px);\n          filter: blur(4px);\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-cc1e20e4] {\n   background-position: right bottom;\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.threediv[data-v-cc1e20e4] {\n  background-position: center bottom;\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-cc1e20e4] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.fivediv[data-v-cc1e20e4] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.el-carousel__item h3[data-v-cc1e20e4] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11660,7 +11660,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   data: function data() {
     return {
-
+      visota: '60',
       items: [{ title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст5', class: 'fivediv' }]
     };
   }
@@ -11674,7 +11674,7 @@ exports.default = {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('el-carousel', {
     attrs: {
-      "height": "50vh",
+      "height": _vm.visota + 'vh',
       "indicator-position": "outside"
     }
   }, _vm._l((_vm.items), function(item) {

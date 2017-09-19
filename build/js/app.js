@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// ------------------------------------------Navigation on Head--------------------------------------------------
+// ----------------------------------------------------
         var $nav = $('.greedy-nav');
         var $btn = $('.greedy-nav button');
         var $vlinks = $('.greedy-nav .visible-links');
