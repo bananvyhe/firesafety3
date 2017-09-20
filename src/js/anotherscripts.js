@@ -118,4 +118,6 @@ setTimeout(function(){
     //  setTimeout(function(){
     //   $('.adress').css('visibility', 'visible').addClass('slideUpReturn');
     // }, 400);
+
+    
        

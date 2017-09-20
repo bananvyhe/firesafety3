@@ -1,38 +1,44 @@
 <template>
-  <el-carousel :height="visota + 'vh'" indicator-position="outside">
-    <el-carousel-item v-for="item in items">
-        <onediv :class="item.class" ><h3>{{item.title}}<br>{{item.text}}</h3></onediv>
+  <el-carousel :height="changev" indicator-position="outside">
+    <el-carousel-item v-for="item in items" :key='item'>
+        <onediv :class="item.class" ><h3>{{item.title}}<br>{{item.text}}</h3>{{changev}}<br><input type="text" v-model="item.title"></onediv>
     </el-carousel-item>
   </el-carousel>
 </template>
 
 <script>
-   
-  var mq = window.matchMedia('all and (max-width: 700px)');
-  if(mq.matches) {
-      // the width of browser is more then 700px
-      var visota = 20;
+var visota; 
+var handleMatchMedia = function (mediaQuery) {
+  if (mediaQuery.matches) {
+    // если менее 480px или равное, то выполняется код между скобок 
+    visota=20;
+    console.log(visota);
   } else {
-      // the width of browser is less then 700px
-      var visota = 60;
+    // обратное условие, т.е если более 480px
+    visota=60;
+    console.log(visota);
   }
-  export default {
+},
 
-    data: function () {
-      return {
-        visota: visota,
-        items: [
-          { title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' },
-          { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
-          { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' },
-          { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' },
-          { title: 'Посадить дерево4', text: 'какой-нибудь текст5', class: 'fivediv' }  
-        ]
-      }
+mql = window.matchMedia('all and (max-width: 480px)');
+handleMatchMedia(mql);
+mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
+
+export default {
+  data: function () {
+    return {
+      changev: visota + 'vh',
+      items: [
+        { title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' },
+        { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
+        { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' },
+        { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' },
+        { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }  
+      ] 
     }
-    
   }
-  
+}
+
 </script>
 
 <style scoped>

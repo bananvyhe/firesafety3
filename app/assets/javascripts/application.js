@@ -10733,6 +10733,7 @@ setTimeout(function () {
 //   $('.adress').css('visibility', 'visible').addClass('slideUpReturn');
 // }, 400);
 
+
 //# sourceMappingURL=app.js.map
 
 /***/ }),
@@ -11658,24 +11659,29 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 
+var visota;
+var handleMatchMedia = function handleMatchMedia(mediaQuery) {
+  if (mediaQuery.matches) {
+    // если менее 480px или равное, то выполняется код между скобок 
+    visota = 20;
+    console.log(visota);
+  } else {
+    // обратное условие, т.е если более 480px
+    visota = 60;
+    console.log(visota);
+  }
+},
+    mql = window.matchMedia('all and (max-width: 480px)');
+handleMatchMedia(mql);
+mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
 
-var mq = window.matchMedia('all and (max-width: 700px)');
-if (mq.matches) {
-  // the width of browser is more then 700px
-  var visota = 20;
-} else {
-  // the width of browser is less then 700px
-  var visota = 60;
-}
 exports.default = {
-
   data: function data() {
     return {
-      visota: visota,
-      items: [{ title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст5', class: 'fivediv' }]
+      changev: visota + 'vh',
+      items: [{ title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }]
     };
   }
-
 };
 
 /***/ }),
@@ -11686,13 +11692,34 @@ exports.default = {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('el-carousel', {
     attrs: {
-      "height": _vm.visota + 'vh',
+      "height": _vm.changev,
       "indicator-position": "outside"
     }
   }, _vm._l((_vm.items), function(item) {
-    return _c('el-carousel-item', [_c('onediv', {
+    return _c('el-carousel-item', {
+      key: item
+    }, [_c('onediv', {
       class: item.class
-    }, [_c('h3', [_vm._v(_vm._s(item.title)), _c('br'), _vm._v(_vm._s(item.text))])])], 1)
+    }, [_c('h3', [_vm._v(_vm._s(item.title)), _c('br'), _vm._v(_vm._s(item.text))]), _vm._v(_vm._s(_vm.changev)), _c('br'), _c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (item.title),
+        expression: "item.title"
+      }],
+      attrs: {
+        "type": "text"
+      },
+      domProps: {
+        "value": (item.title)
+      },
+      on: {
+        "input": function($event) {
+          if ($event.target.composing) { return; }
+          item.title = $event.target.value
+        }
+      }
+    })])], 1)
   }))
 }
 var staticRenderFns = []
