@@ -11,11 +11,11 @@ let vis = {value: '30'};
     var handleMatchMedia = function (mediaQuery) {
       if (mediaQuery.matches) {
         // если менее 480px или равное, то выполняется код между скобок 
-        vis = {value: '20'};
+        vis.value = '20';
         console.log(vis);
         } else {
         // обратное условие, т.е если более 480px
-        vis = {value: '60'};
+        vis.value = '60';
         console.log(vis);
       }
     },
