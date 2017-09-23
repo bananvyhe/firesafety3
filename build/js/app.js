@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   new _vue2.default({
     el: '#app',
-
     render: function render(h) {
       return h(_app2.default);
     }

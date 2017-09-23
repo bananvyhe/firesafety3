@@ -12,20 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   Vue.component('onediv', {
       template: '<div><slot></slot></div>'
   }) 
-
-
-   
+  
   new Vue({
     el: '#app',
-     
-    
-     
-       
-    
     render: h => h(App)
   })
-  
-
+ 
   new Vue({
     el: '#app1',
     render: h => h(App1)

@@ -1,33 +1,33 @@
 <template>
-  <el-carousel :height="changev" indicator-position="outside">
-    <el-carousel-item v-for="item in items" :key='item'>
-        <onediv :class="item.class" ><h3>{{item.title}}<br>{{item.text}}</h3>{{changev}}<br><input type="text" v-model="item.title"></onediv>
+  <el-carousel v-bind="{height: visota.value + 'vh'}" indicator-position="outside">
+    <el-carousel-item v-for="(item, index) in items" :key='index'>
+        <onediv :class="item.class" ><h3>{{item.title}}<br>{{item.text}}<br></h3>{{visota.value}}<br><input type="text" v-model="item.title"><br><input type="text" v-model="visota.value"></div></onediv>
     </el-carousel-item>
   </el-carousel>
 </template>
 
 <script>
-var visota; 
-var handleMatchMedia = function (mediaQuery) {
-  if (mediaQuery.matches) {
-    // если менее 480px или равное, то выполняется код между скобок 
-    visota=20;
-    console.log(visota);
-  } else {
-    // обратное условие, т.е если более 480px
-    visota=60;
-    console.log(visota);
-  }
-},
-
-mql = window.matchMedia('all and (max-width: 480px)');
-handleMatchMedia(mql);
-mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
+let vis = {value: '30'};
+    var handleMatchMedia = function (mediaQuery) {
+      if (mediaQuery.matches) {
+        // если менее 480px или равное, то выполняется код между скобок 
+        vis = {value: '20'};
+        console.log(vis);
+        } else {
+        // обратное условие, т.е если более 480px
+        vis = {value: '60'};
+        console.log(vis);
+      }
+    },
+        
+    mql = window.matchMedia('all and (max-width: 480px)');
+    handleMatchMedia(mql);
+    mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
 
 export default {
   data: function () {
     return {
-      changev: visota + 'vh',
+      visota: vis,
       items: [
         { title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' },
         { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
@@ -38,12 +38,11 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
-  h3 {
-
+  .changev {
+  
   }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
