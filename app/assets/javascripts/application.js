@@ -10584,10 +10584,6 @@ var _telpanel = __webpack_require__(25);
 
 var _telpanel2 = _interopRequireDefault(_telpanel);
 
-var _app3 = __webpack_require__(30);
-
-var _app4 = _interopRequireDefault(_app3);
-
 var _logoApp = __webpack_require__(35);
 
 var _logoApp2 = _interopRequireDefault(_logoApp);
@@ -10615,13 +10611,6 @@ document.addEventListener('DOMContentLoaded', function () {
     el: '#telpanel',
     render: function render(h) {
       return h(_telpanel2.default);
-    }
-  });
-
-  new _vue2.default({
-    el: '#app1',
-    render: function render(h) {
-      return h(_app4.default);
     }
   });
 
@@ -10733,9 +10722,7 @@ $btn.on('click', function () {
 updateNav();
 
 // ------------------------------------Animations Timeoutes-------------------------- 
-setTimeout(function () {
-  $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-}, 1300);
+
 //setTimeout(function(){
 //   $('.mail').css('visibility', 'visible').addClass('slideUpReturn');
 // }, 400);
@@ -11903,6 +11890,10 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 
+setTimeout(function () {
+  $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
+}, 1300);
+
 exports.default = {
   data: function data() {
     return {};
@@ -11935,145 +11926,11 @@ if (false) {
 }
 
 /***/ }),
-/* 30 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app1_vue__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app1_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b792d7da_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_app1_vue__ = __webpack_require__(34);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(31)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-
-/* template */
-
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-b792d7da"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app1_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b792d7da_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_app1_vue__["a" /* default */],
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "build/js/app1.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] app1.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b792d7da", Component.options)
-  } else {
-    hotAPI.reload("data-v-b792d7da", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
-
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(32);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(1)("654f9d2f", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b792d7da\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app1.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b792d7da\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app1.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\np[data-v-b792d7da] {\n  font-size: 2em;\n  text-align: center;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  data: function data() {
-    return {
-      message: "VUERATOR1"
-    };
-  }
-};
-
-/***/ }),
-/* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', [_vm._v(_vm._s(_vm.message))])
-}
-var staticRenderFns = []
-render._withStripped = true
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-b792d7da", esExports)
-  }
-}
-
-/***/ }),
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
 /* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

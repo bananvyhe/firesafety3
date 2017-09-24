@@ -20,10 +20,6 @@ var _telpanel = require('./telpanel.vue');
 
 var _telpanel2 = _interopRequireDefault(_telpanel);
 
-var _app3 = require('./app1.vue');
-
-var _app4 = _interopRequireDefault(_app3);
-
 var _logoApp = require('./logoApp.vue');
 
 var _logoApp2 = _interopRequireDefault(_logoApp);
@@ -49,13 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
     el: '#telpanel',
     render: function render(h) {
       return h(_telpanel2.default);
-    }
-  });
-
-  new _vue2.default({
-    el: '#app1',
-    render: function render(h) {
-      return h(_app4.default);
     }
   });
 
@@ -177,9 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // ------------------------------------Animations Timeoutes-------------------------- 
-setTimeout(function(){
-      $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-    }, 1300);
+
      //setTimeout(function(){
     //   $('.mail').css('visibility', 'visible').addClass('slideUpReturn');
     // }, 400);

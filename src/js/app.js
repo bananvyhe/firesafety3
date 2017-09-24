@@ -3,7 +3,6 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import App from './app.vue' 
 import Telpanel from './telpanel.vue' 
-import App1 from './app1.vue' 
 import LogoApp from './logoApp.vue'
 
 
@@ -25,11 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     render: h => h(Telpanel)
   })
  
-  new Vue({
-    el: '#app1',
-    render: h => h(App1)
-  })
-
   new Vue({
     el: '#logoApp',
     render: h => h(LogoApp)

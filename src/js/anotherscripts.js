@@ -109,9 +109,7 @@
 
 
 // ------------------------------------Animations Timeoutes-------------------------- 
-setTimeout(function(){
-      $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-    }, 1300);
+
      //setTimeout(function(){
     //   $('.mail').css('visibility', 'visible').addClass('slideUpReturn');
     // }, 400);
