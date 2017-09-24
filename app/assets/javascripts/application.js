@@ -11569,7 +11569,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.fade-enter[data-v-cc1e20e4] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-cc1e20e4] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n.fade-leave[data-v-cc1e20e4] {\n}\n.fade-leave-zctive[data-v-cc1e20e4] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n.changev[data-v-cc1e20e4] {\n}\n.onediv[data-v-cc1e20e4], .twodiv[data-v-cc1e20e4], .threediv[data-v-cc1e20e4], .fourdiv[data-v-cc1e20e4], .fivediv[data-v-cc1e20e4] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n}\n.onediv[data-v-cc1e20e4] {\n   background-position: right bottom;\n  /*filter: blur(4px);*/\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-cc1e20e4] {\n   background-position: right bottom;\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.threediv[data-v-cc1e20e4] {\n  background-position: center bottom;\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-cc1e20e4] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.fivediv[data-v-cc1e20e4] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.el-carousel__item h3[data-v-cc1e20e4] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, "\n.changev[data-v-cc1e20e4] {\n}\n.onediv[data-v-cc1e20e4], .twodiv[data-v-cc1e20e4], .threediv[data-v-cc1e20e4], .fourdiv[data-v-cc1e20e4], .fivediv[data-v-cc1e20e4] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n}\n.onediv[data-v-cc1e20e4] {\n   background-position: right bottom;\n  /*filter: blur(4px);*/\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-cc1e20e4] {\n   background-position: right bottom;\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.threediv[data-v-cc1e20e4] {\n  background-position: center bottom;\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-cc1e20e4] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.fivediv[data-v-cc1e20e4] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.el-carousel__item h3[data-v-cc1e20e4] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-cc1e20e4]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11860,7 +11860,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\ntelpanel[data-v-f0894aa8] {\n  height: 3vh;\n  font-family: \"PTSansNar\"; \n  font-style: regular;\n  font-weight: 400;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row wrap;\n          flex-flow: row wrap;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 99.9%;\n      flex-basis: 99.9%;\n  max-width: 99.9%;\n  width: 99.9%;\n@util border-bottom-radius(0.6em);\n}\ntelpanel[data-v-f0894aa8]:nth-child(1n) {\n@util border-bottom-radius(0.6em);\n  margin-right: 1%;\n  margin-left: 0;\n}\ntelpanel[data-v-f0894aa8]:last-child {\n@util border-bottom-radius(0.6em);\n  margin-right: 0;\n}\ntelpanel[data-v-f0894aa8]:nth-child(1n) {\n@util border-bottom-radius(0.6em);\n  margin-right: 0;\n  margin-left: auto;\n}\ntelpanel div[data-v-f0894aa8] {\n  text-align: center;\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n.tel[data-v-f0894aa8] {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 22.725%;\n      flex-basis: 22.725%;\n  max-width: 22.725%;\n  width: 22.725%;\n  visibility: hidden;\n}\n.tel[data-v-f0894aa8]:nth-child(1n) {\n  margin-right: 3%;\n  margin-left: 0;\n}\n.tel[data-v-f0894aa8]:last-child {\n  margin-right: 0;\n}\n.tel[data-v-f0894aa8]:nth-child(3n) {\n  margin-right: 0;\n  margin-left: auto;\n}\n.adress[data-v-f0894aa8] {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 48.45%;\n      flex-basis: 48.45%;\n  max-width: 48.45%;\n  width: 48.45%;\n}\n.adress[data-v-f0894aa8]:nth-child(1n) {\n  margin-right: 3%;\n  margin-left: 0;\n}\n.adress[data-v-f0894aa8]:last-child {\n  margin-right: 0;\n}\n.adress[data-v-f0894aa8]:nth-child(3n) {\n  margin-right: 0;\n  margin-left: auto;\n}\n.mail[data-v-f0894aa8] {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 22.725%;\n      flex-basis: 22.725%;\n  max-width: 22.725%;\n  width: 22.725%;\n}\n.mail[data-v-f0894aa8]:nth-child(1n) {\n  margin-right: 3%;\n  margin-left: 0;\n}\n.mail[data-v-f0894aa8]:last-child {\n  margin-right: 0;\n}\n.mail[data-v-f0894aa8]:nth-child(3n) {\n  margin-right: 0;\n  margin-left: auto;\n}\n  \n", ""]);
+exports.push([module.i, "\ntelpanel[data-v-f0894aa8] {\n  height: 3vh;\n  font-family: \"PTSansNar\"; \n  font-style: regular;\n  font-weight: 400;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row wrap;\n          flex-flow: row wrap;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 99.9%;\n      flex-basis: 99.9%;\n  max-width: 99.9%;\n  width: 99.9%;\n@util border-bottom-radius(0.6em);\n}\ntelpanel[data-v-f0894aa8]:nth-child(1n) {\n@util border-bottom-radius(0.6em);\n  margin-right: 1%;\n  margin-left: 0;\n}\ntelpanel[data-v-f0894aa8]:last-child {\n@util border-bottom-radius(0.6em);\n  margin-right: 0;\n}\ntelpanel[data-v-f0894aa8]:nth-child(1n) {\n@util border-bottom-radius(0.6em);\n  margin-right: 0;\n  margin-left: auto;\n}\ntelpanel div[data-v-f0894aa8] {\n  text-align: center;\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n.tel[data-v-f0894aa8] {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 22.725%;\n      flex-basis: 22.725%;\n  max-width: 22.725%;\n  width: 22.725%;\n}\n.tel[data-v-f0894aa8]:nth-child(1n) {\n  margin-right: 3%;\n  margin-left: 0;\n}\n.tel[data-v-f0894aa8]:last-child {\n  margin-right: 0;\n}\n.tel[data-v-f0894aa8]:nth-child(3n) {\n  margin-right: 0;\n  margin-left: auto;\n}\n.adress[data-v-f0894aa8] {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 48.45%;\n      flex-basis: 48.45%;\n  max-width: 48.45%;\n  width: 48.45%;\n}\n.adress[data-v-f0894aa8]:nth-child(1n) {\n  margin-right: 3%;\n  margin-left: 0;\n}\n.adress[data-v-f0894aa8]:last-child {\n  margin-right: 0;\n}\n.adress[data-v-f0894aa8]:nth-child(3n) {\n  margin-right: 0;\n  margin-left: auto;\n}\n.mail[data-v-f0894aa8] {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -ms-flex-preferred-size: 22.725%;\n      flex-basis: 22.725%;\n  max-width: 22.725%;\n  width: 22.725%;\n}\n.mail[data-v-f0894aa8]:nth-child(1n) {\n  margin-right: 3%;\n  margin-left: 0;\n}\n.mail[data-v-f0894aa8]:last-child {\n  margin-right: 0;\n}\n.mail[data-v-f0894aa8]:nth-child(3n) {\n  margin-right: 0;\n  margin-left: auto;\n}\n.fade-enter[data-v-f0894aa8] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n}\n.fade-leave[data-v-f0894aa8] {\n}\n.fade-leave-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n  \n", ""]);
 
 // exports
 
@@ -11889,10 +11889,13 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
-setTimeout(function () {
-  $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-}, 1300);
+// setTimeout(function(){
+//       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
+// }, 1300);
 
 exports.default = {
   data: function data() {
@@ -11906,13 +11909,18 @@ exports.default = {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('telpanel', [_c('div', {
+  return _c('telpanel', [_c('transition', {
+    attrs: {
+      "name": "fade",
+      "appear": ""
+    }
+  }, [_c('div', {
     staticClass: "tel"
-  }, [_vm._v("\n    +7 (343)382-24-61\n  ")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n    +7 (343)382-24-61\n  ")])]), _vm._v(" "), _c('div', {
     staticClass: "adress"
   }, [_vm._v("\n    ООО \"ЛИДЕР\", Россия, г. Екатеринбург, ул. Старых Большевиков д.54, 620135\n  ")]), _vm._v(" "), _c('div', {
     staticClass: "mail"
-  }, [_vm._v("\n    lider-1-00@mail.ru\n  ")])])
+  }, [_vm._v("\n    lider-1-00@mail.ru\n  ")])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

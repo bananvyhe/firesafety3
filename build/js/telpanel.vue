@@ -1,8 +1,11 @@
 <template>
   <telpanel>
+  <transition name="fade" appear>
     <div class="tel">
       +7 (343)382-24-61
-    </div>
+    </div>    
+  </transition>
+
     <div class="adress">
       ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков д.54, 620135
     </div>
@@ -13,9 +16,9 @@
 </template>
 
 <script>
-setTimeout(function(){
-      $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-}, 1300);
+// setTimeout(function(){
+//       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
+// }, 1300);
 
 export default {
   data: function () {
@@ -46,7 +49,6 @@ telpanel {
 
 .tel {
   lost-column: 1/4 3 3% flex;
-  visibility: hidden;
 } 
 
 .adress {
@@ -55,6 +57,20 @@ telpanel {
 
 .mail {
   lost-column: 1/4 3 3% flex;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 1s;
+}
+.fade-leave {
+  
+}
+.fade-leave-active {
+  transition: opacity 1s;
+  opacity: 0;
 }
   
 </style>
