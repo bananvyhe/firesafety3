@@ -16,6 +16,10 @@ var _app = require('./app.vue');
 
 var _app2 = _interopRequireDefault(_app);
 
+var _telpanel = require('./telpanel.vue');
+
+var _telpanel2 = _interopRequireDefault(_telpanel);
+
 var _app3 = require('./app1.vue');
 
 var _app4 = _interopRequireDefault(_app3);
@@ -38,6 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
     el: '#app',
     render: function render(h) {
       return h(_app2.default);
+    }
+  });
+
+  new _vue2.default({
+    el: '#telpanel',
+    render: function render(h) {
+      return h(_telpanel2.default);
     }
   });
 

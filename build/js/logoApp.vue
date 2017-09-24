@@ -11,7 +11,6 @@
     z-index: 2;
     $bgsize: 20vh;
     div {
-
       lost-column: 1/4 2; 
       margin-top: -60px; 
       background: svg-load('../../app/assets/images/logo-01-01.svg' );
@@ -22,4 +21,4 @@
     }
 
 }
-</style>W
+</style>

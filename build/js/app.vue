@@ -61,6 +61,20 @@ export default {
 </script>
 
 <style scoped>
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  .fade-leave {
+    
+  }
+  .fade-leave-zctive {
+    transition: opacity 1s;
+    opacity: 0;
+  }
   .changev {
   
   }
