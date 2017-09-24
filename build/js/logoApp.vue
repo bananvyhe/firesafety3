@@ -4,10 +4,11 @@
       <div class="logo">
         
       </div>
-    </div>
-    <div class="brandname">
+      <div class="brandname">
         brandname
+      </div>
     </div>
+    
     <div class="audit">
       sefsef
     </div> 
@@ -17,6 +18,7 @@
 <style scoped>
 
   .logoContainer { position: relative;
+    lost-column: 2/4 2; 
     z-index: 2;
     $bgsizeB: 25vh;
     $bgsize: 20vh;
@@ -25,7 +27,7 @@
     @custom-media --only-big-screen (width >= 1024px);
 
     @media (--only-small-screen) {
-      div {
+      .logo {
         margin-top: -60px; 
         background-size: $bgsizeS auto; 
         height: calc(1.1 * $bgsizeS);  
@@ -33,7 +35,7 @@
     }
 
     @media (--only-big-screen) {
-      div {
+      .logo {
         margin-top: -100px; 
         background-size: $bgsizeB auto; 
         height: calc(1.1 * $bgsizeB);  
@@ -41,7 +43,7 @@
     }
 
     .logo {
-      lost-column: 1/4 3; 
+      lost-column: 1/2 2; 
       margin-top: -85px;
       background: svg-load('../../app/assets/images/logo-01-01.svg' );
       background-size: $bgsize auto;
@@ -52,10 +54,10 @@
   }
   
   .brandname {
-    lost-column: 1/4 3;
+    lost-column: 1/2 2;
   }
   .audit {
-    lost-column: 2/4 3;
+    lost-column: 2/4 2;
   } 
 
 </style>
