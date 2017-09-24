@@ -795,28 +795,7 @@ logo {overflow: visible;
   border-bottom-right-radius: 0.6em;
 }
 
-audit {
-  width: calc(99.9% * 3/4 - (30px - 30px * 3/4));
-}
 
-audit:nth-child(1n) {
-	float: left;
-	margin-right: 30px;
-	clear: none;
-}
-
-audit:last-child {
-	margin-right: 0;
-}
-
-audit:nth-child(2n) {
-	margin-right: 0;
-	float: right;
-}
-
-audit:nth-child(2n + 1) {
-	clear: both;
-}
 
 .up {
   background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);

@@ -34,9 +34,7 @@ logo {overflow: visible;
   @util border-bottom-radius(0.6em);
 }
 
-audit {
-  lost-column: 3/4 2;
-}
+
 
 .up {
   background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);

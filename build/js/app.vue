@@ -14,7 +14,7 @@ let vis = {value: '30'};
 function resize() {
         if (window.matchMedia('only screen and (max-width: 600px)').matches) {
             console.log('under 600 pixels');
-            vis.value = '20';                    
+            vis.value = '25';                    
         } else if (window.matchMedia('only screen and (min-width: 601px) and ' +
                                      '(max-width: 1024px)').matches) {
             console.log('between 601 and 1024 pixels');
