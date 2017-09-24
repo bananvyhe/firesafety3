@@ -1,9 +1,12 @@
 <template>
   <div>
     <div class="logoContainer">
-      <div>
+      <div class="logo">
         
       </div>
+    </div>
+    <div class="brandname">
+        brandname
     </div>
     <div class="audit">
       sefsef
@@ -12,6 +15,7 @@
 </template>
 
 <style scoped>
+
   .logoContainer { position: relative;
     z-index: 2;
     $bgsizeB: 25vh;
@@ -27,7 +31,7 @@
         height: calc(1.1 * $bgsizeS);  
       }
     }
-    
+
     @media (--only-big-screen) {
       div {
         margin-top: -100px; 
@@ -36,8 +40,8 @@
       }
     }
 
-    div {
-      lost-column: 1/4 2; 
+    .logo {
+      lost-column: 1/4 3; 
       margin-top: -85px;
       background: svg-load('../../app/assets/images/logo-01-01.svg' );
       background-size: $bgsize auto;
@@ -46,7 +50,12 @@
       height: calc(1.1 * $bgsize); 
     }
   }
+  
+  .brandname {
+    lost-column: 1/4 3;
+  }
   .audit {
-    lost-column: 3/4 2;
+    lost-column: 2/4 3;
   } 
+
 </style>
