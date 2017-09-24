@@ -6,23 +6,43 @@
   </el-carousel>
 </template>
 
+
+
 <script>
+
 let vis = {value: '30'};
-    var handleMatchMedia = function (mediaQuery) {
-      if (mediaQuery.matches) {
-        // если менее 480px или равное, то выполняется код между скобок 
-        vis.value = '20';
-        console.log(vis);
+function resize() {
+        if (window.matchMedia('only screen and (max-width: 320px)').matches) {
+            console.log('under 320 pixels');
+            vis.value = '20';                    
+        } else if (window.matchMedia('only screen and (min-width: 321px) and ' +
+                                     '(max-width: 1024px)').matches) {
+            console.log('between 320 and 1024 pixels');
+            vis.value = '40';                      
         } else {
-        // обратное условие, т.е если более 480px
-        vis.value = '60';
-        console.log(vis);
-      }
-    },
-        
-    mql = window.matchMedia('all and (max-width: 480px)');
-    handleMatchMedia(mql);
-    mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
+            console.log('higher than 1024 pixels');
+             vis.value = '60';                     
+        }
+    }
+ 
+    window.addEventListener('resize', resize, false);
+    resize();
+    // var handleMatchMedia = function (mediaQuery) {
+    //   if (mediaQuery.matches) {
+    //     // если менее 480px или равное, то выполняется код между скобок 
+    //     vis.value = '30';
+    //     console.log(vis);
+    //     } else {
+    //     // обратное условие, т.е если более 480px
+    //     vis.value = '60';
+    //     console.log(vis);
+    //   }
+    // },
+     
+     
+    // mql = window.matchMedia('all and (max-width: 480px)');
+    // handleMatchMedia(mql);
+    // mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
 
 export default {
   data: function () {
@@ -52,7 +72,7 @@ export default {
   }
   .onediv {
      background-position: right bottom;
-    filter: blur(4px);
+    /*filter: blur(4px);*/
     background-image: url(../../app/assets/images/1.jpg);
   }
   .twodiv {
