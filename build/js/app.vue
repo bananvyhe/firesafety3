@@ -14,10 +14,10 @@ let vis = {value: '30'};
 function resize() {
         if (window.matchMedia('only screen and (max-width: 600px)').matches) {
             console.log('under 600 pixels');
-            vis.value = '25';                    
+            vis.value = '14';                    
         } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
             console.log('between 601 and 1024 pixels');
-            vis.value = '32';                      
+            vis.value = '28';                      
         } else {
             console.log('higher than 1024 pixels');
             vis.value = '55';                     

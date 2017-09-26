@@ -1,17 +1,17 @@
 <template>
-  <telpanel>
-  <transition name="fade" appear>
-    <div class="tel">
-      +7 (343)382-24-61
-    </div>    
-  </transition>
+  <div class="telpanel">
+    <transition name="fade" appear>
+      <div class="tel">
+        +7 (343)382-24-61
+      </div>    
+    </transition>
     <div class="adress">
       ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков д.54, 620135
     </div>
     <div class="mail">
       lider-1-00@mail.ru
     </div>
-  </telpanel>
+  </div>
 </template>
 
 <script>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-telpanel {
+.telpanel {
   height: 4vh;
   font-family: "PTSansNar"; 
   font-style: regular;
