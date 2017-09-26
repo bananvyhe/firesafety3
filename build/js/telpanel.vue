@@ -5,7 +5,6 @@
       +7 (343)382-24-61
     </div>    
   </transition>
-
     <div class="adress">
       ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков д.54, 620135
     </div>
@@ -31,7 +30,7 @@ export default {
 
 <style scoped>
 telpanel {
-  height: 3vh;
+  height: 4vh;
   font-family: "PTSansNar"; 
   font-style: regular;
   font-weight: 400;

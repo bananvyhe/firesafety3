@@ -1,24 +1,26 @@
 <template>
-  <div>
+  <div class="main">
     <div class="logoContainer">
       <div class="logo">
-        
       </div>
       <div class="brandname">
-        brandname
       </div>
     </div>
-    
     <div class="audit">
-      sefsef
+      sefsef<br><br>45453456
     </div> 
   </div>
 </template>
 
 <style scoped>
-
-  .logoContainer { position: relative;
-    lost-column: 2/4 2; 
+  .main {
+    lost-flex-container: row;
+  }
+   
+  .logoContainer {  
+    lost-flex-container: row;
+    position: relative;
+    lost-column: 2/4 2 0 flex; 
     z-index: 2;
     $bgsizeB: 25vh;
     $bgsize: 20vh;
@@ -43,7 +45,7 @@
     }
 
     .logo {
-      lost-column: 1/2 2; 
+      lost-column: 1/2 2 0 flex; 
       margin-top: -85px;
       background: svg-load('../../app/assets/images/logo-01-01.svg' );
       background-size: $bgsize auto;
@@ -51,13 +53,18 @@
       background-repeat: no-repeat;
       height: calc(1.1 * $bgsize); 
     }
+    .brandname { 
+      lost-column: 1/2 2 0 flex;
+      background: svg-load('../../app/assets/images/leader.svg' );
+      background-size: $bgsize auto;
+      background-position:center;
+      background-repeat: no-repeat;
+      height: calc(0.3 * $bgsize); 
+    }
   }
-  
-  .brandname {
-    lost-column: 1/2 2;
-  }
+
   .audit {
-    lost-column: 2/4 2;
+    lost-column: 2/4 2 0 flex;
   } 
 
 </style>

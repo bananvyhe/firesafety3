@@ -82,7 +82,7 @@ a:hover, a:active {
 
 html {
 	font-size: 100%;
-	line-height: 1.5em;
+	line-height: 1.1em;
 }
 .ruler-debug{
 
@@ -95,10 +95,10 @@ html {
   height: 100%;
   z-index: 9900;
   pointer-events: none;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAYCAYAAADd5VyeAAAAFElEQVR42mNgGAWDAQi37T+DzAcAH3ACJR9sUEYAAAAASUVORK5CYII=");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAASCAYAAAB8fn/4AAAAE0lEQVR42mNgGAX4gXDb/jPIfAAfCgIljemuDwAAAABJRU5ErkJggg==");
   background-position: left top;
   background-repeat: repeat;
-  background-size: 4px 24px;}
+  background-size: 4px 18px;}
 
 .precss {
   background: green
