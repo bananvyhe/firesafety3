@@ -17,10 +17,10 @@ function resize() {
             vis.value = '14';                    
         } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
             console.log('between 601 and 1024 pixels');
-            vis.value = '28';                      
+            vis.value = '24';                      
         } else {
             console.log('higher than 1024 pixels');
-            vis.value = '55';                     
+            vis.value = '35';                     
         }
     }
  
