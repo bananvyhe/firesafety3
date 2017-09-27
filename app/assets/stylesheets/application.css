@@ -124,8 +124,7 @@ html {
   position: relative;
 }
  
-body *:not(input):not(textarea):not(select) {
-	background-color: rgba(15, 150, 25, 0.1);
+body {
 }
 
 section {
@@ -249,7 +248,6 @@ noflex:after {
 
 
 noflex div {
-  
 }
 
  
@@ -838,17 +836,19 @@ headmenu ul li {
 
 
 .greedy-nav {
+  text-align: center;
   position: relative;
   font-family: "UbuntuR"; 
   font-style: normal;
   font-weight: 400;
   font-style: bold;
+  background-color: #1d3557;
 }
  
 
 
 .greedy-nav a {
-	height: 3vh;
+	height: 1em;
 	display: block;
 	padding: 20px 30px;
 	color: #FFF;

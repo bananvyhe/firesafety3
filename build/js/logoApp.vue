@@ -20,19 +20,18 @@
 <style scoped>
   .main {
     lost-flex-container: row;
-
   }
    
   .logoContainer { 
     $bgsizeB: 15rem;
     $bgsize: 12rem;
-     $bgsizeSS:2rem;
+    $bgsizeSS:2em;
     $bgsizeS: 3.5em;
     $bgsizeX: 9rem;
     $bgsizeVB: 28rem;
     height: $bgsizeS;   
     lost-flex-container: row;
-    lost-column: 2/4 2 0 flex; 
+    lost-column: 3/7 2 0 flex; 
     z-index: 2;
     align-items: flex-end;
 
@@ -45,9 +44,7 @@
         lost-column: 1/2 2 0 flex;
         div {
           height: 110px;
-
         }
-        
       }
       .brandname {
         padding-bottom: 10px;
@@ -63,22 +60,23 @@
       height: $bgsizeS;  
       lost-column: 3/8 2 0 flex; 
       .logo {
-        lost-column: 3/7 2 0 flex; 
+        lost-column: 3/8 2 0 flex; 
         div {
-          height: 220px;
+          height: 190px;
         }
       }
       .brandname {
-        padding-bottom: 18px;
-        lost-column: 4/7 2 0 flex; 
+        padding-bottom: 16px;
+        lost-column: 5/8 2 0 flex; 
         div {
-          width: 180px;
-          margin-left: -0.9em;
+          height: 45px;
+          width: 240px;
+          margin-left: -0.8em;
         } 
       } 
     }
     .logo { 
-      lost-column: 3/7 2 0 flex; 
+      lost-column: 1/2 2 0 flex; 
       div {
         height: 180px;
         background: svg-load('../../app/assets/images/logo-04-01-01.svg' );
@@ -87,14 +85,14 @@
       }
     }
     .brandname {
-      lost-column: 4/7 2 0 flex;
-      padding-bottom: 12px;
+      lost-column: 1/2 2 0 flex;
+      padding-bottom: 16px;
       div {
         background: svg-load('../../app/assets/images/leader.svg' );
         background-repeat: no-repeat;
-        height: 50px;
+        height: 40px;
         width: 160px;
-        margin-left: -0.5em;
+        margin-left: -0.8em;
       } 
     }
   }
@@ -109,9 +107,8 @@
     @media (--only-small-screen) {
       lost-column: 5/8 2 0 flex; 
       height: $bgsizeSS;   
-       
     }
-    lost-column: 2/4 2 0 flex;
+    lost-column: 4/7 2 0 flex;
   } 
 
 </style>
