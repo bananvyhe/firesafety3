@@ -1,3 +1,8 @@
+.mainmenu {
+  background-color: $color-5;
+  padding: 6px;
+  border-bottom: 5px solid $color-6;
+}
 .greedy-nav {
   text-align: center;
   position: relative;
@@ -5,22 +10,22 @@
   font-style: normal;
   font-weight: 400;
   font-style: bold;
-  background-color: #1d3557;
+  background-color: $color-5;
    
   
   a {
-    height: 1em;
+     
     display: block;
     padding: 20px 30px;
     color: $color-1;
     text-decoration: none;
-    
     &:hover {
       color: $color-3;
     }
   }
   
   button {
+    
     position: absolute;
     height: 100%;
     right: 0;
@@ -30,28 +35,27 @@
     background-color: $color-2;
     color: #fff;
     cursor: pointer;
-    
-    &:hover {
+      &:hover {
       background-color: $color-3;
     }
     
     &::after {
       content: attr(count);
       position: absolute;
-      width: 30px;
-      height: 30px;
+      width: 22px;
+      height: 22px;
       left: -16px;
-      top: 12px;
+      top: 5px;
       text-align: center;
       background-color: $color-3;
       color: #fff;
-      font-size: 14px;
-      line-height: 28px;
+      font-size: 13px;
+      line-height: 22px;
       border-radius: 50%;
-      border: 3px solid #fff;
+      border: 2px solid #fff;
       font-weight: bold;
     }
-    
+  
     &:hover::after {
       transform: scale(1.075);
     }
@@ -85,7 +89,9 @@
   
   .visible-links {
     display: inline-table;
-    
+    :first-child {
+      border-left: 0px;
+    }
     li {
       display: table-cell;
       border-left: 1px solid $color-1; 
@@ -96,10 +102,12 @@
     position: absolute;
     right: 0px;
     top: 100%;
-    
+    padding-top: 12px;
+        margin-right: -6px;
     li {
       display: block;
       border-top: 1px solid $color-1;
+      background-color: $color-5;
     }
   }
   

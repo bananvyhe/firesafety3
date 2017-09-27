@@ -18,15 +18,18 @@
 </template>
 
 <style scoped>
+  $color-6: #b9d6f2;
   .main {
     lost-flex-container: row;
+    background-color: $color-6;
+
   }
    
   .logoContainer { 
     $bgsizeB: 15rem;
     $bgsize: 12rem;
-    $bgsizeSS:2em;
-    $bgsizeS: 3.5em;
+    $bgsizeSS:3.4em;
+    $bgsizeS: 5em;
     $bgsizeX: 9rem;
     $bgsizeVB: 28rem;
     height: $bgsizeS;   
