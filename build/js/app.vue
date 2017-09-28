@@ -20,7 +20,7 @@ function resize() {
             vis.value = '25';                      
         } else {
             console.log('higher than 1024 pixels');
-            vis.value = '30';                     
+            vis.value = '40';                     
         }
     }
  

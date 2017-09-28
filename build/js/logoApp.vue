@@ -18,11 +18,15 @@
 </template>
 
 <style scoped>
-  $color-6: #b9d6f2;
+  
   .main {
+
+    $color-6: #b9d6f2;
     lost-flex-container: row;
     background-color: $color-6;
-
+    background: url('../../app/assets/images/main_06.jpg' );
+    background-repeat: no-repeat;
+    background-color: $color-6;
   }
    
   .logoContainer { 
