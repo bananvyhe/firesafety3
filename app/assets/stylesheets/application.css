@@ -851,7 +851,7 @@ headmenu ul li {
 }
 .greedy-nav a {
 	display: block;
-	padding: 20px 30px;
+	padding: 10px 30px;
 	color: #FFF;
 	text-decoration: none
 }
@@ -914,12 +914,15 @@ headmenu ul li {
 	bottom: -8px;
 }
 .greedy-nav .visible-links {
+	height: 3em;
 	display: inline-table;
 }
 .greedy-nav .visible-links :first-child {
 	border-left: 0px;
 }
 .greedy-nav .visible-links li {
+	vertical-align: middle;
+	line-height: 1.2em;
 	display: table-cell;
 	border-left: 1px solid #FFF;
 }
@@ -934,6 +937,7 @@ headmenu ul li {
 	display: block;
 	border-top: 1px solid #FFF;
 	background-color: #1d3557;
+	padding: 6px;
 }
 .greedy-nav .visible-links li:first-child {
 	font-weight: bold;
