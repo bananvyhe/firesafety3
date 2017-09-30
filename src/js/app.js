@@ -1,10 +1,10 @@
 import Vue from 'vue'  
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-import App from './app.vue' 
+import Sliderapp from './sliderapp.vue' 
 import Telpanel from './telpanel.vue' 
 import LogoApp from './logoApp.vue'
-
+import Mainmenuapp from './mainmenuapp.vue'
 
 Vue.use(ElementUI)
  
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }) 
   
   new Vue({
-    el: '#app',
-    render: h => h(App)
+    el: '#sliderapp',
+    render: h => h(Sliderapp)
   })
 
   new Vue({
@@ -27,5 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: '#logoApp',
     render: h => h(LogoApp)
+  })
+  new Vue({
+    el: '#mainmenuapp',
+    render: h => h(Mainmenuapp)
   })
 })   

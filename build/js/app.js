@@ -12,9 +12,9 @@ var _vue = require('vue');
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _app = require('./app.vue');
+var _sliderapp = require('./sliderapp.vue');
 
-var _app2 = _interopRequireDefault(_app);
+var _sliderapp2 = _interopRequireDefault(_sliderapp);
 
 var _telpanel = require('./telpanel.vue');
 
@@ -23,6 +23,10 @@ var _telpanel2 = _interopRequireDefault(_telpanel);
 var _logoApp = require('./logoApp.vue');
 
 var _logoApp2 = _interopRequireDefault(_logoApp);
+
+var _mainmenuapp = require('./mainmenuapp.vue');
+
+var _mainmenuapp2 = _interopRequireDefault(_mainmenuapp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   new _vue2.default({
-    el: '#app',
+    el: '#sliderapp',
     render: function render(h) {
-      return h(_app2.default);
+      return h(_sliderapp2.default);
     }
   });
 
@@ -54,42 +58,48 @@ document.addEventListener('DOMContentLoaded', function () {
       return h(_logoApp2.default);
     }
   });
+  new _vue2.default({
+    el: '#mainmenuapp',
+    render: function render(h) {
+      return h(_mainmenuapp2.default);
+    }
+  });
 });
  
        
-        window.sr = ScrollReveal();
-        sr.reveal('.grid-item', {
-          reset: true,
-          duration: 600,
-          distance: '150px',
-          origin: 'bottom',
-          rotate: { x: 0, y: 0, z: 0 },
-          scale: 0.95,
-          mobile: true,
-          viewFactor: 0.2,
-          viewOffset: { top: 30, right: 0, bottom: 30, left: 0 },
+        // window.sr = ScrollReveal();
+        // sr.reveal('.grid-item', {
+        //   reset: true,
+        //   duration: 600,
+        //   distance: '150px',
+        //   origin: 'bottom',
+        //   rotate: { x: 0, y: 0, z: 0 },
+        //   scale: 0.95,
+        //   mobile: true,
+        //   viewFactor: 0.2,
+        //   viewOffset: { top: 30, right: 0, bottom: 30, left: 0 },
 
-        });
-        sr.reveal('#JQSecuence', { 
-          reset: true,
-          afterReveal  : function (domEl) {
-            $('#JQSecuence .grid-itemL').each(function(i) {
-              var num = (i % 4) + 1;
-              var neely = 700 * parseInt(i);
-              $(this).delay(neely).queue(function () {
-                $(this).addClass('slide-in-elliptic-left-fwd');
-              });
-            });
+        // });
+        // sr.reveal('#JQSecuence', { 
+        //   reset: true,
+        //   afterReveal  : function (domEl) {
+        //     $('#JQSecuence .grid-itemL').each(function(i) {
+        //       var num = (i % 4) + 1;
+        //       var neely = 700 * parseInt(i);
+        //       $(this).delay(neely).queue(function () {
+        //         $(this).addClass('slide-in-elliptic-left-fwd');
+        //       });
+        //     });
 
-            $('#JQSecuence .grid-itemR').each(function(i) {
-              var num = (i % 4) + 1;
-              var neely = 700 * parseInt(i)+350;
-              $(this).delay(neely).queue(function () {
-                $(this).addClass('slide-in-elliptic-right-fwd');
-              });
-            });
-          }
-        }); 
+        //     $('#JQSecuence .grid-itemR').each(function(i) {
+        //       var num = (i % 4) + 1;
+        //       var neely = 700 * parseInt(i)+350;
+        //       $(this).delay(neely).queue(function () {
+        //         $(this).addClass('slide-in-elliptic-right-fwd');
+        //       });
+        //     });
+        //   }
+        // }); 
        
 
 
