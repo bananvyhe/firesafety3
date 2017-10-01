@@ -12194,18 +12194,17 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
-//
 
 // setTimeout(function(){
 //       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
 // }, 1300);
 
+
 exports.default = {
   data: function data() {
-    return {};
+    return {
+      menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', url: '' }, { title: 'контроль доступа', url: '' }]
+    };
   }
 };
 
@@ -12215,40 +12214,26 @@ exports.default = {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "mainmenu"
   }, [_c('nav', {
     staticClass: "greedy-nav font3"
-  }, [_c('button', [_c('div', {
-    staticClass: "hamburger"
-  })]), _vm._v(" "), _c('ul', {
-    staticClass: "visible-links"
-  }, [_c('li', [_c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("ГЛАВНАЯ")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("О НАС")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("ПРОТИВОПОЖАРНЫЕ СИСТЕМЫ")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("ВИДЕОНАБЛЮДЕНИЕ")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("КОНТРОЛЬ ДОСТУПА")])])]), _vm._v(" "), _c('ul', {
+  }, [_vm._m(0), _vm._v(" "), _vm._l((_vm.menuitems), function(menuitem) {
+    return _c('ul', {
+      staticClass: "visible-links"
+    }, [_c('li', [_c('a', {
+      attrs: {
+        "href": ""
+      }
+    }, [_vm._v(_vm._s(menuitem.title.toUpperCase()))])])])
+  }), _vm._v(" "), _c('ul', {
     staticClass: "hidden-links hidden"
-  })])])
+  })], 2)])
+}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('button', [_c('div', {
+    staticClass: "hamburger"
+  })])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }

@@ -2,12 +2,8 @@
   <div class="mainmenu">
     <nav class='greedy-nav font3'>
       <button><div class="hamburger"></div></button>
-      <ul class='visible-links'>
-        <li><a href="">ГЛАВНАЯ</a></li>
-        <li><a href="">О НАС</a></li>
-        <li><a href="">ПРОТИВОПОЖАРНЫЕ СИСТЕМЫ</a></li>
-        <li><a href="">ВИДЕОНАБЛЮДЕНИЕ</a></li>
-        <li><a href="">КОНТРОЛЬ ДОСТУПА</a>
+      <ul v-for="menuitem in menuitems" class='visible-links'>
+        <li><a href="">{{menuitem.title.toUpperCase()}}</a></li>
         </li>
       </ul>
       <ul class='hidden-links hidden'></ul>
@@ -20,10 +16,18 @@
 //       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
 // }, 1300);
 
+
+
 export default {
   data: function () {
     return {
-      
+      menuitems: [
+        { title: 'главная', url: ''},
+        { title: 'о нас', url: ''},
+        { title: 'противопожарные системы', url: ''},
+        { title: 'видеонаблюдение', url: ''},
+        { title: 'контроль доступа', url: ''},
+      ]
     }
   }
 }

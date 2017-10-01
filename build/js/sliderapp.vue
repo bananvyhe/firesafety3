@@ -10,22 +10,22 @@
 
 <script>
 
-let vis = {value: '30'};
-function resize() {
-        if (window.matchMedia('only screen and (max-width: 600px)').matches) {
-            console.log('under 600 pixels');
-            vis.value = '14';                    
-        } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
-            console.log('between 601 and 1024 pixels');
-            vis.value = '25';                      
-        } else {
-            console.log('higher than 1024 pixels');
-            vis.value = '40';                     
-        }
+  let vis = {value: '30'};
+  function resize() {
+    if (window.matchMedia('only screen and (max-width: 600px)').matches) {
+        console.log('under 600 pixels');
+        vis.value = '14';                    
+    } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
+        console.log('between 601 and 1024 pixels');
+        vis.value = '25';                      
+    } else {
+        console.log('higher than 1024 pixels');
+        vis.value = '40';                     
     }
- 
-    window.addEventListener('resize', resize, false);
-    resize();
+  }
+
+  window.addEventListener('resize', resize, false);
+  resize();
     // var handleMatchMedia = function (mediaQuery) {
     //   if (mediaQuery.matches) {
     //     // если менее 480px или равное, то выполняется код между скобок 
@@ -43,20 +43,20 @@ function resize() {
     // handleMatchMedia(mql);
     // mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
 
-export default {
-  data: function () {
-    return {
-      visota: vis,
-      items: [
-        { title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' },
-        { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
-        { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' },
-        { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' },
-        { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }  
-      ] 
+  export default {
+    data: function () {
+      return {
+        visota: vis,
+        items: [
+          { title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' },
+          { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
+          { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' },
+          { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' },
+          { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }  
+        ] 
+      }
     }
   }
-}
 </script>
 
 <style scoped>
@@ -67,6 +67,7 @@ export default {
     height: 100%;
     background-repeat:no-repeat;
     background-size: cover;
+    
    
   }
   .onediv {
