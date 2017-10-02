@@ -22,8 +22,7 @@ let vlinks = {value:  ''};
 function resize () {
   let nav = document.querySelector(".greedy-nav");
   let btn = document.querySelector(".greedy-nav button");
-  vlinks = document.querySelector(".greedy-nav .visible-links");
-
+  
   window.onresize = function(event) {
     // вычисляет ширину главного меню от краев браузера в пикселах
     menuwidth.value = nav.offsetWidth;
@@ -44,7 +43,7 @@ export default {
     return {
       nav: menuwidth,
       availableSpace: availableSpace,
-      vlinks: vlinks,
+      vlinks: '',
       menuitems: [
         { title: 'главная', url: ''},
         { title: 'о нас', url: ''},
@@ -59,16 +58,20 @@ export default {
   computed: {
     num: {
       get: function () {
+        this.vlinks = document.querySelector(".greedy-nav .visible-links");
+        this.vlinks.value = this.vlinks.offsetWidth;
         // если длина меню с видимыми пунктами больше значения доступного пространства   
         if (this.vlinks.value > this.availableSpace.value) { 
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
         // удаляем последний пункт из массива с отображаемыми пунктами меню
         this.menuitems.pop(); 
-        
-        return this.menuitemsHide
+        } else { 
+          // аналогично трансфер значений из массива в массив обратно 
+          this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
+          this.menuitemsHide.pop(); 
         };
-
+        return this.menuitemsHide
         console.log('breaks');
       }
     }
