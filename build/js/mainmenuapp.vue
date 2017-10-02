@@ -1,5 +1,5 @@
 <template>
-  <div class="mainmenu"><div>menuwidth: {{nav.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br></div>
+  <div class="mainmenu"><div>menuwidth: {{nav.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>breaks: {{num}}</div>
     <nav class='greedy-nav font3'>
       <button><div class="hamburger"></div></button>
       <ul class='visible-links'>
@@ -19,18 +19,24 @@ let hlinks = document.querySelector(".greedy-nav .hidden-links");
 let menuwidth = {value:  ''};
 let availableSpace = {value:  ''};
 let vlinks = {value:  ''};
-
+ 
 function resize () {
   let nav = document.querySelector(".greedy-nav");
   let btn = document.querySelector(".greedy-nav button");
   vlinks = document.querySelector(".greedy-nav .visible-links");
+
   window.onresize = function(event) {
+    
     // вычисляет ширину главного меню от краев браузера в пикселах
     menuwidth.value = nav.offsetWidth;
     // вычисляет ширину списка видимых пунктов
     vlinks.value = vlinks.offsetWidth;
+
     // вычисляет свободное место для пунктов без учета кнопки в пикселях
     availableSpace.value = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
+
+     
+     
     console.log(menuwidth.value);
     console.log(availableSpace.value);
     console.log(vlinks.value);
@@ -44,8 +50,9 @@ export default {
       nav: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
-      //массив для хранения длины "вырезанных" пунктов меню, находящимихя первыми в списке массива и для получение из индекса кол-во видимых пунктов
-      breaks: [],
+       
+      //массив для хранения длины "вырезанных" пунктов меню, находящимихя первыми в списке массива и для получения из индекса кол-во видимых пунктов
+      
       menuitems: [
         { title: 'главная', url: ''},
         { title: 'о нас', url: ''},
@@ -55,12 +62,16 @@ export default {
       ]
     }
   },
-  methods: {
-    created: {
-      
+  computed: {
+    num: {
+      get: function () {
+        if(this.vlinks.value > this.availableSpace.value) { 
+        return this.nav
+        };
+        console.log('breaks');
+      }
     }
   }
-  
 }
 
 // setTimeout(function(){

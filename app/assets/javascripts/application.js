@@ -12204,13 +12204,17 @@ function resize() {
   var nav = document.querySelector(".greedy-nav");
   var btn = document.querySelector(".greedy-nav button");
   vlinks = document.querySelector(".greedy-nav .visible-links");
+
   window.onresize = function (event) {
+
     // вычисляет ширину главного меню от краев браузера в пикселах
     menuwidth.value = nav.offsetWidth;
     // вычисляет ширину списка видимых пунктов
     vlinks.value = vlinks.offsetWidth;
+
     // вычисляет свободное место для пунктов без учета кнопки в пикселях
     availableSpace.value = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
+
     console.log(menuwidth.value);
     console.log(availableSpace.value);
     console.log(vlinks.value);
@@ -12224,13 +12228,21 @@ exports.default = {
       nav: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
-      //массив для хранения длины "вырезанных" пунктов меню, находящимихя первыми в списке массива и для получение из индекса кол-во видимых пунктов
-      breaks: [],
+
+      //массив для хранения длины "вырезанных" пунктов меню, находящимихя первыми в списке массива и для получения из индекса кол-во видимых пунктов
+
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', url: '' }, { title: 'контроль доступа', url: '' }]
     };
   },
-  methods: {
-    created: {}
+  computed: {
+    num: {
+      get: function get() {
+        if (this.vlinks.value > this.availableSpace.value) {
+          return this.nav;
+        };
+        console.log('breaks');
+      }
+    }
   }
 
   // setTimeout(function(){
@@ -12295,7 +12307,7 @@ exports.default = {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "mainmenu"
-  }, [_c('div', [_vm._v("menuwidth: " + _vm._s(_vm.nav.value)), _c('br'), _vm._v("av space: " + _vm._s(_vm.availableSpace.value)), _c('br'), _vm._v("vlink: " + _vm._s(_vm.vlinks.value)), _c('br')]), _vm._v(" "), _c('nav', {
+  }, [_c('div', [_vm._v("menuwidth: " + _vm._s(_vm.nav.value)), _c('br'), _vm._v("av space: " + _vm._s(_vm.availableSpace.value)), _c('br'), _vm._v("vlink: " + _vm._s(_vm.vlinks.value)), _c('br'), _vm._v("breaks: " + _vm._s(_vm.num))]), _vm._v(" "), _c('nav', {
     staticClass: "greedy-nav font3"
   }, [_vm._m(0), _vm._v(" "), _c('ul', {
     staticClass: "visible-links"
