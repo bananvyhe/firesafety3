@@ -1,9 +1,9 @@
 <template>
-  <div class="mainmenu">
+  <div class="mainmenu"><div>{{nav.value}}</div>
     <nav class='greedy-nav font3'>
       <button><div class="hamburger"></div></button>
-      <ul v-for="menuitem in menuitems" class='visible-links'>
-        <li><a href="">{{menuitem.title.toUpperCase()}}</a></li>
+      <ul class='visible-links'>
+        <li v-for="menuitem in menuitems" ><a href="">{{menuitem.title.toUpperCase()}}</a></li>
         </li>
       </ul>
       <ul class='hidden-links hidden'></ul>
@@ -12,15 +12,26 @@
 </template>
 
 <script>
-// setTimeout(function(){
-//       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-// }, 1300);
+let btn = document.querySelector(".greedy-nav button");
+let vlinks = document.querySelector(".greedy-nav .visible-links");
+let hlinks = document.querySelector(".greedy-nav .hidden-links");
+let breaks = [];
+let menuwidth = {value:  '30'};
+function resize () {
+        let nav = document.querySelector(".greedy-nav");
 
+        window.onresize = function(event) {
+          menuwidth.value = nav.offsetWidth;
+          console.log(menuwidth.value);
 
+        };
+      } 
+      resize();
 
 export default {
   data: function () {
     return {
+      nav: menuwidth,
       menuitems: [
         { title: 'главная', url: ''},
         { title: 'о нас', url: ''},
@@ -29,8 +40,68 @@ export default {
         { title: 'контроль доступа', url: ''},
       ]
     }
+  },
+  methods: {
+    created: {
+      
+    }
   }
+  
 }
+
+// setTimeout(function(){
+//       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
+// }, 1300);
+
+//console.log(btn);
+// function updateNav() {
+//   let availableSpace = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
+// console.log(availableSpace);
+
+// // The visible list is overflowing the nav
+// if(vlinks.offsetWidth > availableSpace) {
+
+//   // Record the width of the list
+//   breaks.push(vlinks.offsetWidth);
+
+//   // Move item to the hidden list
+//   vlinks.insertBefore(hlinks, parent.firstChild);
+
+//   // Show the dropdown btn
+//   if(btn.classList.contains('hidden')) {
+//     btn.remove('hidden');
+//   }
+
+// // The visible list is not overflowing
+// } else {
+
+//   // There is space for another item in the nav
+//   if(availableSpace > breaks[breaks.length-1]) {
+
+//     // Move the item to the visible list
+//     hlinks.children().first().appendTo(vlinks);
+//     breaks.pop();
+//   }
+
+//   // Hide the dropdown btn if hidden list is empty
+//   if(breaks.length < 1) {
+//     btn.classList.add('hidden');
+//     hlinks.classList.add('hidden');
+//   }
+// } 
+
+//   // Keep counter updated
+//   btn.setAttribute("count", breaks.length);
+
+//   // Recur if the visible list is still overflowing the nav
+//   if(vlinks.width > availableSpace) {
+//     updateNav();
+//   }
+
+// }
+// updateNav(); 
+
+
 </script>
 
 <style scoped>
