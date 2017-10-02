@@ -12192,23 +12192,28 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 
-var vlinks = document.querySelector(".greedy-nav .visible-links");
+
 var hlinks = document.querySelector(".greedy-nav .hidden-links");
-//массив для хранения длины "вырезанных" пунктов меню, находящимихя первыми в списке массива и для получение из индекса кол-во видимых пунктов
-var breaks = [];
+
 // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
-var menuwidth = { value: '30' };
-var availableSpace = { value: '30' };
-// вычисляет ширину главного меню в пикселах
+var menuwidth = { value: '' };
+var availableSpace = { value: '' };
+var vlinks = { value: '' };
+
 function resize() {
   var nav = document.querySelector(".greedy-nav");
   var btn = document.querySelector(".greedy-nav button");
-
+  vlinks = document.querySelector(".greedy-nav .visible-links");
   window.onresize = function (event) {
+    // вычисляет ширину главного меню от краев браузера в пикселах
     menuwidth.value = nav.offsetWidth;
+    // вычисляет ширину списка видимых пунктов
+    vlinks.value = vlinks.offsetWidth;
+    // вычисляет свободное место для пунктов без учета кнопки в пикселях
     availableSpace.value = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
     console.log(menuwidth.value);
     console.log(availableSpace.value);
+    console.log(vlinks.value);
   };
 }
 resize();
@@ -12218,6 +12223,9 @@ exports.default = {
     return {
       nav: menuwidth,
       availableSpace: availableSpace,
+      vlinks: vlinks,
+      //массив для хранения длины "вырезанных" пунктов меню, находящимихя первыми в списке массива и для получение из индекса кол-во видимых пунктов
+      breaks: [],
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', url: '' }, { title: 'контроль доступа', url: '' }]
     };
   },
@@ -12287,7 +12295,7 @@ exports.default = {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "mainmenu"
-  }, [_c('div', [_vm._v(_vm._s(_vm.nav.value)), _c('br'), _vm._v(_vm._s(_vm.availableSpace.value))]), _vm._v(" "), _c('nav', {
+  }, [_c('div', [_vm._v("menuwidth: " + _vm._s(_vm.nav.value)), _c('br'), _vm._v("av space: " + _vm._s(_vm.availableSpace.value)), _c('br'), _vm._v("vlink: " + _vm._s(_vm.vlinks.value)), _c('br')]), _vm._v(" "), _c('nav', {
     staticClass: "greedy-nav font3"
   }, [_vm._m(0), _vm._v(" "), _c('ul', {
     staticClass: "visible-links"
