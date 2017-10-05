@@ -3,7 +3,7 @@
     <nav class='greedy-nav font3'>
       <button><div class="hamburger"></div></button>
       <ul class='visible-links'>
-        <li v-for="menuitem in menuitems" ><a href="">{{menuitem.title.toUpperCase()}}</a></li>
+        <li v-for="menuitem in menuitems" ><a href=""><nobr>{{menuitem.title.toUpperCase()}}</nobr></a></li>
         </li>
       </ul>
       <ul class='hidden-links hidden'></ul>
@@ -45,6 +45,7 @@ export default {
         let btn = document.querySelector(".greedy-nav button");
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
         let menuwidth1 = document.querySelector(".greedy-nav");
+
         vlinks.value = vlinks1.offsetWidth;
         menuwidth.value = menuwidth1.offsetWidth;
         availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
@@ -55,7 +56,7 @@ export default {
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
         // удаляем последний пункт из массива с отображаемыми пунктами меню
         this.menuitems.pop(); 
-      } else if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0) { 
+      } else if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 250) { 
         // аналогично трансфер значений из массива в массив обратно 
         this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
         this.menuitemsHide.pop(); 
@@ -212,7 +213,7 @@ export default {
   }
   
   .visible-links {
-    height: 3em;
+    
     display: inline-table;
     :first-child {
       border-left: 0px;
