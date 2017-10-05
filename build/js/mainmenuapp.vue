@@ -1,5 +1,5 @@
 <template>
-  <div class="mainmenu"><div>menuwidth: {{nav.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>breaks: {{num}}</div>
+  <div class="mainmenu"><div>menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>breaks: {{num}}</div>
     <nav class='greedy-nav font3'>
       <button><div class="hamburger"></div></button>
       <ul class='visible-links'>
@@ -13,37 +13,20 @@
 
 <script>
 
-let hlinks = document.querySelector(".greedy-nav .hidden-links");
+
 // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
 let menuwidth = {value:  ''};
 let availableSpace = {value:  ''};
 let vlinks = {value:  ''};
  
-function resize () {
-  let nav = document.querySelector(".greedy-nav");
-  let btn = document.querySelector(".greedy-nav button");
-  
-  window.onresize = function(event) {
-    // вычисляет ширину главного меню от краев браузера в пикселах
-    menuwidth.value = nav.offsetWidth;
-    // вычисляет ширину списка видимых пунктов
-    vlinks.value = vlinks.offsetWidth;
-    // вычисляет свободное место для пунктов без учета кнопки в пикселях
-    availableSpace.value = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
-    
-    console.log(menuwidth.value);
-    console.log(availableSpace.value);
-    console.log(vlinks.value);
-  };
-} 
-resize();
+ 
 
 export default {
   data: function () {
     return {
-      nav: menuwidth,
+      menuwidth: menuwidth,
       availableSpace: availableSpace,
-      vlinks: '',
+      vlinks: vlinks,
       menuitems: [
         { title: 'главная', url: ''},
         { title: 'о нас', url: ''},
@@ -56,24 +39,32 @@ export default {
   },
 
   computed: {
-    num: {
-      get: function () {
-        this.vlinks = document.querySelector(".greedy-nav .visible-links");
-        this.vlinks.value = this.vlinks.offsetWidth;
-        // если длина меню с видимыми пунктами больше значения доступного пространства   
-        if (this.vlinks.value > this.availableSpace.value) { 
+    num:  function () {
+      window.onresize = function(event) {
+        let hlinks = document.querySelector(".greedy-nav .hidden-links");
+        let btn = document.querySelector(".greedy-nav button");
+        let vlinks1 = document.querySelector(".greedy-nav .visible-links");
+        let menuwidth1 = document.querySelector(".greedy-nav");
+        vlinks.value = vlinks1.offsetWidth;
+        menuwidth.value = menuwidth1.offsetWidth;
+        availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
+      }
+      // если длина меню с видимыми пунктами больше значения доступного пространства   
+      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1) { 
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
         // удаляем последний пункт из массива с отображаемыми пунктами меню
         this.menuitems.pop(); 
-        } else { 
-          // аналогично трансфер значений из массива в массив обратно 
-          this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
-          this.menuitemsHide.pop(); 
-        };
-        return this.menuitemsHide
-        console.log('breaks');
-      }
+      } else if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0) { 
+        // аналогично трансфер значений из массива в массив обратно 
+        this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
+        this.menuitemsHide.pop(); 
+      } else {
+        console.log('wide');
+      };
+      return this.menuitemsHide
+      console.log('breaks');
+      
     }
   }
 }

@@ -12193,61 +12193,48 @@ Object.defineProperty(exports, "__esModule", {
 //
 
 
-var hlinks = document.querySelector(".greedy-nav .hidden-links");
 // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
 var menuwidth = { value: '' };
 var availableSpace = { value: '' };
 var vlinks = { value: '' };
 
-function resize() {
-  var nav = document.querySelector(".greedy-nav");
-  var btn = document.querySelector(".greedy-nav button");
-
-  window.onresize = function (event) {
-    // вычисляет ширину главного меню от краев браузера в пикселах
-    menuwidth.value = nav.offsetWidth;
-    // вычисляет ширину списка видимых пунктов
-    vlinks.value = vlinks.offsetWidth;
-    // вычисляет свободное место для пунктов без учета кнопки в пикселях
-    availableSpace.value = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
-
-    console.log(menuwidth.value);
-    console.log(availableSpace.value);
-    console.log(vlinks.value);
-  };
-}
-resize();
-
 exports.default = {
   data: function data() {
     return {
-      nav: menuwidth,
+      menuwidth: menuwidth,
       availableSpace: availableSpace,
-      vlinks: '',
+      vlinks: vlinks,
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', url: '' }, { title: 'контроль доступа', url: '' }],
       menuitemsHide: []
     };
   },
 
   computed: {
-    num: {
-      get: function get() {
-        this.vlinks = document.querySelector(".greedy-nav .visible-links");
-        this.vlinks.value = this.vlinks.offsetWidth;
-        // если длина меню с видимыми пунктами больше значения доступного пространства   
-        if (this.vlinks.value > this.availableSpace.value) {
-          // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
-          this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
-          // удаляем последний пункт из массива с отображаемыми пунктами меню
-          this.menuitems.pop();
-        } else {
-          // аналогично трансфер значений из массива в массив обратно 
-          this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
-          this.menuitemsHide.pop();
-        };
-        return this.menuitemsHide;
-        console.log('breaks');
-      }
+    num: function num() {
+      window.onresize = function (event) {
+        var hlinks = document.querySelector(".greedy-nav .hidden-links");
+        var btn = document.querySelector(".greedy-nav button");
+        var vlinks1 = document.querySelector(".greedy-nav .visible-links");
+        var menuwidth1 = document.querySelector(".greedy-nav");
+        vlinks.value = vlinks1.offsetWidth;
+        menuwidth.value = menuwidth1.offsetWidth;
+        availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
+      };
+      // если длина меню с видимыми пунктами больше значения доступного пространства   
+      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1) {
+        // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
+        this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
+        // удаляем последний пункт из массива с отображаемыми пунктами меню
+        this.menuitems.pop();
+      } else if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0) {
+        // аналогично трансфер значений из массива в массив обратно 
+        this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
+        this.menuitemsHide.pop();
+      } else {
+        console.log('wide');
+      };
+      return this.menuitemsHide;
+      console.log('breaks');
     }
   }
 
@@ -12313,7 +12300,7 @@ exports.default = {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "mainmenu"
-  }, [_c('div', [_vm._v("menuwidth: " + _vm._s(_vm.nav.value)), _c('br'), _vm._v("av space: " + _vm._s(_vm.availableSpace.value)), _c('br'), _vm._v("vlink: " + _vm._s(_vm.vlinks.value)), _c('br'), _vm._v("breaks: " + _vm._s(_vm.num))]), _vm._v(" "), _c('nav', {
+  }, [_c('div', [_vm._v("menuwidth: " + _vm._s(_vm.menuwidth.value)), _c('br'), _vm._v("av space: " + _vm._s(_vm.availableSpace.value)), _c('br'), _vm._v("vlink: " + _vm._s(_vm.vlinks.value)), _c('br'), _vm._v("breaks: " + _vm._s(_vm.num))]), _vm._v(" "), _c('nav', {
     staticClass: "greedy-nav font3"
   }, [_vm._m(0), _vm._v(" "), _c('ul', {
     staticClass: "visible-links"
