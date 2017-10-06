@@ -12211,6 +12211,16 @@ exports.default = {
 
   computed: {
     num: function num() {
+
+      var hlinks = document.querySelector(".greedy-nav .hidden-links");
+      var btn = document.querySelector(".greedy-nav button");
+      var vlinks1 = document.querySelector(".greedy-nav .visible-links");
+      var menuwidth1 = document.querySelector(".greedy-nav");
+
+      vlinks.value = vlinks1.offsetWidth;
+      menuwidth.value = menuwidth1.offsetWidth;
+      availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
+
       window.onresize = function (event) {
         var hlinks = document.querySelector(".greedy-nav .hidden-links");
         var btn = document.querySelector(".greedy-nav button");
@@ -12222,7 +12232,7 @@ exports.default = {
         availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
       };
       // если длина меню с видимыми пунктами больше значения доступного пространства   
-      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1) {
+      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1 && this.vlinks.value - this.availableSpace.value > 80) {
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
         // удаляем последний пункт из массива с отображаемыми пунктами меню

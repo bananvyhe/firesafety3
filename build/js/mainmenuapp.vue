@@ -40,18 +40,28 @@ export default {
 
   computed: {
     num:  function () {
-      window.onresize = function(event) {
-        let hlinks = document.querySelector(".greedy-nav .hidden-links");
-        let btn = document.querySelector(".greedy-nav button");
-        let vlinks1 = document.querySelector(".greedy-nav .visible-links");
-        let menuwidth1 = document.querySelector(".greedy-nav");
+       
+      let hlinks = document.querySelector(".greedy-nav .hidden-links");
+      let btn = document.querySelector(".greedy-nav button");
+      let vlinks1 = document.querySelector(".greedy-nav .visible-links");
+      let menuwidth1 = document.querySelector(".greedy-nav");
 
-        vlinks.value = vlinks1.offsetWidth;
-        menuwidth.value = menuwidth1.offsetWidth;
-        availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
+      vlinks.value = vlinks1.offsetWidth;
+      menuwidth.value = menuwidth1.offsetWidth;
+      availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
+     
+      window.onresize = function(event) {
+         let hlinks = document.querySelector(".greedy-nav .hidden-links");
+      let btn = document.querySelector(".greedy-nav button");
+      let vlinks1 = document.querySelector(".greedy-nav .visible-links");
+      let menuwidth1 = document.querySelector(".greedy-nav");
+
+      vlinks.value = vlinks1.offsetWidth;
+      menuwidth.value = menuwidth1.offsetWidth;
+      availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
       }
       // если длина меню с видимыми пунктами больше значения доступного пространства   
-      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1) { 
+      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 80) { 
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
         // удаляем последний пункт из массива с отображаемыми пунктами меню
