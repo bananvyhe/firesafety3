@@ -12305,7 +12305,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.mainmenu[data-v-2cf218f6] {\n  background-color: $color-5;\n  padding: 6px;\n  border-bottom: 5px solid $color-6;\n}\n.greedy-nav[data-v-2cf218f6] {\n  text-align: center;\n  position: relative;\n  font-family: \"UbuntuR\"; \n  font-style: normal;\n  font-weight: 400;\n  font-style: bold;\n  background-color: $color-5;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after {\n  bottom: -8px;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before {\n  top: -8px;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after {\n  -webkit-transform: scale(1.075);\n          transform: scale(1.075);\n}\n.greedy-nav button[data-v-2cf218f6]::after {\n  content: attr(count);\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  left: -16px;\n  top: 5px;\n  text-align: center;\n  background-color: $color-3;\n  color: #fff;\n  font-size: 13px;\n  line-height: 22px;\n  border-radius: 50%;\n  border: 2px solid #fff;\n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] {\n  display: block;\n  padding: 10px 30px;\n  color: $color-1;\n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover {\n  color: $color-3;\n}\n.greedy-nav button[data-v-2cf218f6] {\n  position: absolute;\n  height: 100%;\n  right: 0;\n  padding: 0 15px;\n  border: 0;\n  outline: none;\n  background-color: $color-2;\n  color: #fff;\n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover {\n  background-color: $color-3;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] {\n  position: relative;\n  width: 32px;\n  height: 4px;\n  background: #fff;\n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  width: 32px;\n  height: 4px;\n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] {\n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child {\n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] {\n  vertical-align: middle;\n  line-height: 1.2em;\n  display: table-cell;\n  border-left: 1px solid $color-1;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] {\n  position: absolute;\n  right: 0px;\n  top: 100%;\n  padding-top: 12px;\n  margin-right: -6px;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] {\n  display: block;\n  border-top: 1px solid $color-1;\n  background-color: $color-5;\n  padding: 6px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child {\n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] {\n  color: $color-1 !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] {\n  visibility: hidden;\n}\n", ""]);
+exports.push([module.i, "\n.mainmenu[data-v-2cf218f6] {\n  background-color: $color-5;\n  padding: 6px;\n  border-bottom: 5px solid $color-6;\n}\n.greedy-nav[data-v-2cf218f6] { \n  background-color: #ada;\n  text-align: center;\n  position: relative;\n  font-family: \"UbuntuR\"; \n  font-style: normal;\n  font-weight: 400;\n  font-style: bold;\n  background-color: $color-5;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after {\n  bottom: -8px;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before {\n  top: -8px;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after {\n  -webkit-transform: scale(1.075);\n          transform: scale(1.075);\n}\n.greedy-nav button[data-v-2cf218f6]::after {\n  content: attr(count);\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  left: -16px;\n  top: 5px;\n  text-align: center;\n  background-color: $color-3;\n  color: #fff;\n  font-size: 13px;\n  line-height: 22px;\n  border-radius: 50%;\n  border: 2px solid #fff;\n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] {\n  display: block;\n  padding: 10px 30px;\n  color: $color-1;\n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover {\n  color: $color-3;\n}\n.greedy-nav button[data-v-2cf218f6] {\n  position: absolute;\n  height: 100%;\n  right: 0;\n  padding: 0 15px;\n  border: 0;\n  outline: none;\n  background-color: $color-2;\n  color: #fff;\n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover {\n  background-color: $color-3;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] {\n  position: relative;\n  width: 32px;\n  height: 4px;\n  background: #fff;\n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  width: 32px;\n  height: 4px;\n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] {\n  background-color: #dad;\n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child {\n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] {\n  vertical-align: middle;\n  line-height: 1.2em;\n  display: table-cell;\n  border-left: 1px solid $color-1;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] {\n  position: absolute;\n  right: 0px;\n  top: 100%;\n  padding-top: 12px;\n  margin-right: -6px;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] {\n  display: block;\n  border-top: 1px solid $color-1;\n  background-color: $color-5;\n  padding: 6px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child {\n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] {\n  color: $color-1 !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] {\n  visibility: hidden;\n}\n", ""]);
 
 // exports
 
@@ -12352,8 +12352,8 @@ exports.default = {
 
   computed: {
     numHide: function numHide() {
-      // если длина меню с видимыми пунктами больше значения доступного пространства   
-      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1 && this.vlinks.value - this.availableSpace.value > 80) {
+      // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
+      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1 && this.vlinks.value - this.availableSpace.value > 30) {
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
         // удаляем последний пункт из массива с отображаемыми пунктами меню
@@ -12362,11 +12362,18 @@ exports.default = {
       return this.menuitemsHide;
     },
     numVis: function numVis() {
-      if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0 && this.availableSpace.value - this.vlinks.value > 220) {
+      if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0 && this.availableSpace.value - this.vlinks.value > 350) {
         this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
         this.menuitemsHide.pop();
       }
       return this.menuitems;
+    }
+  },
+  // вотчер палит изменения происходящие в скрытых меню и обновляет ширингу видимых меню для дальнейшей работы условий в скрипте по переносу пунктов
+  watch: {
+    menuitemsHide: function menuitemsHide() {
+      var vlinks1 = document.querySelector(".greedy-nav .visible-links");
+      vlinks.value = vlinks1.offsetWidth;
     }
   }
 

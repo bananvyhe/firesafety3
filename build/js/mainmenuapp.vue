@@ -36,8 +36,8 @@
 
     computed: {
       numHide:  function () {
-        // если длина меню с видимыми пунктами больше значения доступного пространства   
-        if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 80) { 
+        // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
+        if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 30) { 
           // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
           this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
           // удаляем последний пункт из массива с отображаемыми пунктами меню
@@ -46,11 +46,18 @@
         return this.menuitemsHide
       },
       numVis: function () {
-        if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 220) {
+        if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 350) {
           this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
           this.menuitemsHide.pop(); 
         }
         return this.menuitems
+      }
+    },
+    // вотчер палит изменения происходящие в скрытых меню и обновляет ширингу видимых меню для дальнейшей работы условий в скрипте по переносу пунктов
+    watch: {
+      menuitemsHide: function () {
+        let vlinks1 = document.querySelector(".greedy-nav .visible-links");
+        vlinks.value = vlinks1.offsetWidth;
       }
     }
   }
@@ -64,7 +71,6 @@
     vlinks.value = vlinks1.offsetWidth;
     menuwidth.value = menuwidth1.offsetWidth;
     availableSpace.value = menuwidth1.offsetWidth   - 90;
-
   }
 
    window.onresize = function(event) {
@@ -89,7 +95,8 @@
   padding: 6px;
   border-bottom: 5px solid $color-6;
 }
-.greedy-nav {
+.greedy-nav { 
+  background-color: #ada;
   text-align: center;
   position: relative;
   font-family: "UbuntuR"; 
@@ -171,7 +178,7 @@
   }
   
   .visible-links {
-    
+    background-color: #dad;
     display: inline-table;
     :first-child {
       border-left: 0px;
