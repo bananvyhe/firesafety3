@@ -1,5 +1,7 @@
 <template>
-  <div  class="mainmenu"><div>menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{num}}<br>menuitems: {{num}}</div>
+  <div  class="mainmenu">
+    <div>menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}
+    </div>
     <nav  class='greedy-nav font3'>
       <button v-if="menuitemsHide.length > 0"><div class="hamburger"></div></button>
       <ul class='visible-links'>
@@ -12,124 +14,73 @@
 </template>
 
 <script>
+  let menuwidth = {value:  ''};
+  let availableSpace = {value:  ''};
+  let vlinks = {value:  ''};
+  export default {
+    data: function () {
+      return {
+        menuwidth: menuwidth,
+        availableSpace: availableSpace,
+        vlinks: vlinks,
+        menuitems: [
+          { title: 'главная', url: ''},
+          { title: 'о нас', url: ''},
+          { title: 'противопожарные системы', url: ''},
+          { title: 'видеонаблюдение', url: ''},
+          { title: 'контроль доступа', url: ''},
+        ],
+        menuitemsHide: []
+      }
+    },
 
-
-// передаваемое значение во вью в виде обьекта для поддержания реактивной связи
-let menuwidth = {value:  ''};
-let availableSpace = {value:  ''};
-let vlinks = {value:  ''};
-
-let hlinks = document.querySelector(".greedy-nav .hidden-links");
-let btn = document.querySelector(".greedy-nav button");
-let vlinks1 = document.querySelector(".greedy-nav .visible-links");
-let menuwidth1 = document.querySelector(".greedy-nav");
-
-vlinks.value = vlinks1.offsetWidth;
-menuwidth.value = menuwidth1.offsetWidth;
-availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
-
-window.onresize = function(event) {
-  let hlinks = document.querySelector(".greedy-nav .hidden-links");
-  let btn = document.querySelector(".greedy-nav button");
-  let vlinks1 = document.querySelector(".greedy-nav .visible-links");
-  let menuwidth1 = document.querySelector(".greedy-nav");
-  vlinks.value = vlinks1.offsetWidth;
-  menuwidth.value = menuwidth1.offsetWidth;
-  availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
-}
-
-
-export default {
-  data: function () {
-    return {
-      menuwidth: menuwidth,
-      availableSpace: availableSpace,
-      vlinks: vlinks,
-      menuitems: [
-        { title: 'главная', url: ''},
-        { title: 'о нас', url: ''},
-        { title: 'противопожарные системы', url: ''},
-        { title: 'видеонаблюдение', url: ''},
-        { title: 'контроль доступа', url: ''},
-      ],
-      menuitemsHide: []
-    }
-  },
-
-  computed: {
-    num:  function () {
-      // если длина меню с видимыми пунктами больше значения доступного пространства   
-      if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 80) { 
-        // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
-        this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
-        // удаляем последний пункт из массива с отображаемыми пунктами меню
-        this.menuitems.pop();
-
-      } else if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 220) { 
-        // аналогично трансфер значений из массива в массив обратно 
-        this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
-        this.menuitemsHide.pop(); 
-      } else {
-        console.log('wide');
-      };
-      return this.menuitemsHide
+    computed: {
+      numHide:  function () {
+        // если длина меню с видимыми пунктами больше значения доступного пространства   
+        if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 80) { 
+          // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
+          this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
+          // удаляем последний пункт из массива с отображаемыми пунктами меню
+          this.menuitems.pop();
+        }
+        return this.menuitemsHide
+      },
+      numVis: function () {
+        if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 220) {
+          this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
+          this.menuitemsHide.pop(); 
+        }
+        return this.menuitems
+      }
     }
   }
-}
+
+  // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
+  window.onload = function () {
+    let hlinks = document.querySelector(".greedy-nav .hidden-links");
+    let btn = document.querySelector(".greedy-nav button");
+    let vlinks1 = document.querySelector(".greedy-nav .visible-links");
+    let menuwidth1 = document.querySelector(".greedy-nav");
+    vlinks.value = vlinks1.offsetWidth;
+    menuwidth.value = menuwidth1.offsetWidth;
+    availableSpace.value = menuwidth1.offsetWidth   - 90;
+
+  }
+
+   window.onresize = function(event) {
+    let hlinks = document.querySelector(".greedy-nav .hidden-links");
+    let btn = document.querySelector(".greedy-nav button");
+    let vlinks1 = document.querySelector(".greedy-nav .visible-links");
+    let menuwidth1 = document.querySelector(".greedy-nav");
+    vlinks.value = vlinks1.offsetWidth;
+    menuwidth.value = menuwidth1.offsetWidth;
+    availableSpace.value =  menuwidth1.offsetWidth - 90;
+  }
 
 // setTimeout(function(){
 //       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
 // }, 1300);
-
-//console.log(btn);
-// function updateNav() {
-//   let availableSpace = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
-// console.log(availableSpace);
-
-// // The visible list is overflowing the nav
-// if(vlinks.offsetWidth > availableSpace) {
-
-//   // Record the width of the list
-//   breaks.push(vlinks.offsetWidth);
-
-//   // Move item to the hidden list
-//   vlinks.insertBefore(hlinks, parent.firstChild);
-
-//   // Show the dropdown btn
-//   if(btn.classList.contains('hidden')) {
-//     btn.remove('hidden');
-//   }
-
-// // The visible list is not overflowing
-// } else {
-
-//   // There is space for another item in the nav
-//   if(availableSpace > breaks[breaks.length-1]) {
-
-//     // Move the item to the visible list
-//     hlinks.children().first().appendTo(vlinks);
-//     breaks.pop();
-//   }
-
-//   // Hide the dropdown btn if hidden list is empty
-//   if(breaks.length < 1) {
-//     btn.classList.add('hidden');
-//     hlinks.classList.add('hidden');
-//   }
-// } 
-
-//   // Keep counter updated
-//   btn.setAttribute("count", breaks.length);
-
-//   // Recur if the visible list is still overflowing the nav
-//   if(vlinks.width > availableSpace) {
-//     updateNav();
-//   }
-
-// }
-// updateNav(); 
-
-
+ 
 </script>
 
 <style scoped>

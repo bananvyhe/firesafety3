@@ -12333,32 +12333,12 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
 
-
-// передаваемое значение во вью в виде обьекта для поддержания реактивной связи
 var menuwidth = { value: '' };
 var availableSpace = { value: '' };
 var vlinks = { value: '' };
-
-var hlinks = document.querySelector(".greedy-nav .hidden-links");
-var btn = document.querySelector(".greedy-nav button");
-var vlinks1 = document.querySelector(".greedy-nav .visible-links");
-var menuwidth1 = document.querySelector(".greedy-nav");
-
-vlinks.value = vlinks1.offsetWidth;
-menuwidth.value = menuwidth1.offsetWidth;
-availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
-
-window.onresize = function (event) {
-  var hlinks = document.querySelector(".greedy-nav .hidden-links");
-  var btn = document.querySelector(".greedy-nav button");
-  var vlinks1 = document.querySelector(".greedy-nav .visible-links");
-  var menuwidth1 = document.querySelector(".greedy-nav");
-  vlinks.value = vlinks1.offsetWidth;
-  menuwidth.value = menuwidth1.offsetWidth;
-  availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
-};
-
 exports.default = {
   data: function data() {
     return {
@@ -12371,77 +12351,50 @@ exports.default = {
   },
 
   computed: {
-    num: function num() {
+    numHide: function numHide() {
       // если длина меню с видимыми пунктами больше значения доступного пространства   
       if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1 && this.vlinks.value - this.availableSpace.value > 80) {
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
         // удаляем последний пункт из массива с отображаемыми пунктами меню
         this.menuitems.pop();
-      } else if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0 && this.availableSpace.value - this.vlinks.value > 220) {
-        // аналогично трансфер значений из массива в массив обратно 
+      }
+      return this.menuitemsHide;
+    },
+    numVis: function numVis() {
+      if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0 && this.availableSpace.value - this.vlinks.value > 220) {
         this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
         this.menuitemsHide.pop();
-      } else {
-        console.log('wide');
-      };
-      return this.menuitemsHide;
+      }
+      return this.menuitems;
     }
   }
 
-  // setTimeout(function(){
-  //       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-  // }, 1300);
-
-  //console.log(btn);
-  // function updateNav() {
-  //   let availableSpace = btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - btn.offsetWidth - 30;
-  // console.log(availableSpace);
-
-  // // The visible list is overflowing the nav
-  // if(vlinks.offsetWidth > availableSpace) {
-
-  //   // Record the width of the list
-  //   breaks.push(vlinks.offsetWidth);
-
-  //   // Move item to the hidden list
-  //   vlinks.insertBefore(hlinks, parent.firstChild);
-
-  //   // Show the dropdown btn
-  //   if(btn.classList.contains('hidden')) {
-  //     btn.remove('hidden');
-  //   }
-
-  // // The visible list is not overflowing
-  // } else {
-
-  //   // There is space for another item in the nav
-  //   if(availableSpace > breaks[breaks.length-1]) {
-
-  //     // Move the item to the visible list
-  //     hlinks.children().first().appendTo(vlinks);
-  //     breaks.pop();
-  //   }
-
-  //   // Hide the dropdown btn if hidden list is empty
-  //   if(breaks.length < 1) {
-  //     btn.classList.add('hidden');
-  //     hlinks.classList.add('hidden');
-  //   }
-  // } 
-
-  //   // Keep counter updated
-  //   btn.setAttribute("count", breaks.length);
-
-  //   // Recur if the visible list is still overflowing the nav
-  //   if(vlinks.width > availableSpace) {
-  //     updateNav();
-  //   }
-
-  // }
-  // updateNav(); 
-
+  // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
 };
+window.onload = function () {
+  var hlinks = document.querySelector(".greedy-nav .hidden-links");
+  var btn = document.querySelector(".greedy-nav button");
+  var vlinks1 = document.querySelector(".greedy-nav .visible-links");
+  var menuwidth1 = document.querySelector(".greedy-nav");
+  vlinks.value = vlinks1.offsetWidth;
+  menuwidth.value = menuwidth1.offsetWidth;
+  availableSpace.value = menuwidth1.offsetWidth - 90;
+};
+
+window.onresize = function (event) {
+  var hlinks = document.querySelector(".greedy-nav .hidden-links");
+  var btn = document.querySelector(".greedy-nav button");
+  var vlinks1 = document.querySelector(".greedy-nav .visible-links");
+  var menuwidth1 = document.querySelector(".greedy-nav");
+  vlinks.value = vlinks1.offsetWidth;
+  menuwidth.value = menuwidth1.offsetWidth;
+  availableSpace.value = menuwidth1.offsetWidth - 90;
+};
+
+// setTimeout(function(){
+//       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
+// }, 1300);
 
 /***/ }),
 /* 39 */
@@ -12460,9 +12413,9 @@ var render = function() {
       _c("br"),
       _vm._v("vlink: " + _vm._s(_vm.vlinks.value)),
       _c("br"),
-      _vm._v("menuitemsHide: " + _vm._s(_vm.num)),
+      _vm._v("menuitemsHide: " + _vm._s(_vm.numHide)),
       _c("br"),
-      _vm._v("menuitems: " + _vm._s(_vm.num))
+      _vm._v("menuitemsVis: " + _vm._s(_vm.numVis) + "\n  ")
     ]),
     _vm._v(" "),
     _c("nav", { staticClass: "greedy-nav font3" }, [
