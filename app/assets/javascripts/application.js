@@ -12340,6 +12340,25 @@ var menuwidth = { value: '' };
 var availableSpace = { value: '' };
 var vlinks = { value: '' };
 
+var hlinks = document.querySelector(".greedy-nav .hidden-links");
+var btn = document.querySelector(".greedy-nav button");
+var vlinks1 = document.querySelector(".greedy-nav .visible-links");
+var menuwidth1 = document.querySelector(".greedy-nav");
+
+vlinks.value = vlinks1.offsetWidth;
+menuwidth.value = menuwidth1.offsetWidth;
+availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
+
+window.onresize = function (event) {
+  var hlinks = document.querySelector(".greedy-nav .hidden-links");
+  var btn = document.querySelector(".greedy-nav button");
+  var vlinks1 = document.querySelector(".greedy-nav .visible-links");
+  var menuwidth1 = document.querySelector(".greedy-nav");
+  vlinks.value = vlinks1.offsetWidth;
+  menuwidth.value = menuwidth1.offsetWidth;
+  availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
+};
+
 exports.default = {
   data: function data() {
     return {
@@ -12353,26 +12372,6 @@ exports.default = {
 
   computed: {
     num: function num() {
-
-      var hlinks = document.querySelector(".greedy-nav .hidden-links");
-      var btn = document.querySelector(".greedy-nav button");
-      var vlinks1 = document.querySelector(".greedy-nav .visible-links");
-      var menuwidth1 = document.querySelector(".greedy-nav");
-
-      vlinks.value = vlinks1.offsetWidth;
-      menuwidth.value = menuwidth1.offsetWidth;
-      availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
-
-      window.onresize = function (event) {
-        var hlinks = document.querySelector(".greedy-nav .hidden-links");
-        var btn = document.querySelector(".greedy-nav button");
-        var vlinks1 = document.querySelector(".greedy-nav .visible-links");
-        var menuwidth1 = document.querySelector(".greedy-nav");
-
-        vlinks.value = vlinks1.offsetWidth;
-        menuwidth.value = menuwidth1.offsetWidth;
-        availableSpace.value = btn.classList.contains('hidden') ? menuwidth1.offsetWidth : menuwidth1.offsetWidth - btn.offsetWidth - 90;
-      };
       // если длина меню с видимыми пунктами больше значения доступного пространства   
       if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1 && this.vlinks.value - this.availableSpace.value > 80) {
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
@@ -12387,7 +12386,6 @@ exports.default = {
         console.log('wide');
       };
       return this.menuitemsHide;
-      console.log('breaks');
     }
   }
 
@@ -12462,11 +12460,15 @@ var render = function() {
       _c("br"),
       _vm._v("vlink: " + _vm._s(_vm.vlinks.value)),
       _c("br"),
-      _vm._v("breaks: " + _vm._s(_vm.num))
+      _vm._v("menuitemsHide: " + _vm._s(_vm.num)),
+      _c("br"),
+      _vm._v("menuitems: " + _vm._s(_vm.num))
     ]),
     _vm._v(" "),
     _c("nav", { staticClass: "greedy-nav font3" }, [
-      _vm._m(0),
+      _vm.menuitemsHide.length > 0
+        ? _c("button", [_c("div", { staticClass: "hamburger" })])
+        : _vm._e(),
       _vm._v(" "),
       _c(
         "ul",
@@ -12487,14 +12489,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", [_c("div", { staticClass: "hamburger" })])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
