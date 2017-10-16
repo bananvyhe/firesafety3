@@ -1,12 +1,16 @@
 <template>
   <div  class="mainmenu">
-    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}
+    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}
     </div>
-    <nav  class='greedy-nav font3' >
-      <button v-if="menuitemsHide.length > 0"  v-bind:style="styleObject"><div class="hamburger" ></div>
+    <nav  class='greedy-nav font3'  v-bind:style="styleObject" >
+      <button v-if="menuitemsHide.length > 0">
+        <div class="hamburger" >
+        </div>
       </button>
       <ul class='visible-links'>
-        <li v-for="menuitem in menuitems" ><a href=""><nobr>{{menuitem.title.toUpperCase()}}</nobr></a></li>
+        <li v-for="menuitem in menuitems" >
+          <a href=""><nobr>{{menuitem.title.toUpperCase()}}</nobr>
+          </a>
         </li>
       </ul>
       <ul class='hidden-links hidden'></ul>
@@ -34,14 +38,28 @@
           { title: 'контроль доступа', url: ''},
         ],
         menuitemsHide: [],
-        styleObject: {
-          backgroundColor: 'red',
-          fontSize: '13px' 
-        }
+        styleObject: {}
       }
     },
 
     computed: {
+      compstylem: function () {
+        if (this.menuitemsHide.length > 0) {
+          this.styleObject = {
+          backgroundColor: 'red', 
+          textAlign: 'right',
+          paddingRight: '60px'
+          } 
+          return this.styleObject;
+        }else{
+          this.styleObject = {
+          backgroundColor: 'blue',
+          textAlign: 'center' 
+          } 
+          return this.styleObject;
+        }
+        
+      },
       numHide:  function () {
         // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
         if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 30) { 
@@ -67,8 +85,10 @@
       menuitemsHide: function () {
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
         vlinks.value = vlinks1.offsetWidth;
-        let btn = document.querySelector(".greedy-nav button");
-        btn.setAttribute("count", this.menuitemsHide.length);
+        if (this.menuitemsHide.length>1) {
+          let btn = document.querySelector(".greedy-nav button");
+          btn.setAttribute("count", this.menuitemsHide.length);
+        }
       }
     }
   }
@@ -104,16 +124,16 @@
   padding: 6px;
   border-bottom: 5px solid $color-6;
 }
+
 .greedy-nav { 
   background-color: #ada;
-  text-align: center;
   position: relative;
   font-family: "UbuntuR"; 
   font-style: normal;
   font-weight: 400;
   font-style: bold;
-  background-color: $color-5;   
-  
+  background-color: $color-5;  
+    
   a {
     display: block;
     padding: 10px 30px;
