@@ -12376,10 +12376,9 @@ exports.default = {
       vlinks.value = vlinks1.offsetWidth;
     }
   }
-
-  // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
 };
-window.onload = function () {
+
+function parseCalc() {
   var hlinks = document.querySelector(".greedy-nav .hidden-links");
   var btn = document.querySelector(".greedy-nav button");
   var vlinks1 = document.querySelector(".greedy-nav .visible-links");
@@ -12387,16 +12386,14 @@ window.onload = function () {
   vlinks.value = vlinks1.offsetWidth;
   menuwidth.value = menuwidth1.offsetWidth;
   availableSpace.value = menuwidth1.offsetWidth - 90;
+}
+// передаваемое значение во вью в виде обьекта для поддержания реактивной связи
+window.onload = function () {
+  parseCalc();
 };
 
 window.onresize = function (event) {
-  var hlinks = document.querySelector(".greedy-nav .hidden-links");
-  var btn = document.querySelector(".greedy-nav button");
-  var vlinks1 = document.querySelector(".greedy-nav .visible-links");
-  var menuwidth1 = document.querySelector(".greedy-nav");
-  vlinks.value = vlinks1.offsetWidth;
-  menuwidth.value = menuwidth1.offsetWidth;
-  availableSpace.value = menuwidth1.offsetWidth - 90;
+  parseCalc();
 };
 
 // setTimeout(function(){

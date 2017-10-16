@@ -61,9 +61,7 @@
       }
     }
   }
-
-  // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
-  window.onload = function () {
+  function parseCalc () {
     let hlinks = document.querySelector(".greedy-nav .hidden-links");
     let btn = document.querySelector(".greedy-nav button");
     let vlinks1 = document.querySelector(".greedy-nav .visible-links");
@@ -72,15 +70,13 @@
     menuwidth.value = menuwidth1.offsetWidth;
     availableSpace.value = menuwidth1.offsetWidth   - 90;
   }
+  // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
+  window.onload = function () {
+    parseCalc();
+  }
 
-   window.onresize = function(event) {
-    let hlinks = document.querySelector(".greedy-nav .hidden-links");
-    let btn = document.querySelector(".greedy-nav button");
-    let vlinks1 = document.querySelector(".greedy-nav .visible-links");
-    let menuwidth1 = document.querySelector(".greedy-nav");
-    vlinks.value = vlinks1.offsetWidth;
-    menuwidth.value = menuwidth1.offsetWidth;
-    availableSpace.value =  menuwidth1.offsetWidth - 90;
+  window.onresize = function(event) {
+    parseCalc();
   }
 
 // setTimeout(function(){
