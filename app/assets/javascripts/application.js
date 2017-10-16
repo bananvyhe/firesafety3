@@ -12345,7 +12345,6 @@ exports.default = {
     return {
       //выключатель показа индикации служебной информации
       switcher: false,
-      //
       menuwidth: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
@@ -12422,19 +12421,30 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "mainmenu" }, [
-    _vm.switcher
-      ? _c("div", [
-          _vm._v("menuwidth: " + _vm._s(_vm.menuwidth.value)),
-          _c("br"),
-          _vm._v("av space: " + _vm._s(_vm.availableSpace.value)),
-          _c("br"),
-          _vm._v("vlink: " + _vm._s(_vm.vlinks.value)),
-          _c("br"),
-          _vm._v("menuitemsHide: " + _vm._s(_vm.numHide)),
-          _c("br"),
-          _vm._v("menuitemsVis: " + _vm._s(_vm.numVis) + "\n  ")
-        ])
-      : _vm._e(),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.switcher,
+            expression: "switcher"
+          }
+        ]
+      },
+      [
+        _vm._v("menuwidth: " + _vm._s(_vm.menuwidth.value)),
+        _c("br"),
+        _vm._v("av space: " + _vm._s(_vm.availableSpace.value)),
+        _c("br"),
+        _vm._v("vlink: " + _vm._s(_vm.vlinks.value)),
+        _c("br"),
+        _vm._v("menuitemsHide: " + _vm._s(_vm.numHide)),
+        _c("br"),
+        _vm._v("menuitemsVis: " + _vm._s(_vm.numVis) + "\n  ")
+      ]
+    ),
     _vm._v(" "),
     _c("nav", { staticClass: "greedy-nav font3" }, [
       _vm.menuitemsHide.length > 0
