@@ -12399,7 +12399,8 @@ exports.default = {
     menuitemsHide: function menuitemsHide() {
       var vlinks1 = document.querySelector(".greedy-nav .visible-links");
       vlinks.value = vlinks1.offsetWidth;
-      if (this.menuitemsHide.length > 1) {
+
+      if (this.menuitemsHide.length != 0) {
         var btn = document.querySelector(".greedy-nav button");
         btn.setAttribute("count", this.menuitemsHide.length);
       }

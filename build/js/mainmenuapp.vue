@@ -85,9 +85,10 @@
       menuitemsHide: function () {
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
         vlinks.value = vlinks1.offsetWidth;
-        if (this.menuitemsHide.length>1) {
-          let btn = document.querySelector(".greedy-nav button");
-          btn.setAttribute("count", this.menuitemsHide.length);
+        
+        if (this.menuitemsHide.length!=0) {
+        let btn = document.querySelector(".greedy-nav button");
+        btn.setAttribute("count", this.menuitemsHide.length);
         }
       }
     }
