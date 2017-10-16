@@ -1,6 +1,6 @@
 <template>
   <div  class="mainmenu">
-    <div>menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}
+    <div v-if="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}
     </div>
     <nav  class='greedy-nav font3' >
       <button v-if="menuitemsHide.length > 0"  v-bind:style="styleObject"><div class="hamburger" ></div>
@@ -21,6 +21,9 @@
   export default {
     data: function () {
       return {
+        //выключатель показа индикации служебной информации
+        switcher: false,
+        //
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
