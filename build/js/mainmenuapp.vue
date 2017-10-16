@@ -2,8 +2,9 @@
   <div  class="mainmenu">
     <div>menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}
     </div>
-    <nav  class='greedy-nav font3'>
-      <button v-if="menuitemsHide.length > 0"><div class="hamburger"></div></button>
+    <nav  class='greedy-nav font3' >
+      <button v-if="menuitemsHide.length > 0"  v-bind:style="styleObject"><div class="hamburger" ></div>
+      </button>
       <ul class='visible-links'>
         <li v-for="menuitem in menuitems" ><a href=""><nobr>{{menuitem.title.toUpperCase()}}</nobr></a></li>
         </li>
@@ -30,7 +31,11 @@
           { title: 'видеонаблюдение', url: ''},
           { title: 'контроль доступа', url: ''},
         ],
-        menuitemsHide: []
+        menuitemsHide: [],
+        styleObject: {
+          backgroundColor: 'red',
+          fontSize: '13px' 
+        }
       }
     },
 
@@ -44,6 +49,7 @@
           this.menuitems.pop();
         }
         return this.menuitemsHide
+        
       },
       numVis: function () {
         if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 350) {
@@ -54,13 +60,17 @@
       }
     },
     // вотчер палит изменения происходящие в скрытых меню и обновляет ширингу видимых меню для дальнейшей работы условий в скрипте по переносу пунктов
+    //устанавливает апфтер-аттрибут на кнопку с отображением количества позиций в массиве скрытых пунктов меню
     watch: {
       menuitemsHide: function () {
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
         vlinks.value = vlinks1.offsetWidth;
+        let btn = document.querySelector(".greedy-nav button");
+        btn.setAttribute("count", this.menuitemsHide.length);
       }
     }
   }
+
   function parseCalc () {
     let hlinks = document.querySelector(".greedy-nav .hidden-links");
     let btn = document.querySelector(".greedy-nav button");
@@ -69,6 +79,7 @@
     vlinks.value = vlinks1.offsetWidth;
     menuwidth.value = menuwidth1.offsetWidth;
     availableSpace.value = menuwidth1.offsetWidth   - 90;
+
   }
   // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
   window.onload = function () {
@@ -123,29 +134,29 @@
     cursor: pointer;
       &:hover {
       background-color: $color-3;
-    }
+      }
     
-    &::after {
-      content: attr(count);
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      left: -16px;
-      top: 5px;
-      text-align: center;
-      background-color: $color-3;
-      color: #fff;
-      font-size: 13px;
-      line-height: 22px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      font-weight: bold;
+      &::after {
+        content: attr(count);
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: -16px;
+        top: 5px;
+        text-align: center;
+        background-color: $color-3;
+        color: #fff;
+        font-size: 13px;
+        line-height: 22px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        font-weight: bold;
+      }
+    
+      &:hover::after {
+        transform: scale(1.075);
+      }
     }
-  
-    &:hover::after {
-      transform: scale(1.075);
-    }
-  }
   
   .hamburger {
     position: relative;

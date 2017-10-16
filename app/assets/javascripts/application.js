@@ -12335,6 +12335,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 var menuwidth = { value: '' };
 var availableSpace = { value: '' };
@@ -12346,7 +12347,11 @@ exports.default = {
       availableSpace: availableSpace,
       vlinks: vlinks,
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', url: '' }, { title: 'контроль доступа', url: '' }],
-      menuitemsHide: []
+      menuitemsHide: [],
+      styleObject: {
+        backgroundColor: 'red',
+        fontSize: '13px'
+      }
     };
   },
 
@@ -12370,13 +12375,17 @@ exports.default = {
     }
   },
   // вотчер палит изменения происходящие в скрытых меню и обновляет ширингу видимых меню для дальнейшей работы условий в скрипте по переносу пунктов
+  //устанавливает апфтер-аттрибут на кнопку с отображением количества позиций в массиве скрытых пунктов меню
   watch: {
     menuitemsHide: function menuitemsHide() {
       var vlinks1 = document.querySelector(".greedy-nav .visible-links");
       vlinks.value = vlinks1.offsetWidth;
+      var btn = document.querySelector(".greedy-nav button");
+      btn.setAttribute("count", this.menuitemsHide.length);
     }
   }
 };
+
 
 function parseCalc() {
   var hlinks = document.querySelector(".greedy-nav .hidden-links");
@@ -12424,7 +12433,9 @@ var render = function() {
     _vm._v(" "),
     _c("nav", { staticClass: "greedy-nav font3" }, [
       _vm.menuitemsHide.length > 0
-        ? _c("button", [_c("div", { staticClass: "hamburger" })])
+        ? _c("button", { style: _vm.styleObject }, [
+            _c("div", { staticClass: "hamburger" })
+          ])
         : _vm._e(),
       _vm._v(" "),
       _c(
