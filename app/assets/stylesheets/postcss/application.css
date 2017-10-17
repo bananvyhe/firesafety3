@@ -1,7 +1,7 @@
 @hamster {
   /*  Base settings */
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1.5;
   remove-comments: true;
  /*  Vertical Rythm settings */
   unit: em;
@@ -51,7 +51,30 @@ $HeadBackColor: #2a303a;
   width: calc(4 * $column);
 }
 */
+@custom-media --only-small-screen (width >= 0px) and (width <= 600px);
+@custom-media --only-big-screen (width >= 1024px);
+    
+.greedy-nav {
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  font-style: bold;
+  letter-spacing: 0.07em;
+  font-size: 0.9em;
+  border-bottom-left-radius: 1.3em; 
+  height: 3em; 
+}
 
+.main {
+  height: 3em; 
+}
+
+@media (--only-small-screen) {
+  .main {
+    height: 2em; 
+  }
+}
+ 
 .precss {
   @if 3 < 5 {
     background: green;
@@ -124,12 +147,13 @@ noflex {
 }
 
 .font3 {
-  letter-spacing: 0.07em;
+  
 }
 
 .font4 {
    
 }
+
  
 #grid-one {
 
@@ -138,7 +162,7 @@ noflex {
 .grid-item {
   position: relative;/*for hamster*/
   overflow: hidden;
-  height: 580px;
+   
   @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);
   text-align: justify;

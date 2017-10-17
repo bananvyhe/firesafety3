@@ -1,8 +1,8 @@
 <template>
-  <div  class="mainmenu">
+  <div>
     <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}
     </div>
-    <nav  class='greedy-nav font3'  v-bind:style="styleObject" >
+    <nav  class='greedy-nav'  v-bind:style="styleObject" >
       <button v-if="menuitemsHide.length > 0">
         <div class="hamburger" >
         </div>
@@ -85,7 +85,7 @@
       menuitemsHide: function () {
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
         vlinks.value = vlinks1.offsetWidth;
-        
+
         if (this.menuitemsHide.length!=0) {
         let btn = document.querySelector(".greedy-nav button");
         btn.setAttribute("count", this.menuitemsHide.length);
@@ -120,20 +120,16 @@
 </script>
 
 <style scoped>
-.mainmenu {
-  background-color: $color-5;
-  padding: 6px;
-  border-bottom: 5px solid $color-6;
-}
-
+@import "../../app/assets/stylesheets/postcss/variables";
+ 
 .greedy-nav { 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #ada;
   position: relative;
-  font-family: "UbuntuR"; 
-  font-style: normal;
-  font-weight: 400;
-  font-style: bold;
-  background-color: $color-5;  
+  background-color: $color-5; 
+
     
   a {
     display: block;
@@ -150,6 +146,7 @@
     height: 100%;
     right: 0;
     padding: 0 15px;
+    
     border: 0;
     outline: none;
     background-color: $color-2;
@@ -162,22 +159,22 @@
       &::after {
         content: attr(count);
         position: absolute;
-        width: 22px;
-        height: 22px;
-        left: -16px;
+        width: 18px;
+        height: 18px;
+        left: -12px;
         top: 5px;
         text-align: center;
         background-color: $color-3;
         color: #fff;
         font-size: 13px;
-        line-height: 22px;
+        line-height: 18px;
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
       }
     
       &:hover::after {
-        transform: scale(1.075);
+        transform: scale(1.135);
       }
     }
   
