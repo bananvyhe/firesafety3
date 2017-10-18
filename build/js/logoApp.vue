@@ -19,7 +19,7 @@
 
 <style scoped>
   
-  .main {
+  .main { z-index: 6;
     $color-6: #b9d6f2;
     lost-flex-container: row;
     background-color: $color-6;

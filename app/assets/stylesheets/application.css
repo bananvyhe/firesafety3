@@ -191,10 +191,12 @@ section .trust:nth-child(3n) {
 }
 
 section1 { 
-  display: -webkit-box; 
-  display: flex; 
-  -webkit-box-orient: horizontal; 
-  -webkit-box-direction: normal; 
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
           flex-flow: row wrap;
   max-width: 1366px;
   margin-left: auto;

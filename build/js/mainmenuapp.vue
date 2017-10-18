@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}
+    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}}
     </div>
     <nav  class='greedy-nav'  v-bind:style="styleObject" >
-      <button v-if="menuitemsHide.length > 0">
+      <button v-if="menuitemsHide.length > 0" v-on:click="toggle = !toggle">
         <div class="hamburger" >
         </div>
       </button>
@@ -13,7 +13,12 @@
           </a>
         </li>
       </ul>
-      <ul class='hidden-links hidden'></ul>
+      <ul class='hidden-links' v-bind:style="hiddenStyle">
+        <li v-for="item in menuitemsHide" >
+          <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
+          </a>
+        </li>
+      </ul>
     </nav> 
   </div>
 </template>
@@ -26,7 +31,8 @@
     data: function () {
       return {
         //выключатель показа индикации служебной информации
-        switcher: false,
+        toggle: false,
+        switcher: true,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -38,11 +44,26 @@
           { title: 'контроль доступа', url: ''},
         ],
         menuitemsHide: [],
-        styleObject: {}
+        styleObject: {},
+        hiddenStyle: {}
       }
     },
 
     computed: {
+       switchhidestyle: function(){
+        if (this.toggle) {
+          this.hiddenStyle = {
+          visibility: 'visible'
+          } 
+          return this.hiddenStyle;
+        }else{
+          this.hiddenStyle = {
+          visibility: 'hidden'
+          } 
+          return this.hiddenStyle;
+        }
+      },
+
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
           this.styleObject = {
@@ -58,8 +79,8 @@
           } 
           return this.styleObject;
         }
-        
       },
+
       numHide:  function () {
         // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
         if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 30) { 
@@ -218,6 +239,7 @@
   }
   
   .hidden-links {
+    z-index: 116;
     position: absolute;
     right: 0px;
     top: 100%;

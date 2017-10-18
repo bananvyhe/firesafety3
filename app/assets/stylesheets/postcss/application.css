@@ -116,6 +116,8 @@ section {
 }
 
 section1 { 
+  position: relative;
+  z-index: 1;
   lost-flex-container: row;
   /*padding-top:  0.25em;
   padding-bottom: 0.25em;*/
