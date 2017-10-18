@@ -2,8 +2,8 @@
   <div>
     <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}}
     </div>
-    <nav  class='greedy-nav'  v-bind:style="styleObject" >
-      <button v-if="menuitemsHide.length > 0" v-on:click="toggle = !toggle">
+    <nav  class='greedy-nav'  v-bind:style="styleObject"  ref="dropdown">
+      <button v-if="menuitemsHide.length > 0" v-on:click="toggle = !toggle" >
         <div class="hamburger" >
         </div>
       </button>
@@ -14,7 +14,7 @@
         </li>
       </ul>
       <ul class='hidden-links' v-bind:style="hiddenStyle">
-        <li v-for="item in menuitemsHide" @mouseleave="toggle = false">
+        <li v-for="item in menuitemsHide" @mouseleave="toggle = false" @mouseup="" @click="">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>
         </li>
@@ -47,6 +47,22 @@
         styleObject: {},
         hiddenStyle: {}
       }
+    },
+    created(){ 
+        document.addEventListener('click', this.dropdown) 
+    }, 
+    destroyed () { 
+        document.removeEventListener('click', this.dropdown) 
+    }, 
+    methods:{
+      dropdown(e){ 
+              let el = this.$refs.dropdown; 
+              let target = e.target;
+              if (el !== target && !el.contains(target)) 
+              { 
+                this.toggle = false
+              } 
+          } 
     },
  
     computed: {

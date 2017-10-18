@@ -12364,6 +12364,22 @@ exports.default = {
       hiddenStyle: {}
     };
   },
+  created: function created() {
+    document.addEventListener('click', this.dropdown);
+  },
+  destroyed: function destroyed() {
+    document.removeEventListener('click', this.dropdown);
+  },
+
+  methods: {
+    dropdown: function dropdown(e) {
+      var el = this.$refs.dropdown;
+      var target = e.target;
+      if (el !== target && !el.contains(target)) {
+        this.toggle = false;
+      }
+    }
+  },
 
   computed: {
 
@@ -12493,61 +12509,67 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("nav", { staticClass: "greedy-nav", style: _vm.styleObject }, [
-      _vm.menuitemsHide.length > 0
-        ? _c(
-            "button",
-            {
-              on: {
-                click: function($event) {
-                  _vm.toggle = !_vm.toggle
+    _c(
+      "nav",
+      { ref: "dropdown", staticClass: "greedy-nav", style: _vm.styleObject },
+      [
+        _vm.menuitemsHide.length > 0
+          ? _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    _vm.toggle = !_vm.toggle
+                  }
                 }
-              }
-            },
-            [_c("div", { staticClass: "hamburger" })]
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c(
-        "ul",
-        { staticClass: "visible-links" },
-        _vm._l(_vm.menuitems, function(menuitem) {
-          return _c("li", [
-            _c(
-              "a",
-              { attrs: { href: "" } },
-              [_c("nobr", [_vm._v(_vm._s(menuitem.title.toUpperCase()))])],
-              1
+              },
+              [_c("div", { staticClass: "hamburger" })]
             )
-          ])
-        })
-      ),
-      _vm._v(" "),
-      _c(
-        "ul",
-        { staticClass: "hidden-links", style: _vm.hiddenStyle },
-        _vm._l(_vm.menuitemsHide, function(item) {
-          return _c(
-            "li",
-            {
-              on: {
-                mouseleave: function($event) {
-                  _vm.toggle = false
-                }
-              }
-            },
-            [
+          : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "visible-links" },
+          _vm._l(_vm.menuitems, function(menuitem) {
+            return _c("li", [
               _c(
                 "a",
                 { attrs: { href: "" } },
-                [_c("nobr", [_vm._v(_vm._s(item.title.toUpperCase()))])],
+                [_c("nobr", [_vm._v(_vm._s(menuitem.title.toUpperCase()))])],
                 1
               )
-            ]
-          )
-        })
-      )
-    ])
+            ])
+          })
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "hidden-links", style: _vm.hiddenStyle },
+          _vm._l(_vm.menuitemsHide, function(item) {
+            return _c(
+              "li",
+              {
+                on: {
+                  mouseleave: function($event) {
+                    _vm.toggle = false
+                  },
+                  mouseup: function($event) {},
+                  click: function($event) {}
+                }
+              },
+              [
+                _c(
+                  "a",
+                  { attrs: { href: "" } },
+                  [_c("nobr", [_vm._v(_vm._s(item.title.toUpperCase()))])],
+                  1
+                )
+              ]
+            )
+          })
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = []
