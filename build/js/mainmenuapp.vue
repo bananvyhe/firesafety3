@@ -84,14 +84,14 @@
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
           this.styleObject = {
-          backgroundColor: 'green', 
+          backgroundColor: '#1d3557', 
           textAlign: 'right',
           paddingRight: '60px'
           } 
           return this.styleObject;
         }else{
           this.styleObject = {
-          backgroundColor: 'blue',
+          backgroundColor: '#1d3557',
           textAlign: 'center' 
           } 
           return this.styleObject;
@@ -262,7 +262,7 @@
         margin-right: -6px;
     li {
       display: block;
-      background-color: green;
+      background-color: $color-5;
       padding: 0px;
       margin: 4px;
       font-size: 0.9em;
