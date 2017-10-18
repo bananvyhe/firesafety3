@@ -13,8 +13,8 @@
           </a>
         </li>
       </ul>
-      <ul class='hidden-links' v-bind:style="hiddenStyle">
-        <li v-for="item in menuitemsHide" @mouseleave="toggle = false" @mouseup="" @click="">
+      <ul class='hidden-links' v-bind:style="hiddenStyle"  @mouseleave="toggle = false">
+        <li v-for="item in menuitemsHide" @mouseup="" @click="">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>
         </li>
@@ -32,7 +32,7 @@
       return {
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: true,
+        switcher: false,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -84,7 +84,7 @@
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
           this.styleObject = {
-          backgroundColor: 'red', 
+          backgroundColor: 'green', 
           textAlign: 'right',
           paddingRight: '60px'
           } 
@@ -164,7 +164,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #ada;
   position: relative;
   background-color: $color-5; 
 
@@ -197,15 +196,16 @@
       &::after {
         content: attr(count);
         position: absolute;
-        width: 18px;
-        height: 18px;
-        left: -12px;
+        width: 17px;
+        height: 17px;
+        left: -11px;
         top: 5px;
         text-align: center;
         background-color: $color-3;
         color: #fff;
-        font-size: 13px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 16px;
+        
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
@@ -219,7 +219,7 @@
   .hamburger {
     position: relative;
     width: 32px;
-    height: 4px;
+    height: 0.25em;
     background: #fff;
     margin: auto;
     
@@ -229,44 +229,43 @@
       position: absolute;
       left: 0;
       width: 32px;
-      height: 4px;
+      height: 0.25em;
       background: #fff;
     }
     
     &:before {
-      top: -8px;
+      top: -0.6em;
     }
     
     &:after {
-      bottom: -8px;
+      bottom: -0.6em;
     }
   }
   
   .visible-links {
-    background-color: #dad;
     display: inline-table;
     :first-child {
       border-left: 0px;
     }
     li { vertical-align: middle;
-      line-height: 1.2em;
       display: table-cell;
       border-left: 1px solid $color-1; 
     }
   }
   
   .hidden-links {
-    z-index: 116;
+    z-index: 10;
     position: absolute;
     right: 0px;
     top: 100%;
-    padding-top: 12px;
+    
         margin-right: -6px;
     li {
       display: block;
-      border-top: 1px solid $color-1;
-      background-color: $color-5;
-      padding: 6px;
+      background-color: green;
+      padding: 0px;
+      margin: 4px;
+      font-size: 0.9em;
     }
   }
   

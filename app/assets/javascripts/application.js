@@ -12305,7 +12305,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box; \n  display: -ms-flexbox; \n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #ada;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after { \n  bottom: -8px;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before { \n  top: -8px;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after { \n  -webkit-transform: scale(1.135); \n          transform: scale(1.135);\n}\n.greedy-nav button[data-v-2cf218f6]::after { \n  content: attr(count); \n  position: absolute; \n  width: 18px; \n  height: 18px; \n  left: -12px; \n  top: 5px; \n  text-align: center; \n  background-color: #ef6c00; \n  color: #fff; \n  font-size: 13px; \n  line-height: 18px; \n  border-radius: 50%; \n  border: 2px solid #fff; \n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] { \n  display: block; \n  padding: 10px 30px; \n  color: #FFF; \n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover { \n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] { \n  position: absolute; \n  height: 100%; \n  right: 0; \n  padding: 0 15px; \n  border: 0; \n  outline: none; \n  background-color: #f57c00; \n  color: #fff; \n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover { \n  background-color: #ef6c00;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] { \n  position: relative; \n  width: 32px; \n  height: 4px; \n  background: #fff; \n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after { \n  content: ''; \n  position: absolute; \n  left: 0; \n  width: 32px; \n  height: 4px; \n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] { \n  background-color: #dad; \n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child { \n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] { \n  vertical-align: middle; \n  line-height: 1.2em; \n  display: table-cell; \n  border-left: 1px solid #FFF;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] { \n  z-index: 116; \n  position: absolute; \n  right: 0px; \n  top: 100%; \n  padding-top: 12px; \n  margin-right: -6px;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] { \n  display: block; \n  border-top: 1px solid #FFF; \n  background-color: #1d3557; \n  padding: 6px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child { \n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] { \n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] { \n  visibility: hidden;\n}\n", ""]);
+exports.push([module.i, ".greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box; \n  display: -ms-flexbox; \n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after { \n  bottom: -0.6em;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before { \n  top: -0.6em;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after { \n  -webkit-transform: scale(1.135); \n          transform: scale(1.135);\n}\n.greedy-nav button[data-v-2cf218f6]::after { \n  content: attr(count); \n  position: absolute; \n  width: 17px; \n  height: 17px; \n  left: -11px; \n  top: 5px; \n  text-align: center; \n  background-color: #ef6c00; \n  color: #fff; \n  font-size: 14px; \n  line-height: 16px; \n  border-radius: 50%; \n  border: 2px solid #fff; \n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] { \n  display: block; \n  padding: 10px 30px; \n  color: #FFF; \n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover { \n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] { \n  position: absolute; \n  height: 100%; \n  right: 0; \n  padding: 0 15px; \n  border: 0; \n  outline: none; \n  background-color: #f57c00; \n  color: #fff; \n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover { \n  background-color: #ef6c00;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] { \n  position: relative; \n  width: 32px; \n  height: 0.25em; \n  background: #fff; \n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after { \n  content: ''; \n  position: absolute; \n  left: 0; \n  width: 32px; \n  height: 0.25em; \n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] { \n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child { \n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] { \n  vertical-align: middle; \n  display: table-cell; \n  border-left: 1px solid #FFF;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] { \n  z-index: 10; \n  position: absolute; \n  right: 0px; \n  top: 100%; \n  margin-right: -6px;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] { \n  display: block; \n  background-color: green; \n  padding: 0px; \n  margin: 4px; \n  font-size: 0.9em;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child { \n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] { \n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] { \n  visibility: hidden;\n}\n", ""]);
 
 // exports
 
@@ -12354,7 +12354,7 @@ exports.default = {
     return {
       //выключатель показа индикации служебной информации
       toggle: false,
-      switcher: true,
+      switcher: false,
       menuwidth: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
@@ -12400,7 +12400,7 @@ exports.default = {
     compstylem: function compstylem() {
       if (this.menuitemsHide.length > 0) {
         this.styleObject = {
-          backgroundColor: 'red',
+          backgroundColor: 'green',
           textAlign: 'right',
           paddingRight: '60px'
         };
@@ -12544,18 +12544,20 @@ var render = function() {
         _vm._v(" "),
         _c(
           "ul",
-          { staticClass: "hidden-links", style: _vm.hiddenStyle },
+          {
+            staticClass: "hidden-links",
+            style: _vm.hiddenStyle,
+            on: {
+              mouseleave: function($event) {
+                _vm.toggle = false
+              }
+            }
+          },
           _vm._l(_vm.menuitemsHide, function(item) {
             return _c(
               "li",
               {
-                on: {
-                  mouseleave: function($event) {
-                    _vm.toggle = false
-                  },
-                  mouseup: function($event) {},
-                  click: function($event) {}
-                }
+                on: { mouseup: function($event) {}, click: function($event) {} }
               },
               [
                 _c(
