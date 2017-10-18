@@ -14,7 +14,7 @@
         </li>
       </ul>
       <ul class='hidden-links' v-bind:style="hiddenStyle">
-        <li v-for="item in menuitemsHide" >
+        <li v-for="item in menuitemsHide" @mouseleave="toggle = false">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>
         </li>
@@ -48,9 +48,10 @@
         hiddenStyle: {}
       }
     },
-
+ 
     computed: {
-       switchhidestyle: function(){
+ 
+      switchhidestyle: function(){
         if (this.toggle) {
           this.hiddenStyle = {
           visibility: 'visible'

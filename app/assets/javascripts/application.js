@@ -12366,6 +12366,7 @@ exports.default = {
   },
 
   computed: {
+
     switchhidestyle: function switchhidestyle() {
       if (this.toggle) {
         this.hiddenStyle = {
@@ -12526,14 +12527,24 @@ var render = function() {
         "ul",
         { staticClass: "hidden-links", style: _vm.hiddenStyle },
         _vm._l(_vm.menuitemsHide, function(item) {
-          return _c("li", [
-            _c(
-              "a",
-              { attrs: { href: "" } },
-              [_c("nobr", [_vm._v(_vm._s(item.title.toUpperCase()))])],
-              1
-            )
-          ])
+          return _c(
+            "li",
+            {
+              on: {
+                mouseleave: function($event) {
+                  _vm.toggle = false
+                }
+              }
+            },
+            [
+              _c(
+                "a",
+                { attrs: { href: "" } },
+                [_c("nobr", [_vm._v(_vm._s(item.title.toUpperCase()))])],
+                1
+              )
+            ]
+          )
         })
       )
     ])
