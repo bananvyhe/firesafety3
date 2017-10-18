@@ -29,29 +29,33 @@ export default {
 </script>
 
 <style scoped>
+@import "../../app/assets/stylesheets/postcss/variables";
 .telpanel {
-  justify-content: center;
-  lost-flex-container: row;
-  lost-column: 1/1 1 1% flex;
-
+   display: flex;
+   justify-content: center;
   div {
-    text-align: center;
+    padding: 1.5em; 
     align-self: center;
   }
-
   @util border-bottom-radius(0.6em);
 }
-
+@media (--only-small-screen) {
+  .adress {
+    background-color: #dad;
+    
+  }
+} 
 .tel {
-  lost-column: 1/4 3 3% flex;
+  text-align: right;
 } 
 
 .adress {
-  lost-column: 1/2 3 3% flex;
+  text-align: center;
 }
 
+
 .mail {
-  lost-column: 1/4 3 3% flex;
+  
 }
 
 .fade-enter {
@@ -67,5 +71,6 @@ export default {
   transition: opacity 1s;
   opacity: 0;
 }
-  
+ 
+
 </style>

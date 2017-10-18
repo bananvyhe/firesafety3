@@ -17,8 +17,9 @@
   </div>
 </template>
 
+
+
 <style scoped>
-  
   .mainLogoPanel { 
     z-index: 6;
     $color-6: #b9d6f2;
@@ -26,7 +27,6 @@
     background-color: $color-6;
     background: url('../../app/assets/images/main_06.jpg' );
     background-repeat: no-repeat;
-    background-color: $color-6;
   }
    
   .logoContainer { 
@@ -40,10 +40,7 @@
     lost-column: 3/7 2 0 flex; 
     z-index: 2;
     align-items: flex-end;
-    
-    @custom-media --only-small-screen (width >= 0px) and (width <= 600px);
-    @custom-media --only-big-screen (width >= 1024px);
-
+        
     @media (--only-small-screen) {
       lost-column: 3/8 2 0 flex; 
        .logo {

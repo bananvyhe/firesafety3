@@ -5,3 +5,7 @@ $color-4: #d64933;
 $color-5: #1d3557;
 $color-6: #b9d6f2;
 $HeadBackColor: #2a303a;
+$color-8: 
+
+@custom-media --only-small-screen (width >= 0px) and (width <= 600px);
+@custom-media --only-big-screen (width >= 1024px);
