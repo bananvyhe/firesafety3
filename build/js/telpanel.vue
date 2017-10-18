@@ -30,10 +30,6 @@ export default {
 
 <style scoped>
 .telpanel {
-  height: 4vh;
-  font-family: "PTSansNar"; 
-  font-style: regular;
-  font-weight: 400;
   justify-content: center;
   lost-flex-container: row;
   lost-column: 1/1 1 1% flex;

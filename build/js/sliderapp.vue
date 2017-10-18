@@ -26,22 +26,6 @@
 
   window.addEventListener('resize', resize, false);
   resize();
-    // var handleMatchMedia = function (mediaQuery) {
-    //   if (mediaQuery.matches) {
-    //     // если менее 480px или равное, то выполняется код между скобок 
-    //     vis.value = '30';
-    //     console.log(vis);
-    //     } else {
-    //     // обратное условие, т.е если более 480px
-    //     vis.value = '60';
-    //     console.log(vis);
-    //   }
-    // },
-     
-     
-    // mql = window.matchMedia('all and (max-width: 480px)');
-    // handleMatchMedia(mql);
-    // mql.addListener(handleMatchMedia); // запускается каждый раз, когда заданное разрешение медиа запроса достигнуто
 
   export default {
     data: function () {

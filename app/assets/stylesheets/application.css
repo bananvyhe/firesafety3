@@ -12,6 +12,20 @@
 	src: url(fonts/Ubuntu-Regular.woff2) format("woff2");
 } 
 
+@font-face {
+	font-family: PTSansNar;
+	font-style: regular;
+	font-weight: 400;
+	src: url(fonts/PT_Sans-Narrow-Web-Regular.woff2) format("woff2");
+} 
+
+@font-face {
+	font-family: PTSansNar;
+	font-style: bold;
+	font-weight: 700;
+	src: url(fonts/PT_Sans-Narrow-Web-Bold.woff2) format("woff2");
+} 
+
 .phone img {
 	display: block;
 } 
@@ -99,7 +113,13 @@ html {
   background-position: left top;
   background-repeat: repeat;
   background-size: 4px 24px;}
-    
+.telpanel {
+  height: 4vh;
+  font-family: "PTSansNar"; 
+  font-style: regular;
+  font-weight: 400;
+} 
+
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;
@@ -111,12 +131,12 @@ html {
   height: 3.6em; 
 }
 
-.main {
+.mainLogoPanel {
   height: 3em; 
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
-  .main {
+  .mainLogoPanel {
     height: 2em; 
   }
 }

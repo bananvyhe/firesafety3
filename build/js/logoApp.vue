@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="mainLogoPanel">
     <div class="logoContainer">
        
       <div class="logo">
@@ -19,7 +19,8 @@
 
 <style scoped>
   
-  .main { z-index: 6;
+  .mainLogoPanel { 
+    z-index: 6;
     $color-6: #b9d6f2;
     lost-flex-container: row;
     background-color: $color-6;

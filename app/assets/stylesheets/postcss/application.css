@@ -47,7 +47,15 @@ $column: 200px;
 */
 @custom-media --only-small-screen (width >= 0px) and (width <= 600px);
 @custom-media --only-big-screen (width >= 1024px);
-    
+
+/*Настройки шрифтов и высоты апплетов*/
+.telpanel {
+  height: 4vh;
+  font-family: "PTSansNar"; 
+  font-style: regular;
+  font-weight: 400;
+} 
+
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;
@@ -59,15 +67,16 @@ $column: 200px;
   height: 3.6em; 
 }
 
-.main {
+.mainLogoPanel {
   height: 3em; 
 }
 
 @media (--only-small-screen) {
-  .main {
+  .mainLogoPanel {
     height: 2em; 
   }
 }
+/*end Настройки шрифтов и высоты апплетов*/
  
 .precss {
   @if 3 < 5 {
