@@ -10,6 +10,7 @@ var assets  = require('postcss-assets');
 var postutil = require('postcss-utilities');
 var flexbox = require('postcss-flexbox');
 var babel = require("gulp-babel");
+var cssnext = require('postcss-cssnext');
 
 var fonts = require('postcss-font-magician')({
   custom: {
@@ -179,6 +180,7 @@ var path = {
 };
 
 gulp.task('scripts', function() {
+
   return streamqueue({ objectMode: true },
     gulp.src("src/js/app.js").pipe(babel()),
     gulp.src("src/js/anotherscripts.js")
@@ -192,7 +194,7 @@ gulp.task('scripts', function() {
 
 gulp.task('css', function () {
   var plugins = [
-    
+
     assets({
       loadPaths: ['app/assets/images/']
     }),
@@ -200,15 +202,15 @@ gulp.task('css', function () {
     precss({
       "lookup": false
     }),
+
     flexbox,
     postutil,
-    postcssgulp,
-    svg( ), 
-    
+     
+    svg(), 
+        cssnext(), 
     hamster(),
     lost(),
-    fonts,
-    autoprefixer({browsers: ["> 0.5%"]})
+    fonts
 
   ];
 

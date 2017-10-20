@@ -32,7 +32,7 @@
       return {
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: false,
+        switcher: true,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -259,13 +259,19 @@
     right: 0px;
     top: 100%;
     
-        margin-right: -6px;
+    margin-right: -6px;
+    :last-child {
+      border-bottom-left-radius: 1.3em; 
+    }
+    
     li {
+
       display: block;
       background-color: $color-5;
       padding: 0px;
       margin: 4px;
       font-size: 0.9em;
+
     }
   }
   

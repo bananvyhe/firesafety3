@@ -36,9 +36,6 @@ logo {overflow: visible;
 
 
 
-.up {
-  background: svg-load('../../images/logo.svg', fill=#000, stroke=#fff);
-}
 
 headmenu {
   lost-column: 1/1 1 1% flex;
