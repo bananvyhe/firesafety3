@@ -1,32 +1,28 @@
 <template>
   <div class="mainLogoPanel">
     <div class="logoContainer">
-       
       <div class="logo">
         <div></div>
       </div>
-
       <div class="brandname">
         <div></div>
       </div>
     </div>
-
     <div class="audit">
       <br>
     </div> 
   </div>
 </template>
 
-
-
 <style scoped>
+@import "../../app/assets/stylesheets/postcss/variables";
   .mainLogoPanel { 
     z-index: 6;
     $color-6: #b9d6f2;
     lost-flex-container: row;
-    background-color: $color-6;
     background: url('../../app/assets/images/main_06.jpg' );
     background-repeat: no-repeat;
+    background-color: $color-6;
   }
    
   .logoContainer { 
