@@ -1,5 +1,6 @@
 <template>
-  <el-carousel v-bind="{height: visota.value + 'vh'}">
+  <el-carousel v-bind="{height: visota.value + 'vh', 'indicator-position':
+  hider}">
     <el-carousel-item v-for="(item, index) in items" :key='index'>
         <onediv :class="item.class" >
           <h3>{{item.title}}
@@ -10,6 +11,8 @@
           <input type="text" v-model="item.title">
           <br>
           <input type="text" v-model="visota.value">
+          <br>
+          {{hideind}}
         </onediv>
     </el-carousel-item>
   </el-carousel>
@@ -23,13 +26,13 @@
   function resize() {
     if (window.matchMedia('only screen and (max-width: 600px)').matches) {
         console.log('under 600 pixels');
-        vis.value = '14';                    
+        vis.value = '14';
     } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
         console.log('between 601 and 1024 pixels');
         vis.value = '28';                      
     } else {
         console.log('higher than 1024 pixels');
-        vis.value = '40';                     
+        vis.value = '40'; 
     }
   }
 
@@ -40,6 +43,7 @@
     data: function () {
       return {
         visota: vis,
+        hider: '',
         items: [
           { title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' },
           { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
@@ -47,6 +51,15 @@
           { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' },
           { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }  
         ] 
+      }
+    },
+    computed: {
+      hideind: function() {
+        if (this.visota.value <= 14){
+          return this.hider = 'none';
+        }else{
+          return this.hider = '';
+        }
       }
     }
   }

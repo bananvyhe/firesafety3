@@ -11784,6 +11784,9 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
 
 var vis = { value: '30' };
@@ -11807,8 +11810,18 @@ exports.default = {
   data: function data() {
     return {
       visota: vis,
+      hider: '',
       items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }]
     };
+  },
+  computed: {
+    hideind: function hideind() {
+      if (this.visota.value <= 14) {
+        return this.hider = 'none';
+      } else {
+        return this.hider = '';
+      }
+    }
   }
 };
 
@@ -11823,7 +11836,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "el-carousel",
-    _vm._b({}, "el-carousel", { height: _vm.visota.value + "vh" }, false),
+    _vm._b(
+      {},
+      "el-carousel",
+      {
+        height: _vm.visota.value + "vh",
+        "indicator-position": _vm.hider
+      },
+      false
+    ),
     _vm._l(_vm.items, function(item, index) {
       return _c(
         "el-carousel-item",
@@ -11881,7 +11902,10 @@ var render = function() {
                   _vm.visota.value = $event.target.value
                 }
               }
-            })
+            }),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v("\n        " + _vm._s(_vm.hideind) + "\n      ")
           ])
         ],
         1
