@@ -32,7 +32,7 @@
       return {
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: true,
+        switcher: false,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,

@@ -31,26 +31,33 @@ export default {
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 .telpanel {
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
   div {
-    padding: 1.5em; 
+    @media (--only-big-screen) {
+      padding: 2.8em; 
+    }
+    padding: 0.8em; 
     align-self: center;
   }
-  @util border-bottom-radius(0.6em);
-}
-@media (--only-small-screen) {
-  .adress {
-    background-color: #dad;
-    
+  @media (--only-small-screen) {
+    .adress {
+      display: none;
+    }
   }
-} 
+
+  @media (--only-big-screen) {
+      
+      height: 2.2em;
+  }
+}
+
 .tel {
-  text-align: right;
+  
 } 
 
 .adress {
-  text-align: center;
+   
 }
 
 

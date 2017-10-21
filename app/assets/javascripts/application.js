@@ -11978,7 +11978,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".telpanel[data-v-f0894aa8] {\n   display: -webkit-box;\n   display: -ms-flexbox;\n   display: flex;\n   -webkit-box-pack: center;\n       -ms-flex-pack: center;\n           justify-content: center;\n@util border-bottom-radius(0.6em);\n}\n.telpanel div[data-v-f0894aa8] {\n   padding: 1.5em;\n   -ms-flex-item-align: center;\n       align-self: center;\n}\n.tel[data-v-f0894aa8] {\n  text-align: right;\n}\n.adress[data-v-f0894aa8] {\n  text-align: center;\n}\n.mail[data-v-f0894aa8] {\n}\n.fade-enter[data-v-f0894aa8] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n}\n.fade-leave[data-v-f0894aa8] {\n}\n.fade-leave-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n \n\n", ""]);
+exports.push([module.i, ".telpanel[data-v-f0894aa8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.telpanel div[data-v-f0894aa8] {\n  padding: 0.8em;\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n@media (min-width: 1024px) {\n  .telpanel div[data-v-f0894aa8] {\n    padding: 2.8em;\n  }\n}\n@media (min-width: 0px) and (max-width: 750px) {\n  .telpanel .adress[data-v-f0894aa8] {\n    display: none;\n  }\n}\n@media (min-width: 1024px) {\n  .telpanel[data-v-f0894aa8] {\n      \n      height: 2.2em;\n  }\n}\n.tel[data-v-f0894aa8] {\n}\n.adress[data-v-f0894aa8] {\n}\n.mail[data-v-f0894aa8] {\n}\n.fade-enter[data-v-f0894aa8] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n}\n.fade-leave[data-v-f0894aa8] {\n}\n.fade-leave-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n \n\n", ""]);
 
 // exports
 
@@ -12338,7 +12338,7 @@ exports.default = {
     return {
       //выключатель показа индикации служебной информации
       toggle: false,
-      switcher: true,
+      switcher: false,
       menuwidth: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,

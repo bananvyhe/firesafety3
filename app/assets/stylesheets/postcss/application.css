@@ -58,25 +58,24 @@ $column: 200px;
   font-weight: 400;
   background-color: $color-5;
   color: $color-1;
+
   @media (--only-small-screen) {
+    .adress {
+      display: none;
+    }
     div {
-      color: #000000;
-      padding: 0.2m; 
+      padding: 0.2em; 
     }
   }
-} 
 
-/*Dont work!*/
-/*--------------*/
-
-/*--------------*/
-/*end Dont work!*/
- 
-@media (--only-big-screen) {
-  .telpanel {
-    height: 2.2em;
+  @media (--only-big-screen) {
+      div {
+        padding: 2em; 
+      }
+      height: 2.2em;
   }
-}
+
+} 
 
 
 .greedy-nav {

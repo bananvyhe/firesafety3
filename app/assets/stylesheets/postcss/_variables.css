@@ -7,5 +7,5 @@ $color-6: #b9d6f2;
 $HeadBackColor: #2a303a;
 
 
-@custom-media --only-small-screen (width >= 0px) and (width <= 600px);
+@custom-media --only-small-screen (width >= 0px) and (width <= 750px);
 @custom-media --only-big-screen (width >= 1024px);

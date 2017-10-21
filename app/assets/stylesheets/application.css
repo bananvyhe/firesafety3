@@ -113,21 +113,32 @@ html {
   font-weight: 400;
   background-color: #1d3557;
   color: #FFF
+
 }
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 750px) {
+
+
+  .telpanel .adress {
+    display: none;
+  }
 
 
   .telpanel div {
-    color: #000000;
-    padding: 0.2m;
+    padding: 0.2em;
   }
   }
- 
 @media (min-width: 1024px) {
+
+
   .telpanel {
     height: 2.2em;
   }
-}
+
+
+  .telpanel div {
+    padding: 2em;
+  }
+  } 
 
 
 .greedy-nav {
@@ -145,7 +156,7 @@ html {
   height: 3em; 
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 750px) {
   .mainLogoPanel {
     height: 2em; 
   }
