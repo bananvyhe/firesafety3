@@ -3,7 +3,7 @@
     <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}}
     </div>
     <nav  class='greedy-nav'  v-bind:style="styleObject"  ref="dropdown">
-      <button v-if="menuitemsHide.length > 0" v-on:click="toggle = !toggle" >
+      <button v-if="menuitemsHide.length > 0" v-on:click="toggle = !toggle" @mouseenter="toggle = true">
         <div class="hamburger" >
         </div>
       </button>
@@ -13,7 +13,7 @@
           </a>
         </li>
       </ul>
-      <ul class='hidden-links' v-bind:style="hiddenStyle"  @mouseleave="toggle = false">
+      <ul class='hidden-links' v-bind:style="hiddenStyle"  @mouseleave="toggle = false" >
         <li v-for="item in menuitemsHide" @mouseup="" @click="">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>

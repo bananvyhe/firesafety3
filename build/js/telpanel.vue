@@ -34,9 +34,9 @@ export default {
   display: flex;
   justify-content: center;
   div {
-    padding: 1.8em; 
+    padding: 2.2em; 
     @media (--only-big-screen) {
-      padding: 2.8em; 
+      padding: 2.6em; 
     }
     padding: 0.8em; 
     align-self: center;

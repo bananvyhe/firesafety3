@@ -1,7 +1,16 @@
 <template>
   <el-carousel v-bind="{height: visota.value + 'vh'}">
     <el-carousel-item v-for="(item, index) in items" :key='index'>
-        <onediv :class="item.class" ><h3>{{item.title}}<br>{{item.text}}<br></h3>{{visota.value}}<br><input type="text" v-model="item.title"><br><input type="text" v-model="visota.value"></div></onediv>
+        <onediv :class="item.class" >
+          <h3>{{item.title}}
+            <br>{{item.text}}
+            <br>
+          </h3>{{visota.value}}
+          <br>
+          <input type="text" v-model="item.title">
+          <br>
+          <input type="text" v-model="visota.value">
+        </onediv>
     </el-carousel-item>
   </el-carousel>
 </template>

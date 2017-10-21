@@ -11775,6 +11775,15 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 var vis = { value: '30' };
@@ -11822,13 +11831,14 @@ var render = function() {
         [
           _c("onediv", { class: item.class }, [
             _c("h3", [
-              _vm._v(_vm._s(item.title)),
+              _vm._v(_vm._s(item.title) + "\n          "),
               _c("br"),
-              _vm._v(_vm._s(item.text)),
+              _vm._v(_vm._s(item.text) + "\n          "),
               _c("br")
             ]),
-            _vm._v(_vm._s(_vm.visota.value)),
+            _vm._v(_vm._s(_vm.visota.value) + "\n        "),
             _c("br"),
+            _vm._v(" "),
             _c("input", {
               directives: [
                 {
@@ -11849,7 +11859,9 @@ var render = function() {
                 }
               }
             }),
+            _vm._v(" "),
             _c("br"),
+            _vm._v(" "),
             _c("input", {
               directives: [
                 {
@@ -11978,7 +11990,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".telpanel[data-v-f0894aa8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.telpanel div[data-v-f0894aa8] {\n  padding: 1.8em;\n  padding: 0.8em;\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n@media (min-width: 1424px) {\n  .telpanel div[data-v-f0894aa8] {\n    padding: 2.8em;\n  }\n}\n@media (min-width: 0px) and (max-width: 750px) {\n  .telpanel .adress[data-v-f0894aa8] {\n    display: none;\n  }\n}\n@media (min-width: 1424px) {\n  .telpanel[data-v-f0894aa8] {\n      height: 2.2em;\n  }\n}\n.tel[data-v-f0894aa8] {\n}\n.adress[data-v-f0894aa8] {\n}\n.mail[data-v-f0894aa8] {\n}\n.fade-enter[data-v-f0894aa8] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n}\n.fade-leave[data-v-f0894aa8] {\n}\n.fade-leave-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n \n\n", ""]);
+exports.push([module.i, ".telpanel[data-v-f0894aa8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.telpanel div[data-v-f0894aa8] {\n  padding: 2.2em;\n  padding: 0.8em;\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n@media (min-width: 1424px) {\n  .telpanel div[data-v-f0894aa8] {\n    padding: 2.6em;\n  }\n}\n@media (min-width: 0px) and (max-width: 750px) {\n  .telpanel .adress[data-v-f0894aa8] {\n    display: none;\n  }\n}\n@media (min-width: 1424px) {\n  .telpanel[data-v-f0894aa8] {\n      height: 2.2em;\n  }\n}\n.tel[data-v-f0894aa8] {\n}\n.adress[data-v-f0894aa8] {\n}\n.mail[data-v-f0894aa8] {\n}\n.fade-enter[data-v-f0894aa8] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n}\n.fade-leave[data-v-f0894aa8] {\n}\n.fade-leave-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n \n\n", ""]);
 
 // exports
 
@@ -12504,6 +12516,9 @@ var render = function() {
                 on: {
                   click: function($event) {
                     _vm.toggle = !_vm.toggle
+                  },
+                  mouseenter: function($event) {
+                    _vm.toggle = true
                   }
                 }
               },
