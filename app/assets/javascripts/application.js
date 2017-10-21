@@ -11687,7 +11687,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.changev[data-v-a7895866] {\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n}\n.onediv[data-v-a7895866] {\n   background-position: right bottom;\n  /*filter: blur(4px);*/\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-a7895866] {\n   background-position: right bottom;\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.threediv[data-v-a7895866] {\n  background-position: center bottom;\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.fivediv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.el-carousel__item h3[data-v-a7895866] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, "\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n}\n.onediv[data-v-a7895866] {\n   background-position: right bottom;\n  /*filter: blur(4px);*/\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-a7895866] {\n   background-position: right bottom;\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.threediv[data-v-a7895866] {\n  background-position: center bottom;\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.fivediv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.el-carousel__item h3[data-v-a7895866] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11784,11 +11784,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 var vis = { value: '30' };
@@ -11814,7 +11809,7 @@ exports.default = {
       switcher: false,
       visota: vis,
       hider: '',
-      items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }]
+      items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' }, { title: 'Пожарная безопастность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' }, { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' }, { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' }, { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }]
     };
   },
   computed: {
@@ -11849,84 +11844,32 @@ var render = function() {
       false
     ),
     _vm._l(_vm.items, function(item, index) {
-      return _c(
-        "el-carousel-item",
-        { key: index },
-        [
-          _c("onediv", { class: item.class }, [
-            _c("h3", [
-              _vm._v(_vm._s(item.title) + "\n          "),
-              _c("br"),
-              _vm._v(_vm._s(item.text) + "\n          "),
-              _c("br")
-            ]),
-            _vm._v(_vm._s(_vm.visota.value) + "\n        "),
-            _c("br"),
-            _vm._v(" "),
-            _c("input", {
+      return _c("el-carousel-item", { key: index }, [
+        _c("div", { class: item.class }, [
+          _c("h3", [_vm._v(_vm._s(item.title))]),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("h4", [_vm._v(_vm._s(item.text))]),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
               directives: [
                 {
-                  name: "model",
-                  rawName: "v-model",
-                  value: item.title,
-                  expression: "item.title"
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.switcher,
+                  expression: "switcher"
                 }
-              ],
-              attrs: { type: "text" },
-              domProps: { value: item.title },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  item.title = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.visota.value,
-                  expression: "visota.value"
-                }
-              ],
-              attrs: { type: "text" },
-              domProps: { value: _vm.visota.value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.visota.value = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.switcher,
-                    expression: "switcher"
-                  }
-                ]
-              },
-              [_vm._v("\n          " + _vm._s(_vm.hideind) + "\n        ")]
-            )
-          ])
-        ],
-        1
-      )
+              ]
+            },
+            [_vm._v("\n          " + _vm._s(_vm.hideind) + "\n        ")]
+          )
+        ])
+      ])
     })
   )
 }
@@ -12342,7 +12285,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box; \n  display: -ms-flexbox; \n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after { \n  bottom: -0.6em;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before { \n  top: -0.6em;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after { \n  -webkit-transform: scale(1.135); \n          transform: scale(1.135);\n}\n.greedy-nav button[data-v-2cf218f6]::after { \n  content: attr(count); \n  position: absolute; \n  width: 17px; \n  height: 17px; \n  left: -11px; \n  top: 5px; \n  text-align: center; \n  background-color: #ef6c00; \n  color: #fff; \n  font-size: 14px; \n  border-radius: 50%; \n  border: 2px solid #fff; \n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] { \n  display: block; \n  padding: 10px 30px; \n  color: #FFF; \n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover { \n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] { \n  position: absolute; \n  height: 100%; \n  right: 0; \n  padding: 0 15px; \n  border: 0; \n  outline: none; \n  background-color: #f57c00; \n  color: #fff; \n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover { \n  background-color: #ef6c00;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] { \n  position: relative; \n  width: 32px; \n  height: 0.25em; \n  background: #fff; \n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after { \n  content: ''; \n  position: absolute; \n  left: 0; \n  width: 32px; \n  height: 0.25em; \n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] { \n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child { \n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] { \n  vertical-align: middle; \n  display: table-cell; \n  border-left: 1px solid #FFF;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] { \n  z-index: 10; \n  position: absolute; \n  right: 0px; \n  top: 100%; \n  margin-right: -6px;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] :last-child { \n  border-bottom-left-radius: 1.3em;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] { \n  display: block; \n  background-color: #1d3557; \n  padding: 0px; \n  margin: 4px; \n  font-size: 0.9em;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child { \n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] { \n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] { \n  visibility: hidden;\n}\n", ""]);
+exports.push([module.i, ".greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box; \n  display: -ms-flexbox; \n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after { \n  bottom: -0.6em;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before { \n  top: -0.6em;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after { \n  -webkit-transform: scale(1.135); \n          transform: scale(1.135);\n}\n.greedy-nav button[data-v-2cf218f6]::after { \n  content: attr(count); \n  position: absolute; \n  width: 17px; \n  height: 17px; \n  left: -11px; \n  top: 5px; \n  text-align: center; \n  background-color: #ef6c00; \n  color: #fff; \n  font-size: 14px; \n  border-radius: 50%; \n  border: 2px solid #fff; \n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] { \n  display: block; \n  padding: 10px 30px; \n  color: #FFF; \n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover { \n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] { \n  position: absolute; \n  height: 100%; \n  right: 0; \n  padding: 0 15px; \n  border: 0; \n  outline: none; \n  background-color: #f57c00; \n  color: #fff; \n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover { \n  background-color: #ef6c00;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] { \n  position: relative; \n  width: 32px; \n  height: 0.25em; \n  background: #fff; \n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after { \n  content: ''; \n  position: absolute; \n  left: 0; \n  width: 32px; \n  height: 0.25em; \n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] { \n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child { \n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] { \n  vertical-align: middle; \n  display: table-cell; \n  border-left: 1px solid #FFF;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] { \n  z-index: 10; \n  position: absolute; \n  right: 0px; \n  top: 100%; \n  margin-right: 0px;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] :last-child { \n  border-bottom-left-radius: 1.3em;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] { \n  display: block; \n  background-color: #1d3557; \n  padding: 0px; \n  margin: 4px; \n  font-size: 0.9em;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child { \n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] { \n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] { \n  visibility: hidden;\n}\n", ""]);
 
 // exports
 

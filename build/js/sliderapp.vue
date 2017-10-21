@@ -2,22 +2,17 @@
   <el-carousel v-bind="{height: visota.value + 'vh', 'indicator-position':
   hider}">
     <el-carousel-item v-for="(item, index) in items" :key='index'>
-        <onediv :class="item.class" >
-          <h3>{{item.title}}
-            <br>{{item.text}}
-            <br>
-          </h3>{{visota.value}}
+        <div :class="item.class" >
+          <h3>{{item.title}}</h3>
           <br>
-          <input type="text" v-model="item.title">
-          <br>
-          <input type="text" v-model="visota.value">
+          <h4>{{item.text}}</h4>
           <br>
           <!-- служебное поле -->
           <div v-show="switcher">
             {{hideind}}
           </div>
           <!-- -->
-        </onediv>
+        </div>
     </el-carousel-item>
   </el-carousel>
 </template>
@@ -49,10 +44,10 @@
         hider: '',
         items: [
           { title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' },
-          { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' },
-          { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' },
-          { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' },
-          { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }  
+          { title: 'Пожарная безопастность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' },
+          { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' },
+          { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' },
+          { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }  
         ] 
       }
     },
@@ -69,15 +64,10 @@
 </script>
 
 <style scoped>
-  .changev {
-  
-  }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
     background-repeat:no-repeat;
     background-size: cover;
-    
-   
   }
   .onediv {
      background-position: right bottom;
@@ -86,7 +76,7 @@
   }
   .twodiv {
      background-position: right bottom;
-    background-image: url(../../app/assets/images/2.jpg);
+    background-image: url(../../app/assets/images/5.jpg);
   }
   .threediv {
     background-position: center bottom;
@@ -94,13 +84,12 @@
   }
   .fourdiv {
     background-position: right bottom;
-    background-image: url(../../app/assets/images/4.jpg);
+    background-image: url(../../app/assets/images/2.jpg);
   } 
   .fivediv {
     background-position: right bottom;
-    background-image: url(../../app/assets/images/5.jpg);
+    background-image: url(../../app/assets/images/4.jpg);
   }   
-
   .el-carousel__item h3 {
     color: #475669;
     font-size: 18px;
@@ -108,11 +97,9 @@
     line-height: 2em;
     margin: 0;
   }
-
   .el-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
-
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }

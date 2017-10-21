@@ -94,7 +94,7 @@ html {
 .mainLogoPanel {
   height: 3.2em; 
 }
-@media (min-width: 0px) and (max-width: 750px) {
+@media (min-width: 0px) and (max-width: 601px) {
   .mainLogoPanel {
     height: 2.2em; 
   }

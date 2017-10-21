@@ -183,7 +183,6 @@
     height: 100%;
     right: 0;
     padding: 0 15px;
-    
     border: 0;
     outline: none;
     background-color: $color-2;
@@ -192,7 +191,6 @@
       &:hover {
       background-color: $color-3;
       }
-    
       &::after {
         content: attr(count);
         position: absolute;
@@ -208,7 +206,6 @@
         border: 2px solid #fff;
         font-weight: bold;
       }
-    
       &:hover::after {
         transform: scale(1.135);
       }
@@ -220,7 +217,6 @@
     height: 0.25em;
     background: #fff;
     margin: auto;
-    
     &:before, 
     &:after {
       content: '';
@@ -230,16 +226,13 @@
       height: 0.25em;
       background: #fff;
     }
-    
     &:before {
       top: -0.6em;
     }
-    
     &:after {
       bottom: -0.6em;
     }
   }
-  
   .visible-links {
     display: inline-table;
     :first-child {
@@ -250,34 +243,27 @@
       border-left: 1px solid $color-1; 
     }
   }
-  
   .hidden-links {
     z-index: 10;
     position: absolute;
     right: 0px;
     top: 100%;
-    
-    margin-right: -6px;
+    margin-right: 0px;
     :last-child {
       border-bottom-left-radius: 1.3em; 
     }
-    
     li {
-
       display: block;
       background-color: $color-5;
       padding: 0px;
       margin: 4px;
       font-size: 0.9em;
-
     }
   }
-  
   .visible-links li:first-child {
     font-weight: bold;
     a { color: $color-1 !important; }
   }
-  
   .hidden {
     visibility: hidden;
   }
