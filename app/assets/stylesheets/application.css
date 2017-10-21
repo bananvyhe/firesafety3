@@ -4,55 +4,24 @@
   font-weight: 700;
   src: url(fonts/Saira-Bold.woff2) format("woff2");
 }
-
-
 @font-face {
   font-family: UbuntuR;
   font-style: normal;
   font-weight: 400;
   src: url(fonts/Ubuntu-Regular.woff2) format("woff2");
 }
-
-
 @font-face {
   font-family: PTSansNar;
   font-style: regular;
   font-weight: 400;
   src: url(fonts/PT_Sans-Narrow-Web-Regular.woff2) format("woff2");
 }
-
-
 @font-face {
   font-family: PTSansNar;
   font-style: bold;
   font-weight: 700;
   src: url(fonts/PT_Sans-Narrow-Web-Bold.woff2) format("woff2");
 }
-
-
-.phone img {
-  display: block;
-}
-
-
-.phone_title {
-  width: 500px;
-}
-
-
-body.is_dark .phone_title {
-  color: white;
-}
-
-
-@media (max-width: 500px) {
-
-
-  .phone_title {
-    width: auto;
-  }
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -73,7 +42,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -97,14 +65,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 a:hover, a:active {
     outline: none;
 }
 
 html {
   font-size: 100%;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 .telpanel {
   height: 2em;
@@ -112,35 +79,8 @@ html {
   font-style: regular;
   font-weight: 400;
   background-color: #1d3557;
-  color: #FFF
-
-}
-@media (min-width: 0px) and (max-width: 750px) {
-
-
-  .telpanel .adress {
-    display: none;
-  }
-
-
-  .telpanel div {
-    padding: 0.2em;
-  }
-  }
-@media (min-width: 1024px) {
-
-
-  .telpanel {
-    height: 2.2em;
-  }
-
-
-  .telpanel div {
-    padding: 2em;
-  }
-  } 
-
-
+  color: #FFF;
+} 
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;
@@ -151,33 +91,16 @@ html {
   border-bottom-left-radius: 1.3em; 
   height: 3.6em; 
 }
-
 .mainLogoPanel {
-  height: 3em; 
+  height: 3.2em; 
 }
-
-@media (min-width: 0px) and (max-width: 750px) {
+@media (min-width: 0px) and (max-width: 600px) {
   .mainLogoPanel {
-    height: 2em; 
+    height: 2.2em; 
   }
-}
- 
-.precss {
-  background: green
-}
-
-@media (min-width: 500px) and (max-width: 1200px) {
-  .blur {
-    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
-    -webkit-filter: blur(10px);
-            filter: blur(10px);
+  .telpanel {
+    height: 1.6em; 
   }
-}
-
-.blur { 
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter'); 
-  -webkit-filter: blur(5px); 
-          filter: blur(5px);
 }
 
 .dropshadow {
@@ -189,7 +112,8 @@ html {
   position: relative;
 }
  
-body {
+body *:not(input):not(textarea):not(select) {
+  background-color: rgba(15, 150, 25, 0.1);
 }
 
 section {
@@ -291,10 +215,10 @@ section1 .trust:nth-child(3n) {
   height: 100%;
   z-index: 9900;
   pointer-events: none;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAVCAYAAABhe09AAAAAE0lEQVR42mNgGAVUB8Jt+88g8wEfPQIlLgxfuAAAAABJRU5ErkJggg==");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAYCAYAAADd5VyeAAAAFElEQVR42mNgGAWDAQi37T+DzAcAH3ACJR9sUEYAAAAASUVORK5CYII=");
   background-position: left top;
   background-repeat: repeat;
-  background-size: 4px 21px;}
+  background-size: 4px 24px;}
 
 noflex {
   max-width: 1366px;
@@ -318,6 +242,7 @@ noflex:after {
 }
 
 noflex div {
+  
 }
 
  
@@ -355,8 +280,6 @@ noflex div {
   width: calc(99.9% * 1/2 - (1em - 1em * 1/2));
   margin-top: 1%; 
   margin-bottom: 1%;
-
-
 }
 
 .grid-item:nth-child(1n) {

@@ -45,24 +45,19 @@ export default {
       display: none;
     }
   }
-
   @media (--only-big-screen) {
-      
       height: 2.2em;
   }
 }
 
 .tel {
-  
 } 
 
 .adress {
-   
 }
 
 
 .mail {
-  
 }
 
 .fade-enter {

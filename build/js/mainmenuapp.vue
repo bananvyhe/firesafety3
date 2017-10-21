@@ -204,8 +204,6 @@
         background-color: $color-3;
         color: #fff;
         font-size: 14px;
-        line-height: 16px;
-        
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
