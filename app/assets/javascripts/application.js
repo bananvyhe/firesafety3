@@ -11798,7 +11798,7 @@ exports.default = {
   data: function data() {
     return {
       visota: vis,
-      items: [{ title: 'Посадить дерево1', text: 'какой-нибудь текст1', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }]
+      items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }]
     };
   }
 };
@@ -11978,7 +11978,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".telpanel[data-v-f0894aa8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.telpanel div[data-v-f0894aa8] {\n  padding: 0.8em;\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n@media (min-width: 1024px) {\n  .telpanel div[data-v-f0894aa8] {\n    padding: 2.8em;\n  }\n}\n@media (min-width: 0px) and (max-width: 750px) {\n  .telpanel .adress[data-v-f0894aa8] {\n    display: none;\n  }\n}\n@media (min-width: 1024px) {\n  .telpanel[data-v-f0894aa8] {\n      height: 2.2em;\n  }\n}\n.tel[data-v-f0894aa8] {\n}\n.adress[data-v-f0894aa8] {\n}\n.mail[data-v-f0894aa8] {\n}\n.fade-enter[data-v-f0894aa8] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n}\n.fade-leave[data-v-f0894aa8] {\n}\n.fade-leave-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n \n\n", ""]);
+exports.push([module.i, ".telpanel[data-v-f0894aa8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.telpanel div[data-v-f0894aa8] {\n  padding: 1.8em;\n  padding: 0.8em;\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n@media (min-width: 1424px) {\n  .telpanel div[data-v-f0894aa8] {\n    padding: 2.8em;\n  }\n}\n@media (min-width: 0px) and (max-width: 750px) {\n  .telpanel .adress[data-v-f0894aa8] {\n    display: none;\n  }\n}\n@media (min-width: 1424px) {\n  .telpanel[data-v-f0894aa8] {\n      height: 2.2em;\n  }\n}\n.tel[data-v-f0894aa8] {\n}\n.adress[data-v-f0894aa8] {\n}\n.mail[data-v-f0894aa8] {\n}\n.fade-enter[data-v-f0894aa8] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n}\n.fade-leave[data-v-f0894aa8] {\n}\n.fade-leave-active[data-v-f0894aa8] {\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  opacity: 0;\n}\n \n\n", ""]);
 
 // exports
 
@@ -12041,7 +12041,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "adress" }, [
         _vm._v(
-          '\n    ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков д.54, 620135\n  '
+          '\n    ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков, д.54, 620135\n  '
         )
       ]),
       _vm._v(" "),

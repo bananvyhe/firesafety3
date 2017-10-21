@@ -6,7 +6,7 @@
       </div>    
     </transition>
     <div class="adress">
-      ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков д.54, 620135
+      ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков, д.54, 620135
     </div>
     <div class="mail">
       lider-1-00@mail.ru
@@ -34,6 +34,7 @@ export default {
   display: flex;
   justify-content: center;
   div {
+    padding: 1.8em; 
     @media (--only-big-screen) {
       padding: 2.8em; 
     }
