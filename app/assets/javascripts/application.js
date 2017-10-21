@@ -11787,6 +11787,8 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
 
 
 var vis = { value: '30' };
@@ -11809,6 +11811,7 @@ resize();
 exports.default = {
   data: function data() {
     return {
+      switcher: false,
       visota: vis,
       hider: '',
       items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' }, { title: 'Посадить дерево2', text: 'какой-нибудь текст2', class: 'twodiv' }, { title: 'Посадить дерево3', text: 'какой-нибудь текст3', class: 'threediv' }, { title: 'Посадить дерево4', text: 'какой-нибудь текст4', class: 'fourdiv' }, { title: 'Посадить дерево5', text: 'какой-нибудь текст5', class: 'fivediv' }]
@@ -11905,7 +11908,21 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("br"),
-            _vm._v("\n        " + _vm._s(_vm.hideind) + "\n      ")
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.switcher,
+                    expression: "switcher"
+                  }
+                ]
+              },
+              [_vm._v("\n          " + _vm._s(_vm.hideind) + "\n        ")]
+            )
           ])
         ],
         1
