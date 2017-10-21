@@ -32,7 +32,7 @@ export default {
 @import "../../app/assets/stylesheets/postcss/variables";
 .telpanel {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   div {
     padding: 2.2em; 
     @media (--only-big-screen) {
@@ -50,17 +50,12 @@ export default {
       height: 2.2em;
   }
 }
-
 .tel {
 } 
-
 .adress {
 }
-
-
 .mail {
 }
-
 .fade-enter {
   opacity: 0;
 }
@@ -74,6 +69,4 @@ export default {
   transition: opacity 1s;
   opacity: 0;
 }
- 
-
 </style>
