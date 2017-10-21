@@ -1,11 +1,10 @@
 <template>
   <el-carousel v-bind="{height: visota.value + 'vh', 'indicator-position':
   hider}">
-    <el-carousel-item v-for="(item, index) in items" :key='index'>
-        <div :class="item.class" >
-          <h3>{{item.title}}</h3>
-          <br>
-          <h4>{{item.text}}</h4>
+    <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
+        <div :class="item.class">
+          <titlefirst>{{item.title}}</titlefirst></br>
+          <titlesecond>{{item.text}}</titlesecond>
           <br>
           <!-- служебное поле -->
           <div v-show="switcher">

@@ -11783,7 +11783,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 
 var vis = { value: '30' };
@@ -11844,31 +11843,35 @@ var render = function() {
       false
     ),
     _vm._l(_vm.items, function(item, index) {
-      return _c("el-carousel-item", { key: index }, [
-        _c("div", { class: item.class }, [
-          _c("h3", [_vm._v(_vm._s(item.title))]),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("h4", [_vm._v(_vm._s(item.text))]),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.switcher,
-                  expression: "switcher"
-                }
-              ]
-            },
-            [_vm._v("\n          " + _vm._s(_vm.hideind) + "\n        ")]
-          )
-        ])
+      return _c("el-carousel-item", { key: index, staticClass: "sliderText" }, [
+        _c(
+          "div",
+          { class: item.class },
+          [
+            _c("titlefirst", [_vm._v(_vm._s(item.title))]),
+            _c("br"),
+            _vm._v(" "),
+            _c("titlesecond", [_vm._v(_vm._s(item.text))]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.switcher,
+                    expression: "switcher"
+                  }
+                ]
+              },
+              [_vm._v("\n          " + _vm._s(_vm.hideind) + "\n        ")]
+            )
+          ],
+          1
+        )
       ])
     })
   )

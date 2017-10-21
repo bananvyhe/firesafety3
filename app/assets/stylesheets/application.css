@@ -81,6 +81,22 @@ html {
   background-color: #1d3557;
   color: #FFF;
 } 
+.sliderText {
+  position: relative;
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 0.9em;
+} 
+.sliderText div titlefirst {
+  padding-left: 20%;
+  font-size: 2.4em;
+} 
+.sliderText div titlesecond {
+  padding-left: 20%;
+  font-size: 1em;
+}
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;
@@ -101,8 +117,13 @@ html {
   .telpanel {
     height: 1.6em; 
   }
+  .sliderText div titlefirst {
+    font-size: 1.4em;
+  }
+  .sliderText div titlesecond {
+    font-size: 0.9em;
+  }
 }
-
 .dropshadow {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="2" /><feOffset dx="2" dy="2" result="offsetblur" /><feFlood flood-color="rgba(128,128,128,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
   -webkit-filter: drop-shadow(1px 1px 2px grey);
@@ -111,28 +132,23 @@ html {
 .mytext {
   position: relative;
 }
- 
 body *:not(input):not(textarea):not(select) {
   background-color: rgba(15, 150, 25, 0.1);
 }
-
 section {
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
 }
-
 section:before {
   content: '';
   display: table;
 }
-
 section:after {
   content: '';
   display: table;
   clear: both;
 }
-
 section .trust {
   flex-grow: 0;
   flex-shrink: 0;
@@ -142,21 +158,17 @@ section .trust {
   border-top-left-radius: 1.6em;
   border-top-right-radius: 1.6em;
 }
-
 section .trust:nth-child(1n) {
   margin-right: 1em;
   margin-left: 0;
 }
-
 section .trust:last-child {
   margin-right: 0;
 }
-
 section .trust:nth-child(3n) {
   margin-right: 0;
   margin-left: auto;
 }
-
 section1 { 
   position: relative;
   z-index: 1;
@@ -168,18 +180,15 @@ section1 {
   margin-top: 0.5%;
   margin-bottom: 0.5%;
 }
-
 section1:before {
   content: '';
   display: table;
 }
-
 section1:after {
   content: '';
   display: table;
   clear: both;
 }
-
 section1 .trust {
   flex-grow: 0;
   flex-shrink: 0;
@@ -189,16 +198,13 @@ section1 .trust {
   border-top-left-radius: 1.6em;
   border-top-right-radius: 1.6em;
 }
-
 section1 .trust:nth-child(1n) {
   margin-right: 1em;
   margin-left: 0;
 }
-
 section1 .trust:last-child {
   margin-right: 0;
 }
-
 section1 .trust:nth-child(3n) {
   margin-right: 0;
   margin-left: auto;

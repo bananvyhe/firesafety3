@@ -36,6 +36,24 @@ $column: 200px;
   background-color: $color-5;
   color: $color-1;
 } 
+.sliderText {
+  position: relative;
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 0.9em;
+  div {
+    titlefirst {
+      padding-left: 20%;
+      font-size: 2.4em;
+    }
+    titlesecond {
+      padding-left: 20%;
+      font-size: 1em;
+    }
+  }
+}
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;
@@ -56,21 +74,28 @@ $column: 200px;
   .telpanel {
     height: 1.6em; 
   }
+  .sliderText {
+    div {
+      titlefirst {
+        font-size: 1.4em;
+      }
+      titlesecond {
+        font-size: 0.9em;
+      }
+    }
+  }
 }
 /*-------------------------------------------*/
 /*end Настройки шрифтов и высоты апплетов*/
-
 .dropshadow {
   filter: drop-shadow(1px 1px 2px grey);   
 }
 .mytext {
   position: relative;
 }
- 
 body {
   lost-utility: edit rgb(15, 150, 25);
 }
-
 section {
   /*padding-top:  0.25em;
   padding-bottom: 0.25em;*/
@@ -80,7 +105,6 @@ section {
     @util border-top-radius(1.6em);  
   }
 }
-
 section1 { 
   position: relative;
   z-index: 1;
