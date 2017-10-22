@@ -5,12 +5,6 @@
   src: url(fonts/Saira-Bold.woff2) format("woff2");
 }
 @font-face {
-  font-family: UbuntuR;
-  font-style: normal;
-  font-weight: 400;
-  src: url(fonts/Ubuntu-Regular.woff2) format("woff2");
-}
-@font-face {
   font-family: PTSansNar;
   font-style: regular;
   font-weight: 400;
@@ -21,6 +15,12 @@
   font-style: bold;
   font-weight: 700;
   src: url(fonts/PT_Sans-Narrow-Web-Bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: UbuntuR;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Ubuntu-Regular.woff2) format("woff2");
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -73,6 +73,18 @@ html {
   font-size: 100%;
   line-height: 1.5em;
 }
+
+body {
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+body *:not(input):not(textarea):not(select) {
+  background-color: rgba(15, 150, 25, 0.1);
+}
 .telpanel {
   height: 2em;
   font-family: "PTSansNar"; 
@@ -84,18 +96,17 @@ html {
 .sliderText {
   position: relative;
   font-family: "UbuntuR"; 
-  font-style: normal;
   font-weight: 400;
   font-style: bold;
   font-size: 0.9em;
 } 
 .sliderText div titlefirst {
-  padding-left: 20%;
-  font-size: 2.4em;
+  font-size: 1.9531em;
+  line-height: 1.536em;
 } 
 .sliderText div titlesecond {
-  padding-left: 20%;
   font-size: 1em;
+  line-height: 1.5em;
 }
 .greedy-nav {
   font-family: "UbuntuR"; 
@@ -132,23 +143,24 @@ html {
 .mytext {
   position: relative;
 }
-body *:not(input):not(textarea):not(select) {
-  background-color: rgba(15, 150, 25, 0.1);
-}
+
 section {
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
 }
+
 section:before {
   content: '';
   display: table;
 }
+
 section:after {
   content: '';
   display: table;
   clear: both;
 }
+
 section .trust {
   flex-grow: 0;
   flex-shrink: 0;
@@ -158,13 +170,16 @@ section .trust {
   border-top-left-radius: 1.6em;
   border-top-right-radius: 1.6em;
 }
+
 section .trust:nth-child(1n) {
   margin-right: 1em;
   margin-left: 0;
 }
+
 section .trust:last-child {
   margin-right: 0;
 }
+
 section .trust:nth-child(3n) {
   margin-right: 0;
   margin-left: auto;

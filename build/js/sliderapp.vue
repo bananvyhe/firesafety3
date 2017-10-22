@@ -1,10 +1,13 @@
-<template>
+s<template>
   <el-carousel v-bind="{height: visota.value + 'vh', 'indicator-position':
   hider}">
     <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
         <div :class="item.class">
-          <titlefirst>{{item.title}}</titlefirst></br>
-          <titlesecond>{{item.text}}</titlesecond>
+          <div class ="infoBlock">
+            <titlefirst>{{item.title}}</titlefirst></br>
+            <titlesecond>{{item.text}}</titlesecond>
+          </div>
+
           <br>
           <!-- служебное поле -->
           <div v-show="switcher">
@@ -43,7 +46,7 @@
         hider: '',
         items: [
           { title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' },
-          { title: 'Пожарная безопастность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' },
+          { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' },
           { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' },
           { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' },
           { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }  
@@ -63,6 +66,12 @@
 </script>
 
 <style scoped>
+  .infoBlock {
+    display: flex;
+    width: 40%;
+    margin-left: 20%;
+    padding-top: 5%;
+  }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
     background-repeat:no-repeat;

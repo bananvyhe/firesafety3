@@ -1,7 +1,8 @@
 @hamster {
   /*  Base settings */
-  font-size: 16em;
-  line-height: 24em;
+  font-size: 16px;
+  line-height: 1.5;
+  font-ratio: 1.25;
   remove-comments: true;
  /*  Vertical Rythm settings */
   unit: em;
@@ -22,9 +23,18 @@
 End Hamster setup*/
 @reset;
 $column: 200px;
+$block-font-size: xlarge@d2;
 
 /*Импорт общих настроек*/
 @import "variables";
+
+body {
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  lost-utility: edit rgb(15, 150, 25);
+  @baseline;
+}
 
 /*Настройки шрифтов и высоты апплетов*/
 /*---------------------------------------*/
@@ -39,18 +49,15 @@ $column: 200px;
 .sliderText {
   position: relative;
   font-family: "UbuntuR"; 
-  font-style: normal;
   font-weight: 400;
   font-style: bold;
   font-size: 0.9em;
   div {
     titlefirst {
-      padding-left: 20%;
-      font-size: 2.4em;
+      adjust-font-size: fontsize xlarge; 
     }
     titlesecond {
-      padding-left: 20%;
-      font-size: 1em;
+      adjust-font-size: fontsize base;
     }
   }
 }
@@ -93,9 +100,7 @@ $column: 200px;
 .mytext {
   position: relative;
 }
-body {
-  lost-utility: edit rgb(15, 150, 25);
-}
+
 section {
   /*padding-top:  0.25em;
   padding-bottom: 0.25em;*/
