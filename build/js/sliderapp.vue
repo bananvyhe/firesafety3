@@ -1,11 +1,11 @@
 s<template>
-  <el-carousel v-bind="{height: visota.value + 'vh', 'indicator-position':
+  <el-carousel v-bind="{height: visota.value + 'px', 'indicator-position':
   hider}">
     <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
         <div :class="item.class">
           <div class ="infoBlock">
-            <titlefirst>{{item.title}}</titlefirst></br>
-            <titlesecond>{{item.text}}</titlesecond>
+            <div class="titlefirst">{{item.title}}</div> 
+            <div class="titlesecond">{{item.text}}</div>
           </div>
 
           <br>
@@ -25,13 +25,13 @@ s<template>
   function resize() {
     if (window.matchMedia('only screen and (max-width: 600px)').matches) {
       console.log('under 600 pixels');
-      vis.value = '14';
+      vis.value = '130';
     } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
       console.log('between 601 and 1024 pixels');
-      vis.value = '28';                      
+      vis.value = '220';                      
     } else {
       console.log('higher than 1024 pixels');
-      vis.value = '40'; 
+      vis.value = '300'; 
     }
   }
 
@@ -55,7 +55,7 @@ s<template>
     },
     computed: {
       hideind: function() {
-        if (this.visota.value <= 14){
+        if (this.visota.value <= 130){
           return this.hider = 'none';
         }else{
           return this.hider = '';
@@ -66,11 +66,15 @@ s<template>
 </script>
 
 <style scoped>
+
+
   .infoBlock {
     display: flex;
-    width: 40%;
-    margin-left: 20%;
-    padding-top: 5%;
+    flex-direction: column;
+     
+    width: 50%;
+     
+     
   }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
@@ -78,7 +82,7 @@ s<template>
     background-size: cover;
   }
   .onediv {
-     background-position: right bottom;
+     background-position: right center;
     /*filter: blur(4px);*/
     background-image: url(../../app/assets/images/1.jpg);
   }

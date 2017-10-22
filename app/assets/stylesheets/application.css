@@ -78,8 +78,7 @@ body {
   font-family: "UbuntuR"; 
   font-style: normal;
   font-weight: 400;
-  font-size: 100%;
-  line-height: 1.5em;
+   
 }
 
 body *:not(input):not(textarea):not(select) {
@@ -91,23 +90,78 @@ body *:not(input):not(textarea):not(select) {
   font-style: regular;
   font-weight: 400;
   background-color: #1d3557;
-  color: #FFF;
+  color: #FFF; 
 } 
 .sliderText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   font-family: "UbuntuR"; 
   font-weight: 400;
   font-style: bold;
-  font-size: 0.9em;
-} 
-.sliderText div titlefirst {
-  font-size: 1.9531em;
-  line-height: 1.536em;
-} 
-.sliderText div titlesecond {
-  font-size: 1em;
-  line-height: 1.5em;
+  text-align: right;
 }
+@media (min-width: 1424px) {
+  .sliderText {
+    font-size: 18px;
+  }
+  .sliderText div .titlefirst {
+    font-size: 1.9531em;
+    line-height: 1.536em;
+    line-height: 0.8;
+    padding-bottom: 0.2em;
+  }
+  .sliderText div .titlesecond {
+    font-size: 1em;
+    line-height: 1.5em;
+    line-height: 1.2;
+  }
+} 
+@media (min-width: 602px) and (max-width: 1423px) {
+  .sliderText div .titlefirst {
+    font-size: calc(1.3914vw + 15.3572px);
+    line-height: calc(-2.6714vw + 38.0142px);
+    line-height: 0.8;
+    padding-bottom: 0.2em;
+  }
+  .sliderText div .titlesecond {
+    font-size: calc(0.7124vw + 7.8629px);
+    line-height: calc(-1.3357vw + 19.0071px);
+    line-height: 1.2;
+  }
+.ruler-debug{
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9900;
+  pointer-events: none;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAPCAYAAADDNm69AAAAEklEQVR42mNgGFFAuG3/GWQ+AB7XAiXZVYAzAAAAAElFTkSuQmCC");
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: 4px 15px;}
+}
+@media (min-width: 0px) and (max-width: 601px) {
+  .sliderText {
+    font-size: 10px;
+  }
+  .sliderText div .titlefirst {
+    font-size: 1.9531em;
+    line-height: 1.536em;
+    line-height: 0.8;
+    padding-bottom: 0.2em;
+  }
+  .sliderText div .titlesecond {
+    font-size: 1em;
+    line-height: 1.5em;
+    line-height: 1.2;
+  }
+}  
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;

@@ -33,7 +33,7 @@ body {
   font-style: normal;
   font-weight: 400;
   lost-utility: edit rgb(15, 150, 25);
-  @baseline;
+   
 }
 
 /*Настройки шрифтов и высоты апплетов*/
@@ -44,23 +44,71 @@ body {
   font-style: regular;
   font-weight: 400;
   background-color: $color-5;
-  color: $color-1;
+  color: $color-1; 
 } 
 .sliderText {
+  display: flex;
   position: relative;
   font-family: "UbuntuR"; 
   font-weight: 400;
   font-style: bold;
-  font-size: 0.9em;
-  div {
-    titlefirst {
-      adjust-font-size: fontsize xlarge; 
-    }
-    titlesecond {
-      adjust-font-size: fontsize base;
+  text-align: right;
+}
+@media (--only-big-screen) {
+  .sliderText {
+    font-size: 18px;
+    div {
+      .titlefirst {
+        adjust-font-size: fontsize xlarge;
+        line-height: 0.8;
+        padding-bottom: 0.2em;
+      }
+      .titlesecond {
+        adjust-font-size: fontsize base;
+        line-height: 1.2;
+      }
     }
   }
+} 
+@media (--only-medium-screen) {
+  @ihamster {
+    --font-size: 10px;
+    --to-font-size: 18px;
+    --viewport: 300px 1423px;
+    --unit: vw;
+  }
+  .sliderText {
+    div {
+      .titlefirst {
+        adjust-font-size: fontsize xlarge;
+        line-height: 0.8;
+        padding-bottom: 0.2em;
+      }
+      .titlesecond {
+        adjust-font-size: fontsize base;
+        line-height: 1.2;
+      }
+    }
+  }
+  @ruler; 
+  @hamster end;
 }
+@media (--only-small-screen) {
+  .sliderText {
+    font-size: 10px;
+    div {
+      .titlefirst {
+        adjust-font-size: fontsize xlarge;
+        line-height: 0.8;
+        padding-bottom: 0.2em;
+      }
+      .titlesecond {
+        adjust-font-size: fontsize base;
+        line-height: 1.2;
+      }
+    }
+  }
+}  
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;

@@ -11687,7 +11687,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.infoBlock[data-v-a7895866] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 40%;\n  margin-left: 20%;\n  padding-top: 5%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n}\n.onediv[data-v-a7895866] {\n   background-position: right bottom;\n  /*filter: blur(4px);*/\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-a7895866] {\n   background-position: right bottom;\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.threediv[data-v-a7895866] {\n  background-position: center bottom;\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.fivediv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.el-carousel__item h3[data-v-a7895866] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, "\n.infoBlock[data-v-a7895866] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n   \n  width: 50%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n  height: 100%;\n  background-repeat:no-repeat;\n  background-size: cover;\n}\n.onediv[data-v-a7895866] {\n   background-position: right center;\n  /*filter: blur(4px);*/\n  background-image: url(" + __webpack_require__(17) + ");\n}\n.twodiv[data-v-a7895866] {\n   background-position: right bottom;\n  background-image: url(" + __webpack_require__(18) + ");\n}\n.threediv[data-v-a7895866] {\n  background-position: center bottom;\n  background-image: url(" + __webpack_require__(19) + ");\n}\n.fourdiv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(20) + ");\n}\n.fivediv[data-v-a7895866] {\n  background-position: right bottom;\n  background-image: url(" + __webpack_require__(21) + ");\n}\n.el-carousel__item h3[data-v-a7895866] {\n  color: #475669;\n  font-size: 18px;\n  opacity: 0.75;\n  line-height: 2em;\n  margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n  background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n  background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11792,13 +11792,13 @@ var vis = { value: '30' };
 function resize() {
   if (window.matchMedia('only screen and (max-width: 600px)').matches) {
     console.log('under 600 pixels');
-    vis.value = '14';
+    vis.value = '130';
   } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
     console.log('between 601 and 1024 pixels');
-    vis.value = '28';
+    vis.value = '220';
   } else {
     console.log('higher than 1024 pixels');
-    vis.value = '40';
+    vis.value = '300';
   }
 }
 
@@ -11816,7 +11816,7 @@ exports.default = {
   },
   computed: {
     hideind: function hideind() {
-      if (this.visota.value <= 14) {
+      if (this.visota.value <= 130) {
         return this.hider = 'none';
       } else {
         return this.hider = '';
@@ -11840,7 +11840,7 @@ var render = function() {
       {},
       "el-carousel",
       {
-        height: _vm.visota.value + "vh",
+        height: _vm.visota.value + "px",
         "indicator-position": _vm.hider
       },
       false
@@ -11848,17 +11848,15 @@ var render = function() {
     _vm._l(_vm.items, function(item, index) {
       return _c("el-carousel-item", { key: index, staticClass: "sliderText" }, [
         _c("div", { class: item.class }, [
-          _c(
-            "div",
-            { staticClass: "infoBlock" },
-            [
-              _c("titlefirst", [_vm._v(_vm._s(item.title))]),
-              _c("br"),
-              _vm._v(" "),
-              _c("titlesecond", [_vm._v(_vm._s(item.text))])
-            ],
-            1
-          ),
+          _c("div", { staticClass: "infoBlock" }, [
+            _c("div", { staticClass: "titlefirst" }, [
+              _vm._v(_vm._s(item.title))
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "titlesecond" }, [
+              _vm._v(_vm._s(item.text))
+            ])
+          ]),
           _vm._v(" "),
           _c("br"),
           _vm._v(" "),

@@ -24,7 +24,7 @@ module.exports = {
             require('precss'),
             require('postcss-inline-svg'),
             require('lost'),
-            require('postcss-cssnext')
+            require('postcss-cssnext') 
           ]
         }
       },
