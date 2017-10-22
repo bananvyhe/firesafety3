@@ -32,27 +32,29 @@ body {
   font-family: "UbuntuR"; 
   font-style: normal;
   font-weight: 400;
-  lost-utility: edit rgb(15, 150, 25);
-   
+ /* lost-utility: edit rgb(15, 150, 25);*/
 }
 
 /*Настройки шрифтов и высоты апплетов*/
 /*---------------------------------------*/
 .telpanel {
-  height: 2em;
-  font-family: "PTSansNar"; 
-  font-style: regular;
-  font-weight: 400;
+  height: 2.2em;
   background-color: $color-5;
   color: $color-1; 
+  adjust-font-size: fontsize small;
 } 
 .sliderText {
   display: flex;
   position: relative;
-  font-family: "UbuntuR"; 
+   
   font-weight: 400;
   font-style: bold;
   text-align: right; 
+
+  .titlefirst {
+    filter: drop-shadow(1px 1px 2px grey);  
+    font-family: "OswaldL";
+  }
 }
 #sliderapp {
 }
@@ -128,22 +130,10 @@ body {
   .mainLogoPanel {
     height: 2.2em; 
   }
-  .telpanel {
-    height: 1.6em; 
-  }
-  .sliderText {
-    div {
-      titlefirst {
-        font-size: 1.4em;
-      }
-      titlesecond {
-        font-size: 0.9em;
-      }
-    }
-  }
 }
 /*-------------------------------------------*/
 /*end Настройки шрифтов и высоты апплетов*/
+
 .dropshadow {
   filter: drop-shadow(1px 1px 2px grey);   
 }

@@ -34,20 +34,24 @@ export default {
   display: flex;
   justify-content: space-around;
   div {
-    padding: 2.2em; 
-    @media (--only-big-screen) {
-      padding: 2.6em; 
-    }
-    padding: 0.8em; 
     align-self: center;
   }
-  @media (--only-small-screen) {
-    .adress {
-      display: none;
-    }
-  }
   @media (--only-big-screen) {
-      height: 2.2em;
+    height: 2.2em;
+  }
+}
+@media (--telpanel-small-screen) {
+  .telpanel {
+    justify-content: center;  
+  }
+  .adress {
+    display: none;
+  }
+  .tel {
+    padding-right: 7%;
+  }
+  .mail {
+    padding-left: 7%;
   }
 }
 .tel {

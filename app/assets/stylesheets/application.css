@@ -5,16 +5,16 @@
   src: url(fonts/Saira-Bold.woff2) format("woff2");
 }
 @font-face {
-  font-family: PTSansNar;
-  font-style: regular;
-  font-weight: 400;
-  src: url(fonts/PT_Sans-Narrow-Web-Regular.woff2) format("woff2");
+  font-family: OswaldL;
+  font-style: light;
+  font-weight: 300;
+  src: url(fonts/Oswald-Light.woff2) format("woff2");
 }
 @font-face {
-  font-family: PTSansNar;
-  font-style: bold;
-  font-weight: 700;
-  src: url(fonts/PT_Sans-Narrow-Web-Bold.woff2) format("woff2");
+  font-family: OswaldL;
+  font-style: ExtraLight;
+  font-weight: 200;
+  src: url(fonts/Oswald-ExtraLight.woff2) format("woff2");
 }
 @font-face {
   font-family: UbuntuR;
@@ -78,29 +78,29 @@ body {
   font-family: "UbuntuR"; 
   font-style: normal;
   font-weight: 400;
-   
-}
-
-body *:not(input):not(textarea):not(select) {
-  background-color: rgba(15, 150, 25, 0.1);
 }
 .telpanel {
-  height: 2em;
-  font-family: "PTSansNar"; 
-  font-style: regular;
-  font-weight: 400;
+  height: 2.2em;
   background-color: #1d3557;
   color: #FFF; 
+  font-size: 0.8em; 
+  line-height: 1.875em;
 } 
 .sliderText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  font-family: "UbuntuR"; 
+   
   font-weight: 400;
   font-style: bold;
-  text-align: right; 
+  text-align: right;
+} 
+.sliderText .titlefirst {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="2" /><feOffset dx="2" dy="2" result="offsetblur" /><feFlood flood-color="rgba(128,128,128,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(1px 1px 2px grey);
+          filter: drop-shadow(1px 1px 2px grey);
+  font-family: "OswaldL";
 }
 #sliderapp {
 }
@@ -181,16 +181,8 @@ body *:not(input):not(textarea):not(select) {
   .mainLogoPanel {
     height: 2.2em; 
   }
-  .telpanel {
-    height: 1.6em; 
-  }
-  .sliderText div titlefirst {
-    font-size: 1.4em;
-  }
-  .sliderText div titlesecond {
-    font-size: 0.9em;
-  }
 }
+
 .dropshadow {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="2" /><feOffset dx="2" dy="2" result="offsetblur" /><feFlood flood-color="rgba(128,128,128,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
   -webkit-filter: drop-shadow(1px 1px 2px grey);

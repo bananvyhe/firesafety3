@@ -66,23 +66,21 @@
 </script>
 
 <style scoped>
+@import "../../app/assets/stylesheets/postcss/variables";
   .mainFormat {
     display: flex;
     align-items: center;
   }
-
   .infoBlock {
     display: flex;
     flex-direction: column;
     width: 50%;
-   
-    z-index: 10;
   }
   .titlefirst {
-    padding-left: 10%;  
+    padding-left: 15%;  
   }
   .titlesecond {
-    padding-left: 10%;
+    padding-left: 15%;
   }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
@@ -90,25 +88,71 @@
     background-size: cover;
   }
   .onediv {
-     background-position: right center;
+    background-position: right center;
     /*filter: blur(4px);*/
     background-image: url(../../app/assets/images/1.jpg);
+    padding-left: 5%;
   }
   .twodiv {
-     background-position: right bottom;
+    background-position: right bottom;
     background-image: url(../../app/assets/images/5.jpg);
+    padding-left: 15%;
   }
   .threediv {
     background-position: center bottom;
     background-image: url(../../app/assets/images/3.jpg);
+    color: $color-1;
+    padding-left: 5%;
   }
   .fourdiv {
     background-position: right bottom;
     background-image: url(../../app/assets/images/2.jpg);
+    padding-left: 20%;
+    color: $color-1;
+    .infoBlock {
+      text-shadow: 
+        -0   -1px 1px #353535,
+         0   -1px 1px #353535,
+        -0    1px 1px #353535,
+         0    1px 1px #353535,
+        -1px -0   1px #353535,
+         1px -0   1px #353535,
+        -1px  0   1px #353535,
+         1px  0   1px #353535,
+        -1px -1px 1px #353535,
+         1px -1px 1px #353535,
+        -1px  1px 1px #353535,
+         1px  1px 1px #353535,
+        -1px -1px 1px #353535,
+         1px -1px 1px #353535,
+        -1px  1px 1px #353535,
+         1px  1px 1px #353535;
+    }
   } 
   .fivediv {
     background-position: right bottom;
     background-image: url(../../app/assets/images/4.jpg);
+    color: $color-1;
+    .infoBlock {
+      color: #000;
+      text-shadow: 
+        -0   -1px 0   #FFFFFF,
+         0   -1px 0   #FFFFFF,
+        -0    1px 0   #FFFFFF,
+         0    1px 0   #FFFFFF,
+        -1px -0   0   #FFFFFF,
+         1px -0   0   #FFFFFF,
+        -1px  0   0   #FFFFFF,
+         1px  0   0   #FFFFFF,
+        -1px -1px 0   #FFFFFF,
+         1px -1px 0   #FFFFFF,
+        -1px  1px 0   #FFFFFF,
+         1px  1px 0   #FFFFFF,
+        -1px -1px 0   #FFFFFF,
+         1px -1px 0   #FFFFFF,
+        -1px  1px 0   #FFFFFF,
+         1px  1px 0   #FFFFFF;
+    }
   }   
   .el-carousel__item h3 {
     color: #475669;
