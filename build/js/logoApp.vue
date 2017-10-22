@@ -17,7 +17,6 @@
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
   .mainLogoPanel { 
-    z-index: 6;
     $color-6: #b9d6f2;
     lost-flex-container: row;
     background: url('../../app/assets/images/main_06.jpg' );
@@ -36,56 +35,18 @@
     lost-column: 3/7 2 0 flex; 
     z-index: 2;
     align-items: flex-end;
-        
-    @media (--only-small-screen) {
-      lost-column: 3/8 2 0 flex; 
-       .logo {
-        lost-column: 1/2 2 0 flex;
-        div {
-          height: 90px;
-        }
-      }
-      .brandname {
-        padding-bottom: 0px;
-        lost-column: 1/2 2 0 flex;
-        div {
-          height: 30px;
-          width: 170px;
-        }   
-      }
-    }
-
-    @media (--only-big-screen) {
-      lost-column: 3/8 2 0 flex; 
-      .logo {
-        lost-column: 3/8 2 0 flex; 
-        div {
-          height: 190px;
-        }
-      }
-      .brandname {
-        padding-bottom: 2px;
-        lost-column: 5/8 2 0 flex; 
-        div {
-          height: 45px;
-          width: 240px;
-        } 
-      } 
-    }
-
     .logo { 
       lost-column: 1/2 2 0 flex; 
       div {
-        height: 180px;
-        background: svg-load('../../app/assets/images/logo-04-01-01.svg' );
-        background-position: right bottom;
+        height: 120px;
+        background: svg-load('../../app/assets/images/logo-04-01-01.svg');
+        background-position: right 2px;
         background-repeat: no-repeat;
       }
     }
-
     .brandname {
       lost-column: 1/2 2 0 flex;
-      padding-bottom: 4px;
+      padding-bottom: 4px; 
       div {
         background: svg-load('../../app/assets/images/leader.svg' );
         background-repeat: no-repeat;
@@ -94,8 +55,39 @@
         margin-left: -0.4em;
       } 
     }
+    @media (--only-small-screen) {
+      lost-column: 3/8 2 0 flex; 
+      .logo {
+        div {
+        height: 70px;
+        background-position: right 1px;
+        }
+      }
+      .brandname {
+        padding-bottom: 2px;  
+        div {
+          height: 30px;
+          width: 170px;
+          margin-left: -0.2em;
+        }   
+      }
+    }
+    @media (--only-big-screen) {
+      lost-column: 3/8 2 0 flex; 
+      .logo {
+        div {
+          height: 180px;
+        }
+      }
+      .brandname {
+        div {
+          height: 45px;
+          width: 240px;
+          margin-left: -0.8em;
+        } 
+      } 
+    }
   }
-
   .audit {
     @custom-media --only-small-screen (width >= 0px) and (width <= 600px);
     @custom-media --only-big-screen (width >= 1024px);
@@ -110,5 +102,4 @@
     }
     lost-column: 4/7 2 0 flex;
   } 
-
 </style>

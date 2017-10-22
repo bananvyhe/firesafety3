@@ -1,8 +1,8 @@
-s<template>
+<template>
   <el-carousel v-bind="{height: visota.value + 'px', 'indicator-position':
   hider}">
     <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
-        <div :class="item.class">
+        <div :class="item.class" class="mainFormat">
           <div class ="infoBlock">
             <div class="titlefirst">{{item.title}}</div> 
             <div class="titlesecond">{{item.text}}</div>
@@ -66,15 +66,23 @@ s<template>
 </script>
 
 <style scoped>
-
+  .mainFormat {
+    display: flex;
+    align-items: center;
+  }
 
   .infoBlock {
     display: flex;
     flex-direction: column;
-     
     width: 50%;
-     
-     
+   
+    z-index: 10;
+  }
+  .titlefirst {
+    padding-left: 10%;  
+  }
+  .titlesecond {
+    padding-left: 10%;
   }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;

@@ -52,7 +52,9 @@ body {
   font-family: "UbuntuR"; 
   font-weight: 400;
   font-style: bold;
-  text-align: right;
+  text-align: right; 
+}
+#sliderapp {
 }
 @media (--only-big-screen) {
   .sliderText {

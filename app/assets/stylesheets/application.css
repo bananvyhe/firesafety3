@@ -100,7 +100,9 @@ body *:not(input):not(textarea):not(select) {
   font-family: "UbuntuR"; 
   font-weight: 400;
   font-style: bold;
-  text-align: right;
+  text-align: right; 
+}
+#sliderapp {
 }
 @media (min-width: 1424px) {
   .sliderText {
@@ -317,7 +319,6 @@ noflex:after {
 }
 
 noflex div {
-  
 }
 
  
