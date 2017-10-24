@@ -11687,7 +11687,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, ".fade-enter[data-v-a7895866] {\n    opacity: 0;\n}\n.fade-enter-active[data-v-a7895866] {\n    -webkit-transition: opacity 1s;\n    transition: opacity 1s;\n}\n.mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11808,10 +11808,11 @@ resize();
 exports.default = {
   data: function data() {
     return {
+      animfade: 'fade',
       switcher: false,
       visota: vis,
       hider: '',
-      items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' }, { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' }, { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' }, { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' }, { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }]
+      items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение.', class: 'onediv' }, { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' }, { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' }, { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' }, { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }]
     };
   },
   computed: {
@@ -11821,6 +11822,11 @@ exports.default = {
       } else {
         return this.hider = '';
       }
+    }
+  },
+  methods: {
+    change: function change(event) {
+      console.log('123');
     }
   }
 };
@@ -11837,26 +11843,30 @@ var render = function() {
   return _c(
     "el-carousel",
     _vm._b(
-      {},
+      { on: { change: _vm.change } },
       "el-carousel",
-      {
-        height: _vm.visota.value + "px",
-        "indicator-position": _vm.hider
-      },
+      { height: _vm.visota.value + "px", "indicator-position": _vm.hider },
       false
     ),
     _vm._l(_vm.items, function(item, index) {
       return _c("el-carousel-item", { key: index, staticClass: "sliderText" }, [
         _c("div", { staticClass: "mainFormat", class: item.class }, [
-          _c("div", { staticClass: "infoBlock" }, [
-            _c("div", { staticClass: "titlefirst" }, [
-              _vm._v(_vm._s(item.title))
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "titlesecond" }, [
-              _vm._v(_vm._s(item.text))
-            ])
-          ]),
+          _c(
+            "div",
+            { staticClass: "infoBlock" },
+            [
+              _c("transition", { attrs: { name: "fade", appear: "" } }, [
+                _c("div", { staticClass: "titlefirst" }, [
+                  _vm._v(_vm._s(item.title))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "titlesecond" }, [
+                _vm._v(_vm._s(item.text))
+              ])
+            ],
+            1
+          ),
           _vm._v(" "),
           _c("br"),
           _vm._v(" "),

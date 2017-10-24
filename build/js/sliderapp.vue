@@ -1,13 +1,13 @@
 <template>
-  <el-carousel v-bind="{height: visota.value + 'px', 'indicator-position':
-  hider}">
+  <el-carousel @change="change" v-bind="{height: visota.value + 'px', 'indicator-position': hider}">
     <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
         <div :class="item.class" class="mainFormat">
           <div class ="infoBlock">
-            <div class="titlefirst">{{item.title}}</div> 
+            <transition name='fade' appear>
+              <div class="titlefirst">{{item.title}}</div> 
+            </transition>
             <div class="titlesecond">{{item.text}}</div>
           </div>
-
           <br>
           <!-- служебное поле -->
           <div v-show="switcher">
@@ -41,11 +41,12 @@
   export default {
     data: function () {
       return {
+        animfade: 'fade',
         switcher: false,
         visota: vis,
         hider: '',
         items: [
-          { title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение', class: 'onediv' },
+          { title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение.', class: 'onediv' },
           { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' },
           { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' },
           { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' },
@@ -61,12 +62,24 @@
           return this.hider = '';
         }
       }
+    },
+    methods: {
+      change: function(event){
+        console.log('123');
+
+      }
     }
   }
 </script>
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+  }
   .mainFormat {
     display: flex;
     align-items: center;
