@@ -40,13 +40,13 @@
       div {
         height: 120px;
         background: svg-load('../../app/assets/images/logo-04-01-01.svg');
-        background-position: right 2px;
+        background-position: right 4px;
         background-repeat: no-repeat;
       }
     }
     .brandname {
       lost-column: 1/2 2 0 flex;
-      padding-bottom: 4px; 
+      padding-bottom: 2px; 
       div {
         background: svg-load('../../app/assets/images/leader.svg' );
         background-repeat: no-repeat;
