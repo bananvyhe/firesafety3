@@ -12036,20 +12036,26 @@ var render = function() {
     { staticClass: "telpanel" },
     [
       _c("transition", { attrs: { name: "fade", appear: "" } }, [
-        _c("div", { staticClass: "tel" }, [
-          _vm._v("\n      +7 (343)382-24-61\n    ")
-        ])
+        _c(
+          "div",
+          { staticClass: "tel" },
+          [_c("nobr", [_vm._v("+7(343)382-24-61")])],
+          1
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "adress" }, [
         _vm._v(
-          '\n    ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков, д.54, 620135\n  '
+          '\n    ООО "ЛИДЕР", 620135, Россия, г. Екатеринбург, ул. Старых Большевиков, д.54\n  '
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "mail" }, [
-        _vm._v("\n    lider-1-00@mail.ru\n  ")
-      ])
+      _c(
+        "div",
+        { staticClass: "mail" },
+        [_c("nobr", [_vm._v("lider-1-00@mail.ru")])],
+        1
+      )
     ],
     1
   )

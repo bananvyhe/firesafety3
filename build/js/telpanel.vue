@@ -2,14 +2,14 @@
   <div class="telpanel">
     <transition name="fade" appear>
       <div class="tel">
-        +7 (343)382-24-61
+       <nobr>+7(343)382-24-61</nobr>
       </div>    
     </transition>
     <div class="adress">
-      ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков, д.54, 620135
+      ООО "ЛИДЕР", 620135, Россия, г. Екатеринбург, ул. Старых Большевиков, д.54
     </div>
     <div class="mail">
-      lider-1-00@mail.ru
+      <nobr>lider-1-00@mail.ru</nobr>
     </div>
   </div>
 </template>
