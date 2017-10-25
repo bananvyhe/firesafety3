@@ -3,8 +3,8 @@
     <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
         <div :class="item.class" class="mainFormat">
           <div class ="infoBlock">
-            <transition name='fade' appear>
-              <div class="titlefirst">{{item.title}}</div> 
+            <transition  name='fade' >
+              <div class="titlefirst" v-if="slideAnimRestart">{{item.title}}</div> 
             </transition>
             <div class="titlesecond">{{item.text}}</div>
           </div>
@@ -41,6 +41,7 @@
   export default {
     data: function () {
       return {
+        slideAnimRestart: false,
         animfade: 'fade',
         switcher: false,
         visota: vis,
@@ -65,8 +66,17 @@
     },
     methods: {
       change: function(event){
-        console.log('123');
+         
+        var vm = this;
+        setTimeout(function(){
+          vm.slideAnimRestart = true;
+        }, 400);
+         
 
+        setTimeout(function(){
+          vm.slideAnimRestart = false;
+        }, 2500);
+         
       }
     }
   }
@@ -79,6 +89,14 @@
   }
   .fade-enter-active {
     transition: opacity 1s;
+  }
+  .fade-leave {
+   /* transition: opacity 1s;*/
+  }
+  .fade-leave-active {
+     
+    transition: opacity 1s;
+    opacity: 0;
   }
   .mainFormat {
     display: flex;

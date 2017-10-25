@@ -11687,7 +11687,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".fade-enter[data-v-a7895866] {\n    opacity: 0;\n}\n.fade-enter-active[data-v-a7895866] {\n    -webkit-transition: opacity 1s;\n    transition: opacity 1s;\n}\n.mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, ".fade-enter[data-v-a7895866] {\n    opacity: 0;\n}\n.fade-enter-active[data-v-a7895866] {\n    -webkit-transition: opacity 1s;\n    transition: opacity 1s;\n}\n.fade-leave[data-v-a7895866] {\n   /* transition: opacity 1s;*/\n}\n.fade-leave-active[data-v-a7895866] {\n     \n    -webkit-transition: opacity 1s;\n     \n    transition: opacity 1s;\n    opacity: 0;\n}\n.mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11808,6 +11808,7 @@ resize();
 exports.default = {
   data: function data() {
     return {
+      slideAnimRestart: false,
       animfade: 'fade',
       switcher: false,
       visota: vis,
@@ -11826,7 +11827,15 @@ exports.default = {
   },
   methods: {
     change: function change(event) {
-      console.log('123');
+
+      var vm = this;
+      setTimeout(function () {
+        vm.slideAnimRestart = true;
+      }, 400);
+
+      setTimeout(function () {
+        vm.slideAnimRestart = false;
+      }, 2500);
     }
   }
 };
@@ -11855,10 +11864,12 @@ var render = function() {
             "div",
             { staticClass: "infoBlock" },
             [
-              _c("transition", { attrs: { name: "fade", appear: "" } }, [
-                _c("div", { staticClass: "titlefirst" }, [
-                  _vm._v(_vm._s(item.title))
-                ])
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.slideAnimRestart
+                  ? _c("div", { staticClass: "titlefirst" }, [
+                      _vm._v(_vm._s(item.title))
+                    ])
+                  : _vm._e()
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "titlesecond" }, [
