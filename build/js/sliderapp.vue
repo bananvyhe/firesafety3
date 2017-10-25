@@ -1,10 +1,10 @@
 <template>
-  <el-carousel @change="change" v-bind="{height: visota.value + 'px', 'indicator-position': hider}">
+  <el-carousel :interval="interval" @change="change" v-bind="{height: visota.value + 'px', 'indicator-position': hider}">
     <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
         <div :class="item.class" class="mainFormat">
           <div class ="infoBlock">
-            <transition  name='fade' >
-              <div class="titlefirst" v-if="slideAnimRestart">{{item.title}}</div> 
+            <transition  name='fade' :duration="1000" >
+              <div class="titlefirst" v-if="slideAnimRestart" :key="item.class">{{item.title}}</div> 
             </transition>
             <div class="titlesecond">{{item.text}}</div>
           </div>
@@ -41,6 +41,7 @@
   export default {
     data: function () {
       return {
+        interval: 7000,
         slideAnimRestart: false,
         animfade: 'fade',
         switcher: false,
@@ -68,14 +69,14 @@
       change: function(event){
          
         var vm = this;
+        vm.slideAnimRestart = false;
         setTimeout(function(){
           vm.slideAnimRestart = true;
-        }, 400);
-         
-
+        },this.interval * 0.1);
         setTimeout(function(){
           vm.slideAnimRestart = false;
-        }, 2500);
+        }, this.interval * 0.9);
+ 
          
       }
     }
@@ -91,7 +92,7 @@
     transition: opacity 1s;
   }
   .fade-leave {
-   /* transition: opacity 1s;*/
+   transition: opacity 1s;
   }
   .fade-leave-active {
      
