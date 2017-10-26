@@ -11687,7 +11687,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".fade-enter[data-v-a7895866] {\n    opacity: 0;\n}\n.fade-enter-active[data-v-a7895866] {\n    -webkit-transition: opacity 1s;\n    transition: opacity 1s;\n}\n.fade-leave[data-v-a7895866] {\n   -webkit-transition: opacity 1s;\n   transition: opacity 1s;\n}\n.fade-leave-active[data-v-a7895866] {\n     \n    -webkit-transition: opacity 1s;\n     \n    transition: opacity 1s;\n    opacity: 0;\n}\n.mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, ".slide-left-enter-active[data-v-a7895866] {\n  -webkit-animation: slide-left-data-v-a7895866 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\n          animation: slide-left-data-v-a7895866 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\n}\n.slide-left-leave-active[data-v-a7895866] {\n  -webkit-animation: slide-left-data-v-a7895866 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both reverse;\n          animation: slide-left-data-v-a7895866 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both reverse;\n}\n.fade-in-enter-active[data-v-a7895866] {\n  -webkit-animation: fade-in-data-v-a7895866 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;\n          animation: fade-in-data-v-a7895866 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;\n}\n.fade-in-leave-active[data-v-a7895866] {\n  -webkit-animation: fade-in-data-v-a7895866 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both reverse;\n          animation: fade-in-data-v-a7895866 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both reverse;\n}\n@-webkit-keyframes slide-left-data-v-a7895866 {\n0% {\n    -webkit-transform: translateZ(-1400px) translateX(-1000px);\n            transform: translateZ(-1400px) translateX(-1000px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateZ(0) translateX(0);\n            transform: translateZ(0) translateX(0);\n    opacity: 1;\n}\n}\n@keyframes slide-left-data-v-a7895866 {\n0% {\n    -webkit-transform: translateZ(-1400px) translateX(-1000px);\n            transform: translateZ(-1400px) translateX(-1000px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateZ(0) translateX(0);\n            transform: translateZ(0) translateX(0);\n    opacity: 1;\n}\n}\n@-webkit-keyframes fade-in-data-v-a7895866 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fade-in-data-v-a7895866 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n.mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n  text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n  color: #000;\n  text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11765,6 +11765,7 @@ module.exports = function listToStyles (parentId, list) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
 //
 //
 //
@@ -11917,7 +11918,9 @@ var render = function() {
                   [
                     _vm._v("hoverslide: " + _vm._s(_vm.hoverslide)),
                     _c("br"),
-                    _vm._v("addhide: " + _vm._s(_vm.addhide) + " \n          ")
+                    _vm._v("addhide: " + _vm._s(_vm.addhide)),
+                    _c("br"),
+                    _vm._v("hideind: " + _vm._s(_vm.hideind) + "  \n          ")
                   ]
                 ),
                 _vm._v(" "),
@@ -11925,17 +11928,29 @@ var render = function() {
                   "div",
                   { staticClass: "infoBlock" },
                   [
-                    _c("transition", { attrs: { name: "fade", appear: "" } }, [
-                      _vm.slideAnimRestart
-                        ? _c("div", { staticClass: "titlefirst" }, [
-                            _vm._v(_vm._s(item.title))
-                          ])
-                        : _vm._e()
-                    ]),
+                    _c(
+                      "transition",
+                      { attrs: { name: "slide-left", appear: "" } },
+                      [
+                        _vm.slideAnimRestart
+                          ? _c("div", { staticClass: "titlefirst" }, [
+                              _vm._v(_vm._s(item.title))
+                            ])
+                          : _vm._e()
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "titlesecond" }, [
-                      _vm._v(_vm._s(item.text))
-                    ])
+                    _c(
+                      "transition",
+                      { attrs: { name: "fade-in", appear: "" } },
+                      [
+                        _vm.slideAnimRestart
+                          ? _c("div", { staticClass: "titlesecond" }, [
+                              _vm._v(_vm._s(item.text))
+                            ])
+                          : _vm._e()
+                      ]
+                    )
                   ],
                   1
                 ),

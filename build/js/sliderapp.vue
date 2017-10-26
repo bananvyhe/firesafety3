@@ -8,15 +8,16 @@
       v-bind="{height: visota.value + 'px', 
       'indicator-position': hider}">
       <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
-          <div :class="item.class" class="mainFormat" 
-            >
-            <div v-show="switcher">hoverslide: {{hoverslide}}<br>addhide: {{addhide}} 
+          <div :class="item.class" class="mainFormat">
+            <div v-show="switcher">hoverslide: {{hoverslide}}<br>addhide: {{addhide}}<br>hideind: {{hideind}}  
             </div>
             <div class ="infoBlock">
-              <transition  name='fade' appear>
+              <transition  name='slide-left' appear>
                 <div class="titlefirst" v-if="slideAnimRestart" >{{item.title}}</div> 
               </transition>
-              <div class="titlesecond">{{item.text}}</div>
+              <transition  name='fade-in' appear>
+                <div class="titlesecond" v-if="slideAnimRestart">{{item.text}}</div>
+              </transition>
             </div>
             <br>
            </div>
@@ -106,20 +107,45 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-  .fade-enter {
+ 
+.slide-left-enter-active {
+  animation: slide-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-left-leave-active {
+  animation: slide-left 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both reverse;
+}
+
+.fade-in-enter-active {
+  animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-leave-active {
+  animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both reverse;
+}
+ 
+@keyframes slide-left {
+  0% {
+    transform: translateZ(-1400px) translateX(-1000px);
     opacity: 0;
   }
-  .fade-enter-active {
-    transition: opacity 1s;
+  100% {
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
   }
-  .fade-leave {
-   transition: opacity 1s;
-  }
-  .fade-leave-active {
-     
-    transition: opacity 1s;
+}
+ 
+@keyframes fade-in {
+  0% {
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
   .mainFormat {
     display: flex;
     align-items: center;
