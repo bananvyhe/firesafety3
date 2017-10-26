@@ -13,10 +13,10 @@
             </div>
             <div class ="infoBlock">
               <transition  name='slide-left' appear>
-                <div class="titlefirst" v-if="slideAnimRestart" >{{item.title}}</div> 
+                <div class="titlefirst" v-show="slideAnimRestart" >{{item.title}}</div> 
               </transition>
               <transition  name='fade-in' appear>
-                <div class="titlesecond" v-if="slideAnimRestart">{{item.text}}</div>
+                <div class="titlesecond" v-show="slideAnimRestart">{{item.text}}</div>
               </transition>
             </div>
             <br>
@@ -109,16 +109,20 @@
 @import "../../app/assets/stylesheets/postcss/variables";
  
 .slide-left-enter-active {
-  animation: slide-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-left 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .slide-left-leave-active {
-  animation: slide-left 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both reverse;
+  animation: slide-out-left 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
+  animation-delay: 0.8s;
+}
+ 
+.fade-in-enter-active {
+  animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-delay: 0.8s;
 }
 
-.fade-in-enter-active {
-  animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+
 
 .fade-in-leave-active {
   animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both reverse;
@@ -134,6 +138,18 @@
     opacity: 1;
   }
 }
+ 
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
  
 @keyframes fade-in {
   0% {
