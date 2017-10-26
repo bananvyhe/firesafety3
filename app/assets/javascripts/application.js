@@ -11814,11 +11814,11 @@ resize();
 exports.default = {
   data: function data() {
     return {
-      hoverslide: '',
-      interval: 3000,
+      hoverslide: false,
+      interval: 5000,
       slideAnimRestart: '',
       animfade: 'fade',
-      switcher: true,
+      switcher: false,
       visota: vis,
       hider: '',
       items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение.', class: 'onediv' }, { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' }, { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' }, { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' }, { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }]
@@ -11831,25 +11831,34 @@ exports.default = {
       } else {
         return this.hider = '';
       }
+    },
+    addhide: function addhide() {
+      var vm = this;
+      if (vm.hoverslide) {
+        console.log('freeze animation');
+      } else {
+        console.log('begin timer fade-out');
+        setTimeout(function () {
+          if (vm.hoverslide == '0') {
+            vm.slideAnimRestart = false;
+          }
+        }, vm.interval * 0.8);
+      }
     }
-
   },
-  watch: {},
+
   methods: {
     change: function change() {
       var vm = this;
-
       setTimeout(function () {
         vm.slideAnimRestart = true;
       }, this.interval * 0.1);
-      console.log('123456');
-
-      var hideTimer = setTimeout(function () {
-        if (vm.hoverslide == false) {
-          console.log('456');
+      console.log('slide listed and begin timeout fade-in animation');
+      setTimeout(function () {
+        if (vm.hoverslide == '0') {
           vm.slideAnimRestart = false;
         }
-      }, vm.interval * 0.7);
+      }, vm.interval * 0.8);
     }
   }
 };
@@ -11867,10 +11876,10 @@ var render = function() {
     "div",
     {
       on: {
-        mouseout: function($event) {
+        mouseleave: function($event) {
           _vm.hoverslide = false
         },
-        mouseover: function($event) {
+        mouseenter: function($event) {
           _vm.hoverslide = true
         }
       }
@@ -11906,9 +11915,9 @@ var render = function() {
                     ]
                   },
                   [
-                    _vm._v(
-                      "hoverslide: " + _vm._s(_vm.hoverslide) + "\n          "
-                    )
+                    _vm._v("hoverslide: " + _vm._s(_vm.hoverslide)),
+                    _c("br"),
+                    _vm._v("addhide: " + _vm._s(_vm.addhide) + " \n          ")
                   ]
                 ),
                 _vm._v(" "),
@@ -12444,7 +12453,6 @@ exports.default = {
   },
 
   computed: {
-
     switchhidestyle: function switchhidestyle() {
       if (this.toggle) {
         this.hiddenStyle = {

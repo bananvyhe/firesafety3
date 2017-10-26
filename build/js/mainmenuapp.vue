@@ -64,17 +64,16 @@
     }, 
     methods:{
       dropdown(e){ 
-              let el = this.$refs.dropdown; 
-              let target = e.target;
-              if (el !== target && !el.contains(target)) 
-              { 
-                this.toggle = false
-              } 
-          } 
+        let el = this.$refs.dropdown; 
+        let target = e.target;
+        if (el !== target && !el.contains(target)) 
+        { 
+          this.toggle = false
+        } 
+      } 
     },
  
     computed: {
- 
       switchhidestyle: function(){
         if (this.toggle) {
           this.hiddenStyle = {

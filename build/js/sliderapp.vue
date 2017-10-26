@@ -1,7 +1,7 @@
 <template >
   <div 
-    @mouseout = "hoverslide = false"
-    @mouseover ="hoverslide = true">
+    @mouseleave = "hoverslide = false"
+    @mouseenter = "hoverslide = true">
     <el-carousel 
       v-bind:interval="interval" 
       @change="change" 
@@ -10,7 +10,7 @@
       <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
           <div :class="item.class" class="mainFormat" 
             >
-            <div v-show="switcher">hoverslide: {{hoverslide}}
+            <div v-show="switcher">hoverslide: {{hoverslide}}<br>addhide: {{addhide}} 
             </div>
             <div class ="infoBlock">
               <transition  name='fade' appear>
@@ -47,11 +47,11 @@
   export default {
     data: function () {
       return {
-        hoverslide: '',
-        interval: 3000,
+        hoverslide: false,
+        interval: 5000,
         slideAnimRestart: '',
         animfade: 'fade',
-        switcher: true,
+        switcher: false,
         visota: vis,
         hider: '',
         items: [
@@ -70,29 +70,34 @@
         }else{
           return this.hider = '';
         }
-      }
-      
+      },
+      addhide: function(){
+        var vm = this;
+        if (vm.hoverslide) {
+          console.log('freeze animation');
+        }else{
+          console.log('begin timer fade-out');
+          setTimeout(function(){
+          if (vm.hoverslide == '0') {
+            vm.slideAnimRestart = false; 
+          }
+        }, vm.interval * 0.8);
+        }
+      } 
     },
-    watch: {
-      
-    },
+ 
     methods: {
       change: function(){
         var vm = this;
-
         setTimeout(function(){
           vm.slideAnimRestart = true;
         },this.interval * 0.1);
-        console.log('123456');
-        
-        var hideTimer =  
+        console.log('slide listed and begin timeout fade-in animation');
         setTimeout(function(){
-          if (vm.hoverslide == false) {
-            console.log('456');
+          if (vm.hoverslide == '0') {
             vm.slideAnimRestart = false; 
           }
-        }, vm.interval * 0.7);
-
+        }, vm.interval * 0.8);
       }
     } 
   }
