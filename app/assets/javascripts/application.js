@@ -11786,6 +11786,12 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 var vis = { value: '30' };
@@ -11808,10 +11814,11 @@ resize();
 exports.default = {
   data: function data() {
     return {
-      interval: 7000,
-      slideAnimRestart: false,
+      hoverslide: '',
+      interval: 3000,
+      slideAnimRestart: '',
       animfade: 'fade',
-      switcher: false,
+      switcher: true,
       visota: vis,
       hider: '',
       items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение.', class: 'onediv' }, { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' }, { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' }, { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' }, { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }]
@@ -11825,18 +11832,24 @@ exports.default = {
         return this.hider = '';
       }
     }
-  },
-  methods: {
-    change: function change(event) {
 
+  },
+  watch: {},
+  methods: {
+    change: function change() {
       var vm = this;
-      vm.slideAnimRestart = false;
+
       setTimeout(function () {
         vm.slideAnimRestart = true;
       }, this.interval * 0.1);
-      setTimeout(function () {
-        vm.slideAnimRestart = false;
-      }, this.interval * 0.9);
+      console.log('123456');
+
+      var hideTimer = setTimeout(function () {
+        if (vm.hoverslide == false) {
+          console.log('456');
+          vm.slideAnimRestart = false;
+        }
+      }, vm.interval * 0.7);
     }
   }
 };
@@ -11851,54 +11864,81 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "el-carousel",
-    _vm._b(
-      { attrs: { interval: _vm.interval }, on: { change: _vm.change } },
-      "el-carousel",
-      { height: _vm.visota.value + "px", "indicator-position": _vm.hider },
-      false
-    ),
-    _vm._l(_vm.items, function(item, index) {
-      return _c("el-carousel-item", { key: index, staticClass: "sliderText" }, [
-        _c("div", { staticClass: "mainFormat", class: item.class }, [
-          _c(
-            "div",
-            { staticClass: "infoBlock" },
+    "div",
+    {
+      on: {
+        mouseout: function($event) {
+          _vm.hoverslide = false
+        },
+        mouseover: function($event) {
+          _vm.hoverslide = true
+        }
+      }
+    },
+    [
+      _c(
+        "el-carousel",
+        _vm._b(
+          { attrs: { interval: _vm.interval }, on: { change: _vm.change } },
+          "el-carousel",
+          {
+            height: _vm.visota.value + "px",
+            "indicator-position": _vm.hider
+          },
+          false
+        ),
+        _vm._l(_vm.items, function(item, index) {
+          return _c(
+            "el-carousel-item",
+            { key: index, staticClass: "sliderText" },
             [
-              _c("transition", { attrs: { name: "fade", duration: 1000 } }, [
-                _vm.slideAnimRestart
-                  ? _c("div", { key: item.class, staticClass: "titlefirst" }, [
-                      _vm._v(_vm._s(item.title))
+              _c("div", { staticClass: "mainFormat", class: item.class }, [
+                _c(
+                  "div",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.switcher,
+                        expression: "switcher"
+                      }
+                    ]
+                  },
+                  [
+                    _vm._v(
+                      "hoverslide: " + _vm._s(_vm.hoverslide) + "\n          "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "infoBlock" },
+                  [
+                    _c("transition", { attrs: { name: "fade", appear: "" } }, [
+                      _vm.slideAnimRestart
+                        ? _c("div", { staticClass: "titlefirst" }, [
+                            _vm._v(_vm._s(item.title))
+                          ])
+                        : _vm._e()
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "titlesecond" }, [
+                      _vm._v(_vm._s(item.text))
                     ])
-                  : _vm._e()
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "titlesecond" }, [
-                _vm._v(_vm._s(item.text))
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("br")
               ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.switcher,
-                  expression: "switcher"
-                }
-              ]
-            },
-            [_vm._v("\n          " + _vm._s(_vm.hideind) + "\n        ")]
+            ]
           )
-        ])
-      ])
-    })
+        })
+      )
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -12334,6 +12374,14 @@ exports.push([module.i, ".greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //

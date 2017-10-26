@@ -1,24 +1,30 @@
-<template>
-  <el-carousel :interval="interval" @change="change" v-bind="{height: visota.value + 'px', 'indicator-position': hider}">
-    <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
-        <div :class="item.class" class="mainFormat">
-          <div class ="infoBlock">
-            <transition  name='fade' :duration="1000" >
-              <div class="titlefirst" v-if="slideAnimRestart" :key="item.class">{{item.title}}</div> 
-            </transition>
-            <div class="titlesecond">{{item.text}}</div>
-          </div>
-          <br>
-          <!-- служебное поле -->
-          <div v-show="switcher">
-            {{hideind}}
-          </div>
-          <!-- -->
-        </div>
-    </el-carousel-item>
-  </el-carousel>
+<template >
+  <div 
+    @mouseout = "hoverslide = false"
+    @mouseover ="hoverslide = true">
+    <el-carousel 
+      v-bind:interval="interval" 
+      @change="change" 
+      v-bind="{height: visota.value + 'px', 
+      'indicator-position': hider}">
+      <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
+          <div :class="item.class" class="mainFormat" 
+            >
+            <div v-show="switcher">hoverslide: {{hoverslide}}
+            </div>
+            <div class ="infoBlock">
+              <transition  name='fade' appear>
+                <div class="titlefirst" v-if="slideAnimRestart" >{{item.title}}</div> 
+              </transition>
+              <div class="titlesecond">{{item.text}}</div>
+            </div>
+            <br>
+           </div>
+      </el-carousel-item>
+    </el-carousel>
+  </div>
 </template>
-
+ 
 <script>
 
   let vis = {value: '30'};
@@ -41,10 +47,11 @@
   export default {
     data: function () {
       return {
-        interval: 7000,
-        slideAnimRestart: false,
+        hoverslide: '',
+        interval: 3000,
+        slideAnimRestart: '',
         animfade: 'fade',
-        switcher: false,
+        switcher: true,
         visota: vis,
         hider: '',
         items: [
@@ -64,23 +71,32 @@
           return this.hider = '';
         }
       }
+      
+    },
+    watch: {
+      
     },
     methods: {
-      change: function(event){
-         
+      change: function(){
         var vm = this;
-        vm.slideAnimRestart = false;
+
         setTimeout(function(){
           vm.slideAnimRestart = true;
         },this.interval * 0.1);
+        console.log('123456');
+        
+        var hideTimer =  
         setTimeout(function(){
-          vm.slideAnimRestart = false;
-        }, this.interval * 0.9);
- 
-         
+          if (vm.hoverslide == false) {
+            console.log('456');
+            vm.slideAnimRestart = false; 
+          }
+        }, vm.interval * 0.7);
+
       }
-    }
+    } 
   }
+
 </script>
 
 <style scoped>
