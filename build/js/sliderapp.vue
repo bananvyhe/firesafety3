@@ -12,12 +12,15 @@
             <div v-show="switcher">hoverslide: {{hoverslide}}<br>addhide: {{addhide}}<br>hideind: {{hideind}}  
             </div>
             <div class ="infoBlock">
-              <transition  name='slide-left' appear>
-                <div class="titlefirst" v-show="slideAnimRestart" >{{item.title}}</div> 
-              </transition>
-              <transition  name='fade-in' appear>
-                <div class="titlesecond" v-show="slideAnimRestart">{{item.text}}</div>
-              </transition>
+               
+                <transition  name='slide-left' appear>
+                  <div class="titlefirst" v-show="slideAnimRestart">{{item.title}}</div> 
+                </transition>
+               
+                <transition  name='fade-in' appear>
+                  <div class="titlesecond" v-show="slideAnimRestart">{{item.text}}</div>
+                </transition>
+              
             </div>
             <br>
            </div>
@@ -44,12 +47,13 @@
 
   window.addEventListener('resize', resize, false);
   resize();
-
+  let divHeight = {value:  ''};
   export default {
     data: function () {
       return {
+        divHeight: divHeight,
         hoverslide: false,
-        interval: 5000,
+        interval: 7000,
         slideAnimRestart: '',
         animfade: 'fade',
         switcher: false,
@@ -65,6 +69,7 @@
       }
     },
     computed: {
+      //отключение индикации слайдов при маленьких разрешениях
       hideind: function() {
         if (this.visota.value <= 130){
           return this.hider = 'none';
@@ -72,6 +77,7 @@
           return this.hider = '';
         }
       },
+      //при ложном ховерслайд, запускать таймаут начала анимации фейд-аут
       addhide: function(){
         var vm = this;
         if (vm.hoverslide) {
@@ -86,14 +92,16 @@
         }
       } 
     },
- 
+    //реакция, после смены слайда
     methods: {
       change: function(){
         var vm = this;
+         //запуск таймаута анимации фейд-ин
         setTimeout(function(){
           vm.slideAnimRestart = true;
         },this.interval * 0.1);
         console.log('slide listed and begin timeout fade-in animation');
+        //при ложном ховерслайд, запускать таймаут начала анимации фейд-аут
         setTimeout(function(){
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart = false; 
@@ -107,69 +115,15 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
- 
-.slide-left-enter-active {
-  animation: slide-left 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.slide-left-leave-active {
-  animation: slide-out-left 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
-  animation-delay: 0.8s;
-}
- 
-.fade-in-enter-active {
-  animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation-delay: 0.8s;
-}
-
-
-
-.fade-in-leave-active {
-  animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both reverse;
-}
- 
-@keyframes slide-left {
-  0% {
-    transform: translateZ(-1400px) translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateZ(0) translateX(0);
-    opacity: 1;
-  }
-}
- 
-@keyframes slide-out-left {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-1000px);
-    opacity: 0;
-  }
-}
-
- 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-
   .mainFormat {
     display: flex;
-    align-items: center;
+    
   }
   .infoBlock {
     display: flex;
     flex-direction: column;
     width: 50%;
+    align-self: center;
   }
   .titlefirst {
     padding-left: 15%;  
@@ -262,4 +216,67 @@
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
+ 
+.slide-left-enter-active {
+  animation: slide-left 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ 
+.slide-left-leave-active {
+  animation: slide-out-left 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
+  animation-delay: 0.8s;
+}
+
+.fade-in-enter-active {
+  animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-delay: 0.8s;
+}
+
+.fade-in-leave-active {
+  animation: fade-out 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+ 
+@keyframes slide-left {
+  0% {
+    transform: translateZ(-1400px) translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}
+ 
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+ 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 </style>
