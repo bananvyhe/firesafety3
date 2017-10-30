@@ -41,10 +41,6 @@
       <br>addhide: {{addhide}}
       <br>slideAnimRestart: {{slideAnimRestart}} 
       <br>slideAnimRestart2: {{slideAnimRestart2}}
-      <button 
-        v-on:click="slideAnimRestart2 = false">
-        sdasdsd
-      </button>  
     </div>
   </div>
 </template>
@@ -121,9 +117,12 @@
          //запуск таймаута анимации фейд-ин
         setTimeout(function(){
           vm.slideAnimRestart = true;
-          vm.slideAnimRestart2 = true;
+          
         },this.interval * 0.2);
-
+        setTimeout(function(){
+          vm.slideAnimRestart2 = true;
+        },this.interval * 0.3);
+        
         console.log('slide listed and begin timeout fade-in animation');
         //при ложном ховерслайд, запускать таймаут начала анимации фейд-аут
         setTimeout(function(){
@@ -146,53 +145,12 @@
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
   .switcher {
-    padding-left: 20em;
+    padding-left: 10em;
   }
-/*  .slide-enter {
-    opacity: 0; 
-  }
-  .slide-leave-active {
-    animation: slide-out 0.5s ease-out forwards;
-    transition: opacity .5s;
-  }
-  .slide-move {
-    transition: transform .5s;   
-  }
-  .slide-leave-to {
-    opacity: 0;
-  }
-  .slide-enter-active, .slide-leave-active {
-  transition: all 1s;
-}
 
-  @keyframes slide-out {
-   from {
-    transform: translateY(0px);
-    }
-    to {
-    transform: translateY(20px);
-    }
-  }
-*/
   .slide-enter-active {
   animation: slide-in-blurred-left 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
   }
-  .slide-leave-active {
-    animation: slide-out-blurred-right 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
-  }
-  .fade-enter {
-    opacity: 0;
-  }
-  .fade-enter-active {
-    transition: opacity 1s;
-  }
-  .fade-leave-active {
-    transition: opacity 1s;
-    opacity: 0;
-  }
-
-
-
   @keyframes slide-in-blurred-left {
     0% {
       transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
@@ -208,6 +166,9 @@
     }
   }
 
+  .slide-leave-active {
+    animation: slide-out-blurred-right 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  }
   @keyframes slide-out-blurred-right {
     0% {
       transform: translateX(0) scaleY(1) scaleX(1);
@@ -223,7 +184,16 @@
     }
   }
 
-
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+  }
+  .fade-leave-active {
+    transition: opacity 1s;
+    opacity: 0;
+  }
 
   .mainFormat {
     display: flex;
@@ -294,7 +264,7 @@
   .fivediv {
     background-position: right bottom;
     background-image: url(../../app/assets/images/4.jpg);
-    color: $color-1;
+    color: $color-1;padding-left: 10%;
     .infoBlock {
       color: #000;
       text-shadow: 
