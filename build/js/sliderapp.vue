@@ -17,7 +17,7 @@
                   <div class="titlefirst" v-show="slideAnimRestart">{{item.title}}</div> 
                 </transition>
                
-                <transition  name='fade-in' appear>
+                <transition  name='fade' appear>
                   <div class="titlesecond" v-show="slideAnimRestart">{{item.text}}</div>
                 </transition>
               
@@ -53,7 +53,7 @@
       return {
         divHeight: divHeight,
         hoverslide: false,
-        interval: 8000,
+        interval: 3000,
         slideAnimRestart: '',
         animfade: 'fade',
         switcher: false,
@@ -129,6 +129,7 @@
     padding-left: 15%;  
   }
   .titlesecond {
+    background-color: #ada;
     padding-top: 0.2em;
     padding-left: 15%;
   }
@@ -227,13 +228,14 @@
   animation-delay: 1.2s;
 }
  
-.fade-in-enter-active {
+.fade-enter-active {
   animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   animation-delay: 0.8s;
 }
 
-.fade-in-leave-active {
-  animation: fade-out 2.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+.fade-leave-active {
+  animation: fade-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  transition: opacity 0.5s
 }
  
 @keyframes slide-out-blurred-left {
@@ -252,6 +254,9 @@
     opacity: 0;
   }
 }
+.fade-move {
+  transition: transform 0.5s;
+}
  
  
 @keyframes fade-in {
@@ -266,12 +271,6 @@
 @keyframes fade-out {
   0% {
     opacity: 1;
-  }
-  5% {
-    opacity: 0.5;
-  }
-  30% {
-    opacity: 0;
   }
   100% {
     opacity: 0;
