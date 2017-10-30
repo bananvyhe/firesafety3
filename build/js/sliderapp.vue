@@ -9,14 +9,24 @@
       'indicator-position': hider}">
       <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
           <div :class="item.class" class="mainFormat">
-            <div v-show="switcher">hoverslide: {{hoverslide}}<br>addhide: {{addhide}}<br>hideind: {{hideind}} <br><button v-on:click="slideAnimRestart2 = false">sdasdsd</button>  
-            </div>
+            
             <div class ="infoBlock">
                
-                <transition-group  name='slide' appear >
-                  <div :key='index' class="titlefirst" v-show="slideAnimRestart">{{item.title}}</div> 
+                <transition-group  name='slide' tag="ul">
+                  <li 
+                    :key='index' 
+                    class="titlefirst" 
+                    v-show="slideAnimRestart"
+                    @click="slideAnimRestart = false">{{item.title}}
+
+                  </li> 
                  
-                  <div :key='index' class="titlesecond" v-show="slideAnimRestart">{{item.text}}</div>
+                  <li 
+                    :key='item.title' 
+                    class="titlesecond" 
+                    v-show="slideAnimRestart2"
+                    @click="slideAnimRestart2 = false">{{item.text}}
+                  </li>
                 </transition-group>
               
             </div>
@@ -24,6 +34,17 @@
            </div>
       </el-carousel-item>
     </el-carousel>
+    <div 
+      v-show="switcher" class="switcher">
+      hoverslide: {{hoverslide}}
+      <br>addhide: {{addhide}}
+      <br>slideAnimRestart: {{slideAnimRestart}} 
+      <br>slideAnimRestart2: {{slideAnimRestart2}}
+      <button 
+        v-on:click="slideAnimRestart2 = false">
+        sdasdsd
+      </button>  
+    </div>
   </div>
 </template>
  
@@ -53,7 +74,7 @@
         hoverslide: false,
         interval: 3000,
         slideAnimRestart: '',
-        slideAnimRestart2: true,
+        slideAnimRestart2: '',
         animfade: 'fade',
         switcher: true,
         visota: vis,
@@ -85,7 +106,8 @@
           console.log('begin timer fade-out');
           setTimeout(function(){
           if (vm.hoverslide == '0') {
-            vm.slideAnimRestart = false; 
+            vm.slideAnimRestart = false;
+            vm.slideAnimRestart2 = false;  
           }
         }, vm.interval * 0.8);
         }
@@ -98,14 +120,22 @@
          //запуск таймаута анимации фейд-ин
         setTimeout(function(){
           vm.slideAnimRestart = true;
-        },this.interval * 0.1);
+          vm.slideAnimRestart2 = true;
+        },this.interval * 0.2);
+
         console.log('slide listed and begin timeout fade-in animation');
         //при ложном ховерслайд, запускать таймаут начала анимации фейд-аут
         setTimeout(function(){
           if (vm.hoverslide == '0') {
-            vm.slideAnimRestart = false; 
+            vm.slideAnimRestart = false;
           }
         }, vm.interval * 0.8);
+        setTimeout(function(){
+          if (vm.hoverslide == '0') {
+            vm.slideAnimRestart2 = false; 
+          }
+        }, vm.interval * 0.6);
+        
       }
     } 
   }
@@ -114,6 +144,35 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
+  .switcher {
+    padding-left: 20em;
+  }
+  .slide-enter {
+    opacity: 0; 
+  }
+  .slide-leave-active {
+    animation: slide-out 0.5s ease-out forwards;
+    transition: opacity .5s; position: absolute;
+  }
+  .slide-move {
+    transition: transform .5s;   
+  }
+  .slide-leave-to {
+    opacity: 0;
+  }
+  .slide-enter-active, .slide-leave-active {
+  transition: all 1s;
+}
+
+  @keyframes slide-out {
+   from {
+    transform: translateY(0px);
+    }
+    to {
+    transform: translateY(20px);
+    }
+  }
+
   .mainFormat {
     display: flex;
   }
@@ -124,7 +183,7 @@
     width: 50%;
     align-self: center;
   }
-  .titlefirst {
+  .titlefirst { display: inline-block;
     background-color: #dad;
     padding-left: 15%;  
   }
@@ -219,24 +278,9 @@
     background-color: #d3dce6;
   }
  
-  .slide-enter-active {
-   /* animation: slide-out 0.1s ease-out forwards;*/
-
-
-  }
-  .slide-move {
-    transition: transform 2s;
-  }
-   
-  .slide-leave-active {
-    /*animation: slide-out-blurred-left 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
-    animation-delay: 0.7s;*/
-  }
  
- 
- 
-  @keyframes slide-out {
-/*    0% {
+ /* @keyframes slide-out {
+    0% {
       transform: translateY(0px); 
       opacity: 1;
     }
@@ -247,8 +291,8 @@
        transform: translateY(100px); 
       filter: blur(40px);
       opacity: 0;
-    }*/
-  }
+    }
+  }*/
 
   .fade-move {
     transition: transform 0.5s;
