@@ -12,22 +12,23 @@
             
             <div class ="infoBlock">
                
-                <transition-group  name='slide' tag="ul">
-                  <li 
+                <transition name='slide'>
+                  <div 
                     :key='index' 
                     class="titlefirst" 
                     v-show="slideAnimRestart"
                     @click="slideAnimRestart = false">{{item.title}}
 
-                  </li> 
-                 
-                  <li 
+                  </div> 
+                </transition>
+                <transition name='fade'> 
+                  <div 
                     :key='item.title' 
                     class="titlesecond" 
                     v-show="slideAnimRestart2"
                     @click="slideAnimRestart2 = false">{{item.text}}
-                  </li>
-                </transition-group>
+                  </div>
+                </transition>
               
             </div>
             <br>
@@ -72,7 +73,7 @@
       return {
         divHeight: divHeight,
         hoverslide: false,
-        interval: 3000,
+        interval: 8000,
         slideAnimRestart: '',
         slideAnimRestart2: '',
         animfade: 'fade',
@@ -147,12 +148,12 @@
   .switcher {
     padding-left: 20em;
   }
-  .slide-enter {
+/*  .slide-enter {
     opacity: 0; 
   }
   .slide-leave-active {
     animation: slide-out 0.5s ease-out forwards;
-    transition: opacity .5s; position: absolute;
+    transition: opacity .5s;
   }
   .slide-move {
     transition: transform .5s;   
@@ -172,6 +173,57 @@
     transform: translateY(20px);
     }
   }
+*/
+  .slide-enter-active {
+  animation: slide-in-blurred-left 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  }
+  .slide-leave-active {
+    animation: slide-out-blurred-right 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  }
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+  }
+  .fade-leave-active {
+    transition: opacity 1s;
+    opacity: 0;
+  }
+
+
+
+  @keyframes slide-in-blurred-left {
+    0% {
+      transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+      transform-origin: 100% 50%;
+      filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-out-blurred-right {
+    0% {
+      transform: translateX(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(1000px) scaleX(2) scaleY(0.2);
+      transform-origin: 0% 50%;
+      filter: blur(40px);
+      opacity: 0;
+    }
+  }
+
+
 
   .mainFormat {
     display: flex;
@@ -277,44 +329,4 @@
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
- 
- 
- /* @keyframes slide-out {
-    0% {
-      transform: translateY(0px); 
-      opacity: 1;
-    }
-    10% {
-      filter: blur(0);
-    }
-    100% {
-       transform: translateY(100px); 
-      filter: blur(40px);
-      opacity: 0;
-    }
-  }*/
-
-  .fade-move {
-    transition: transform 0.5s;
-  }
-   
-   
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
 </style>
