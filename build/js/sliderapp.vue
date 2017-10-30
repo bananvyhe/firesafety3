@@ -9,17 +9,15 @@
       'indicator-position': hider}">
       <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
           <div :class="item.class" class="mainFormat">
-            <div v-show="switcher">hoverslide: {{hoverslide}}<br>addhide: {{addhide}}<br>hideind: {{hideind}}  
+            <div v-show="switcher">hoverslide: {{hoverslide}}<br>addhide: {{addhide}}<br>hideind: {{hideind}} <br><button v-on:click="slideAnimRestart2 = false">sdasdsd</button>  
             </div>
             <div class ="infoBlock">
                
-                <transition  name='slide' appear>
-                  <div class="titlefirst" v-show="slideAnimRestart">{{item.title}}</div> 
-                </transition>
-               
-                <transition  name='fade' appear>
-                  <div class="titlesecond" v-show="slideAnimRestart">{{item.text}}</div>
-                </transition>
+                <transition-group  name='slide' appear >
+                  <div :key='index' class="titlefirst" v-show="slideAnimRestart">{{item.title}}</div> 
+                 
+                  <div :key='index' class="titlesecond" v-show="slideAnimRestart">{{item.text}}</div>
+                </transition-group>
               
             </div>
             <br>
@@ -55,8 +53,9 @@
         hoverslide: false,
         interval: 3000,
         slideAnimRestart: '',
+        slideAnimRestart2: true,
         animfade: 'fade',
-        switcher: false,
+        switcher: true,
         visota: vis,
         hider: '',
         items: [
@@ -119,12 +118,14 @@
     display: flex;
   }
   .infoBlock {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     width: 50%;
     align-self: center;
   }
   .titlefirst {
+    background-color: #dad;
     padding-left: 15%;  
   }
   .titlesecond {
@@ -218,62 +219,58 @@
     background-color: #d3dce6;
   }
  
-.slide-enter-active {
-  animation: slide-out-blurred-left 0.1s cubic-bezier(0.755, 0.050, 0.855, 0.060) both reverse;
-}
- 
-.slide-leave-active {
-  animation: slide-out-blurred-left 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
-  animation-delay: 0.7s;
-}
- 
-.fade-enter-active {
-  animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation-delay: 0.8s;
-}
+  .slide-enter-active {
+   /* animation: slide-out 0.1s ease-out forwards;*/
 
-.fade-leave-active {
-  animation: fade-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  transition: opacity 0.5s
-}
- 
-@keyframes slide-out-blurred-left {
-  0% {
-    transform: translateX(0) scaleY(1) scaleX(1);
-    transform-origin: 50% 50%;
-    opacity: 1;
-  }
-  10% {
-    filter: blur(0);
-  }
-  100% {
-    transform: translateX(-1000px) scaleX(2) scaleY(0.2);
-    transform-origin: 100% 50%;
-    filter: blur(40px);
-    opacity: 0;
-  }
-}
-.fade-move {
-  transition: transform 0.5s;
-}
- 
- 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
-@keyframes fade-out {
-  0% {
-    opacity: 1;
   }
-  100% {
-    opacity: 0;
+  .slide-move {
+    transition: transform 2s;
   }
-}
+   
+  .slide-leave-active {
+    /*animation: slide-out-blurred-left 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+    animation-delay: 0.7s;*/
+  }
+ 
+ 
+ 
+  @keyframes slide-out {
+/*    0% {
+      transform: translateY(0px); 
+      opacity: 1;
+    }
+    10% {
+      filter: blur(0);
+    }
+    100% {
+       transform: translateY(100px); 
+      filter: blur(40px);
+      opacity: 0;
+    }*/
+  }
+
+  .fade-move {
+    transition: transform 0.5s;
+  }
+   
+   
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 </style>

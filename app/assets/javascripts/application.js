@@ -11687,7 +11687,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n    -ms-flex-item-align: center;\n        align-self: center;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    background-color: #ada;\n    padding-top: 0.2em;\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n.slide-enter-active[data-v-a7895866] {\n  -webkit-animation: slide-out-blurred-left-data-v-a7895866 0.1s cubic-bezier(0.755, 0.050, 0.855, 0.060) both reverse;\n          animation: slide-out-blurred-left-data-v-a7895866 0.1s cubic-bezier(0.755, 0.050, 0.855, 0.060) both reverse;\n}\n.slide-leave-active[data-v-a7895866] {\n  -webkit-animation: slide-out-blurred-left-data-v-a7895866 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n          animation: slide-out-blurred-left-data-v-a7895866 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n  -webkit-animation-delay: 0.7s;\n          animation-delay: 0.7s;\n}\n.fade-enter-active[data-v-a7895866] {\n  -webkit-animation: fade-in-data-v-a7895866 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;\n          animation: fade-in-data-v-a7895866 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;\n  -webkit-animation-delay: 0.8s;\n          animation-delay: 0.8s;\n}\n.fade-leave-active[data-v-a7895866] {\n  -webkit-animation: fade-out-data-v-a7895866 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;\n          animation: fade-out-data-v-a7895866 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;\n  -webkit-transition: opacity 0.5s;\n  transition: opacity 0.5s\n}\n@-webkit-keyframes slide-out-blurred-left-data-v-a7895866 {\n0% {\n    -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n            transform: translateX(0) scaleY(1) scaleX(1);\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    opacity: 1;\n}\n10% {\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n    -webkit-filter: blur(0);\n            filter: blur(0);\n}\n100% {\n    -webkit-transform: translateX(-1000px) scaleX(2) scaleY(0.2);\n            transform: translateX(-1000px) scaleX(2) scaleY(0.2);\n    -webkit-transform-origin: 100% 50%;\n            transform-origin: 100% 50%;\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n    -webkit-filter: blur(40px);\n            filter: blur(40px);\n    opacity: 0;\n}\n}\n@keyframes slide-out-blurred-left-data-v-a7895866 {\n0% {\n    -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n            transform: translateX(0) scaleY(1) scaleX(1);\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    opacity: 1;\n}\n10% {\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n    -webkit-filter: blur(0);\n            filter: blur(0);\n}\n100% {\n    -webkit-transform: translateX(-1000px) scaleX(2) scaleY(0.2);\n            transform: translateX(-1000px) scaleX(2) scaleY(0.2);\n    -webkit-transform-origin: 100% 50%;\n            transform-origin: 100% 50%;\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n    -webkit-filter: blur(40px);\n            filter: blur(40px);\n    opacity: 0;\n}\n}\n.fade-move[data-v-a7895866] {\n  -webkit-transition: -webkit-transform 0.5s;\n  transition: -webkit-transform 0.5s;\n  transition: transform 0.5s;\n  transition: transform 0.5s, -webkit-transform 0.5s;\n}\n@-webkit-keyframes fade-in-data-v-a7895866 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fade-in-data-v-a7895866 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@-webkit-keyframes fade-out-data-v-a7895866 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes fade-out-data-v-a7895866 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n\n", ""]);
+exports.push([module.i, ".mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.infoBlock[data-v-a7895866] {\n    background-color: #fff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n    -ms-flex-item-align: center;\n        align-self: center;\n}\n.titlefirst[data-v-a7895866] {\n    background-color: #dad;\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    background-color: #ada;\n    padding-top: 0.2em;\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n.slide-enter-active[data-v-a7895866] {\n   /* animation: slide-out 0.1s ease-out forwards;*/\n}\n.slide-move[data-v-a7895866] {\n    -webkit-transition: -webkit-transform 2s;\n    transition: -webkit-transform 2s;\n    transition: transform 2s;\n    transition: transform 2s, -webkit-transform 2s;\n}\n.slide-leave-active[data-v-a7895866] {\n    /*animation: slide-out-blurred-left 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n    animation-delay: 0.7s;*/\n}\n@-webkit-keyframes slide-out-data-v-a7895866 {\n/*    0% {\n      transform: translateY(0px); \n      opacity: 1;\n    }\n    10% {\n      filter: blur(0);\n    }\n    100% {\n       transform: translateY(100px); \n      filter: blur(40px);\n      opacity: 0;\n    }*/\n}\n@keyframes slide-out-data-v-a7895866 {\n/*    0% {\n      transform: translateY(0px); \n      opacity: 1;\n    }\n    10% {\n      filter: blur(0);\n    }\n    100% {\n       transform: translateY(100px); \n      filter: blur(40px);\n      opacity: 0;\n    }*/\n}\n.fade-move[data-v-a7895866] {\n    -webkit-transition: -webkit-transform 0.5s;\n    transition: -webkit-transform 0.5s;\n    transition: transform 0.5s;\n    transition: transform 0.5s, -webkit-transform 0.5s;\n}\n@-webkit-keyframes fade-in-data-v-a7895866 {\n0% {\n      opacity: 0;\n}\n100% {\n      opacity: 1;\n}\n}\n@keyframes fade-in-data-v-a7895866 {\n0% {\n      opacity: 0;\n}\n100% {\n      opacity: 1;\n}\n}\n@-webkit-keyframes fade-out-data-v-a7895866 {\n0% {\n      opacity: 1;\n}\n100% {\n      opacity: 0;\n}\n}\n@keyframes fade-out-data-v-a7895866 {\n0% {\n      opacity: 1;\n}\n100% {\n      opacity: 0;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -11794,8 +11794,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
 
 
 var vis = { value: '30' };
@@ -11822,8 +11820,9 @@ exports.default = {
       hoverslide: false,
       interval: 3000,
       slideAnimRestart: '',
+      slideAnimRestart2: true,
       animfade: 'fade',
-      switcher: false,
+      switcher: true,
       visota: vis,
       hider: '',
       items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение.', class: 'onediv' }, { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' }, { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' }, { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' }, { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }]
@@ -11928,7 +11927,19 @@ var render = function() {
                     _c("br"),
                     _vm._v("addhide: " + _vm._s(_vm.addhide)),
                     _c("br"),
-                    _vm._v("hideind: " + _vm._s(_vm.hideind) + "  \n          ")
+                    _vm._v("hideind: " + _vm._s(_vm.hideind) + " "),
+                    _c("br"),
+                    _c(
+                      "button",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.slideAnimRestart2 = false
+                          }
+                        }
+                      },
+                      [_vm._v("sdasdsd")]
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -11936,41 +11947,45 @@ var render = function() {
                   "div",
                   { staticClass: "infoBlock" },
                   [
-                    _c("transition", { attrs: { name: "slide", appear: "" } }, [
-                      _c(
-                        "div",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.slideAnimRestart,
-                              expression: "slideAnimRestart"
-                            }
-                          ],
-                          staticClass: "titlefirst"
-                        },
-                        [_vm._v(_vm._s(item.title))]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("transition", { attrs: { name: "fade", appear: "" } }, [
-                      _c(
-                        "div",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.slideAnimRestart,
-                              expression: "slideAnimRestart"
-                            }
-                          ],
-                          staticClass: "titlesecond"
-                        },
-                        [_vm._v(_vm._s(item.text))]
-                      )
-                    ])
+                    _c(
+                      "transition-group",
+                      { attrs: { name: "slide", appear: "" } },
+                      [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.slideAnimRestart,
+                                expression: "slideAnimRestart"
+                              }
+                            ],
+                            key: index,
+                            staticClass: "titlefirst"
+                          },
+                          [_vm._v(_vm._s(item.title))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.slideAnimRestart,
+                                expression: "slideAnimRestart"
+                              }
+                            ],
+                            key: index,
+                            staticClass: "titlesecond"
+                          },
+                          [_vm._v(_vm._s(item.text))]
+                        )
+                      ]
+                    )
                   ],
                   1
                 ),
