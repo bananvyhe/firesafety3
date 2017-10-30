@@ -117,7 +117,6 @@
 @import "../../app/assets/stylesheets/postcss/variables";
   .mainFormat {
     display: flex;
-    
   }
   .infoBlock {
     display: flex;
@@ -225,7 +224,7 @@
  
 .slide-leave-active {
   animation: slide-out-blurred-left 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
-  animation-delay: 1.2s;
+  animation-delay: 0.7s;
 }
  
 .fade-enter-active {
