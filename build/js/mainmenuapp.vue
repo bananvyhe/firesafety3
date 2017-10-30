@@ -13,7 +13,7 @@
         </div>
       </button>
       <ul class='visible-links'>
-        <li v-for="menuitem in menuitems" >
+        <li v-for="menuitem in menuitems" v-bind:key="menuitem.title" >
           <a href=""><nobr>{{menuitem.title.toUpperCase()}}</nobr>
           </a>
         </li>
@@ -247,7 +247,8 @@
     }
     li { vertical-align: middle;
       display: table-cell;
-      border-left: 1px solid $color-1; 
+      border-left: 1px solid $color-1;
+      line-height: 0.2em;
     }
   }
   .hidden-links {

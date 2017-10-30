@@ -13,7 +13,7 @@
             </div>
             <div class ="infoBlock">
                
-                <transition  name='slide-left' appear>
+                <transition  name='slide' appear>
                   <div class="titlefirst" v-show="slideAnimRestart">{{item.title}}</div> 
                 </transition>
                
@@ -53,7 +53,7 @@
       return {
         divHeight: divHeight,
         hoverslide: false,
-        interval: 7000,
+        interval: 8000,
         slideAnimRestart: '',
         animfade: 'fade',
         switcher: false,
@@ -129,6 +129,7 @@
     padding-left: 15%;  
   }
   .titlesecond {
+    padding-top: 0.2em;
     padding-left: 15%;
   }
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
@@ -217,46 +218,41 @@
     background-color: #d3dce6;
   }
  
-.slide-left-enter-active {
-  animation: slide-left 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.slide-enter-active {
+  animation: slide-out-blurred-left 0.1s cubic-bezier(0.755, 0.050, 0.855, 0.060) both reverse;
 }
  
-.slide-left-leave-active {
-  animation: slide-out-left 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
-  animation-delay: 0.8s;
+.slide-leave-active {
+  animation: slide-out-blurred-left 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  animation-delay: 1.2s;
 }
-
+ 
 .fade-in-enter-active {
   animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   animation-delay: 0.8s;
 }
 
 .fade-in-leave-active {
-  animation: fade-out 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-out 2.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
  
-@keyframes slide-left {
+@keyframes slide-out-blurred-left {
   0% {
-    transform: translateZ(-1400px) translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateZ(0) translateX(0);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
     opacity: 1;
   }
-}
- 
-@keyframes slide-out-left {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
+  10% {
+    filter: blur(0);
   }
   100% {
-    transform: translateX(-1000px);
+    transform: translateX(-1000px) scaleX(2) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
     opacity: 0;
   }
 }
-
+ 
  
 @keyframes fade-in {
   0% {
@@ -271,8 +267,11 @@
   0% {
     opacity: 1;
   }
-  7% {
-    opacity: 0.9;
+  5% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
