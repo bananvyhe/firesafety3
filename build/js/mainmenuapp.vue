@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}}
+    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}}<br>testarray: {{testarray}}
     </div>
     <nav  class='greedy-nav'  
       v-bind:style="styleObject"  
@@ -13,7 +13,7 @@
         </div>
       </button>
       <ul class='visible-links'>
-        <li v-for="menuitem in menuitems" v-bind:key="menuitem.title" >
+        <li v-for="menuitem in menuitems">
           <a href=""><nobr>{{menuitem.title.toUpperCase()}}</nobr>
           </a>
         </li>
@@ -22,7 +22,8 @@
         v-bind:style="hiddenStyle"  
         @mouseleave="toggle = false" >
         <li v-for="item in menuitemsHide" 
-          @mouseup="" @click="">
+          @mouseup="" 
+          @click="">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>
         </li>
@@ -32,10 +33,13 @@
 </template>
 
 <script>
+
   let menuwidth = {value:  ''};
   let availableSpace = {value:  ''};
   let vlinks = {value:  ''};
+
   export default {
+
     data: function () {
       return {
         //выключатель показа индикации служебной информации
@@ -48,31 +52,35 @@
           { title: 'главная', url: ''},
           { title: 'о нас', url: ''},
           { title: 'противопожарные системы', url: ''},
-          { title: 'видеонаблюдение', url: ''},
+          { title: 'видеонаблюдение', urs: ''},
           { title: 'контроль доступа', url: ''},
         ],
         menuitemsHide: [],
         styleObject: {},
-        hiddenStyle: {}
+        hiddenStyle: {},
+        testarray: [
+          { title: '1', url: ''},
+          { title: '2', url: ''},
+          { title: '3', url: ''},
+        ]
       }
     },
     created(){ 
-        document.addEventListener('click', this.dropdown) 
+      document.addEventListener('click', this.dropdown) 
     }, 
     destroyed () { 
-        document.removeEventListener('click', this.dropdown) 
-    }, 
+      document.removeEventListener('click', this.dropdown) 
+    },
     methods:{
       dropdown(e){ 
         let el = this.$refs.dropdown; 
         let target = e.target;
         if (el !== target && !el.contains(target)) 
         { 
-          this.toggle = false
+          this.toggle = false;
         } 
       } 
     },
- 
     computed: {
       switchhidestyle: function(){
         if (this.toggle) {
@@ -87,7 +95,6 @@
           return this.hiddenStyle;
         }
       },
-
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
           this.styleObject = {
@@ -104,24 +111,26 @@
           return this.styleObject;
         }
       },
-
-      numHide:  function () {
+      numHide: function () {
         // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
         if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 30) { 
+          this.menuitemsHide.reverse();
           // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
           this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
+          this.menuitemsHide.reverse();
           // удаляем последний пункт из массива с отображаемыми пунктами меню
           this.menuitems.pop();
         }
-        return this.menuitemsHide
-        
+        return this.menuitemsHide;
       },
       numVis: function () {
         if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 350) {
+          this.menuitemsHide.reverse();
           this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
           this.menuitemsHide.pop(); 
+          this.menuitemsHide.reverse();
         }
-        return this.menuitems
+        return this.menuitems;
       }
     },
     // вотчер палит изменения происходящие в скрытых меню и обновляет ширингу видимых меню для дальнейшей работы условий в скрипте по переносу пунктов
@@ -130,7 +139,6 @@
       menuitemsHide: function () {
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
         vlinks.value = vlinks1.offsetWidth;
-
         if (this.menuitemsHide.length!=0) {
         let btn = document.querySelector(".greedy-nav button");
         btn.setAttribute("count", this.menuitemsHide.length);
@@ -138,7 +146,6 @@
       }
     }
   }
-
   function parseCalc () {
     let hlinks = document.querySelector(".greedy-nav .hidden-links");
     let btn = document.querySelector(".greedy-nav button");
@@ -147,17 +154,14 @@
     vlinks.value = vlinks1.offsetWidth;
     menuwidth.value = menuwidth1.offsetWidth;
     availableSpace.value = menuwidth1.offsetWidth   - 90;
-
   }
   // передаваемое значение во вью в виде обьекта для поддержания реактивной связи
   window.onload = function () {
     parseCalc();
   }
-
   window.onresize = function(event) {
     parseCalc();
   }
-
 // setTimeout(function(){
 //       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
 // }, 1300);
@@ -166,15 +170,12 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
- 
 .greedy-nav { 
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
   background-color: $color-5; 
-
-    
   a {
     display: block;
     padding: 10px 30px;
@@ -184,7 +185,6 @@
       color: $color-3;
     }
   }
-  
   button {
     position: absolute;
     height: 100%;

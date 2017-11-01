@@ -11687,7 +11687,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".switcher[data-v-a7895866] {\n    padding-left: 10em;\n}\n.slide-enter-active[data-v-a7895866] {\n  -webkit-animation: slide-in-blurred-left-data-v-a7895866 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n          animation: slide-in-blurred-left-data-v-a7895866 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n}\n@-webkit-keyframes slide-in-blurred-left-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n@keyframes slide-in-blurred-left-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n.slide-leave-active[data-v-a7895866] {\n    -webkit-animation: slide-out-blurred-right-data-v-a7895866 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n            animation: slide-out-blurred-right-data-v-a7895866 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n}\n@-webkit-keyframes slide-out-blurred-right-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n@keyframes slide-out-blurred-right-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n.fade-enter[data-v-a7895866] {\n    opacity: 0;\n}\n.fade-enter-active[data-v-a7895866] {\n    -webkit-transition: opacity 1s;\n    transition: opacity 1s;\n}\n.fade-leave-active[data-v-a7895866] {\n    -webkit-transition: opacity 1s;\n    transition: opacity 1s;\n    opacity: 0;\n}\n.mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.infoBlock[data-v-a7895866] {\n    background-color: #fff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n    -ms-flex-item-align: center;\n        align-self: center;\n}\n.titlefirst[data-v-a7895866] { display: inline-block;\n    background-color: #dad;\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    background-color: #ada;\n    padding-top: 0.2em;\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;padding-left: 10%;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
+exports.push([module.i, ".switcher[data-v-a7895866] {\n    padding-left: 10em;\n}\n.slide-enter-active[data-v-a7895866] {\n  -webkit-animation: slide-in-blurred-left-data-v-a7895866 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n          animation: slide-in-blurred-left-data-v-a7895866 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n}\n@-webkit-keyframes slide-in-blurred-left-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n@keyframes slide-in-blurred-left-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n.slide-leave-active[data-v-a7895866] {\n    -webkit-animation: slide-out-blurred-right-data-v-a7895866 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n            animation: slide-out-blurred-right-data-v-a7895866 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n}\n@-webkit-keyframes slide-out-blurred-right-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n@keyframes slide-out-blurred-right-data-v-a7895866 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n.fade-enter[data-v-a7895866] {\n    opacity: 0;\n}\n.fade-enter-active[data-v-a7895866] {\n    -webkit-animation: fade-data-v-a7895866 3.2s;\n            animation: fade-data-v-a7895866 3.2s;\n}\n.fade-leave-active[data-v-a7895866] {\n     \n    -webkit-transition: opacity 1.8s;\n     \n    transition: opacity 1.8s;\n    opacity: 0;\n}\n@-webkit-keyframes fade-data-v-a7895866 {\n0% {\n      opacity: 0;\n}\n40% {\n      opacity: 0;\n}\n100% {\n      opacity: 1;\n}\n}\n@keyframes fade-data-v-a7895866 {\n0% {\n      opacity: 0;\n}\n40% {\n      opacity: 0;\n}\n100% {\n      opacity: 1;\n}\n}\n.mainFormat[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.infoBlock[data-v-a7895866] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 50%;\n    -ms-flex-item-align: center;\n        align-self: center;\n}\n.titlefirst[data-v-a7895866] {\n    padding-left: 15%;\n}\n.titlesecond[data-v-a7895866] {\n    padding-top: 0.2em;\n    padding-left: 15%;\n}\n.onediv[data-v-a7895866], .twodiv[data-v-a7895866], .threediv[data-v-a7895866], .fourdiv[data-v-a7895866], .fivediv[data-v-a7895866] {\n    height: 100%;\n    background-repeat:no-repeat;\n    background-size: cover;\n}\n.onediv[data-v-a7895866] {\n    background-position: right center;\n    /*filter: blur(4px);*/\n    background-image: url(" + __webpack_require__(17) + ");\n    padding-left: 5%;\n}\n.twodiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(18) + ");\n    padding-left: 15%;\n}\n.threediv[data-v-a7895866] {\n    background-position: center bottom;\n    background-image: url(" + __webpack_require__(19) + ");\n    color: #FFF;\n    padding-left: 5%;\n}\n.fourdiv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(20) + ");\n    padding-left: 20%;\n    color: #FFF;\n}\n.fourdiv .infoBlock[data-v-a7895866] {\n    text-shadow: \n        -0   -1px 1px #353535,\n         0   -1px 1px #353535,\n        -0    1px 1px #353535,\n         0    1px 1px #353535,\n        -1px -0   1px #353535,\n         1px -0   1px #353535,\n        -1px  0   1px #353535,\n         1px  0   1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535,\n        -1px -1px 1px #353535,\n         1px -1px 1px #353535,\n        -1px  1px 1px #353535,\n         1px  1px 1px #353535;\n}\n.fivediv[data-v-a7895866] {\n    background-position: right bottom;\n    background-image: url(" + __webpack_require__(21) + ");\n    color: #FFF;padding-left: 10%;\n}\n.fivediv .infoBlock[data-v-a7895866] {\n    color: #000;\n    text-shadow: \n        -0   -1px 0   #FFFFFF,\n         0   -1px 0   #FFFFFF,\n        -0    1px 0   #FFFFFF,\n         0    1px 0   #FFFFFF,\n        -1px -0   0   #FFFFFF,\n         1px -0   0   #FFFFFF,\n        -1px  0   0   #FFFFFF,\n         1px  0   0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF,\n        -1px -1px 0   #FFFFFF,\n         1px -1px 0   #FFFFFF,\n        -1px  1px 0   #FFFFFF,\n         1px  1px 0   #FFFFFF;\n}\n.el-carousel__item h3[data-v-a7895866] {\n    color: #475669;\n    font-size: 18px;\n    opacity: 0.75;\n    line-height: 2em;\n    margin: 0;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n) {\n    background-color: #99a9bf;\n}\n.el-carousel__item[data-v-a7895866]:nth-child(2n+1) {\n    background-color: #d3dce6;\n}\n", ""]);
 
 // exports
 
@@ -11812,6 +11812,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 
 var vis = { value: '30' };
@@ -11836,11 +11837,11 @@ exports.default = {
     return {
       divHeight: divHeight,
       hoverslide: false,
-      interval: 8000,
+      interval: 12000,
       slideAnimRestart: '',
       slideAnimRestart2: '',
       animfade: 'fade',
-      switcher: true,
+      switcher: false,
       visota: vis,
       hider: '',
       items: [{ title: 'Комплексные системы безопасности для вашей недвижимости', text: 'Монтаж, обслуживание, проектирование, ремонт, испытание, обучение.', class: 'onediv' }, { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' }, { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' }, { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' }, { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }]
@@ -11865,9 +11866,13 @@ exports.default = {
         setTimeout(function () {
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart = false;
-            vm.slideAnimRestart2 = false;
           }
         }, vm.interval * 0.8);
+        setTimeout(function () {
+          if (vm.hoverslide == '0') {
+            vm.slideAnimRestart2 = false;
+          }
+        }, vm.interval * 0.7);
       }
     }
   },
@@ -11878,10 +11883,10 @@ exports.default = {
       //запуск таймаута анимации фейд-ин
       setTimeout(function () {
         vm.slideAnimRestart = true;
-      }, this.interval * 0.2);
+      }, this.interval * 0.1);
       setTimeout(function () {
         vm.slideAnimRestart2 = true;
-      }, this.interval * 0.3);
+      }, this.interval * 0.1);
 
       console.log('slide listed and begin timeout fade-in animation');
       //при ложном ховерслайд, запускать таймаут начала анимации фейд-аут
@@ -11889,12 +11894,12 @@ exports.default = {
         if (vm.hoverslide == '0') {
           vm.slideAnimRestart = false;
         }
-      }, vm.interval * 0.8);
+      }, vm.interval * 0.9);
       setTimeout(function () {
         if (vm.hoverslide == '0') {
           vm.slideAnimRestart2 = false;
         }
-      }, vm.interval * 0.6);
+      }, vm.interval * 0.8);
     }
   }
 };
@@ -11942,7 +11947,7 @@ var render = function() {
                   "div",
                   { staticClass: "infoBlock" },
                   [
-                    _c("transition", { attrs: { name: "slide" } }, [
+                    _c("transition", { attrs: { name: "slide", appear: "" } }, [
                       _c(
                         "div",
                         {
@@ -11966,29 +11971,33 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("transition", { attrs: { name: "fade" } }, [
-                      _c(
-                        "div",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.slideAnimRestart2,
-                              expression: "slideAnimRestart2"
+                    _c(
+                      "transition",
+                      { attrs: { name: "fade", duration: 4000, appear: "" } },
+                      [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.slideAnimRestart2,
+                                expression: "slideAnimRestart2"
+                              }
+                            ],
+                            key: item.title,
+                            staticClass: "titlesecond",
+                            on: {
+                              click: function($event) {
+                                _vm.slideAnimRestart2 = false
+                              }
                             }
-                          ],
-                          key: item.title,
-                          staticClass: "titlesecond",
-                          on: {
-                            click: function($event) {
-                              _vm.slideAnimRestart2 = false
-                            }
-                          }
-                        },
-                        [_vm._v(_vm._s(item.text) + "\n                ")]
-                      )
-                    ])
+                          },
+                          [_vm._v(_vm._s(item.text) + "\n                ")]
+                        )
+                      ]
+                    )
                   ],
                   1
                 ),
@@ -12022,7 +12031,11 @@ var render = function() {
             "slideAnimRestart: " + _vm._s(_vm.slideAnimRestart) + " \n    "
           ),
           _c("br"),
-          _vm._v("slideAnimRestart2: " + _vm._s(_vm.slideAnimRestart2) + "\n  ")
+          _vm._v(
+            "slideAnimRestart2: " + _vm._s(_vm.slideAnimRestart2) + "\n     "
+          ),
+          _c("br"),
+          _vm._v("hideind: " + _vm._s(_vm.hideind) + "\n  ")
         ]
       )
     ],
@@ -12495,11 +12508,15 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+
 
 var menuwidth = { value: '' };
 var availableSpace = { value: '' };
 var vlinks = { value: '' };
+
 exports.default = {
+
   data: function data() {
     return {
       //выключатель показа индикации служебной информации
@@ -12508,10 +12525,11 @@ exports.default = {
       menuwidth: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
-      menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', url: '' }, { title: 'контроль доступа', url: '' }],
+      menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', urs: '' }, { title: 'контроль доступа', url: '' }],
       menuitemsHide: [],
       styleObject: {},
-      hiddenStyle: {}
+      hiddenStyle: {},
+      testarray: [{ title: '1', url: '' }, { title: '2', url: '' }, { title: '3', url: '' }]
     };
   },
   created: function created() {
@@ -12530,7 +12548,6 @@ exports.default = {
       }
     }
   },
-
   computed: {
     switchhidestyle: function switchhidestyle() {
       if (this.toggle) {
@@ -12545,7 +12562,6 @@ exports.default = {
         return this.hiddenStyle;
       }
     },
-
     compstylem: function compstylem() {
       if (this.menuitemsHide.length > 0) {
         this.styleObject = {
@@ -12562,12 +12578,13 @@ exports.default = {
         return this.styleObject;
       }
     },
-
     numHide: function numHide() {
       // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
       if (this.vlinks.value > this.availableSpace.value && this.menuitems.length > 1 && this.vlinks.value - this.availableSpace.value > 30) {
+        this.menuitemsHide.reverse();
         // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
         this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
+        this.menuitemsHide.reverse();
         // удаляем последний пункт из массива с отображаемыми пунктами меню
         this.menuitems.pop();
       }
@@ -12575,8 +12592,10 @@ exports.default = {
     },
     numVis: function numVis() {
       if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0 && this.availableSpace.value - this.vlinks.value > 350) {
+        this.menuitemsHide.reverse();
         this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
         this.menuitemsHide.pop();
+        this.menuitemsHide.reverse();
       }
       return this.menuitems;
     }
@@ -12587,7 +12606,6 @@ exports.default = {
     menuitemsHide: function menuitemsHide() {
       var vlinks1 = document.querySelector(".greedy-nav .visible-links");
       vlinks.value = vlinks1.offsetWidth;
-
       if (this.menuitemsHide.length != 0) {
         var btn = document.querySelector(".greedy-nav button");
         btn.setAttribute("count", this.menuitemsHide.length);
@@ -12595,7 +12613,6 @@ exports.default = {
     }
   }
 };
-
 
 function parseCalc() {
   var hlinks = document.querySelector(".greedy-nav .hidden-links");
@@ -12610,11 +12627,9 @@ function parseCalc() {
 window.onload = function () {
   parseCalc();
 };
-
 window.onresize = function (event) {
   parseCalc();
 };
-
 // setTimeout(function(){
 //       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
 // }, 1300);
@@ -12654,7 +12669,9 @@ var render = function() {
         _c("br"),
         _vm._v("compstylem: " + _vm._s(_vm.compstylem)),
         _c("br"),
-        _vm._v("switchhidestyle: " + _vm._s(_vm.switchhidestyle) + "\n  ")
+        _vm._v("switchhidestyle: " + _vm._s(_vm.switchhidestyle)),
+        _c("br"),
+        _vm._v("testarray: " + _vm._s(_vm.testarray) + "\n  ")
       ]
     ),
     _vm._v(" "),
@@ -12683,7 +12700,7 @@ var render = function() {
           "ul",
           { staticClass: "visible-links" },
           _vm._l(_vm.menuitems, function(menuitem) {
-            return _c("li", { key: menuitem.title }, [
+            return _c("li", [
               _c(
                 "a",
                 { attrs: { href: "" } },

@@ -7,13 +7,13 @@ import LogoApp from './logoApp.vue'
 import Mainmenuapp from './mainmenuapp.vue'
 
 Vue.use(ElementUI)
- 
+   
 document.addEventListener('DOMContentLoaded', () => {
   
   Vue.component('onediv', {
       template: '<div><slot></slot></div>'
-  }) 
-  
+  }); 
+   
   new Vue({
     el: '#sliderapp',
     render: h => h(Sliderapp)

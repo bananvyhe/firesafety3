@@ -12,7 +12,7 @@
             
             <div class ="infoBlock">
                
-                <transition name='slide'>
+                <transition name='slide' appear>
                   <div 
                     :key='index' 
                     class="titlefirst" 
@@ -21,7 +21,7 @@
 
                   </div> 
                 </transition>
-                <transition name='fade'> 
+                <transition name='fade' :duration="4000" appear> 
                   <div 
                     :key='item.title' 
                     class="titlesecond" 
@@ -41,6 +41,7 @@
       <br>addhide: {{addhide}}
       <br>slideAnimRestart: {{slideAnimRestart}} 
       <br>slideAnimRestart2: {{slideAnimRestart2}}
+       <br>hideind: {{hideind}}
     </div>
   </div>
 </template>
@@ -69,11 +70,11 @@
       return {
         divHeight: divHeight,
         hoverslide: false,
-        interval: 8000,
+        interval: 12000,
         slideAnimRestart: '',
         slideAnimRestart2: '',
         animfade: 'fade',
-        switcher: true,
+        switcher: false,
         visota: vis,
         hider: '',
         items: [
@@ -104,9 +105,16 @@
           setTimeout(function(){
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart = false;
-            vm.slideAnimRestart2 = false;  
+             
           }
         }, vm.interval * 0.8);
+        setTimeout(function(){
+          if (vm.hoverslide == '0') {
+            vm.slideAnimRestart2 = false; 
+             
+          }
+        }, vm.interval * 0.7);
+        
         }
       } 
     },
@@ -118,10 +126,10 @@
         setTimeout(function(){
           vm.slideAnimRestart = true;
           
-        },this.interval * 0.2);
+        },this.interval * 0.1);
         setTimeout(function(){
           vm.slideAnimRestart2 = true;
-        },this.interval * 0.3);
+        },this.interval * 0.1);
         
         console.log('slide listed and begin timeout fade-in animation');
         //при ложном ховерслайд, запускать таймаут начала анимации фейд-аут
@@ -129,12 +137,12 @@
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart = false;
           }
-        }, vm.interval * 0.8);
+        }, vm.interval * 0.9);
         setTimeout(function(){
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart2 = false; 
           }
-        }, vm.interval * 0.6);
+        }, vm.interval * 0.8);
         
       }
     } 
@@ -188,29 +196,41 @@
     opacity: 0;
   }
   .fade-enter-active {
-    transition: opacity 1s;
+    animation: fade 3.2s;
+     
+    
+
   }
   .fade-leave-active {
-    transition: opacity 1s;
+     
+    transition: opacity 1.8s;
     opacity: 0;
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .mainFormat {
     display: flex;
   }
   .infoBlock {
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     width: 50%;
     align-self: center;
   }
-  .titlefirst { display: inline-block;
-    background-color: #dad;
+  .titlefirst {
     padding-left: 15%;  
   }
   .titlesecond {
-    background-color: #ada;
     padding-top: 0.2em;
     padding-left: 15%;
   }
