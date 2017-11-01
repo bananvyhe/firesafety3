@@ -1,8 +1,8 @@
 @hamster {
   /*  Base settings */
   font-size: 16px;
-  line-height: 1.5;
-  font-ratio: 1.25;
+  line-height: 1.4;
+  font-ratio: 1.6;
   remove-comments: true;
  /*  Vertical Rythm settings */
   unit: em;
@@ -21,6 +21,7 @@
 } 
 /*-----------------------------------------
 End Hamster setup*/
+
 @reset;
 $column: 200px;
 $block-font-size: xlarge@d2;
@@ -41,7 +42,7 @@ body {
   height: 2.2em;
   background-color: $color-5;
   color: $color-1; 
-  adjust-font-size: fontsize small;
+  adjust-font-size: fontsize medium@d2;
 } 
 .sliderText {
   font-weight: 400;
@@ -50,15 +51,19 @@ body {
   .titlefirst {
     filter: drop-shadow(1px 1px 2px grey);  
     font-family: "OswaldL";
+    padding-left: 15%;
+  }
+  .titlesecond {
+    padding-top: 0.2em;
+    padding-left: 15%;
   }
 }
-
 @media (--only-big-screen) {
   .sliderText {
     font-size: 18px;
     div {
       .titlefirst {
-        adjust-font-size: fontsize xlarge;
+        adjust-font-size: fontsize large;
         line-height: 0.8;
         padding-bottom: 0.2em;
       }
@@ -70,22 +75,20 @@ body {
   }
 } 
 @media (--only-medium-screen) {
-  @ihamster {
-    --font-size: 10px;
-    --to-font-size: 18px;
-    --viewport: 300px 1423px;
-    --unit: vw;
-  }
   .sliderText {
     div {
       .titlefirst {
-        adjust-font-size: fontsize xlarge;
+        adjust-font-size: fontsize large;
         line-height: 0.8;
         padding-bottom: 0.2em;
+        padding-left: 5%;
+        margin-right:-15%;
       }
       .titlesecond {
         adjust-font-size: fontsize base;
-        line-height: 1.2;
+        line-height: 0.9;
+        padding-left: 5%;
+        margin-right:-15%;
       }
     }
   }
@@ -97,13 +100,17 @@ body {
     font-size: 10px;
     div {
       .titlefirst {
-        adjust-font-size: fontsize xlarge;
+        adjust-font-size: fontsize large;
         line-height: 0.8;
         padding-bottom: 0.2em;
+        padding-left: 5%;
+        margin-right:-25%;
       }
       .titlesecond {
         adjust-font-size: fontsize base;
-        line-height: 1.2;
+        line-height: 0.9;
+        padding-left: 5%;
+        margin-right:-25%;
       }
     }
   }
@@ -200,7 +207,13 @@ noflex {
   text-align: justify;
   lost-column: 1/2 2 1em flex;
   margin-top: 1%; 
+  
   margin-bottom: 1%;
+ 
+     adjust-font-size: fontsize base;
+
+ 
+ 
 }
  
 .grid-itemL, .grid-itemR  {
@@ -208,11 +221,36 @@ noflex {
   height: 30px;
   @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);
+
   p {
     @util center;
     padding: 0.4em;
   }
 }
+h1 {
+  adjust-font-size: fontsize xxlarge;
+}
+h2 {
+  adjust-font-size: fontsize xlarge;
+}
+h3 {
+  adjust-font-size: fontsize large;
+}
+h4 {
+  adjust-font-size: fontsize medium;
+}
+h5 {
+  adjust-font-size: fontsize base;
+}
+h6 {
+  adjust-font-size: fontsize small;
+}
+p {
+
+}
+ 
+
+
 
 /* keyframes */
 

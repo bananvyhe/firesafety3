@@ -71,7 +71,7 @@ a:hover, a:active {
 
 html {
   font-size: 100%;
-  line-height: 1.5em;
+  line-height: 1.4em;
 }
 
 body {
@@ -84,7 +84,7 @@ body {
   background-color: #1d3557;
   color: #FFF; 
   font-size: 0.8em; 
-  line-height: 1.875em;
+  line-height: 1.75em;
 } 
 .sliderText {
   font-weight: 400;
@@ -96,35 +96,43 @@ body {
   -webkit-filter: drop-shadow(1px 1px 2px grey);
           filter: drop-shadow(1px 1px 2px grey);
   font-family: "OswaldL";
+  padding-left: 15%;
+} 
+.sliderText .titlesecond {
+  padding-top: 0.2em;
+  padding-left: 15%;
 }
-
 @media (min-width: 1424px) {
   .sliderText {
     font-size: 18px;
   }
   .sliderText div .titlefirst {
-    font-size: 1.9531em;
-    line-height: 1.536em;
+    font-size: 2.56em;
+    line-height: 1.0938em;
     line-height: 0.8;
     padding-bottom: 0.2em;
   }
   .sliderText div .titlesecond {
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1.4em;
     line-height: 1.2;
   }
 } 
 @media (min-width: 602px) and (max-width: 1423px) {
   .sliderText div .titlefirst {
-    font-size: calc(1.3914vw + 15.3572px);
-    line-height: calc(-2.6714vw + 38.0142px);
+    font-size: 2.56em;
+    line-height: 1.0938em;
     line-height: 0.8;
     padding-bottom: 0.2em;
+    padding-left: 5%;
+    margin-right:-15%;
   }
   .sliderText div .titlesecond {
-    font-size: calc(0.7124vw + 7.8629px);
-    line-height: calc(-1.3357vw + 19.0071px);
-    line-height: 1.2;
+    font-size: 1em;
+    line-height: 1.4em;
+    line-height: 0.9;
+    padding-left: 5%;
+    margin-right:-15%;
   }
 .ruler-debug{
 
@@ -137,25 +145,29 @@ body {
   height: 100%;
   z-index: 9900;
   pointer-events: none;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAPCAYAAADDNm69AAAAEklEQVR42mNgGFFAuG3/GWQ+AB7XAiXZVYAzAAAAAElFTkSuQmCC");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAWCAYAAADn7z3uAAAAE0lEQVR42mNgGAW0B8Jt+88g8wEfTgIl1iJ2+AAAAABJRU5ErkJggg==");
   background-position: left top;
   background-repeat: repeat;
-  background-size: 4px 15px;}
+  background-size: 4px 22px;}
 }
 @media (min-width: 0px) and (max-width: 601px) {
   .sliderText {
     font-size: 10px;
   }
   .sliderText div .titlefirst {
-    font-size: 1.9531em;
-    line-height: 1.536em;
+    font-size: 2.56em;
+    line-height: 1.0938em;
     line-height: 0.8;
     padding-bottom: 0.2em;
+    padding-left: 5%;
+    margin-right:-25%;
   }
   .sliderText div .titlesecond {
     font-size: 1em;
-    line-height: 1.5em;
-    line-height: 1.2;
+    line-height: 1.4em;
+    line-height: 0.9;
+    padding-left: 5%;
+    margin-right:-25%;
   }
 }  
 .greedy-nav {
@@ -278,10 +290,10 @@ section1 .trust:nth-child(3n) {
   height: 100%;
   z-index: 9900;
   pointer-events: none;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAYCAYAAADd5VyeAAAAFElEQVR42mNgGAWDAQi37T+DzAcAH3ACJR9sUEYAAAAASUVORK5CYII=");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAWCAYAAADn7z3uAAAAE0lEQVR42mNgGAW0B8Jt+88g8wEfTgIl1iJ2+AAAAABJRU5ErkJggg==");
   background-position: left top;
   background-repeat: repeat;
-  background-size: 4px 24px;}
+  background-size: 4px 22px;}
 
 noflex {
   max-width: 1366px;
@@ -342,7 +354,15 @@ noflex div {
   max-width: calc(99.9% * 1/2 - (1em - 1em * 1/2));
   width: calc(99.9% * 1/2 - (1em - 1em * 1/2));
   margin-top: 1%; 
+  
   margin-bottom: 1%;
+ 
+     font-size: 1em;
+ 
+     line-height: 1.4em;
+
+ 
+ 
 }
 
 .grid-item:nth-child(1n) {
@@ -375,6 +395,33 @@ noflex div {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 0.4em;
+}
+h1 {
+  font-size: 6.5536em;
+  line-height: 1.0681em;
+}
+h2 {
+  font-size: 4.096em;
+  line-height: 1.0254em;
+}
+h3 {
+  font-size: 2.56em;
+  line-height: 1.0938em;
+}
+h4 {
+  font-size: 1.6em;
+  line-height: 1.75em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+h6 {
+  font-size: 0.625em;
+  line-height: 2.24em;
+}
+p {
+
 }
 
 @-webkit-keyframes scale-up-ver-top {

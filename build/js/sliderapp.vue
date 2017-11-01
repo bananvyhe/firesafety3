@@ -49,7 +49,7 @@
     if (window.matchMedia('only screen and (max-width: 600px)').matches) {
       console.log('under 600 pixels');
       vis.value = '130';
-    } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1024px)').matches) {
+    } else if (window.matchMedia('only screen and (min-width: 601px) and ' + '(max-width: 1423px)').matches) {
       console.log('between 601 and 1024 pixels');
       vis.value = '220';                      
     } else {
@@ -72,7 +72,7 @@
         slideAnimRestart: '',
         slideAnimRestart2: '',
         animfade: 'fade',
-        switcher: true,
+        switcher: false,
         visota: vis,
         hider: '',
         items: [
@@ -101,18 +101,15 @@
         }else{
           console.log('begin timer fade-out');
           setTimeout(function(){
-          if (vm.hoverslide == '0') {
-            vm.slideAnimRestart = false;
-             
-          }
-        }, vm.interval * this.firsttitledelay);
-        setTimeout(function(){
-          if (vm.hoverslide == '0') {
-            vm.slideAnimRestart2 = false; 
-             
-          }
-        }, vm.interval * this.secondtitledelay);
-        
+            if (vm.hoverslide == '0') {
+              vm.slideAnimRestart = false;   
+            }
+          }, vm.interval * this.firsttitledelay);
+          setTimeout(function(){
+            if (vm.hoverslide == '0') {
+              vm.slideAnimRestart2 = false;   
+            }
+          }, vm.interval * this.secondtitledelay);  
         }
       } 
     },
@@ -122,8 +119,7 @@
         var vm = this;
          //запуск таймаута анимации фейд-ин
         setTimeout(function(){
-          vm.slideAnimRestart = true;
-          
+          vm.slideAnimRestart = true;          
         },this.interval * 0.1);
         setTimeout(function(){
           vm.slideAnimRestart2 = true;
@@ -141,7 +137,6 @@
             vm.slideAnimRestart2 = false; 
           }
         }, vm.interval * this.secondtitledelay);
-        
       }
     } 
   }
@@ -225,13 +220,7 @@
     width: 50%;
     align-self: center;
   }
-  .titlefirst {
-    padding-left: 15%;  
-  }
-  .titlesecond {
-    padding-top: 0.2em;
-    padding-left: 15%;
-  }
+  
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
     background-repeat:no-repeat;
