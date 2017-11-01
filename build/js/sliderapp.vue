@@ -64,13 +64,15 @@
   export default {
     data: function () {
       return {
+        firsttitledelay: 0.8,
+        secondtitledelay: 0.65,
         divHeight: divHeight,
         hoverslide: false,
-        interval: 12000,
+        interval: 10000,
         slideAnimRestart: '',
         slideAnimRestart2: '',
         animfade: 'fade',
-        switcher: false,
+        switcher: true,
         visota: vis,
         hider: '',
         items: [
@@ -78,7 +80,7 @@
           { title: 'Пожарная безопасность', text: 'Разработка, установка, обслуживание, ремонт, обучение, испытание и пусконал­­адка.', class: 'twodiv' },
           { title: 'Видеонаблюдение', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'threediv' },
           { title: 'Системы контроля и управления доступом', text: 'Монтаж, обслуживание, проектирование, ремонт.', class: 'fourdiv' },
-          { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации посмледствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }  
+          { title: 'Деятельность лицензирована', text: 'Деятельность лицензирована Министерством Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и ликвидации последствий стихийных бедствий за №66-Б/00124 от 23 июня 2009 года ', class: 'fivediv' }  
         ] 
       }
     },
@@ -103,13 +105,13 @@
             vm.slideAnimRestart = false;
              
           }
-        }, vm.interval * 0.8);
+        }, vm.interval * this.firsttitledelay);
         setTimeout(function(){
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart2 = false; 
              
           }
-        }, vm.interval * 0.7);
+        }, vm.interval * this.secondtitledelay);
         
         }
       } 
@@ -133,12 +135,12 @@
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart = false;
           }
-        }, vm.interval * 0.9);
+        }, vm.interval * this.firsttitledelay);
         setTimeout(function(){
           if (vm.hoverslide == '0') {
             vm.slideAnimRestart2 = false; 
           }
-        }, vm.interval * 0.8);
+        }, vm.interval * this.secondtitledelay);
         
       }
     } 

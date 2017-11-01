@@ -227,11 +227,14 @@
     padding: 0 15px;
     border: 0;
     outline: none;
-    background-color: $color-2;
+    background-color: $earthyellow;
     color: #fff;
     cursor: pointer;
       &:hover {
-      background-color: $color-3;
+      .hamburger {
+        filter: drop-shadow(1px 1px 2px grey);
+      }
+      background: radial-gradient(circle farthest-corner at 60% 20%, $earthyellow 30%, color($earthyellow blackness(20%)) 100%);
       }
       &::after {
         margin-top: -2.8em;
@@ -243,7 +246,7 @@
         left: -12px;
         
         text-align: center;
-        background-color: $color-3;
+        background-color: color($earthyellow blackness(25%));
         color: #fff;
         font-size: 1em;
         border-radius: 50%;
@@ -276,6 +279,10 @@
     }
     &:after {
       bottom: -0.6em;
+    }
+    &:hover {
+
+      filter: drop-shadow(1px 1px 2px grey);
     }
   }
   .visible-links {
