@@ -234,25 +234,28 @@
       background-color: $color-3;
       }
       &::after {
+        margin-top: -2.8em;
+        padding-top: 0.1em;
         content: attr(count);
         position: absolute;
         width: 17px;
-        height: 17px;
-        left: -11px;
-        top: 5px;
+        height: 16px;
+        left: -12px;
+        
         text-align: center;
         background-color: $color-3;
         color: #fff;
-        font-size: 14px;
+        font-size: 1em;
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
-      }
+        transition: 1s;
+       }
       &:hover::after {
-        transform: scale(1.135);
+        transform: scale(1.125) translateY(0.1em);
+        transition-duration: .4s;
       }
     }
-  
   .hamburger {
     position: relative;
     width: 32px;
