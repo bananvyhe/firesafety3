@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}}<br>testarray: {{testarray}}
+    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} 
     </div>
     <nav  class='greedy-nav'  
       v-bind:style="styleObject"  
@@ -21,12 +21,15 @@
       <ul class='hidden-links' 
         v-bind:style="hiddenStyle"  
         @mouseleave="toggle = false" >
-        <li v-for="item in menuitemsHide" 
+        <transition-group name="slide">
+        <li v-for="(item, index) in menuitemsHide" 
           @mouseup="" 
-          @click="">
+          @click=""
+          :key="index">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>
         </li>
+      </transition-group>
       </ul>
     </nav> 
   </div>
@@ -57,12 +60,7 @@
         ],
         menuitemsHide: [],
         styleObject: {},
-        hiddenStyle: {},
-        testarray: [
-          { title: '1', url: ''},
-          { title: '2', url: ''},
-          { title: '3', url: ''},
-        ]
+        hiddenStyle: {}
       }
     },
     created(){ 
@@ -124,7 +122,7 @@
         return this.menuitemsHide;
       },
       numVis: function () {
-        if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 350) {
+        if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 300) {
           this.menuitemsHide.reverse();
           this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
           this.menuitemsHide.pop(); 
@@ -170,6 +168,43 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
+
+.slide-enter-active {
+  animation: slide-in-blurred-left 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  }
+  @keyframes slide-in-blurred-left {
+    0% {
+      transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+      transform-origin: 100% 50%;
+      filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-leave-active {
+    animation: slide-out-blurred-right 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+  }
+  @keyframes slide-out-blurred-right {
+    0% {
+      transform: translateX(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(1000px) scaleX(2) scaleY(0.2);
+      transform-origin: 0% 50%;
+      filter: blur(40px);
+      opacity: 0;
+    }
+  }
+
 .greedy-nav { 
   display: flex;
   justify-content: flex-end;

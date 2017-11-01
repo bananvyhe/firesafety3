@@ -11809,10 +11809,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
-//
 
 
 var vis = { value: '30' };
@@ -11967,7 +11963,7 @@ var render = function() {
                             }
                           }
                         },
-                        [_vm._v(_vm._s(item.title) + "\n\n                ")]
+                        [_vm._v(_vm._s(item.title) + "\n                ")]
                       )
                     ]),
                     _vm._v(" "),
@@ -12460,7 +12456,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box; \n  display: -ms-flexbox; \n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after { \n  bottom: -0.6em;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before { \n  top: -0.6em;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after { \n  -webkit-transform: scale(1.135); \n          transform: scale(1.135);\n}\n.greedy-nav button[data-v-2cf218f6]::after { \n  content: attr(count); \n  position: absolute; \n  width: 17px; \n  height: 17px; \n  left: -11px; \n  top: 5px; \n  text-align: center; \n  background-color: #ef6c00; \n  color: #fff; \n  font-size: 14px; \n  border-radius: 50%; \n  border: 2px solid #fff; \n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] { \n  display: block; \n  padding: 10px 30px; \n  color: #FFF; \n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover { \n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] { \n  position: absolute; \n  height: 100%; \n  right: 0; \n  padding: 0 15px; \n  border: 0; \n  outline: none; \n  background-color: #f57c00; \n  color: #fff; \n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover { \n  background-color: #ef6c00;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] { \n  position: relative; \n  width: 32px; \n  height: 0.25em; \n  background: #fff; \n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after { \n  content: ''; \n  position: absolute; \n  left: 0; \n  width: 32px; \n  height: 0.25em; \n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] { \n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child { \n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] { \n  vertical-align: middle; \n  display: table-cell; \n  border-left: 1px solid #FFF; \n  line-height: 0.2em;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] { \n  z-index: 10; \n  position: absolute; \n  right: 0px; \n  top: 100%; \n  margin-right: 0px;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] :last-child { \n  border-bottom-left-radius: 1.3em;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] { \n  display: block; \n  background-color: #1d3557; \n  padding: 0px; \n  margin: 4px; \n  font-size: 0.9em;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child { \n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] { \n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] { \n  visibility: hidden;\n}\n", ""]);
+exports.push([module.i, ".slide-enter-active[data-v-2cf218f6] {\n  -webkit-animation: slide-in-blurred-left-data-v-2cf218f6 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n          animation: slide-in-blurred-left-data-v-2cf218f6 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n}\n@-webkit-keyframes slide-in-blurred-left-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n@keyframes slide-in-blurred-left-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n.slide-leave-active[data-v-2cf218f6] {\n    -webkit-animation: slide-out-blurred-right-data-v-2cf218f6 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n            animation: slide-out-blurred-right-data-v-2cf218f6 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n}\n@-webkit-keyframes slide-out-blurred-right-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n@keyframes slide-out-blurred-right-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n.greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box; \n  display: -ms-flexbox; \n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after {\n  bottom: -0.6em;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before {\n  top: -0.6em;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after {\n  -webkit-transform: scale(1.135);\n          transform: scale(1.135);\n}\n.greedy-nav button[data-v-2cf218f6]::after {\n  content: attr(count);\n  position: absolute;\n  width: 17px;\n  height: 17px;\n  left: -11px;\n  top: 5px;\n  text-align: center;\n  background-color: #ef6c00;\n  color: #fff;\n  font-size: 14px;\n  border-radius: 50%;\n  border: 2px solid #fff;\n  font-weight: bold;\n}\n.greedy-nav a[data-v-2cf218f6] {\n  display: block;\n  padding: 10px 30px;\n  color: #FFF;\n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover {\n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] {\n  position: absolute;\n  height: 100%;\n  right: 0;\n  padding: 0 15px;\n  border: 0;\n  outline: none;\n  background-color: #f57c00;\n  color: #fff;\n  cursor: pointer\n}\n.greedy-nav button[data-v-2cf218f6]:hover {\n  background-color: #ef6c00;\n}\n.greedy-nav .hamburger[data-v-2cf218f6] {\n  position: relative;\n  width: 32px;\n  height: 0.25em;\n  background: #fff;\n  margin: auto\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  width: 32px;\n  height: 0.25em;\n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] {\n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child {\n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] {\n  vertical-align: middle;\n  display: table-cell;\n  border-left: 1px solid #FFF;\n  line-height: 0.2em;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] {\n  z-index: 10;\n  position: absolute;\n  right: 0px;\n  top: 100%;\n  margin-right: 0px;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] :last-child {\n  border-bottom-left-radius: 1.3em;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] {\n  display: block;\n  background-color: #1d3557;\n  padding: 0px;\n  margin: 4px;\n  font-size: 0.9em;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child {\n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] {\n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] {\n  visibility: hidden;\n}\n", ""]);
 
 // exports
 
@@ -12475,6 +12471,9 @@ exports.push([module.i, ".greedy-nav[data-v-2cf218f6] { \n  display: -webkit-box
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
 //
 //
 //
@@ -12528,8 +12527,7 @@ exports.default = {
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', urs: '' }, { title: 'контроль доступа', url: '' }],
       menuitemsHide: [],
       styleObject: {},
-      hiddenStyle: {},
-      testarray: [{ title: '1', url: '' }, { title: '2', url: '' }, { title: '3', url: '' }]
+      hiddenStyle: {}
     };
   },
   created: function created() {
@@ -12591,7 +12589,7 @@ exports.default = {
       return this.menuitemsHide;
     },
     numVis: function numVis() {
-      if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0 && this.availableSpace.value - this.vlinks.value > 350) {
+      if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length > 0 && this.availableSpace.value - this.vlinks.value > 300) {
         this.menuitemsHide.reverse();
         this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
         this.menuitemsHide.pop();
@@ -12669,9 +12667,7 @@ var render = function() {
         _c("br"),
         _vm._v("compstylem: " + _vm._s(_vm.compstylem)),
         _c("br"),
-        _vm._v("switchhidestyle: " + _vm._s(_vm.switchhidestyle)),
-        _c("br"),
-        _vm._v("testarray: " + _vm._s(_vm.testarray) + "\n  ")
+        _vm._v("switchhidestyle: " + _vm._s(_vm.switchhidestyle) + " \n  ")
       ]
     ),
     _vm._v(" "),
@@ -12722,22 +12718,33 @@ var render = function() {
               }
             }
           },
-          _vm._l(_vm.menuitemsHide, function(item) {
-            return _c(
-              "li",
-              {
-                on: { mouseup: function($event) {}, click: function($event) {} }
-              },
-              [
-                _c(
-                  "a",
-                  { attrs: { href: "" } },
-                  [_c("nobr", [_vm._v(_vm._s(item.title.toUpperCase()))])],
-                  1
+          [
+            _c(
+              "transition-group",
+              { attrs: { name: "slide" } },
+              _vm._l(_vm.menuitemsHide, function(item, index) {
+                return _c(
+                  "li",
+                  {
+                    key: index,
+                    on: {
+                      mouseup: function($event) {},
+                      click: function($event) {}
+                    }
+                  },
+                  [
+                    _c(
+                      "a",
+                      { attrs: { href: "" } },
+                      [_c("nobr", [_vm._v(_vm._s(item.title.toUpperCase()))])],
+                      1
+                    )
+                  ]
                 )
-              ]
+              })
             )
-          })
+          ],
+          1
         )
       ]
     )

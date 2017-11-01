@@ -9,16 +9,13 @@
       'indicator-position': hider}">
       <el-carousel-item  class="sliderText" v-for="(item, index) in items" :key='index'>
           <div :class="item.class" class="mainFormat">
-            
             <div class ="infoBlock">
-               
                 <transition name='slide' appear>
                   <div 
                     :key='index' 
                     class="titlefirst" 
                     v-show="slideAnimRestart"
                     @click="slideAnimRestart = false">{{item.title}}
-
                   </div> 
                 </transition>
                 <transition name='fade' :duration="4000" appear> 
@@ -29,7 +26,6 @@
                     @click="slideAnimRestart2 = false">{{item.text}}
                   </div>
                 </transition>
-              
             </div>
             <br>
            </div>
