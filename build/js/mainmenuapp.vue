@@ -236,6 +236,7 @@
     background-color: $redorange;
     color: #fff;
     cursor: pointer;
+         background: radial-gradient(circle farthest-corner at 50% 50%, $redorange 50%, color($redorange blackness(30%)) 100%);
       &::after {
         margin-top: -2.8em;
         padding-top: 0.1em;
@@ -259,10 +260,10 @@
       }
     }
   .hoverhamburger {
-    background: radial-gradient(circle farthest-corner at 50% 50%, $redorange 50%, color($redorange blackness(30%)) 100%);
+    background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
   }
   .hamshadow {
-     filter: drop-shadow(1px 1px 2px grey);
+     filter: drop-shadow(1px 1px 1px grey);
   }
 
   .hamburger {
@@ -315,6 +316,9 @@
       padding: 0px;
       margin: 4px;
       font-size: 0.9em;
+       
+   
+       
       
     }
   }
