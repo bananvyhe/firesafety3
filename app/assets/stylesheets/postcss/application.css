@@ -41,7 +41,6 @@ body {
 /*Настройки шрифтов и высоты апплетов*/
 /*---------------------------------------*/
 section {
-  padding-top: 5px;
   lost-center: 1366px;
   .trust {
     lost-column: 1/1 1 1em flex;
@@ -52,7 +51,7 @@ section {
   height: 2.2em;
   background-color: $color-5;
   color: $color-1; 
-  adjust-font-size: fontsize medium@d2;
+  adjust-font-size: fontsize small;
 } 
 .sliderText {
   font-weight: 400;
@@ -86,7 +85,7 @@ section {
     font-size: 18px;
     div {
       .titlefirst {
-        adjust-font-size: fontsize large;
+        adjust-font-size: fontsize xlarge;
         line-height: 0.8;
         padding-bottom: 0.2em;
       }
@@ -101,17 +100,17 @@ section {
   .sliderText {
     div {
       .titlefirst {
-        adjust-font-size: fontsize large;
+        adjust-font-size: fontsize xlarge;
         line-height: 0.8;
         padding-bottom: 0.2em;
         padding-left: 5%;
-        margin-right:-15%;
+        margin-right:-5%;
       }
       .titlesecond {
         adjust-font-size: fontsize base;
         line-height: 0.9;
         padding-left: 5%;
-        margin-right:-15%;
+        margin-right:-5%;
       }
     }
   }
@@ -119,20 +118,20 @@ section {
 }
 @media (--only-small-screen) {
   .sliderText {
-    font-size: 10px;
+     
     div {
       .titlefirst {
-        adjust-font-size: fontsize large;
+        adjust-font-size: fontsize medium;
         line-height: 0.8;
         padding-bottom: 0.2em;
-        padding-left: 5%;
-        margin-right:-25%;
+        padding-left: 0%;
+        margin-right:-15%;
       }
       .titlesecond {
-        adjust-font-size: fontsize base;
+        adjust-font-size: fontsize small;
         line-height: 0.9;
-        padding-left: 5%;
-        margin-right:-25%;
+        padding-left: 0%;
+        margin-right:-15%;
       }
     }
   }

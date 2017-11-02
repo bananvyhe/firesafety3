@@ -1,15 +1,18 @@
 <template>
   <div>
-    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} 
+    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} <br>toggle: {{toggle}} 
     </div>
     <nav  class='greedy-nav'  
       v-bind:style="styleObject"  
       ref="dropdown">
       <button 
+        v-bind:class="{hoverhamburger: toggle, }"  
         v-if="menuitemsHide.length > 0" 
         v-on:click="toggle = !toggle" 
         @mouseenter="toggle = true">
-        <div class="hamburger" >
+        <div 
+          v-bind:class="{hamshadow: toggle, }"
+          class="hamburger">
         </div>
       </button>
       <ul class='visible-links'>
@@ -45,9 +48,10 @@
 
     data: function () {
       return {
+        hoverbutton: {},
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: false,
+        switcher: true,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -80,11 +84,13 @@
       } 
     },
     computed: {
+      //условия при видимости/невидимости гамбургер-кнопки
       switchhidestyle: function(){
         if (this.toggle) {
           this.hiddenStyle = {
           visibility: 'visible'
           } 
+           
           return this.hiddenStyle;
         }else{
           this.hiddenStyle = {
@@ -227,15 +233,9 @@
     padding: 0 15px;
     border: 0;
     outline: none;
-    background-color: $earthyellow;
+    background-color: $redorange;
     color: #fff;
     cursor: pointer;
-      &:hover {
-      .hamburger {
-        filter: drop-shadow(1px 1px 2px grey);
-      }
-      background: radial-gradient(circle farthest-corner at 60% 20%, $earthyellow 30%, color($earthyellow blackness(20%)) 100%);
-      }
       &::after {
         margin-top: -2.8em;
         padding-top: 0.1em;
@@ -244,21 +244,27 @@
         width: 17px;
         height: 16px;
         left: -12px;
-        
         text-align: center;
-        background-color: color($earthyellow blackness(25%));
+        background-color: color($redorange blackness(25%));
         color: #fff;
         font-size: 1em;
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
         transition: 1s;
-       }
+      }
       &:hover::after {
-        transform: scale(1.125) translateY(0.1em);
+        transform: scale(1.125) translateY(0.05em);
         transition-duration: .4s;
       }
     }
+  .hoverhamburger {
+    background: radial-gradient(circle farthest-corner at 50% 50%, $redorange 50%, color($redorange blackness(30%)) 100%);
+  }
+  .hamshadow {
+     filter: drop-shadow(1px 1px 2px grey);
+  }
+
   .hamburger {
     position: relative;
     width: 32px;
@@ -280,10 +286,7 @@
     &:after {
       bottom: -0.6em;
     }
-    &:hover {
-
-      filter: drop-shadow(1px 1px 2px grey);
-    }
+ 
   }
   .visible-links {
     display: inline-table;
@@ -305,12 +308,14 @@
     :last-child {
       border-bottom-left-radius: 1.3em; 
     }
+ 
     li {
       display: block;
       background-color: $color-5;
       padding: 0px;
       margin: 4px;
       font-size: 0.9em;
+      
     }
   }
   .visible-links li:first-child {

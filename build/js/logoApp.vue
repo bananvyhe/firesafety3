@@ -59,8 +59,8 @@
       lost-column: 3/8 2 0 flex; 
       .logo {
         div {
-        height: 70px;
-        background-position: right 1px;
+          height: 70px;
+          background-position: right 1px;
         }
       }
       .brandname {

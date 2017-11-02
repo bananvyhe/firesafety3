@@ -101,7 +101,6 @@ body {
   font-weight: 400;
 }
 section {
-  padding-top: 5px;
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
@@ -139,8 +138,8 @@ section .trust:nth-child(1n) {
   height: 2.2em;
   background-color: #1d3557;
   color: #FFF; 
-  font-size: 0.6665em; 
-  line-height: 2.1005em;
+  font-size: 0.7502em; 
+  line-height: 1.8662em;
 } 
 .sliderText {
   font-weight: 400;
@@ -194,8 +193,8 @@ section .trust:nth-child(1n) {
     font-size: 18px;
   }
   .sliderText div .titlefirst {
-    font-size: 1.7769em;
-    line-height: 1.5758em;
+    font-size: 2.3686em;
+    line-height: 1.1821em;
     line-height: 0.8;
     padding-bottom: 0.2em;
   }
@@ -207,39 +206,36 @@ section .trust:nth-child(1n) {
 } 
 @media (min-width: 602px) and (max-width: 1423px) {
   .sliderText div .titlefirst {
-    font-size: 1.7769em;
-    line-height: 1.5758em;
+    font-size: 2.3686em;
+    line-height: 1.1821em;
     line-height: 0.8;
     padding-bottom: 0.2em;
     padding-left: 5%;
-    margin-right:-15%;
+    margin-right:-5%;
   }
   .sliderText div .titlesecond {
     font-size: 1em;
     line-height: 1.4em;
     line-height: 0.9;
     padding-left: 5%;
-    margin-right:-15%;
+    margin-right:-5%;
   }
 }
 @media (min-width: 0px) and (max-width: 601px) {
-  .sliderText {
-    font-size: 10px;
-  }
   .sliderText div .titlefirst {
-    font-size: 1.7769em;
-    line-height: 1.5758em;
+    font-size: 1.333em;
+    line-height: 1.0503em;
     line-height: 0.8;
     padding-bottom: 0.2em;
-    padding-left: 5%;
-    margin-right:-25%;
+    padding-left: 0%;
+    margin-right:-15%;
   }
   .sliderText div .titlesecond {
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 0.7502em;
+    line-height: 1.8662em;
     line-height: 0.9;
-    padding-left: 5%;
-    margin-right:-25%;
+    padding-left: 0%;
+    margin-right:-15%;
   }
 }  
 .greedy-nav {
