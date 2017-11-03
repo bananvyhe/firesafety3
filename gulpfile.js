@@ -207,7 +207,7 @@ gulp.task('css', function () {
     postutil,
      
     svg(), 
-        cssnext(), 
+        cssnext({features: {"rem": false}}), 
     hamster(),
     lost(),
     fonts

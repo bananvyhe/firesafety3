@@ -1,17 +1,18 @@
 <template>
   <div>
-    <div v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} <br>toggle: {{toggle}} 
+    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} <br>toggle: {{toggle}}  <br>kostil: {{kostil}} 
     </div>
     <nav  class='greedy-nav'  
       v-bind:style="styleObject"  
       ref="dropdown">
       <button 
-        v-bind:class="{hoverhamburger: toggle, }"  
+        v-bind:class="{hoverhamburger: toggle}"  
         v-if="menuitemsHide.length > 0" 
         v-on:click="toggle = !toggle" 
-        @mouseenter="toggle = true">
+        @mouseenter="toggle = true"
+        >
         <div 
-          v-bind:class="{hamshadow: toggle, }"
+          v-bind:class="{hamshadow: toggle, hamshadow2: !toggle}"
           class="hamburger">
         </div>
       </button>
@@ -64,7 +65,8 @@
         ],
         menuitemsHide: [],
         styleObject: {},
-        hiddenStyle: {}
+        hiddenStyle: {},
+        kostil: []
       }
     },
     created(){ 
@@ -236,7 +238,8 @@
     background-color: $redorange;
     color: #fff;
     cursor: pointer;
-         background: radial-gradient(circle farthest-corner at 50% 50%, $redorange 50%, color($redorange blackness(30%)) 100%);
+    background: radial-gradient(circle farthest-corner at 50% 50%, $redorange 50%, color($redorange blackness(30%)) 100%);
+
       &::after {
         margin-top: -2.8em;
         padding-top: 0.1em;
@@ -244,7 +247,7 @@
         position: absolute;
         width: 17px;
         height: 16px;
-        left: -12px;
+        left: -10px;
         text-align: center;
         background-color: color($redorange blackness(25%));
         color: #fff;
@@ -252,34 +255,41 @@
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
-        transition: 1s;
+        transition: 1s ease-in;
       }
       &:hover::after {
-        transform: scale(1.125) translateY(0.05em);
-        transition-duration: .4s;
+        transform:  scale(0.8) translateY(2.4em);
+        transition-duration: .2s;
       }
     }
   .hoverhamburger {
     background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
   }
   .hamshadow {
+     filter: drop-shadow(1px 1px 1px $onyx);
+  }
+    .hamshadow2 {
      filter: drop-shadow(1px 1px 1px grey);
   }
 
+
   .hamburger {
     position: relative;
-    width: 32px;
+    width: 30px;
     height: 0.25em;
     background: #fff;
     margin: auto;
+    border-radius: 0.1em;
     &:before, 
     &:after {
+      border-radius: 0.1em;
       content: '';
       position: absolute;
       left: 0;
-      width: 32px;
+      width: 30px;
       height: 0.25em;
       background: #fff;
+
     }
     &:before {
       top: -0.6em;
@@ -330,4 +340,5 @@
     visibility: hidden;
   }
 }
+
 </style>

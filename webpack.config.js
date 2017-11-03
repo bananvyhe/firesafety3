@@ -21,10 +21,12 @@ module.exports = {
         options: {
           // ...
           postcss: [
-            require('precss'),
+            require('precss')({"lookup": false}),
             require('postcss-inline-svg'),
             require('lost'),
-            require('postcss-cssnext') 
+            require('postcss-cssnext')({features: {"rem": false}}),
+            // require('postcss-hamster'),
+            require('postcss-utilities')
           ]
         }
       },

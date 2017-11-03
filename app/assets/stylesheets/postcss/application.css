@@ -38,6 +38,11 @@ body {
  /* lost-utility: edit rgb(15, 150, 25);*/
 }
 
+.techinfo {
+  adjust-font-size: fontsize small;
+ 
+}
+
 /*Настройки шрифтов и высоты апплетов*/
 /*---------------------------------------*/
 section {
