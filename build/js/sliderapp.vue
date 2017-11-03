@@ -148,7 +148,6 @@
   .switcher {
     padding-left: 10em;
   }
-
   .slide-enter-active {
   animation: slide-in-blurred-left 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
   }
@@ -166,7 +165,6 @@
       opacity: 1;
     }
   }
-
   .slide-leave-active {
     animation: slide-out-blurred-right 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
   }
@@ -184,18 +182,13 @@
       opacity: 0;
     }
   }
-
   .fade-enter {
     opacity: 0;
   }
   .fade-enter-active {
     animation: fade 3.2s;
-     
-    
-
   }
   .fade-leave-active {
-     
     transition: opacity 1.8s;
     opacity: 0;
   }
@@ -210,7 +203,6 @@
       opacity: 1;
     }
   }
-
   .mainFormat {
     display: flex;
   }
@@ -220,7 +212,6 @@
     width: 50%;
     align-self: center;
   }
-  
   .onediv, .twodiv, .threediv, .fourdiv, .fivediv {
     height: 100%;
     background-repeat:no-repeat;

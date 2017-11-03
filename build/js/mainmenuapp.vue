@@ -26,7 +26,7 @@
         v-bind:style="hiddenStyle"  
         @mouseleave="toggle = false" >
         <transition-group name="slide">
-        <li v-for="(item, index) in menuitemsHide" 
+        <li v-for="(item, index) in kostil" 
           @mouseup="" 
           @click=""
           :key="index">
@@ -52,7 +52,7 @@
         hoverbutton: {},
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: true,
+        switcher: false,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -83,24 +83,30 @@
         { 
           this.toggle = false;
         } 
-      } 
+      }
     },
     computed: {
-      //условия при видимости/невидимости гамбургер-кнопки
       switchhidestyle: function(){
         if (this.toggle) {
+            var i;
+            for (i=0; i<this.menuitemsHide.length; i++){
+              this.kostil.push(this.menuitemsHide[this.menuitemsHide.length - (i+1)]);
+            }
           this.hiddenStyle = {
           visibility: 'visible'
           } 
-           
           return this.hiddenStyle;
         }else{
+          for (i=0; i<this.kostil.length; i){
+            this.kostil.pop(); 
+          }
           this.hiddenStyle = {
           visibility: 'hidden'
           } 
           return this.hiddenStyle;
         }
-      },
+      }, 
+      //условия при видимости/невидимости гамбургер-кнопки
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
           this.styleObject = {
@@ -241,7 +247,7 @@
     background: radial-gradient(circle farthest-corner at 50% 50%, $redorange 50%, color($redorange blackness(30%)) 100%);
 
       &::after {
-        margin-top: -2.8em;
+        margin-top: -2.9em;
         padding-top: 0.1em;
         content: attr(count);
         position: absolute;
@@ -255,7 +261,7 @@
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
-        transition: 1s ease-in;
+        transition: 3s cubic-bezier(0,.27,.07,1);
       }
       &:hover::after {
          
@@ -263,20 +269,17 @@
     }
   .hoverhamburger {
     background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
-      &:after { 
-        transform:  scale(0.8) translateY(2.4em);
-        transition-duration: .2s;
-      }
+    &:after { 
+      transform:  scale(0.8) translateY(2.4em);
+      transition-duration: .2s;
+    }
   }
   .hamshadow {
-     filter: drop-shadow(1px 1px 1px $onyx);
-     
+    filter: drop-shadow(1px 1px 1px $onyx);
   }
     .hamshadow2 {
-     filter: drop-shadow(1px 1px 1px grey);
+    filter: drop-shadow(1px 1px 1px grey);
   }
-
-
   .hamburger {
     position: relative;
     width: 30px;
@@ -293,7 +296,6 @@
       width: 30px;
       height: 0.25em;
       background: #fff;
-
     }
     &:before {
       top: -0.6em;
@@ -301,7 +303,6 @@
     &:after {
       bottom: -0.6em;
     }
- 
   }
   .visible-links {
     display: inline-table;
@@ -323,17 +324,12 @@
     :last-child {
       border-bottom-left-radius: 1.3em; 
     }
- 
     li {
       display: block;
       background-color: $color-5;
       padding: 0px;
       margin: 4px;
       font-size: 0.9em;
-       
-   
-       
-      
     }
   }
   .visible-links li:first-child {
