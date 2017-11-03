@@ -25,7 +25,7 @@
       <ul class='hidden-links' 
         v-bind:style="hiddenStyle"  
         @mouseleave="toggle = false" >
-        <transition-group name="slide">
+        <transition-group name="slide-in-top">
         <li v-for="(item, index) in kostil" 
           @mouseup="" 
           @click=""
@@ -183,6 +183,21 @@
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 
+.slide-in-top-enter-active {
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 .slide-enter-active {
   animation: slide-in-blurred-left 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
   }
@@ -220,6 +235,7 @@
   }
 
 .greedy-nav { 
+  z-index: 10;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -234,7 +250,7 @@
       color: $color-3;
     }
   }
-  button {
+  button {z-index: 2;
     position: absolute;
     height: 100%;
     right: 0;
@@ -280,7 +296,7 @@
     .hamshadow2 {
     filter: drop-shadow(1px 1px 1px grey);
   }
-  .hamburger {
+  .hamburger {z-index: 2;
     position: relative;
     width: 30px;
     height: 0.25em;
@@ -305,6 +321,7 @@
     }
   }
   .visible-links {
+    z-index: 3;
     display: inline-table;
     :first-child {
       border-left: 0px;
@@ -316,7 +333,7 @@
     }
   }
   .hidden-links {
-    z-index: 10;
+    z-index: 1;
     position: absolute;
     right: 0px;
     top: 100%;
@@ -324,11 +341,11 @@
     :last-child {
       border-bottom-left-radius: 1.3em; 
     }
-    li {
+    li {z-index: 1;
       display: block;
       background-color: $color-5;
       padding: 0px;
-      margin: 4px;
+      margin: 2px;
       font-size: 0.9em;
     }
   }
