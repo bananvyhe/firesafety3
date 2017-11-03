@@ -258,15 +258,19 @@
         transition: 1s ease-in;
       }
       &:hover::after {
-        transform:  scale(0.8) translateY(2.4em);
-        transition-duration: .2s;
+         
       }
     }
   .hoverhamburger {
     background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
+      &:after { 
+        transform:  scale(0.8) translateY(2.4em);
+        transition-duration: .2s;
+      }
   }
   .hamshadow {
      filter: drop-shadow(1px 1px 1px $onyx);
+     
   }
     .hamshadow2 {
      filter: drop-shadow(1px 1px 1px grey);
