@@ -277,7 +277,7 @@
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
-        transition: 3s cubic-bezier(0,.27,.07,1);
+        transition: 1.2s cubic-bezier(0,.27,.07,1);
       }
       &:hover::after {
          
@@ -287,7 +287,7 @@
     background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
     &:after { 
       transform:  scale(0.8) translateY(2.4em);
-      transition-duration: .2s;
+      transition: 1.2s cubic-bezier(0,.27,.07,1);
     }
   }
   .hamshadow {

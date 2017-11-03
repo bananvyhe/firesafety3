@@ -104,7 +104,6 @@ body {
 .techinfo {
   font-size: 0.7502em;
   line-height: 1.8662em;
- 
 }
 section {
   max-width: 1366px;
@@ -147,11 +146,13 @@ section .trust:nth-child(1n) {
   font-size: 0.7502em; 
   line-height: 1.8662em;
 } 
+ 
 .sliderText {
   font-weight: 400;
   font-style: bold;
   text-align: right;
 } 
+ 
 .sliderText .titlefirst {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="2" /><feOffset dx="2" dy="2" result="offsetblur" /><feFlood flood-color="rgba(128,128,128,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
   -webkit-filter: drop-shadow(1px 1px 2px grey);
@@ -159,6 +160,7 @@ section .trust:nth-child(1n) {
   font-family: "OswaldL";
   padding-left: 15%;
 } 
+ 
 .sliderText .titlesecond {
   padding-top: 0.2em;
   padding-left: 15%;
@@ -772,6 +774,63 @@ p {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
+}
+
+стили для бэк-топ скролла
+.vm-backtop-icon-een {
+  display: inline-block;
+  font-family: "RobotoR";
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.vm-backtop-icon-een:before {
+  content: "\e607";
+}
+.vm-back-top {
+  z-index: 10;
+  position: fixed;
+  cursor: pointer;
+  display: none;
+}
+.vm-back-top.vm-back-top-show {
+  display: block;
+}
+.vm-back-top-inner {
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.vm-back-top-inner:hover {
+  background-color: rgba(0, 0, 0, .7);
+}
+.vm-back-top i {
+  color: #fff;
+  font-size: 24px;
+  padding: 8.5px 10px;
+}
+.vm-back-top-nav {
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.vm-back-top-nav-item {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+.vm-back-top-nav-item:hover {
+  background-color: rgba(0, 0, 0, .7);
 }
  
 .blur1 {

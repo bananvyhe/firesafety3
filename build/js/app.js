@@ -28,6 +28,10 @@ var _mainmenuapp = require('./mainmenuapp.vue');
 
 var _mainmenuapp2 = _interopRequireDefault(_mainmenuapp);
 
+var _backTop = require('./back-top.vue');
+
+var _backTop2 = _interopRequireDefault(_backTop);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.use(_lib2.default);
@@ -36,6 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   _vue2.default.component('onediv', {
     template: '<div><slot></slot></div>'
+  });
+
+  new _vue2.default({
+    el: '#VmBackTop',
+    render: function render(h) {
+      return h(_backTop2.default);
+    }
   });
 
   new _vue2.default({

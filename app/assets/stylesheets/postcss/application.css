@@ -40,11 +40,10 @@ body {
 
 .techinfo {
   adjust-font-size: fontsize small;
- 
 }
 
 /*Настройки шрифтов и высоты апплетов*/
-/*---------------------------------------*/
+/*-----------------------------------------*/
 section {
   lost-center: 1366px;
   .trust {
@@ -58,6 +57,7 @@ section {
   color: $color-1; 
   adjust-font-size: fontsize small;
 } 
+ 
 .sliderText {
   font-weight: 400;
   font-style: bold;
@@ -421,4 +421,59 @@ p {
     transform: translateY(0);
     animation-timing-function: ease-out;
   }
+}
+
+стили для бэк-топ скролла
+.vm-backtop-icon-een {
+  display: inline-block;
+  font-family: "RobotoR";
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.vm-backtop-icon-een:before {
+  content: "\e607";
+}
+.vm-back-top {
+  z-index: 10;
+  position: fixed;
+  cursor: pointer;
+  display: none;
+}
+.vm-back-top.vm-back-top-show {
+  display: block;
+}
+.vm-back-top-inner {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.vm-back-top-inner:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.vm-back-top i {
+  color: #fff;
+  font-size: 24px;
+  padding: 8.5px 10px;
+}
+.vm-back-top-nav {
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.vm-back-top-nav-item {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+.vm-back-top-nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
