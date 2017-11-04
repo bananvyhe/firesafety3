@@ -24,7 +24,6 @@
 End Hamster setup*/
 
 @reset;
-@ruler; 
 $column: 200px;
 $block-font-size: xlarge@d2;
 
@@ -37,9 +36,10 @@ body {
   font-weight: 400;
  /* lost-utility: edit rgb(15, 150, 25);*/
 }
-
+@ruler;
 .techinfo {
   adjust-font-size: fontsize small;
+  line-height: 1.5;
 }
 
 /*Настройки шрифтов и высоты апплетов*/
@@ -72,7 +72,7 @@ section {
     padding-left: 15%;
   }
 }
-.grid-item {
+.grid-item {@ruler;
   position: relative;
   z-index: 1;
   background-color: #ada;
