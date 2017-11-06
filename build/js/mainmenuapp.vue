@@ -52,7 +52,7 @@
         hoverbutton: {},
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: false,
+        switcher: true,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -94,12 +94,15 @@
           } 
           return this.hiddenStyle;
         }else{
-          for (var i=0; i<this.kostil.length; i){
-            this.kostil.pop(); 
-          }
-          this.hiddenStyle = {
-          visibility: 'hidden'
-          } 
+          var self = this;
+          setTimeout (myFunction2, 10000);
+            function myFunction2() {
+              self.hiddenStyle = {
+              visibility: 'hidden'
+              }
+
+            }  
+          
           return this.hiddenStyle;
         }
       }, 
@@ -150,11 +153,19 @@
         var end = this.menuitemsHide.length;
         var self = this;
         myFunction ();
+        myFunction2 ();
         function myFunction() {
           if (start == end || self.toggle == false) return;
           self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (start+1)]);
           start++;
           var timer = setTimeout (myFunction, 220);
+        }
+        function myFunction2() {
+          if (self.menuitemsHide.length > 0 && self.toggle == false) {
+            self.kostil.pop();
+            start--;
+            var timer = setTimeout (myFunction2, 220);
+          }
         }
         // var self = this;
         // if (this.toggle) {
