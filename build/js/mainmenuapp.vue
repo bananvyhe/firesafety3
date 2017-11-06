@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} <br>toggle: {{toggle}}  <br>kostil: {{kostil}} 
+    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} <br>toggle: {{toggle}}  <br>kostil: {{kostil}}
     </div>
     <nav  class='greedy-nav'  
       v-bind:style="styleObject"  
@@ -52,7 +52,7 @@
         hoverbutton: {},
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: false,
+        switcher: true,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -86,18 +86,16 @@
       }
     },
     computed: {
+      
       switchhidestyle: function(){
         if (this.toggle) {
-            var i;
-            for (i=0; i<this.menuitemsHide.length; i++){
-              this.kostil.push(this.menuitemsHide[this.menuitemsHide.length - (i+1)]);
-            }
+          
           this.hiddenStyle = {
           visibility: 'visible'
           } 
           return this.hiddenStyle;
         }else{
-          for (i=0; i<this.kostil.length; i){
+          for (var i=0; i<this.kostil.length; i){
             this.kostil.pop(); 
           }
           this.hiddenStyle = {
@@ -148,6 +146,29 @@
     // вотчер палит изменения происходящие в скрытых меню и обновляет ширингу видимых меню для дальнейшей работы условий в скрипте по переносу пунктов
     //устанавливает апфтер-аттрибут на кнопку с отображением количества позиций в массиве скрытых пунктов меню
     watch: {
+      toggle: function(){
+        var start = 0;
+        var end = this.menuitemsHide.length;
+        var self = this;
+        myFunction ();
+        function myFunction() {
+          if (start == end) return;
+          self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (start+1)]);
+          start++;
+          setTimeout (myFunction, 1000);
+        }
+        // var self = this;
+        // if (this.toggle) {
+          
+        //   for (var i = 0; i < this.menuitemsHide.length; i++){
+        //     (function(e) {
+        //       setTimeout(function() {
+        //         self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (e+1)]);
+        //       }, 1000);
+        //     })(i);      
+        //   }
+        // }
+      },
       menuitemsHide: function () {
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
         vlinks.value = vlinks1.offsetWidth;
