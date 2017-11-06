@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}}<br>switchhidestyle: {{switchhidestyle}} <br>toggle: {{toggle}}  <br>kostil: {{kostil}}
+    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}}  <br>kostil: {{kostil}}
     </div>
     <nav  class='greedy-nav'  
       v-bind:style="styleObject"  
@@ -16,6 +16,9 @@
           class="hamburger">
         </div>
       </button>
+      <div class="blankdiv">
+        
+      </div>
       <ul class='visible-links'>
         <li v-for="menuitem in menuitems">
           <a href=""><nobr>{{menuitem.title.toUpperCase()}}</nobr>
@@ -86,26 +89,26 @@
       }
     },
     computed: {
-      switchhidestyle: function(){
-        if (this.toggle) {
+      // switchhidestyle: function(){
+      //   if (this.toggle) {
           
-          this.hiddenStyle = {
-          visibility: 'visible'
-          } 
-          return this.hiddenStyle;
-        }else{
-          var self = this;
-          setTimeout (myFunction2, 10000);
-            function myFunction2() {
-              self.hiddenStyle = {
-              visibility: 'hidden'
-              }
+      //     this.hiddenStyle = {
+      //     visibility: 'visible'
+      //     } 
+      //     return this.hiddenStyle;
+      //   }else{
+      //     var self = this;
+      //     setTimeout (myFunction2, 5000);
+      //       function myFunction2() {
+      //         self.hiddenStyle = {
+      //         visibility: 'hidden'
+      //         }
 
-            }  
+      //       }  
           
-          return this.hiddenStyle;
-        }
-      }, 
+      //     return this.hiddenStyle;
+      //   }
+      // }, 
       //условия при видимости/невидимости гамбургер-кнопки
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
@@ -164,7 +167,7 @@
           if (self.menuitemsHide.length > 0 && self.toggle == false) {
             self.kostil.pop();
             start--;
-            var timer = setTimeout (myFunction2, 220);
+            var timer = setTimeout (myFunction2, 420);
           }
         }
         // var self = this;
@@ -226,6 +229,19 @@
     opacity: 1;
   }
 }
+.slide-in-top-leave-active {
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .slide-enter-active {
   animation: slide-in-blurred-left 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
   }
@@ -276,7 +292,7 @@
       color: $color-3;
     }
   }
-  button {z-index: 2;
+  button {z-index: 3;
     position: absolute;
     height: 100%;
     right: 0;
@@ -308,6 +324,14 @@
       &:hover::after {
          
       }
+    }
+    .blankdiv {
+      background-color: $color-5; 
+      z-index: 2;
+      position: absolute;
+      height: 100%;
+      width: 300px;
+      right: 0;
     }
   .hoverhamburger {
     background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
@@ -347,7 +371,7 @@
     }
   }
   .visible-links {
-    z-index: 3;
+    z-index: 16;
     display: inline-table;
     :first-child {
       border-left: 0px;
