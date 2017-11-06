@@ -52,7 +52,7 @@
         hoverbutton: {},
         //выключатель показа индикации служебной информации
         toggle: false,
-        switcher: true,
+        switcher: false,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
@@ -86,7 +86,6 @@
       }
     },
     computed: {
-      
       switchhidestyle: function(){
         if (this.toggle) {
           
@@ -124,10 +123,10 @@
       numHide: function () {
         // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
         if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 30) { 
-          this.menuitemsHide.reverse();
+          // this.menuitemsHide.reverse();
           // пушим последний пункт из массива с видимыми пунктами меню в массив для скрытых пунктов
           this.menuitemsHide.push(this.menuitems[this.menuitems.length - 1]);
-          this.menuitemsHide.reverse();
+          // this.menuitemsHide.reverse();
           // удаляем последний пункт из массива с отображаемыми пунктами меню
           this.menuitems.pop();
         }
@@ -135,10 +134,10 @@
       },
       numVis: function () {
         if (this.vlinks.value < this.availableSpace.value && this.menuitemsHide.length >0 && this.availableSpace.value - this.vlinks.value > 300) {
-          this.menuitemsHide.reverse();
+          // this.menuitemsHide.reverse();
           this.menuitems.push(this.menuitemsHide[this.menuitemsHide.length - 1]);
           this.menuitemsHide.pop(); 
-          this.menuitemsHide.reverse();
+          // this.menuitemsHide.reverse();
         }
         return this.menuitems;
       }
@@ -153,11 +152,9 @@
         myFunction ();
         function myFunction() {
           if (start == end || self.toggle == false) return;
-
-          
           self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (start+1)]);
           start++;
-          var timer = setTimeout (myFunction, 1220);
+          var timer = setTimeout (myFunction, 220);
         }
         // var self = this;
         // if (this.toggle) {
@@ -205,7 +202,6 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-
 .slide-in-top-enter-active {
   animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -219,8 +215,6 @@
     opacity: 1;
   }
 }
-
-
 .slide-enter-active {
   animation: slide-in-blurred-left 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
   }
@@ -238,7 +232,6 @@
       opacity: 1;
     }
   }
-
   .slide-leave-active {
     animation: slide-out-blurred-right 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
   }
@@ -256,7 +249,6 @@
       opacity: 0;
     }
   }
-
 .greedy-nav { 
   z-index: 10;
   display: flex;
