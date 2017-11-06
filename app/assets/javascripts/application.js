@@ -12735,10 +12735,11 @@ exports.default = {
       var self = this;
       myFunction();
       function myFunction() {
-        if (start == end) return;
+        if (start == end || self.toggle == false) return;
+
         self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (start + 1)]);
         start++;
-        setTimeout(myFunction, 1000);
+        var timer = setTimeout(myFunction, 1220);
       }
       // var self = this;
       // if (this.toggle) {
