@@ -12773,6 +12773,7 @@ exports.default = {
               var timer = setTimeout(myFunction, 75);
             }
           }
+          self.toggle = false;
         }
         timer = setTimeout(togfal, 3000);
       }
@@ -12863,7 +12864,7 @@ var render = function() {
                 class: { hoverhamburger: _vm.toggle2 },
                 on: {
                   click: function($event) {
-                    _vm.toggle = !_vm.toggle
+                    ;(_vm.toggle2 = !_vm.toggle2), (_vm.toggle = !_vm.toggle)
                   },
                   mouseenter: function($event) {
                     ;(_vm.toggle = true), (_vm.toggle2 = true)

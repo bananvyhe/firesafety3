@@ -8,7 +8,7 @@
       <button 
         v-bind:class="{hoverhamburger: toggle2}"  
         v-if="menuitemsHide.length > 0" 
-        v-on:click="toggle = !toggle" 
+        v-on:click="toggle2 = !toggle2, toggle = !toggle" 
         @mouseenter="toggle = true, toggle2 = true"
         >
         <div 
@@ -220,9 +220,12 @@
                 //тайминг исчезновения
                 var timer = setTimeout (myFunction, 75);
               }
+
             }
+            self.toggle = false;
           }
           timer = setTimeout (togfal, 3000);
+
         }   
       },
       menuitemsHide: function () {
