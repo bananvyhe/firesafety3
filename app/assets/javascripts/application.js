@@ -12615,7 +12615,7 @@ exports.default = {
       //выключатель показа индикации служебной информации
       toggle2: false,
       toggle: false,
-      switcher: true,
+      switcher: false,
       menuwidth: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
@@ -12722,10 +12722,8 @@ exports.default = {
       var start = 0;
       var end = this.menuitemsHide.length;
       var self = this;
-
       myFunction();
       myFunction2();
-      myFunction3();
       function myFunction() {
         if (start == end || self.toggle == false) return;
         self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (start + 1)]);
@@ -12743,18 +12741,6 @@ exports.default = {
           var timer = setTimeout(myFunction2, 75);
         }
       }
-      function myFunction3() {}
-      // var self = this;
-      // if (this.toggle) {
-
-      //   for (var i = 0; i < this.menuitemsHide.length; i++){
-      //     (function(e) {
-      //       setTimeout(function() {
-      //         self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (e+1)]);
-      //       }, 1000);
-      //     })(i);      
-      //   }
-      // }
     },
     //отслеживание выпадающего меню
     toggle2: function toggle2() {
@@ -12772,8 +12758,10 @@ exports.default = {
               //тайминг исчезновения
               var timer = setTimeout(myFunction, 75);
             }
+            if (self.kostil.length == 0) {
+              self.toggle = false;
+            }
           }
-          self.toggle = false;
         }
         timer = setTimeout(togfal, 3000);
       }
