@@ -12542,7 +12542,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".slide-in-top-enter-active[data-v-2cf218f6] {\n  -webkit-animation: slide-in-top-data-v-2cf218f6 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\n          animation: slide-in-top-data-v-2cf218f6 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\n}\n@-webkit-keyframes slide-in-top-data-v-2cf218f6 {\n0% {\n    -webkit-transform: translateY(-50px);\n            transform: translateY(-50px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n@keyframes slide-in-top-data-v-2cf218f6 {\n0% {\n    -webkit-transform: translateY(-50px);\n            transform: translateY(-50px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n.slide-in-top-leave-active[data-v-2cf218f6] {\n  -webkit-animation: slide-in-top-data-v-2cf218f6 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;\n          animation: slide-in-top-data-v-2cf218f6 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;\n}\n@keyframes slide-in-top-data-v-2cf218f6 {\n0% {\n    -webkit-transform: translateY(-50px);\n            transform: translateY(-50px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n.slide-enter-active[data-v-2cf218f6] {\n  -webkit-animation: slide-in-blurred-left-data-v-2cf218f6 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n          animation: slide-in-blurred-left-data-v-2cf218f6 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n}\n@-webkit-keyframes slide-in-blurred-left-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n@keyframes slide-in-blurred-left-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n.slide-leave-active[data-v-2cf218f6] {\n    -webkit-animation: slide-out-blurred-right-data-v-2cf218f6 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n            animation: slide-out-blurred-right-data-v-2cf218f6 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n}\n@-webkit-keyframes slide-out-blurred-right-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n@keyframes slide-out-blurred-right-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n.greedy-nav[data-v-2cf218f6] { \n  z-index: 10;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after {\n  bottom: -0.6em;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before {\n  top: -0.6em;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after {}\n.greedy-nav a[data-v-2cf218f6] {\n  display: block;\n  padding: 10px 30px;\n  color: #FFF;\n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover {\n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] {\n  z-index: 3;\n  position: absolute;\n  height: 100%;\n  right: 0;\n  padding: 0 15px;\n  border: 0;\n  outline: none;\n  background-color: #F15152;\n  color: #fff;\n  cursor: pointer;\n  background: radial-gradient(circle farthest-corner at 50% 50%, #F15152 50%, rgb(179, 82, 82) 100%)\n}\n.greedy-nav button[data-v-2cf218f6]::after {\n  margin-top: -2.9em;\n  padding-top: 0.1em;\n  content: attr(count);\n  position: absolute;\n  width: 17px;\n  height: 16px;\n  left: -10px;\n  text-align: center;\n  background-color: rgb(191, 82, 82);\n  color: #fff;\n  font-size: 1em;\n  border-radius: 50%;\n  border: 2px solid #fff;\n  font-weight: bold;\n  -webkit-transition: 1.2s cubic-bezier(0,.27,.07,1);\n  transition: 1.2s cubic-bezier(0,.27,.07,1);\n}\n.greedy-nav .blankdiv[data-v-2cf218f6] {\n  background-color: #1d3557;\n  z-index: 2;\n  position: absolute;\n  height: 100%;\n  width: 300px;\n  right: 0;\n}\n.greedy-nav .hoverhamburger[data-v-2cf218f6] {\n  background: radial-gradient(circle farthest-corner at 50% 55%, #F15152 50%, rgb(153, 82, 82) 100%)\n}\n.greedy-nav .hoverhamburger[data-v-2cf218f6]:after {\n  -webkit-transform:  scale(0.8) translateY(2.4em);\n          transform:  scale(0.8) translateY(2.4em);\n  -webkit-transition: 1.2s cubic-bezier(0,.27,.07,1);\n  transition: 1.2s cubic-bezier(0,.27,.07,1);\n}\n.greedy-nav .hamshadow[data-v-2cf218f6] {\n  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"1\" /><feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\" /><feFlood flood-color=\"rgba(49,54,56,1)\" /><feComposite in2=\"offsetblur\" operator=\"in\" /><feMerge><feMergeNode /><feMergeNode in=\"SourceGraphic\" /></feMerge></filter></svg>#filter');\n  -webkit-filter: drop-shadow(1px 1px 1px #313638);\n          filter: drop-shadow(1px 1px 1px #313638);\n}\n.greedy-nav .hamshadow2[data-v-2cf218f6] {\n  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"1\" /><feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\" /><feFlood flood-color=\"rgba(128,128,128,1)\" /><feComposite in2=\"offsetblur\" operator=\"in\" /><feMerge><feMergeNode /><feMergeNode in=\"SourceGraphic\" /></feMerge></filter></svg>#filter');\n  -webkit-filter: drop-shadow(1px 1px 1px grey);\n          filter: drop-shadow(1px 1px 1px grey);\n}\n.greedy-nav .hamburger[data-v-2cf218f6] {\n  z-index: 2;\n  position: relative;\n  width: 30px;\n  height: 0.25em;\n  background: #fff;\n  margin: auto;\n  border-radius: 0.1em\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after {\n  border-radius: 0.1em;\n  content: '';\n  position: absolute;\n  left: 0;\n  width: 30px;\n  height: 0.25em;\n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] {\n  z-index: 16;\n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child {\n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] {\n  vertical-align: middle;\n  display: table-cell;\n  border-left: 1px solid #FFF;\n  line-height: 0.2em;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] {\n  z-index: 1;\n  position: absolute;\n  right: 0px;\n  top: 100%;\n  margin-right: 0px;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] :last-child {\n  border-bottom-left-radius: 1.3em;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] {\n  z-index: 1;\n  display: block;\n  background-color: #1d3557;\n  padding: 0px;\n  margin: 2px;\n  font-size: 0.9em;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child {\n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] {\n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] {\n  visibility: hidden;\n}\n\n", ""]);
+exports.push([module.i, ".slide-in-top-enter-active[data-v-2cf218f6] {\n  -webkit-animation: slide-in-top-data-v-2cf218f6 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\n          animation: slide-in-top-data-v-2cf218f6 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\n}\n@-webkit-keyframes slide-in-top-data-v-2cf218f6 {\n0% {\n    -webkit-transform: translateY(-50px);\n            transform: translateY(-50px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n@keyframes slide-in-top-data-v-2cf218f6 {\n0% {\n    -webkit-transform: translateY(-50px);\n            transform: translateY(-50px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n.slide-in-top-leave-active[data-v-2cf218f6] {\n  -webkit-animation: slide-in-top-data-v-2cf218f6 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;\n          animation: slide-in-top-data-v-2cf218f6 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;\n}\n@keyframes slide-in-top-data-v-2cf218f6 {\n0% {\n    -webkit-transform: translateY(-50px);\n            transform: translateY(-50px);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n.slide-enter-active[data-v-2cf218f6] {\n  -webkit-animation: slide-in-blurred-left-data-v-2cf218f6 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n          animation: slide-in-blurred-left-data-v-2cf218f6 0.25s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;\n}\n@-webkit-keyframes slide-in-blurred-left-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n@keyframes slide-in-blurred-left-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);\n      -webkit-transform-origin: 100% 50%;\n              transform-origin: 100% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n100% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n}\n.slide-leave-active[data-v-2cf218f6] {\n    -webkit-animation: slide-out-blurred-right-data-v-2cf218f6 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n            animation: slide-out-blurred-right-data-v-2cf218f6 0.25s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;\n}\n@-webkit-keyframes slide-out-blurred-right-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n@keyframes slide-out-blurred-right-data-v-2cf218f6 {\n0% {\n      -webkit-transform: translateX(0) scaleY(1) scaleX(1);\n              transform: translateX(0) scaleY(1) scaleX(1);\n      -webkit-transform-origin: 50% 50%;\n              transform-origin: 50% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"0\" /></filter></svg>#filter');\n      -webkit-filter: blur(0);\n              filter: blur(0);\n      opacity: 1;\n}\n100% {\n      -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);\n              transform: translateX(1000px) scaleX(2) scaleY(0.2);\n      -webkit-transform-origin: 0% 50%;\n              transform-origin: 0% 50%;\n      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur stdDeviation=\"40\" /></filter></svg>#filter');\n      -webkit-filter: blur(40px);\n              filter: blur(40px);\n      opacity: 0;\n}\n}\n.greedy-nav[data-v-2cf218f6] { \n  z-index: 10;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  background-color: #1d3557;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:after {\n  bottom: -0.6em;\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before {\n  top: -0.6em;\n}\n.greedy-nav button[data-v-2cf218f6]:hover::after {}\n.greedy-nav a[data-v-2cf218f6] {\n  display: block;\n  padding: 10px 30px;\n  color: #FFF;\n  text-decoration: none\n}\n.greedy-nav a[data-v-2cf218f6]:hover {\n  color: #ef6c00;\n}\n.greedy-nav button[data-v-2cf218f6] {\n  z-index: 3;\n  position: absolute;\n  height: 100%;\n  right: 0;\n  padding: 0 15px;\n  border: 0;\n  outline: none;\n  background-color: #F15152;\n  color: #fff;\n  cursor: pointer;\n  background: radial-gradient(circle farthest-corner at 50% 50%, #F15152 50%, rgb(179, 82, 82) 100%)\n}\n.greedy-nav button[data-v-2cf218f6]::after {\n  margin-top: -2.9em;\n  padding-top: 0.1em;\n  content: attr(count);\n  position: absolute;\n  width: 17px;\n  height: 16px;\n  left: -10px;\n  text-align: center;\n  background-color: rgb(191, 82, 82);\n  color: #fff;\n  font-size: 1em;\n  border-radius: 50%;\n  border: 2px solid #fff;\n  font-weight: bold;\n  -webkit-transition: 1.2s cubic-bezier(0,.27,.07,1);\n  transition: 1.2s cubic-bezier(0,.27,.07,1);\n}\n.greedy-nav .blankdiv[data-v-2cf218f6] {\n  background-color: #1d3557;\n  z-index: 2;\n  position: absolute;\n  height: 100%;\n  width: 300px;\n  right: 0;\n}\n.greedy-nav .hoverhamburger[data-v-2cf218f6] {\n  background: radial-gradient(circle farthest-corner at 50% 55%, #F15152 50%, rgb(153, 82, 82) 100%)\n}\n.greedy-nav .hoverhamburger[data-v-2cf218f6]:after {\n  -webkit-transform:  scale(0.8) translateY(2.4em);\n          transform:  scale(0.8) translateY(2.4em);\n  -webkit-transition: 1.2s cubic-bezier(0,.27,.07,1);\n  transition: 1.2s cubic-bezier(0,.27,.07,1);\n}\n.greedy-nav .hamshadow[data-v-2cf218f6] {\n  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"1\" /><feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\" /><feFlood flood-color=\"rgba(49,54,56,1)\" /><feComposite in2=\"offsetblur\" operator=\"in\" /><feMerge><feMergeNode /><feMergeNode in=\"SourceGraphic\" /></feMerge></filter></svg>#filter');\n  -webkit-filter: drop-shadow(1px 1px 1px #313638);\n          filter: drop-shadow(1px 1px 1px #313638);\n}\n.greedy-nav .hamshadow2[data-v-2cf218f6] {\n  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"1\" /><feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\" /><feFlood flood-color=\"rgba(128,128,128,1)\" /><feComposite in2=\"offsetblur\" operator=\"in\" /><feMerge><feMergeNode /><feMergeNode in=\"SourceGraphic\" /></feMerge></filter></svg>#filter');\n  -webkit-filter: drop-shadow(1px 1px 1px grey);\n          filter: drop-shadow(1px 1px 1px grey);\n}\n.greedy-nav .hamburger[data-v-2cf218f6] {\n  z-index: 2;\n  position: relative;\n  width: 30px;\n  height: 0.25em;\n  background: #fff;\n  margin: auto;\n  border-radius: 0.1em\n}\n.greedy-nav .hamburger[data-v-2cf218f6]:before, .greedy-nav .hamburger[data-v-2cf218f6]:after {\n  border-radius: 0.1em;\n  content: '';\n  position: absolute;\n  left: 0;\n  width: 30px;\n  height: 0.25em;\n  background: #fff;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] {\n  z-index: 16;\n  display: inline-table;\n}\n.greedy-nav .visible-links[data-v-2cf218f6] :first-child {\n  border-left: 0px;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6] {\n  vertical-align: middle;\n  display: table-cell;\n  border-left: 1px solid #FFF;\n  line-height: 0.2em;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] {\n  z-index: 1;\n  position: absolute;\n  right: 0px;\n  top: 100%;\n  margin-right: 0px;\n}\n.greedy-nav .hidden-links[data-v-2cf218f6] :last-child {\n  border-bottom-left-radius: 1.3em;\n}\n.greedy-nav .hidden-links li[data-v-2cf218f6] {\n  z-index: 1;\n  display: block;\n  background-color: #1d3557;\n  padding: 0px;\n  margin: 2px;\n  font-size: 0.9em;\n}\n.greedy-nav .visible-links li[data-v-2cf218f6]:first-child {\n  font-weight: bold;\n}\n.greedy-nav .visible-links li:first-child a[data-v-2cf218f6] {\n  color: #FFF !important;\n}\n.greedy-nav .hidden[data-v-2cf218f6] {\n  visibility: hidden;\n}\n\n", ""]);
 
 // exports
 
@@ -12601,6 +12601,8 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
 
 
 var menuwidth = { value: '' };
@@ -12613,6 +12615,7 @@ exports.default = {
     return {
       hoverbutton: {},
       //выключатель показа индикации служебной информации
+      toggle2: false,
       toggle: false,
       switcher: true,
       menuwidth: menuwidth,
@@ -12639,8 +12642,21 @@ exports.default = {
       if (el !== target && !el.contains(target)) {
         this.toggle = false;
       }
+    },
+
+    leavemenu: function leavemenu() {
+      var self = this;
+      myFunction();
+      function myFunction() {
+        var timer;
+        function togfal() {
+          self.toggle = false;
+        }
+        timer = setTimeout(togfal, 3000);
+      }
     }
   },
+
   computed: {
     // switchhidestyle: function(){
     //   if (this.toggle) {
@@ -12708,21 +12724,28 @@ exports.default = {
       var start = 0;
       var end = this.menuitemsHide.length;
       var self = this;
+
       myFunction();
       myFunction2();
+      myFunction3();
       function myFunction() {
         if (start == end || self.toggle == false) return;
         self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (start + 1)]);
         start++;
-        var timer = setTimeout(myFunction, 220);
+        //тайминг появления
+        var timer = setTimeout(myFunction, 120);
       }
       function myFunction2() {
+        //прервать если курсор над выпадающим списком
+        if (self.toggle2 == true) return;
         if (self.menuitemsHide.length > 0 && self.toggle == false) {
           self.kostil.pop();
           start--;
-          var timer = setTimeout(myFunction2, 420);
+          //тайминг исчезновения
+          var timer = setTimeout(myFunction2, 75);
         }
       }
+      function myFunction3() {}
       // var self = this;
       // if (this.toggle) {
 
@@ -12734,6 +12757,27 @@ exports.default = {
       //     })(i);      
       //   }
       // }
+    },
+    //отслеживание выпадающего меню
+    toggle2: function toggle2() {
+      var self = this;
+      myFunction2();
+      function myFunction2() {
+        var timer;
+        function togfal() {
+          myFunction();
+          function myFunction() {
+            //прервать если курсор над выпадающим списком
+            if (self.toggle2 == true) return;
+            if (self.kostil.length > 0 && self.toggle2 == false) {
+              self.kostil.pop();
+              //тайминг исчезновения
+              var timer = setTimeout(myFunction, 75);
+            }
+          }
+        }
+        timer = setTimeout(togfal, 3000);
+      }
     },
     menuitemsHide: function menuitemsHide() {
       var vlinks1 = document.querySelector(".greedy-nav .visible-links");
@@ -12802,7 +12846,9 @@ var render = function() {
         _c("br"),
         _vm._v("compstylem: " + _vm._s(_vm.compstylem) + " "),
         _c("br"),
-        _vm._v("toggle: " + _vm._s(_vm.toggle) + "  "),
+        _vm._v("toggle: " + _vm._s(_vm.toggle) + " "),
+        _c("br"),
+        _vm._v("toggle2: " + _vm._s(_vm.toggle2) + " "),
         _c("br"),
         _vm._v("kostil: " + _vm._s(_vm.kostil) + "\n  ")
       ]
@@ -12816,13 +12862,13 @@ var render = function() {
           ? _c(
               "button",
               {
-                class: { hoverhamburger: _vm.toggle },
+                class: { hoverhamburger: _vm.toggle2 },
                 on: {
                   click: function($event) {
                     _vm.toggle = !_vm.toggle
                   },
                   mouseenter: function($event) {
-                    _vm.toggle = true
+                    ;(_vm.toggle = true), (_vm.toggle2 = true)
                   }
                 }
               },
@@ -12857,11 +12903,7 @@ var render = function() {
           {
             staticClass: "hidden-links",
             style: _vm.hiddenStyle,
-            on: {
-              mouseleave: function($event) {
-                _vm.toggle = false
-              }
-            }
+            on: { mouseleave: _vm.leavemenu }
           },
           [
             _c(
@@ -12874,7 +12916,13 @@ var render = function() {
                     key: index,
                     on: {
                       mouseup: function($event) {},
-                      click: function($event) {}
+                      click: function($event) {},
+                      mouseenter: function($event) {
+                        _vm.toggle2 = true
+                      },
+                      mouseleave: function($event) {
+                        _vm.toggle2 = false
+                      }
                     }
                   },
                   [

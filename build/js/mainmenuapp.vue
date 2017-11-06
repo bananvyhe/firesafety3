@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}}  <br>kostil: {{kostil}}
+    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}
     </div>
-    <nav  class='greedy-nav'  
+    <nav class='greedy-nav'  
       v-bind:style="styleObject"  
       ref="dropdown">
       <button 
-        v-bind:class="{hoverhamburger: toggle}"  
+        v-bind:class="{hoverhamburger: toggle2}"  
         v-if="menuitemsHide.length > 0" 
         v-on:click="toggle = !toggle" 
-        @mouseenter="toggle = true"
+        @mouseenter="toggle = true, toggle2 = true"
         >
         <div 
           v-bind:class="{hamshadow: toggle, hamshadow2: !toggle}"
@@ -17,7 +17,6 @@
         </div>
       </button>
       <div class="blankdiv">
-        
       </div>
       <ul class='visible-links'>
         <li v-for="menuitem in menuitems">
@@ -27,12 +26,15 @@
       </ul>
       <ul class='hidden-links' 
         v-bind:style="hiddenStyle"  
-        @mouseleave="toggle = false" >
+        @mouseleave="leavemenu"
+         >
         <transition-group name="slide-in-top">
         <li v-for="(item, index) in kostil" 
           @mouseup="" 
           @click=""
-          :key="index">
+          :key="index"
+          @mouseenter="toggle2 = true"
+          @mouseleave="toggle2 = false">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>
         </li>
@@ -54,6 +56,7 @@
       return {
         hoverbutton: {},
         //выключатель показа индикации служебной информации
+        toggle2: false,
         toggle: false,
         switcher: true,
         menuwidth: menuwidth,
@@ -82,12 +85,23 @@
       dropdown(e){ 
         let el = this.$refs.dropdown; 
         let target = e.target;
-        if (el !== target && !el.contains(target)) 
-        { 
+        if (el !== target && !el.contains(target)) { 
           this.toggle = false;
         } 
+      },
+      leavemenu: function() {
+        var self = this;
+        myFunction ();
+        function myFunction() {
+          var timer;
+          function togfal() {
+            self.toggle = false;
+          }
+          timer = setTimeout (togfal, 3000);
+        }   
       }
     },
+
     computed: {
       // switchhidestyle: function(){
       //   if (this.toggle) {
@@ -155,20 +169,30 @@
         var start = 0;
         var end = this.menuitemsHide.length;
         var self = this;
+         
         myFunction ();
         myFunction2 ();
+        myFunction3 ();
         function myFunction() {
           if (start == end || self.toggle == false) return;
           self.kostil.push(self.menuitemsHide[self.menuitemsHide.length - (start+1)]);
           start++;
-          var timer = setTimeout (myFunction, 220);
+          //тайминг появления
+          var timer = setTimeout (myFunction, 120);
         }
         function myFunction2() {
+          //прервать если курсор над выпадающим списком
+          if (self.toggle2 == true) return;
           if (self.menuitemsHide.length > 0 && self.toggle == false) {
             self.kostil.pop();
             start--;
-            var timer = setTimeout (myFunction2, 420);
+            //тайминг исчезновения
+            var timer = setTimeout (myFunction2, 75);
           }
+        }
+        function myFunction3() {
+ 
+         
         }
         // var self = this;
         // if (this.toggle) {
@@ -181,6 +205,27 @@
         //     })(i);      
         //   }
         // }
+      },
+      //отслеживание выпадающего меню
+      toggle2: function(){
+        var self = this;
+        myFunction2 ();
+        function myFunction2() {
+          var timer;
+          function togfal() {
+            myFunction ();
+            function myFunction() {
+              //прервать если курсор над выпадающим списком
+              if (self.toggle2 == true) return;
+              if (self.kostil.length > 0 && self.toggle2 == false) {
+                self.kostil.pop();
+                //тайминг исчезновения
+                var timer = setTimeout (myFunction, 75);
+              }
+            }
+          }
+          timer = setTimeout (togfal, 3000);
+        }   
       },
       menuitemsHide: function () {
         let vlinks1 = document.querySelector(".greedy-nav .visible-links");
@@ -217,7 +262,7 @@
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 .slide-in-top-enter-active {
-  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 @keyframes slide-in-top {
   0% {
@@ -230,7 +275,7 @@
   }
 }
 .slide-in-top-leave-active {
-  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;
+  animation: slide-in-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;
 }
 @keyframes slide-in-top {
   0% {
