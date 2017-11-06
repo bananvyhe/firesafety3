@@ -12601,8 +12601,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
 
 
 var menuwidth = { value: '' };
@@ -12903,7 +12901,14 @@ var render = function() {
           {
             staticClass: "hidden-links",
             style: _vm.hiddenStyle,
-            on: { mouseleave: _vm.leavemenu }
+            on: {
+              mouseleave: function($event) {
+                _vm.leavemenu, (_vm.toggle2 = false)
+              },
+              mouseenter: function($event) {
+                _vm.toggle2 = true
+              }
+            }
           },
           [
             _c(
@@ -12916,13 +12921,7 @@ var render = function() {
                     key: index,
                     on: {
                       mouseup: function($event) {},
-                      click: function($event) {},
-                      mouseenter: function($event) {
-                        _vm.toggle2 = true
-                      },
-                      mouseleave: function($event) {
-                        _vm.toggle2 = false
-                      }
+                      click: function($event) {}
                     }
                   },
                   [

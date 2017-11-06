@@ -26,15 +26,13 @@
       </ul>
       <ul class='hidden-links' 
         v-bind:style="hiddenStyle"  
-        @mouseleave="leavemenu"
-         >
+        @mouseleave="leavemenu, toggle2 = false"
+        @mouseenter="toggle2 = true">
         <transition-group name="slide-in-top">
         <li v-for="(item, index) in kostil" 
           @mouseup="" 
           @click=""
-          :key="index"
-          @mouseenter="toggle2 = true"
-          @mouseleave="toggle2 = false">
+          :key="index">
           <a href=""><nobr>{{item.title.toUpperCase()}}</nobr>
           </a>
         </li>
