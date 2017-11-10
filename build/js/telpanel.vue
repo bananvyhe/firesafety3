@@ -31,6 +31,7 @@ export default {
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 .telpanel {
+  border-bottom: 3px solid #c2ddea;
   display: flex;
   justify-content: space-around;
   div {

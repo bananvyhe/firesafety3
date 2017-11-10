@@ -283,11 +283,11 @@ section .trust:nth-child(1n) {
   font-style: normal;
   font-weight: 400;
   font-style: bold;
-  letter-spacing: 0.07em;
-  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
   border-bottom-left-radius: 1.3em; 
   height: 3.6em; 
-  border-top: 8px solid #f4d35e;
+  border-top: 6px solid #f4d35e;
 }
 @media (min-width: 0px) and (max-width: 601px) {
   .greedy-nav {

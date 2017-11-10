@@ -39,7 +39,7 @@
     z-index: 4;
     align-items: flex-end;
     .logo {
-      lost-column: 1/2 2 0 flex; 
+      lost-column: 3/8 2 0 flex; 
       div {
         margin-bottom: -24px;
         height: 120px;
@@ -49,7 +49,7 @@
       }
     }
     .brandname {
-      lost-column: 1/2 2 0 flex;
+      lost-column: 5/8 2 0 flex;
        
       div {
         background: svg-load('../../app/assets/images/lider1.svg' );
@@ -63,11 +63,15 @@
     }
     @media (--only-small-screen) {
       lost-column: 3/8 2 0 flex; 
-      .logo {
+      .logo { 
         div {
-          height: 70px;
-          background-position: right 1px;
-          margin-bottom: -10px;
+          background: svg-load('../../app/assets/images/logo-04-01-01.svg');
+          height: 32px;
+           
+          background-position: right; 
+           
+          background-repeat: no-repeat;
+          margin-bottom: 3px;
         }
       }
       .brandname {
