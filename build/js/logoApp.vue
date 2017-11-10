@@ -8,7 +8,7 @@
         <div></div>
       </div>
     </div>
-    <div class="audit">123
+    <div class="audit">
       <br>
     </div> 
   </div>
@@ -42,7 +42,7 @@
       lost-column: 3/8 2 0 flex; 
       div {
         margin-bottom: -24px;
-        height: 120px;
+        height: 110px;
         background: svg-load('../../app/assets/images/shieldLogo.svg');
         background-position: right 4px;
         background-repeat: no-repeat;
@@ -79,7 +79,7 @@
         div {
           height: 30px;
           width: 170px;
-          margin-left: 0.1em; 
+          margin-left: 0.2em; 
         }   
       }
     }
@@ -88,7 +88,7 @@
       .logo {
         div {
           height: 140px;
-          margin-bottom: -25px;
+          margin-bottom: -40px;
         }
       }
       .brandname {

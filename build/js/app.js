@@ -76,6 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+window.addEventListener("scroll", function(){
+   console.log('scrolling');
+});
         // window.sr = ScrollReveal();
         // sr.reveal('.grid-item', {
         //   reset: true,
