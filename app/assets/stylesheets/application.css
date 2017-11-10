@@ -202,20 +202,20 @@ section .trust:nth-child(1n) {
 }
 .grid-item:nth-child(1n) {
   .ruler-debug {
-
+   
 }
   margin-right: 30px;
   margin-left: 0;
 }
 .grid-item:last-child {
   .ruler-debug {
-
+   
 }
   margin-right: 0;
 }
 .grid-item:nth-child(1n) {
   .ruler-debug {
-
+   
 }
   margin-right: 0;
   margin-left: auto;
@@ -280,8 +280,8 @@ section .trust:nth-child(1n) {
   border-bottom-left-radius: 1.3em; 
   height: 3.6em; 
 }
-#logoApp {
-
+.logoApp {
+   
 }
 .mainLogoPanel {
   height: 2.8em; 
@@ -355,7 +355,7 @@ section1 .trust:nth-child(3n) {
 
  
 .grid-itemL p, .grid-itemR p {
-
+   
 }
 h1 {
   font-size: 2.3686em;

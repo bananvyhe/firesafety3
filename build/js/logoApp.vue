@@ -16,7 +16,8 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-  .mainLogoPanel { 
+  .mainLogoPanel {
+    border-bottom: 8px solid #c2ddea;
     $color-6: #b9d6f2;
     lost-flex-container: row;
     background-color: $color-5;
@@ -30,11 +31,12 @@
     $bgsizeVB: 28rem;
     lost-flex-container: row;
     lost-column: 3/7 2 0 flex; 
-    z-index: 2;
+    z-index: 4;
     align-items: flex-end;
     .logo { 
       lost-column: 1/2 2 0 flex; 
       div {
+        margin-bottom: -30px;
         height: 120px;
         background: svg-load('../../app/assets/images/shieldLogo.svg');
         background-position: right 4px;
