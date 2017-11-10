@@ -307,7 +307,6 @@
   }
  
 .greedy-nav {
-  border-top: 8px solid #f4d35e;
   z-index: 3;
   display: flex;
   justify-content: flex-end;

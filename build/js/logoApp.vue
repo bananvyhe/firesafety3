@@ -17,10 +17,15 @@
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
   .mainLogoPanel {
-    border-bottom: 8px solid #c2ddea;
+    border-bottom: 5px solid #c2ddea;
     $color-6: #b9d6f2;
     lost-flex-container: row;
     background-color: $color-5;
+  }
+  @media (--only-small-screen) {
+    .mainLogoPanel {
+      border-bottom: 2px solid #c2ddea;
+    }
   }
   .logoContainer { 
     $bgsizeB: 15rem;
@@ -33,10 +38,10 @@
     lost-column: 3/7 2 0 flex; 
     z-index: 4;
     align-items: flex-end;
-    .logo { 
+    .logo {
       lost-column: 1/2 2 0 flex; 
       div {
-        margin-bottom: -30px;
+        margin-bottom: -24px;
         height: 120px;
         background: svg-load('../../app/assets/images/shieldLogo.svg');
         background-position: right 4px;
@@ -45,13 +50,15 @@
     }
     .brandname {
       lost-column: 1/2 2 0 flex;
-      padding-bottom: 2px; 
+       
       div {
         background: svg-load('../../app/assets/images/lider1.svg' );
         background-repeat: no-repeat;
+        background-position: contain; 
+        margin: 4px;
         height: 40px;
         width: 160px;
-        margin-left: -0.4em;
+        margin-left: -0.05em;
       } 
     }
     @media (--only-small-screen) {
@@ -60,14 +67,15 @@
         div {
           height: 70px;
           background-position: right 1px;
+          margin-bottom: -10px;
         }
       }
       .brandname {
-        padding-bottom: 2px;  
+        padding-bottom: 0px;  
         div {
           height: 30px;
           width: 170px;
-          margin-left: -0.2em;
+          margin-left: 0.1em; 
         }   
       }
     }
@@ -75,14 +83,15 @@
       lost-column: 3/8 2 0 flex; 
       .logo {
         div {
-          height: 180px;
+          height: 140px;
+          margin-bottom: -25px;
         }
       }
       .brandname {
         div {
-          height: 45px;
-          width: 240px;
-          margin-left: -0.8em;
+          height: 42px;
+          width: 120px;
+          margin-left: -0.1em;
         } 
       } 
     }

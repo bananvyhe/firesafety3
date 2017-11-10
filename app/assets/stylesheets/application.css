@@ -165,6 +165,14 @@ section .trust:nth-child(1n) {
   padding-top: 0.2em;
   padding-left: 15%;
 }
+.mainLogoPanel {
+  height: 2.5em; 
+}
+@media (min-width: 0px) and (max-width: 601px) {
+  .mainLogoPanel {
+    height: 2.2em; 
+  }
+}
 .grid-item {
 .ruler-debug{
 
@@ -202,20 +210,20 @@ section .trust:nth-child(1n) {
 }
 .grid-item:nth-child(1n) {
   .ruler-debug {
-   
+
 }
   margin-right: 30px;
   margin-left: 0;
 }
 .grid-item:last-child {
   .ruler-debug {
-   
+
 }
   margin-right: 0;
 }
 .grid-item:nth-child(1n) {
   .ruler-debug {
-   
+
 }
   margin-right: 0;
   margin-left: auto;
@@ -279,16 +287,11 @@ section .trust:nth-child(1n) {
   font-size: 0.9em;
   border-bottom-left-radius: 1.3em; 
   height: 3.6em; 
-}
-.logoApp {
-   
-}
-.mainLogoPanel {
-  height: 2.8em; 
+  border-top: 8px solid #f4d35e;
 }
 @media (min-width: 0px) and (max-width: 601px) {
-  .mainLogoPanel {
-    height: 2.2em; 
+  .greedy-nav {
+    border-top: 4px solid #f4d35e;
   }
 }
 
@@ -355,7 +358,7 @@ section1 .trust:nth-child(3n) {
 
  
 .grid-itemL p, .grid-itemR p {
-   
+
 }
 h1 {
   font-size: 2.3686em;

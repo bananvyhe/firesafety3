@@ -72,6 +72,14 @@ section {
     padding-left: 15%;
   }
 }
+.mainLogoPanel {
+  height: 2.5em; 
+}
+@media (--only-small-screen) {
+  .mainLogoPanel {
+    height: 2.2em; 
+  }
+}
 .grid-item {@ruler;
   position: relative;
   z-index: 1;
@@ -150,18 +158,14 @@ section {
   font-size: 0.9em;
   border-bottom-left-radius: 1.3em; 
   height: 3.6em; 
-}
-.logoApp {
-   
-}
-.mainLogoPanel {
-  height: 2.8em; 
+  border-top: 8px solid #f4d35e;
 }
 @media (--only-small-screen) {
-  .mainLogoPanel {
-    height: 2.2em; 
+  .greedy-nav {
+    border-top: 4px solid #f4d35e;
   }
 }
+
 /*-------------------------------------------*/
 /*end Настройки шрифтов и высоты апплетов*/
 
