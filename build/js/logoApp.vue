@@ -19,11 +19,10 @@
   .mainLogoPanel { 
     $color-6: #b9d6f2;
     lost-flex-container: row;
-    background: url('../../app/assets/images/main_06.jpg' );
+     
     background-repeat: no-repeat;
     background-color: $color-6;
   }
-   
   .logoContainer { 
     $bgsizeB: 15rem;
     $bgsize: 12rem;
@@ -39,7 +38,7 @@
       lost-column: 1/2 2 0 flex; 
       div {
         height: 120px;
-        background: svg-load('../../app/assets/images/logo-04-01-01.svg');
+        background: svg-load('../../app/assets/images/shieldLogo.svg');
         background-position: right 4px;
         background-repeat: no-repeat;
       }
@@ -48,7 +47,7 @@
       lost-column: 1/2 2 0 flex;
       padding-bottom: 2px; 
       div {
-        background: svg-load('../../app/assets/images/leader.svg' );
+        background: svg-load('../../app/assets/images/lider1.svg' );
         background-repeat: no-repeat;
         height: 40px;
         width: 160px;
