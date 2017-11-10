@@ -8,7 +8,7 @@
         <div></div>
       </div>
     </div>
-    <div class="audit">
+    <div class="audit">123
       <br>
     </div> 
   </div>
@@ -19,9 +19,7 @@
   .mainLogoPanel { 
     $color-6: #b9d6f2;
     lost-flex-container: row;
-     
-    background-repeat: no-repeat;
-    background-color: $color-6;
+    background-color: $color-5;
   }
   .logoContainer { 
     $bgsizeB: 15rem;

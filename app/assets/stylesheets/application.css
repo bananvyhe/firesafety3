@@ -280,8 +280,11 @@ section .trust:nth-child(1n) {
   border-bottom-left-radius: 1.3em; 
   height: 3.6em; 
 }
+#logoApp {
+
+}
 .mainLogoPanel {
-  height: 3.2em; 
+  height: 2.8em; 
 }
 @media (min-width: 0px) and (max-width: 601px) {
   .mainLogoPanel {
