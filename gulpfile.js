@@ -182,6 +182,7 @@ var path = {
 gulp.task('scripts', function() {
 
   return streamqueue({ objectMode: true },
+    gulp.src("src/js/TweenMax.js"),
     gulp.src("src/js/app.js").pipe(babel()),
     gulp.src("src/js/anotherscripts.js")
     )
@@ -235,11 +236,11 @@ gulp.task('html', function () {
 
 
 
-gulp.task('js', function () {
-   return gulp.src('app/assets/javascripts/application.js')
-    .pipe(gulp.dest(''))
-    .pipe(livereload());
-});
+// gulp.task('js', function () {
+//    return gulp.src('app/assets/javascripts/application.js')
+//     .pipe(gulp.dest(''))
+//     .pipe(livereload());
+// });
 
 gulp.task('browreload', function () {
    return gulp.src('app/assets/javascripts/application.js')

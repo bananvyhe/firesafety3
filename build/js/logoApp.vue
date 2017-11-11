@@ -67,9 +67,7 @@
         div {
           background: svg-load('../../app/assets/images/logo-04-01-01.svg');
           height: 32px;
-           
           background-position: right; 
-           
           background-repeat: no-repeat;
           margin-bottom: 3px;
         }

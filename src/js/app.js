@@ -8,9 +8,36 @@ import Mainmenuapp from './mainmenuapp.vue'
 import VmBackTop from './back-top.vue'
 
 Vue.use(ElementUI)
-   
+
+Vue.directive('tack', {
+ bind(el, binding, vnode) {
+    el.style.position = 'absolute'
+     
+    // el.style.top = binding.value + 'px'  
+  }
+});
+Vue.directive('focus', {
+  // Когда привязанный элемент вставлен в DOM...
+  inserted: function (el) {
+    // Переключаем фокус на элемент
+    el.focus()
+  }
+});
+// Регистрируем глобальную директиву с названием v-scroll
+Vue.directive('scroll', {
+  // Когда привязанный элемент вставляется в DOM...
+  inserted: function(el, binding) {
+    let f = function(evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener('scroll', f);
+      }
+    };
+    window.addEventListener('scroll', f);
+  },
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-  
+ 
   Vue.component('onediv', {
       template: '<div><slot></slot></div>'
   }); 

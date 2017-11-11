@@ -1,6 +1,18 @@
-window.addEventListener("scroll", function(){
-   console.log('scrolling');
-});
+// window.addEventListener("scroll", function(){
+//    console.log('scrolling');
+// });
+//отслеживает направление скролла
+var lastScrollTop = 0;
+window.onscroll = onScroll;
+function onScroll (e) {
+  var top = window.pageYOffset;
+  if (lastScrollTop > top) {
+    console.log('top');
+  } else if (lastScrollTop < top) {
+    console.log('down');
+  }
+  lastScrollTop = top;
+}
         // window.sr = ScrollReveal();
         // sr.reveal('.grid-item', {
         //   reset: true,

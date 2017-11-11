@@ -75,6 +75,25 @@ section {
 .mainLogoPanel {
   height: 2.5em; 
 }
+
+.greedy-nav {
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  font-style: bold;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  border-bottom-left-radius: 1.3em; 
+  height: 3.6em; 
+  border-top: 6px solid #f4d35e;
+}
+@media (--only-small-screen) {
+  .greedy-nav {
+    border-top: 4px solid #f4d35e;
+  }
+}
+
+
 @media (--only-small-screen) {
   .mainLogoPanel {
     height: 2.2em; 
@@ -149,22 +168,6 @@ section {
     }
   }
 }  
-.greedy-nav {
-  font-family: "UbuntuR"; 
-  font-style: normal;
-  font-weight: 400;
-  font-style: bold;
-  letter-spacing: 0.05em;
-  font-size: 0.8em;
-  border-bottom-left-radius: 1.3em; 
-  height: 3.6em; 
-  border-top: 6px solid #f4d35e;
-}
-@media (--only-small-screen) {
-  .greedy-nav {
-    border-top: 4px solid #f4d35e;
-  }
-}
 
 /*-------------------------------------------*/
 /*end Настройки шрифтов и высоты апплетов*/

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div   v-scroll="handleScroll">
     <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}
     </div>
-    <nav class='greedy-nav'  
+    <nav class='greedy-nav'
       v-bind:style="styleObject"  
       ref="dropdown">
       <button 
@@ -97,13 +97,21 @@
           }
           timer = setTimeout (togfal, 3000);
         } 
+      },
+      handleScroll: function(evt, el) {
+        // if (window.scrollY > 50) {
+        //   TweenMax.to(el, 1.5, {
+        //     y: -50,
+        //     opacity: 1,
+        //     ease: Sine.easeOut
+        //   })
+        // }
+        // return window.scrollY > 100;
       }
     },
-
     computed: {
       // switchhidestyle: function(){
       //   if (this.toggle) {
-          
       //     this.hiddenStyle = {
       //     visibility: 'visible'
       //     } 
@@ -115,9 +123,7 @@
       //         self.hiddenStyle = {
       //         visibility: 'hidden'
       //         }
-
       //       }  
-          
       //     return this.hiddenStyle;
       //   }
       // }, 
@@ -262,6 +268,7 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
+ 
   background-color: $color-5; 
   a {
     display: block;

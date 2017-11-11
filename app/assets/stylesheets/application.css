@@ -168,6 +168,25 @@ section .trust:nth-child(1n) {
 .mainLogoPanel {
   height: 2.5em; 
 }
+
+.greedy-nav {
+  font-family: "UbuntuR"; 
+  font-style: normal;
+  font-weight: 400;
+  font-style: bold;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  border-bottom-left-radius: 1.3em; 
+  height: 3.6em; 
+  border-top: 6px solid #f4d35e;
+}
+@media (min-width: 0px) and (max-width: 601px) {
+  .greedy-nav {
+    border-top: 4px solid #f4d35e;
+  }
+}
+
+
 @media (min-width: 0px) and (max-width: 601px) {
   .mainLogoPanel {
     height: 2.2em; 
@@ -276,22 +295,6 @@ section .trust:nth-child(1n) {
     line-height: 0.9;
     padding-left: 0%;
     margin-right:-15%;
-  }
-}  
-.greedy-nav {
-  font-family: "UbuntuR"; 
-  font-style: normal;
-  font-weight: 400;
-  font-style: bold;
-  letter-spacing: 0.05em;
-  font-size: 0.8em;
-  border-bottom-left-radius: 1.3em; 
-  height: 3.6em; 
-  border-top: 6px solid #f4d35e;
-}
-@media (min-width: 0px) and (max-width: 601px) {
-  .greedy-nav {
-    border-top: 4px solid #f4d35e;
   }
 }
 
