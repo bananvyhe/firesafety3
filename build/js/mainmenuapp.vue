@@ -1,6 +1,9 @@
 <template>
-  <div   v-scroll="handleScroll">
-    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}
+  <div   
+    v-scroll="handleScroll" 
+    v-bind:class="fixedclass"
+    v-bind:style="fixedwidth">
+    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedclass}}
     </div>
     <nav class='greedy-nav'
       v-bind:style="styleObject"  
@@ -43,6 +46,20 @@
 </template>
 
 <script>
+  var lastScrollTop = 0;
+  var stick = {value:  ''};
+  window.onscroll = onScroll;
+  function onScroll (e) {
+    var top = window.pageYOffset;
+    if (lastScrollTop > top) {
+      console.log('top');
+      stick.value = 'up';
+    } else if (lastScrollTop < top) {
+      console.log('down');
+      stick.value = 'down';
+    }
+    lastScrollTop = top;
+  }
 
   let menuwidth = {value:  ''};
   let availableSpace = {value:  ''};
@@ -52,6 +69,7 @@
 
     data: function () {
       return {
+        fixedwidth: '',
         hoverbutton: {},
         //выключатель показа индикации служебной информации
         toggle2: false,
@@ -60,6 +78,8 @@
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
+        stick: stick,
+        fixedclass: 'unfixed',
         menuitems: [
           { title: 'главная', url: ''},
           { title: 'о нас', url: ''},
@@ -99,14 +119,15 @@
         } 
       },
       handleScroll: function(evt, el) {
-        // if (window.scrollY > 50) {
+        // if (window.scrollY > 250) {
+
         //   TweenMax.to(el, 1.5, {
         //     y: -50,
         //     opacity: 1,
         //     ease: Sine.easeOut
         //   })
         // }
-        // return window.scrollY > 100;
+        // return window.scrollY > 400;
       }
     },
     computed: {
@@ -128,6 +149,7 @@
       //   }
       // }, 
       //условия при видимости/невидимости гамбургер-кнопки
+ 
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
           this.styleObject = {
@@ -145,6 +167,17 @@
         }
       },
       numHide: function () {
+        if (this.stick.value == 'up') {
+          this.fixedclass = 'unfixed';
+        }
+        if (this.stick.value == 'down') {
+          this.fixedclass = 'fixed';
+          // let menuwidth1 = document.querySelector(".greedy-nav");
+          // let menuwidth = menuwidth1.offsetWidth;
+          // console.log(menuwidth);
+          // this.fixedwidth = width написать добавлнение стиля с вычисленной шириной
+
+        }
         // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
         if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 30) { 
           // this.menuitemsHide.reverse();
@@ -262,14 +295,23 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
+.fixed {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+}
+.unfixed {
+  
+  position: relative;
+  
+}
 .greedy-nav {
   z-index: 3;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
- 
-  background-color: $color-5; 
+  background-color: $color-5;
   a {
     display: block;
     padding: 10px 30px;

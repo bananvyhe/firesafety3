@@ -58,21 +58,24 @@
         margin: 4px;
         height: 40px;
         width: 160px;
-        margin-left: -0.05em;
+        margin-left: 0.1em;
       } 
     }
     @media (--only-small-screen) {
       lost-column: 3/8 2 0 flex; 
-      .logo { 
+      .logo { lost-column: 1/2 2 0 flex; 
         div {
-          background: svg-load('../../app/assets/images/logo-04-01-01.svg');
-          height: 32px;
+          background: svg-load('../../app/assets/images/shieldLogo.svg');
+          height: 72px;
+          margin-bottom: -14px;
           background-position: right; 
           background-repeat: no-repeat;
-          margin-bottom: 3px;
+           
+          margin-left: 0.5em;
         }
       }
       .brandname {
+        lost-column: 1/2 2 0 flex;
         padding-bottom: 0px;  
         div {
           height: 30px;
@@ -93,7 +96,7 @@
         div {
           height: 42px;
           width: 120px;
-          margin-left: -0.1em;
+          margin-left: 0.2em;
         } 
       } 
     }
