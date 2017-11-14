@@ -1,12 +1,9 @@
 <template>
-  <div   
-    v-scroll="handleScroll" 
-    v-bind:class="fixedclass"
-    v-bind:style="fixedwidth">
-    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedclass}}
+  <div>
+    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedClass}}
     </div>
-    <nav class='greedy-nav'
-      v-bind:style="styleObject"  
+    <nav class='greedy-nav' v-scroll="handleScroll" 
+      v-bind:style="styleObject" v-bind:class="fixedClass" 
       ref="dropdown">
       <button 
         v-bind:class="{hoverhamburger: toggle2}"  
@@ -74,12 +71,12 @@
         //выключатель показа индикации служебной информации
         toggle2: false,
         toggle: false,
-        switcher: false,
+        switcher: true,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
         stick: stick,
-        fixedclass: 'unfixed',
+        fixedClass: 'unfixed',
         menuitems: [
           { title: 'главная', url: ''},
           { title: 'о нас', url: ''},
@@ -119,16 +116,20 @@
         } 
       },
       handleScroll: function(evt, el) {
-        // if (window.scrollY > 250) {
+        if (window.scrollY > 150) {
+          this.fixedClass = 'fixed';
 
-        //   TweenMax.to(el, 1.5, {
-        //     y: -50,
-        //     opacity: 1,
-        //     ease: Sine.easeOut
-        //   })
-        // }
-        // return window.scrollY > 400;
+          TweenMax.to(el, 1.5, {
+            top: "10px",
+             
+            ease: Sine.easeOut
+          })
+
+        }
+
+        return window.scrollY > 200;
       }
+
     },
     computed: {
       // switchhidestyle: function(){
@@ -167,17 +168,12 @@
         }
       },
       numHide: function () {
-        if (this.stick.value == 'up') {
-          this.fixedclass = 'unfixed';
-        }
-        if (this.stick.value == 'down') {
-          this.fixedclass = 'fixed';
-          // let menuwidth1 = document.querySelector(".greedy-nav");
-          // let menuwidth = menuwidth1.offsetWidth;
-          // console.log(menuwidth);
-          // this.fixedwidth = width написать добавлнение стиля с вычисленной шириной
-
-        }
+        // if (this.stick.value == 'up') {
+        //   this.fixedclass = 'unfixed';
+        // }
+        // if (this.stick.value == 'down') {
+        //   this.fixedclass = 'fixed';
+        // }
         // если длина меню с видимыми пунктами больше значения доступного пространства и количество имеющихся пунктов в массиве больше 1   
         if (this.vlinks.value > this.availableSpace.value && this.menuitems.length >1 && this.vlinks.value - this.availableSpace.value > 30) { 
           // this.menuitemsHide.reverse();
@@ -295,16 +291,15 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-.fixed {
-  z-index: 10;
+.techinfo {
+  z-index: 30;
   position: fixed;
-  top: 0px;
+  top: 400px;
+  background-color: #fff;
+  opacity: 0.9;
 }
-.unfixed {
-  
-  position: relative;
-  
-}
+
+
 .greedy-nav {
   z-index: 3;
   display: flex;
@@ -435,6 +430,14 @@
   .hidden {
     visibility: hidden;
   }
+}
+.fixed {
+  z-index: 70;
+  position: fixed;
+  opacity: 0.9;
+}
+.unfixed {
+  position: relative;
 }
 .slide-in-top-enter-active {
   animation: slide-in-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

@@ -57,6 +57,9 @@ section {
   color: $color-1; 
   adjust-font-size: fontsize small;
 } 
+.sliderapp {
+   
+}
  
 .sliderText {
   font-weight: 400;
@@ -99,8 +102,9 @@ section {
     height: 2.2em; 
   }
 }
+ 
 .grid-item {@ruler;
-  position: relative;
+  opacity: 0;
   z-index: 1;
   background-color: #ada;
   position: relative;/*for hamster*/

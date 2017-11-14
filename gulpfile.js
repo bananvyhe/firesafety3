@@ -185,7 +185,7 @@ gulp.task('scripts', function() {
     gulp.src("src/js/TweenMax.js"),
     gulp.src("src/js/app.js").pipe(babel()),
     gulp.src("src/js/anotherscripts.js")
-    )
+  )
   .pipe(sourcemaps.init())
   .pipe(concat("app.js")) 
   .pipe(sourcemaps.write("."))

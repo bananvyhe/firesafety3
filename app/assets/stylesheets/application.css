@@ -146,12 +146,15 @@ section .trust:nth-child(1n) {
   font-size: 0.7502em; 
   line-height: 1.8662em;
 } 
+.sliderapp {
+   
+}
  
 .sliderText {
   font-weight: 400;
   font-style: bold;
   text-align: right;
-} 
+}
  
 .sliderText .titlefirst {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="2" /><feOffset dx="2" dy="2" result="offsetblur" /><feFlood flood-color="rgba(128,128,128,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
@@ -159,7 +162,7 @@ section .trust:nth-child(1n) {
           filter: drop-shadow(1px 1px 2px grey);
   font-family: "OswaldL";
   padding-left: 15%;
-} 
+}
  
 .sliderText .titlesecond {
   padding-top: 0.2em;
@@ -192,6 +195,7 @@ section .trust:nth-child(1n) {
     height: 2.2em; 
   }
 }
+ 
 .grid-item {
 .ruler-debug{
 
@@ -208,7 +212,7 @@ section .trust:nth-child(1n) {
   background-position: left top;
   background-repeat: repeat;
   background-size: 4px 22px;}
-  position: relative;
+  opacity: 0;
   z-index: 1;
   background-color: #ada;
   position: relative;
@@ -227,22 +231,25 @@ section .trust:nth-child(1n) {
   line-height: 1.4em;
 
 }
+ 
 .grid-item:nth-child(1n) {
   .ruler-debug {
-
+   
 }
   margin-right: 30px;
   margin-left: 0;
 }
+ 
 .grid-item:last-child {
   .ruler-debug {
-
+   
 }
   margin-right: 0;
 }
+ 
 .grid-item:nth-child(1n) {
   .ruler-debug {
-
+   
 }
   margin-right: 0;
   margin-left: auto;
@@ -361,7 +368,7 @@ section1 .trust:nth-child(3n) {
 
  
 .grid-itemL p, .grid-itemR p {
-
+   
 }
 h1 {
   font-size: 2.3686em;

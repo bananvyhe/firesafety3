@@ -1,5 +1,5 @@
 <template >
-  <div 
+  <div class="sliderapp" 
     @mouseleave = "hoverslide = false"
     @mouseenter = "hoverslide = true">
     <el-carousel 
