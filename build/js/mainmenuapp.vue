@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedClass}}
+    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedClass}}<br>fixedwidth: {{fixedwidth}}
     </div>
     <nav class='greedy-nav' v-scroll="handleScroll" 
-      v-bind:style="styleObject" v-bind:class="fixedClass" 
+      v-bind:style="{styleObject, width: fixedwidth.value + 'px'}"  v-bind:class="fixedClass" 
       ref="dropdown">
       <button 
         v-bind:class="{hoverhamburger: toggle2}"  
@@ -116,18 +116,27 @@
         } 
       },
       handleScroll: function(evt, el) {
-        if (window.scrollY > 150) {
-          this.fixedClass = 'fixed';
 
+        if (window.scrollY > 300) {
+          // var self = this;
+          // setTimeout(function(){
+            
+          // },0);
+        if (el.getBoundingClientRect().top <= 0){
+          this.fixedClass = 'fixed';
+             
+            this.fixedwidth = this.menuwidth;
+        }
+          
           TweenMax.to(el, 1.5, {
-            top: "10px",
+            top: "0px",
              
             ease: Sine.easeOut
           })
 
         }
-
-        return window.scrollY > 200;
+        
+        return window.scrollY > 400;
       }
 
     },
@@ -166,6 +175,7 @@
           } 
           return this.styleObject;
         }
+ 
       },
       numHide: function () {
         // if (this.stick.value == 'up') {
@@ -260,7 +270,7 @@
     let hlinks = document.querySelector(".greedy-nav .hidden-links");
     let btn = document.querySelector(".greedy-nav button");
     let vlinks1 = document.querySelector(".greedy-nav .visible-links");
-    let menuwidth1 = document.querySelector(".greedy-nav");
+    let menuwidth1 = document.querySelector(".sliderapp");
     vlinks.value = vlinks1.offsetWidth;
     menuwidth.value = menuwidth1.offsetWidth;
     availableSpace.value = menuwidth1.offsetWidth   - 90;
@@ -306,7 +316,7 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  background-color: $color-5;
+  background-color: $color-5; 
   a {
     display: block;
     padding: 10px 30px;
@@ -316,10 +326,10 @@
       color: $color-3;
     }
   }
-  button {z-index: 3;
+  button {z-index: 23;
     position: absolute;
     height: 100%;
-    right: 0;
+    right: 0px;
     padding: 0 15px;
     border: 0;
     outline: none;
@@ -432,9 +442,10 @@
   }
 }
 .fixed {
+  lost-center: 1366px;
   z-index: 70;
   position: fixed;
-  opacity: 0.9;
+  top: 0px;
 }
 .unfixed {
   position: relative;
