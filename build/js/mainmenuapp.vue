@@ -2,8 +2,10 @@
   <div>
     <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedClass}}<br>fixedwidth: {{fixedwidth}}
     </div>
-    <nav class='greedy-nav' v-scroll="handleScroll" 
-      v-bind:style="{styleObject, width: fixedwidth.value + 'px'}"  v-bind:class="fixedClass" 
+    <nav class='greedy-nav' 
+      v-scroll="handleScroll" 
+      v-bind:style="{styleObject, width: fixedwidth.value + 'px'}"  
+      v-bind:class="fixedClass" 
       ref="dropdown">
       <button 
         v-bind:class="{hoverhamburger: toggle2}"  
@@ -130,9 +132,7 @@
             top: "0px",
             ease: Sine.easeOut
           })
-
         }
-        
         return window.scrollY > 400;
       }
     },
@@ -224,7 +224,7 @@
             self.kostil.pop();
             start--;
             //тайминг исчезновения
-            var timer = setTimeout (myFunction2, 75);
+            var timer = setTimeout (myFunction2, 95);
           }
         }
       },
@@ -336,17 +336,17 @@
     background: radial-gradient(circle farthest-corner at 50% 50%, $redorange 50%, color($redorange blackness(30%)) 100%);
 
       &::after {
-        margin-top: -2.9em;
+        margin-top: -2.6em;
         padding-top: 0.1em;
         content: attr(count);
         position: absolute;
-        width: 17px;
-        height: 16px;
+        width: 15px;
+        height: 14px;
         left: -10px;
         text-align: center;
-        background-color: color($redorange blackness(25%));
+        background-color: color($redorange blackness(35%));
         color: #fff;
-        font-size: 1em;
+        font-size: 0.8em;
         border-radius: 50%;
         border: 2px solid #fff;
         font-weight: bold;
@@ -374,8 +374,9 @@
     }
   .hoverhamburger {
     background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
-    &:after { 
-      transform:  scale(0.8) translateY(2.4em);
+    &:after {
+      background-color: color($redorange blackness(15%)); 
+      transform:  scale(0.8) translateY(1.9em);
       transition: 1.2s cubic-bezier(0,.27,.07,1);
     }
   }

@@ -3,29 +3,21 @@
   <head>
     <title>Firesafety3</title>
     <%= csrf_meta_tags %>
-<!-- import CSS -->
-
-
-
-<%= stylesheet_link_tag    'application', media: 'all'%>
-    
- 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <!-- import CSS -->
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>  
-
   <body>
     <%= yield %>
-   <!-- <script
+    <!-- <script
       src="http://code.jquery.com/jquery-3.2.1.slim.min.js"></script>  
       -->
-<!-- 
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>   -->  
-  <%= javascript_include_tag 'scrollreveal.min','TweenMax', 'application'%>
-
+    <!-- 
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>   -->  
+    <%= javascript_include_tag 'scrollreveal.min','TweenMax', 'application'%>
   </body>
   <script>
     
   </script>
   <!-- import JavaScript -->
- 
 </html>
