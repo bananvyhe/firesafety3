@@ -10796,15 +10796,15 @@ _vue2.default.directive('focus', {
   }
 });
 // Регистрируем глобальную директиву с названием v-scroll
-_vue2.default.directive('scroll', {
+_vue2.default.directive('scrollAttachMenu', {
   // Когда привязанный элемент вставляется в DOM......
   inserted: function inserted(el, binding) {
     var f = function f(evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f);
+        window.removeEventListener('scrollAttachMenu', f);
       }
     };
-    window.addEventListener('scroll', f);
+    window.addEventListener('scrollAttachMenu', f);
   }
 });
 
@@ -12854,8 +12854,8 @@ var render = function() {
       {
         directives: [
           {
-            name: "scroll",
-            rawName: "v-scroll",
+            name: "scrollAttachMenu",
+            rawName: "v-scrollAttachMenu",
             value: _vm.handleScroll,
             expression: "handleScroll"
           }

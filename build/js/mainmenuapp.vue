@@ -3,7 +3,7 @@
     <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedClass}}<br>fixedwidth: {{fixedwidth}}
     </div>
     <nav class='greedy-nav' 
-      v-scroll="handleScroll" 
+      v-scrollAttachMenu="handleScroll" 
       v-bind:style="{styleObject, width: fixedwidth.value + 'px'}"  
       v-bind:class="fixedClass" 
       ref="dropdown">

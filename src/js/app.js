@@ -24,15 +24,15 @@ Vue.directive('focus', {
   }
 });
 // Регистрируем глобальную директиву с названием v-scroll
-Vue.directive('scroll', {
+Vue.directive('scrollAttachMenu', {
   // Когда привязанный элемент вставляется в DOM......
   inserted: function(el, binding) {
     let f = function(evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f);
+        window.removeEventListener('scrollAttachMenu', f);
       }
     };
-    window.addEventListener('scroll', f);
+    window.addEventListener('scrollAttachMenu', f);
   },
 });
 
