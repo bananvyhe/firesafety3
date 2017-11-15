@@ -24,6 +24,8 @@
           </a>
         </li>
       </ul>
+       <div v-if="menuitemsHide.length > 0" class="blankdiv1">
+      </div>
       <ul class='hidden-links' 
         v-bind:style="hiddenStyle"  
         @mouseleave="leavemenu, toggle2 = false "
@@ -116,21 +118,16 @@
         } 
       },
       handleScroll: function(evt, el) {
-
         if (window.scrollY > 300) {
           // var self = this;
           // setTimeout(function(){
-            
           // },0);
         if (el.getBoundingClientRect().top <= 0){
           this.fixedClass = 'fixed';
-             
-            this.fixedwidth = this.menuwidth;
+          this.fixedwidth = this.menuwidth;
         }
-          
           TweenMax.to(el, 1.5, {
             top: "0px",
-             
             ease: Sine.easeOut
           })
 
@@ -138,7 +135,6 @@
         
         return window.scrollY > 400;
       }
-
     },
     computed: {
       // switchhidestyle: function(){
@@ -316,7 +312,8 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  background-color: $color-5; 
+  background-color: $color-5;
+
   a {
     display: block;
     padding: 10px 30px;
@@ -367,6 +364,14 @@
       width: 300px;
       right: 0;
     }
+    .blankdiv1 {
+      background-color: $color-5; 
+      z-index: 2;
+       
+      height: 100%;
+      width: 60px;
+      right: 0;
+    }
   .hoverhamburger {
     background: radial-gradient(circle farthest-corner at 50% 55%, $redorange 50%, color($redorange blackness(40%)) 100%);
     &:after { 
@@ -410,7 +415,8 @@
     :first-child {
       border-left: 0px;
     }
-    li { vertical-align: middle;
+    li { 
+      vertical-align: middle;
       display: table-cell;
       border-left: 1px solid $color-1;
       line-height: 0.2em;
