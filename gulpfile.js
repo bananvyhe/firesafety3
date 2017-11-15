@@ -182,7 +182,6 @@ var path = {
 gulp.task('scripts', function() {
 
   return streamqueue({ objectMode: true },
-    gulp.src("src/js/TweenMax.js"),
     gulp.src("src/js/app.js").pipe(babel()),
     gulp.src("src/js/anotherscripts.js")
   )
