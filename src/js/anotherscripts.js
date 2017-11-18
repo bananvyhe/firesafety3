@@ -1,7 +1,7 @@
 // window.addEventListener("scroll", function(){
 //    console.log('scrolling');
 // });
-//-------------------------  
+//-------------------------  --- ---
 
         // window.sr = ScrollReveal();
         // sr.reveal('.grid-item', {

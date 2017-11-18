@@ -10861,7 +10861,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // window.addEventListener("scroll", function(){
 //    console.log('scrolling');
 // });
-//-------------------------  
+//-------------------------  --- ---
 
 // window.sr = ScrollReveal();
 // sr.reveal('.grid-item', {
@@ -12638,9 +12638,30 @@ exports.default = {
     },
     handleScroll: function handleScroll(evt, el) {
 
-      if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value) {
+      if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value + 900) {
+        this.fixedClass = 'fixed';
+        // var self = this;
+        // setTimeout(function(){
+        //   self.fixedClass = 'unfixed';
+        // },2000);
+      } else if (this.stick.value == 'up' && window.scrollY < this.telpanelSliderHeight.value) {
+        this.fixedClass = 'unfixed';
+        // TweenMax.to(el, 1.5, {
+        //   top: "10px",
+        //   ease: Sine.easeOut
+        // })
+      } else if (this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value) {
+        // TweenMax.to(el, 1.5, {
+        //   top: "0px",
+        //   ease: Sine.easeOut
+        // })
         this.fixedClass = 'fixed';
       } else {
+        new TimelineMax().from(el, 1, {
+          top: "-90px",
+          ease: Linear.easeInOut }).to(el, 0.1, {
+          top: "0px",
+          ease: Linear.easeInOut });
         this.fixedClass = 'unfixed';
       }
       //   var firstScrollUp = false; // Параметр начала сколла вверх
@@ -12918,7 +12939,7 @@ var render = function() {
         class: _vm.fixedClass,
         style: {
           styleObject: _vm.styleObject,
-          width: _vm.fixedwidth.value + "px"
+          width: _vm.menuwidth.value + "px"
         }
       },
       [
