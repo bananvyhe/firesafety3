@@ -10775,6 +10775,10 @@ var _backTop = __webpack_require__(45);
 
 var _backTop2 = _interopRequireDefault(_backTop);
 
+var _bodyApp = __webpack_require__(63);
+
+var _bodyApp2 = _interopRequireDefault(_bodyApp);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -10796,15 +10800,15 @@ _vue2.default.directive('focus', {
   }
 });
 // Регистрируем глобальную директиву с названием v-scroll
-_vue2.default.directive('scrollAttachMenu', {
+_vue2.default.directive('scroll', {
   // Когда привязанный элемент вставляется в DOM......
   inserted: function inserted(el, binding) {
     var f = function f(evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scrollAttachMenu', f);
+        window.removeEventListener('scroll', f);
       }
     };
-    window.addEventListener('scrollAttachMenu', f);
+    window.addEventListener('scroll', f);
   }
 });
 
@@ -10847,25 +10851,31 @@ document.addEventListener('DOMContentLoaded', function () {
       return h(_mainmenuapp2.default);
     }
   });
+  new _vue2.default({
+    el: '#bodyApp',
+    render: function render(h) {
+      return h(_bodyApp2.default);
+    }
+  });
 });
 // window.addEventListener("scroll", function(){
 //    console.log('scrolling');
 // });
-//----------------------------------
+//-------------------------  
 
-window.sr = ScrollReveal();
-sr.reveal('.grid-item', {
-  reset: true,
-  duration: 600,
-  distance: '150px',
-  origin: 'bottom',
-  rotate: { x: 0, y: 0, z: 0 },
-  scale: 0.95,
-  mobile: true,
-  viewFactor: 0.025,
-  viewOffset: { top: 30, right: 0, bottom: 30, left: 0 }
+// window.sr = ScrollReveal();
+// sr.reveal('.grid-item', {
+//   reset: true,
+//   duration: 600,
+//   distance: '150px',
+//   origin: 'bottom',
+//   rotate: { x: 0, y: 0, z: 0 },
+//   scale: 0.95,
+//   mobile: true,
+//   viewFactor: 0.025,
+//   viewOffset: { top: 30, right: 0, bottom: 30, left: 0 },
 
-});
+// });
 //  sr.reveal('#JQSecuence', { 
 //    reset: true,
 //    afterReveal  : function (domEl) {
@@ -12575,7 +12585,7 @@ function onScroll(e) {
 var menuwidth = { value: '' };
 var availableSpace = { value: '' };
 var vlinks = { value: '' };
-
+var telpanelSliderHeight = { value: '' };
 exports.default = {
 
   data: function data() {
@@ -12589,6 +12599,7 @@ exports.default = {
       menuwidth: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
+      telpanelSliderHeight: telpanelSliderHeight,
       stick: stick,
       fixedClass: 'unfixed',
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', urs: '' }, { title: 'контроль доступа', url: '' }],
@@ -12626,20 +12637,54 @@ exports.default = {
       }
     },
     handleScroll: function handleScroll(evt, el) {
-      if (window.scrollY > 300) {
-        // var self = this;
-        // setTimeout(function(){
-        // },0);
-        if (el.getBoundingClientRect().top <= 0) {
-          this.fixedClass = 'fixed';
-          this.fixedwidth = this.menuwidth;
-        }
-        TweenMax.to(el, 1.5, {
-          top: "0px",
-          ease: Sine.easeOut
-        });
+
+      if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value) {
+        this.fixedClass = 'fixed';
+      } else {
+        this.fixedClass = 'unfixed';
       }
-      return window.scrollY > 400;
+      //   var firstScrollUp = false; // Параметр начала сколла вверх
+      //   var firstScrollDown = false; // Параметр начала сколла вниз
+      //   var scrolled = window.scrollY; // Высота скролла в px
+      //   var scrollPrev = 0 // Предыдущее значение скролла
+      // if (scrolled > 0){
+      //     console.log(scrolled);
+      //     // Если текущее значение скролла > предыдущего, т.е. скроллим вниз
+      //   if ( scrolled > scrollPrev ) {
+      //     firstScrollUp = false; // Обнуляем параметр начала скролла вверх
+      //     // Если меню видно
+      //     if ( scrolled < header.height() + header.offset().top ) {
+      //     // Если только начали скроллить вниз
+      //     }
+      //   }
+      // var startHeight = window.scrollY;
+      // console.log(startHeight);
+
+      // var self = this;
+      // setTimeout(function(){
+
+      // },2);
+
+      // if (window.scrollY > 200) {
+      //   // var self = this;
+      //   // setTimeout(function(){
+      //   // },0);
+      //   if (el.getBoundingClientRect().top <= 0){
+      //     this.fixedClass = 'fixed';
+      //     this.fixedwidth = this.menuwidth;
+      //   }
+      //   TweenMax.to(el, 1.5, {
+      //     top: "0px",
+      //     ease: Sine.easeOut
+      //   })
+      //   var firstScrollUp = false; // Параметр начала сколла вверх
+      //   var firstScrollDown = false; // Параметр начала сколла вниз
+      //   var scrolled = window.scrollY; // Высота скролла в px
+      //   console.log(scrolled);
+
+      // }
+
+      // return window.scrollY > 300;
     }
   },
   computed: {
@@ -12773,6 +12818,9 @@ function parseCalc() {
   var btn = document.querySelector(".greedy-nav button");
   var vlinks1 = document.querySelector(".greedy-nav .visible-links");
   var menuwidth1 = document.querySelector(".sliderapp");
+  var sliderHeight = menuwidth1.offsetHeight;
+  var telpanelHeight = document.querySelector(".telpanel").offsetHeight;
+  telpanelSliderHeight.value = sliderHeight + telpanelHeight;
   vlinks.value = vlinks1.offsetWidth;
   menuwidth.value = menuwidth1.offsetWidth;
   availableSpace.value = menuwidth1.offsetWidth - 90;
@@ -12820,7 +12868,8 @@ var render = function() {
             expression: "switcher"
           }
         ],
-        staticClass: "techinfo"
+        staticClass: "techinfo",
+        attrs: { id: "techinfo1" }
       },
       [
         _vm._v("menuwidth: " + _vm._s(_vm.menuwidth.value)),
@@ -12843,9 +12892,13 @@ var render = function() {
         _c("br"),
         _vm._v("stick: " + _vm._s(_vm.stick)),
         _c("br"),
-        _vm._v("fixedclass: " + _vm._s(_vm.fixedClass)),
+        _vm._v("fixedClass: " + _vm._s(_vm.fixedClass)),
         _c("br"),
-        _vm._v("fixedwidth: " + _vm._s(_vm.fixedwidth) + "\n  ")
+        _vm._v("fixedwidth: " + _vm._s(_vm.fixedwidth)),
+        _c("br"),
+        _vm._v(
+          "telpanelSliderHeight: " + _vm._s(_vm.telpanelSliderHeight) + "\n  "
+        )
       ]
     ),
     _vm._v(" "),
@@ -12854,8 +12907,8 @@ var render = function() {
       {
         directives: [
           {
-            name: "scrollAttachMenu",
-            rawName: "v-scrollAttachMenu",
+            name: "scroll",
+            rawName: "v-scroll",
             value: _vm.handleScroll,
             expression: "handleScroll"
           }
@@ -13594,6 +13647,261 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-62b0e452", esExports)
+  }
+}
+
+/***/ }),
+/* 63 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bodyApp_vue__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bodyApp_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bodyApp_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_728fe10c_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_bodyApp_vue__ = __webpack_require__(67);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(64)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bodyApp_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_728fe10c_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_bodyApp_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "build/js/bodyApp.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] bodyApp.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-728fe10c", Component.options)
+  } else {
+    hotAPI.reload("data-v-728fe10c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(65);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("e3ab7f86", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-728fe10c\",\"scoped\":false,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bodyApp.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-728fe10c\",\"scoped\":false,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./bodyApp.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+  data: function data() {
+    return {};
+  }
+};
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "bodyApp" }, [
+      _c("div", { staticClass: "grid-item" }, [
+        _vm._v(
+          " BodyApp Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+        ),
+        _c("h2", [
+          _vm._v(
+            "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h3", [
+          _vm._v(
+            "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [
+          _vm._v(
+            "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "grid-item" }, [
+        _vm._v(
+          " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+        ),
+        _c("h2", [
+          _vm._v(
+            "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h3", [
+          _vm._v(
+            "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [
+          _vm._v(
+            "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "grid-item" }, [
+        _vm._v(
+          " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+        ),
+        _c("h2", [
+          _vm._v(
+            "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h3", [
+          _vm._v(
+            "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [
+          _vm._v(
+            "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "grid-item" }, [
+        _vm._v(
+          " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+        ),
+        _c("h2", [
+          _vm._v(
+            "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h3", [
+          _vm._v(
+            "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [
+          _vm._v(
+            "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-728fe10c", esExports)
   }
 }
 

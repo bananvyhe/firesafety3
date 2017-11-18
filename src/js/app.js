@@ -6,6 +6,7 @@ import Telpanel from './telpanel.vue'
 import LogoApp from './logoApp.vue'
 import Mainmenuapp from './mainmenuapp.vue'
 import VmBackTop from './back-top.vue'
+import BodyApp from './bodyApp.vue' 
 
 Vue.use(ElementUI)
 
@@ -24,15 +25,15 @@ Vue.directive('focus', {
   }
 });
 // Регистрируем глобальную директиву с названием v-scroll
-Vue.directive('scrollAttachMenu', {
+Vue.directive('scroll', {
   // Когда привязанный элемент вставляется в DOM......
   inserted: function(el, binding) {
     let f = function(evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scrollAttachMenu', f);
+        window.removeEventListener('scroll', f);
       }
     };
-    window.addEventListener('scrollAttachMenu', f);
+    window.addEventListener('scroll', f);
   },
 });
 
@@ -64,5 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: '#mainmenuapp',
     render: h => h(Mainmenuapp)
+  })
+  new Vue({
+    el: '#bodyApp',
+    render: h => h(BodyApp)
   })
 })   

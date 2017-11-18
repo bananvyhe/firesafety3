@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedclass: {{fixedClass}}<br>fixedwidth: {{fixedwidth}}
+    <div id="techinfo1" class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedClass: {{fixedClass}}<br>fixedwidth: {{fixedwidth}}<br>telpanelSliderHeight: {{telpanelSliderHeight}}
     </div>
     <nav class='greedy-nav' 
-      v-scrollAttachMenu="handleScroll" 
+      v-scroll="handleScroll" 
       v-bind:style="{styleObject, width: fixedwidth.value + 'px'}"  
       v-bind:class="fixedClass" 
       ref="dropdown">
@@ -65,7 +65,7 @@
   let menuwidth = {value:  ''};
   let availableSpace = {value:  ''};
   let vlinks = {value:  ''};
-
+  let telpanelSliderHeight = {value: ''};
   export default {
 
     data: function () {
@@ -79,6 +79,7 @@
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,
+        telpanelSliderHeight: telpanelSliderHeight,
         stick: stick,
         fixedClass: 'unfixed',
         menuitems: [
@@ -120,20 +121,55 @@
         } 
       },
       handleScroll: function(evt, el) {
-        if (window.scrollY > 300) {
-          // var self = this;
-          // setTimeout(function(){
-          // },0);
-        if (el.getBoundingClientRect().top <= 0){
+ 
+        if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value)
+        {
           this.fixedClass = 'fixed';
-          this.fixedwidth = this.menuwidth;
+        }else{
+          this.fixedClass = 'unfixed';
         }
-          TweenMax.to(el, 1.5, {
-            top: "0px",
-            ease: Sine.easeOut
-          })
-        }
-        return window.scrollY > 400;
+        //   var firstScrollUp = false; // Параметр начала сколла вверх
+        //   var firstScrollDown = false; // Параметр начала сколла вниз
+        //   var scrolled = window.scrollY; // Высота скролла в px
+        //   var scrollPrev = 0 // Предыдущее значение скролла
+        // if (scrolled > 0){
+        //     console.log(scrolled);
+        //     // Если текущее значение скролла > предыдущего, т.е. скроллим вниз
+        //   if ( scrolled > scrollPrev ) {
+        //     firstScrollUp = false; // Обнуляем параметр начала скролла вверх
+        //     // Если меню видно
+        //     if ( scrolled < header.height() + header.offset().top ) {
+        //     // Если только начали скроллить вниз
+        //     }
+        //   }
+            // var startHeight = window.scrollY;
+            // console.log(startHeight);
+
+            // var self = this;
+            // setTimeout(function(){
+
+            // },2);
+ 
+        // if (window.scrollY > 200) {
+        //   // var self = this;
+        //   // setTimeout(function(){
+        //   // },0);
+        //   if (el.getBoundingClientRect().top <= 0){
+        //     this.fixedClass = 'fixed';
+        //     this.fixedwidth = this.menuwidth;
+        //   }
+        //   TweenMax.to(el, 1.5, {
+        //     top: "0px",
+        //     ease: Sine.easeOut
+        //   })
+        //   var firstScrollUp = false; // Параметр начала сколла вверх
+        //   var firstScrollDown = false; // Параметр начала сколла вниз
+        //   var scrolled = window.scrollY; // Высота скролла в px
+        //   console.log(scrolled);
+          
+        // }
+
+        // return window.scrollY > 300;
       }
     },
     computed: {
@@ -267,6 +303,9 @@
     let btn = document.querySelector(".greedy-nav button");
     let vlinks1 = document.querySelector(".greedy-nav .visible-links");
     let menuwidth1 = document.querySelector(".sliderapp");
+    let sliderHeight = menuwidth1.offsetHeight;
+    let telpanelHeight = document.querySelector(".telpanel").offsetHeight;
+    telpanelSliderHeight.value = sliderHeight+telpanelHeight;
     vlinks.value = vlinks1.offsetWidth;
     menuwidth.value = menuwidth1.offsetWidth;
     availableSpace.value = menuwidth1.offsetWidth   - 90;
