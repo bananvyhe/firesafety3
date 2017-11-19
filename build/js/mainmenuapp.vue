@@ -67,7 +67,6 @@
   let vlinks = {value:  ''};
   let telpanelSliderHeight = {value: ''};
   export default {
-
     data: function () {
       return {
         fixedwidth: '',
@@ -121,10 +120,8 @@
         } 
       },
       handleScroll: function(evt, el) {
- 
         if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value+1200)
         {
- 
           this.fixedClass = 'fixed';
           // var self = this;
           // setTimeout(function(){
@@ -136,8 +133,6 @@
             ease: Linear.easeInOut
           });
           this.fixedClass = 'fixed';
-          
-       
         }else if(this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value){
           TweenLite.to(el, .2, {
             top: '0px',
@@ -145,96 +140,27 @@
           });
           this.fixedClass = 'fixed';
         }else{
-           
-          // new TimelineMax().from(el, 1, {
-          //   top: "-90px",
-          //   ease: Linear.easeInOut})
-          //   .to(el, 0.2, {
-          //   top: "0px",
-          //   ease: Linear.easeInOut});
           this.fixedClass = 'unfixed';
-          
         }
-        //   var firstScrollUp = false; // Параметр начала сколла вверх
-        //   var firstScrollDown = false; // Параметр начала сколла вниз
-        //   var scrolled = window.scrollY; // Высота скролла в px
-        //   var scrollPrev = 0 // Предыдущее значение скролла
-        // if (scrolled > 0){
-        //     console.log(scrolled);
-        //     // Если текущее значение скролла > предыдущего, т.е. скроллим вниз
-        //   if ( scrolled > scrollPrev ) {
-        //     firstScrollUp = false; // Обнуляем параметр начала скролла вверх
-        //     // Если меню видно
-        //     if ( scrolled < header.height() + header.offset().top ) {
-        //     // Если только начали скроллить вниз
-        //     }
-        //   }
-            // var startHeight = window.scrollY;
-            // console.log(startHeight);
-
-            // var self = this;
-            // setTimeout(function(){
-
-            // },2);
- 
-        // if (window.scrollY > 200) {
-        //   // var self = this;
-        //   // setTimeout(function(){
-        //   // },0);
-        //   if (el.getBoundingClientRect().top <= 0){
-        //     this.fixedClass = 'fixed';
-        //     this.fixedwidth = this.menuwidth;
-        //   }
-        //   TweenMax.to(el, 1.5, {
-        //     top: "0px",
-        //     ease: Sine.easeOut
-        //   })
-        //   var firstScrollUp = false; // Параметр начала сколла вверх
-        //   var firstScrollDown = false; // Параметр начала сколла вниз
-        //   var scrolled = window.scrollY; // Высота скролла в px
-        //   console.log(scrolled);
-          
-        // }
-
-        // return window.scrollY > 300;
       }
     },
     computed: {
-      // switchhidestyle: function(){
-      //   if (this.toggle) {
-      //     this.hiddenStyle = {
-      //     visibility: 'visible'
-      //     } 
-      //     return this.hiddenStyle;
-      //   }else{
-      //     var self = this;
-      //     setTimeout (myFunction2, 5000);
-      //       function myFunction2() {
-      //         self.hiddenStyle = {
-      //         visibility: 'hidden'
-      //         }
-      //       }  
-      //     return this.hiddenStyle;
-      //   }
-      // }, 
       //условия при видимости/невидимости гамбургер-кнопки
- 
       compstylem: function () {
         if (this.menuitemsHide.length > 0) {
           this.styleObject = {
-          backgroundColor: '#1d3557', 
-          textAlign: 'right',
-          paddingRight: '60px'
+            backgroundColor: '#1d3557', 
+            textAlign: 'right',
+            paddingRight: '60px'
           } 
           return this.styleObject;
         }else{
           this.styleObject = {
-          backgroundColor: '#1d3557',
-          textAlign: 'center' 
+            backgroundColor: '#1d3557',
+            textAlign: 'center' 
           } 
           return this.styleObject;
         }
- 
       },
       numHide: function () {
         // if (this.stick.value == 'up') {
@@ -344,21 +270,6 @@
   window.onresize = function(event) {
     parseCalc();
   }
-  // var  mn = document.querySelector(".greedy-nav");
-  //   mns = "main-nav-scrolled";
-  //   hdr = document.querySelector('header').height();
-
-  // $(window).scroll(function() {
-  //   if( $(this).scrollTop() > hdr ) {
-  //     mn.addClass(mns);
-  //   } else {
-  //     mn.removeClass(mns);
-  //   }
-  // });
-// setTimeout(function(){
-//       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-// }, 1300);
- 
 </script>
 
 <style scoped>

@@ -12289,7 +12289,9 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1cff2e3a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_logoApp_vue__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_logoApp_vue__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_logoApp_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_logoApp_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1cff2e3a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_logoApp_vue__ = __webpack_require__(39);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -12297,7 +12299,7 @@ function injectStyle (ssrContext) {
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = null
+
 /* template */
 
 /* styles */
@@ -12307,8 +12309,8 @@ var __vue_scopeId__ = "data-v-1cff2e3a"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __vue_script__,
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1cff2e3a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_logoApp_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_logoApp_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1cff2e3a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_logoApp_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -12587,7 +12589,6 @@ var availableSpace = { value: '' };
 var vlinks = { value: '' };
 var telpanelSliderHeight = { value: '' };
 exports.default = {
-
   data: function data() {
     return {
       fixedwidth: '',
@@ -12637,9 +12638,7 @@ exports.default = {
       }
     },
     handleScroll: function handleScroll(evt, el) {
-
       if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value + 1200) {
-
         this.fixedClass = 'fixed';
         // var self = this;
         // setTimeout(function(){
@@ -12658,79 +12657,12 @@ exports.default = {
         });
         this.fixedClass = 'fixed';
       } else {
-
-        // new TimelineMax().from(el, 1, {
-        //   top: "-90px",
-        //   ease: Linear.easeInOut})
-        //   .to(el, 0.2, {
-        //   top: "0px",
-        //   ease: Linear.easeInOut});
         this.fixedClass = 'unfixed';
       }
-      //   var firstScrollUp = false; // Параметр начала сколла вверх
-      //   var firstScrollDown = false; // Параметр начала сколла вниз
-      //   var scrolled = window.scrollY; // Высота скролла в px
-      //   var scrollPrev = 0 // Предыдущее значение скролла
-      // if (scrolled > 0){
-      //     console.log(scrolled);
-      //     // Если текущее значение скролла > предыдущего, т.е. скроллим вниз
-      //   if ( scrolled > scrollPrev ) {
-      //     firstScrollUp = false; // Обнуляем параметр начала скролла вверх
-      //     // Если меню видно
-      //     if ( scrolled < header.height() + header.offset().top ) {
-      //     // Если только начали скроллить вниз
-      //     }
-      //   }
-      // var startHeight = window.scrollY;
-      // console.log(startHeight);
-
-      // var self = this;
-      // setTimeout(function(){
-
-      // },2);
-
-      // if (window.scrollY > 200) {
-      //   // var self = this;
-      //   // setTimeout(function(){
-      //   // },0);
-      //   if (el.getBoundingClientRect().top <= 0){
-      //     this.fixedClass = 'fixed';
-      //     this.fixedwidth = this.menuwidth;
-      //   }
-      //   TweenMax.to(el, 1.5, {
-      //     top: "0px",
-      //     ease: Sine.easeOut
-      //   })
-      //   var firstScrollUp = false; // Параметр начала сколла вверх
-      //   var firstScrollDown = false; // Параметр начала сколла вниз
-      //   var scrolled = window.scrollY; // Высота скролла в px
-      //   console.log(scrolled);
-
-      // }
-
-      // return window.scrollY > 300;
     }
   },
   computed: {
-    // switchhidestyle: function(){
-    //   if (this.toggle) {
-    //     this.hiddenStyle = {
-    //     visibility: 'visible'
-    //     } 
-    //     return this.hiddenStyle;
-    //   }else{
-    //     var self = this;
-    //     setTimeout (myFunction2, 5000);
-    //       function myFunction2() {
-    //         self.hiddenStyle = {
-    //         visibility: 'hidden'
-    //         }
-    //       }  
-    //     return this.hiddenStyle;
-    //   }
-    // }, 
     //условия при видимости/невидимости гамбургер-кнопки
-
     compstylem: function compstylem() {
       if (this.menuitemsHide.length > 0) {
         this.styleObject = {
@@ -12856,20 +12788,6 @@ window.onload = function () {
 window.onresize = function (event) {
   parseCalc();
 };
-// var  mn = document.querySelector(".greedy-nav");
-//   mns = "main-nav-scrolled";
-//   hdr = document.querySelector('header').height();
-
-// $(window).scroll(function() {
-//   if( $(this).scrollTop() > hdr ) {
-//     mn.addClass(mns);
-//   } else {
-//     mn.removeClass(mns);
-//   }
-// });
-// setTimeout(function(){
-//       $('.tel').css('visibility', 'visible').addClass('slideUpReturn');
-// }, 1300);
 
 /***/ }),
 /* 44 */
@@ -13928,6 +13846,49 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-728fe10c", esExports)
   }
 }
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  //после монтирования экземпляра, помещаем селектор в переменную для работы c GreenSock
+  mounted: function mounted() {
+    //берем лого
+    var logo = this.$el.querySelector('.logo');
+    console.log(logo);
+    //непосредственно редактор анимации
+    TweenLite.from(logo, 1, {
+      opacity: .2,
+      ease: Linear.easeInOut
+    });
+  },
+  data: function data() {
+    return {};
+  }
+};
 
 /***/ })
 /******/ ]);

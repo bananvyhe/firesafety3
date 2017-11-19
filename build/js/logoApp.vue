@@ -13,6 +13,24 @@
     </div> 
   </div>
 </template>
+<script>
+  export default {
+    //после монтирования экземпляра, помещаем селектор в переменную для работы c GreenSock
+    mounted: function(){
+      //берем лого
+      var logo = this.$el.querySelector('.logo');
+      console.log(logo);
+      //непосредственно редактор анимации
+      TweenLite.from(logo, 1, {
+        opacity: .2,
+        ease: Linear.easeInOut
+      });
+    },
+    data: function () {
+      return {}
+    }
+  }
+</script>
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
