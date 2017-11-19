@@ -122,33 +122,36 @@
       },
       handleScroll: function(evt, el) {
  
-        if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value+900)
+        if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value+1200)
         {
+ 
           this.fixedClass = 'fixed';
           // var self = this;
           // setTimeout(function(){
           //   self.fixedClass = 'unfixed';
           // },2000);
+        }else if(this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value+900){
+          TweenLite.to(el, .1, {
+            top: '-60px',
+            ease: Linear.easeInOut
+          });
+          this.fixedClass = 'fixed';
           
-        }else if(this.stick.value == 'up' && window.scrollY < this.telpanelSliderHeight.value){
-          this.fixedClass = 'unfixed';
-          // TweenMax.to(el, 1.5, {
-          //   top: "10px",
-          //   ease: Sine.easeOut
-          // })
+       
         }else if(this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value){
-          // TweenMax.to(el, 1.5, {
-          //   top: "0px",
-          //   ease: Sine.easeOut
-          // })
+          TweenLite.to(el, .2, {
+            top: '0px',
+            ease: Linear.easeInOut
+          });
           this.fixedClass = 'fixed';
         }else{
-          new TimelineMax().from(el, 1, {
-            top: "-90px",
-            ease: Linear.easeInOut})
-            .to(el, 0.1, {
-            top: "0px",
-            ease: Linear.easeInOut});
+           
+          // new TimelineMax().from(el, 1, {
+          //   top: "-90px",
+          //   ease: Linear.easeInOut})
+          //   .to(el, 0.2, {
+          //   top: "0px",
+          //   ease: Linear.easeInOut});
           this.fixedClass = 'unfixed';
           
         }
@@ -515,7 +518,7 @@
   lost-center: 1366px;
   z-index: 70;
   position: fixed;
-  top: 0px;
+  top: -60px;
 }
 .unfixed {
   position: relative;
