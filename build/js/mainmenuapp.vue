@@ -1,7 +1,18 @@
 <template>
   <div>
-    <div id="techinfo1" class="techinfo" v-show="switcher">menuwidth: {{menuwidth.value}}<br>av space: {{availableSpace.value}}<br>vlink: {{vlinks.value}}<br>menuitemsHide: {{numHide}}<br>menuitemsVis: {{numVis}}<br>compstylem: {{compstylem}} <br>toggle: {{toggle}} <br>toggle2: {{toggle2}} <br>kostil: {{kostil}}<br>stick: {{stick}}<br>fixedClass: {{fixedClass}}<br>fixedwidth: {{fixedwidth}}<br>telpanelSliderHeight: {{telpanelSliderHeight}}
-    </div>
+    <techinfo v-show="switcher" 
+    :menuwidth="menuwidth.value"
+    :availableSpace="availableSpace.value"
+    :vlinks="vlinks.value"
+    :numHide='numHide'
+    :numVis='numVis'
+    :compstylem='compstylem'
+    :toggle='toggle'
+    :toggle2='toggle2'
+    :kostil='kostil'
+    :stick='stick'
+    :fixedClass='fixedClass'
+    :telpanelSliderHeight='telpanelSliderHeight'></techinfo>
     <nav class='greedy-nav' 
       v-scroll="handleScroll" 
       v-bind:style="{styleObject, width: menuwidth.value + 'px'}"  
@@ -274,14 +285,6 @@
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-.techinfo {
-  z-index: 30;
-  position: fixed;
-  top: 400px;
-  background-color: #fff;
-  opacity: 0.9;
-}
-
 
 .greedy-nav {
   z-index: 3;
