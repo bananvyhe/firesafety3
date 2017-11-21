@@ -1,6 +1,6 @@
 <template>
   <div>
-    <techinfo v-show="switcher" 
+    <techinfo
     :menuwidth="menuwidth.value"
     :availableSpace="availableSpace.value"
     :vlinks="vlinks.value"
@@ -85,7 +85,6 @@
         //выключатель показа индикации служебной информации
         toggle2: false,
         toggle: false,
-        switcher: true,
         menuwidth: menuwidth,
         availableSpace: availableSpace,
         vlinks: vlinks,

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		    <div  id="techinfo1" class="techinfo" >
+		    <div  v-show="switcher"   id="techinfo1" class="techinfo" >
 		    	menuwidth: {{menuwidth}}<br>
 		    	av space: {{availableSpace}}<br>
 		    	vlink: {{vlinks}}<br>
@@ -18,10 +18,10 @@
 </template>
 <script>
 	export default {
-		props: ['switcher', 'menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass'],
+		props: ['menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass'],
     data: function () {
       return {
-          
+          switcher: true 
       }
     }
   }

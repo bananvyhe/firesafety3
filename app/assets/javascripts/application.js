@@ -12655,7 +12655,6 @@ exports.default = {
       //выключатель показа индикации служебной информации
       toggle2: false,
       toggle: false,
-      switcher: true,
       menuwidth: menuwidth,
       availableSpace: availableSpace,
       vlinks: vlinks,
@@ -12861,14 +12860,6 @@ var render = function() {
     "div",
     [
       _c("techinfo", {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.switcher,
-            expression: "switcher"
-          }
-        ],
         attrs: {
           menuwidth: _vm.menuwidth.value,
           availableSpace: _vm.availableSpace.value,
@@ -13977,9 +13968,11 @@ Object.defineProperty(exports, "__esModule", {
 //
 
 exports.default = {
-  props: ['switcher', 'menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass'],
+  props: ['menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass'],
   data: function data() {
-    return {};
+    return {
+      switcher: true
+    };
   }
 };
 
@@ -14034,35 +14027,50 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "techinfo", attrs: { id: "techinfo1" } }, [
-      _vm._v("\n\t\t    \tmenuwidth: " + _vm._s(_vm.menuwidth)),
-      _c("br"),
-      _vm._v("\n\t\t    \tav space: " + _vm._s(_vm.availableSpace)),
-      _c("br"),
-      _vm._v("\n\t\t    \tvlink: " + _vm._s(_vm.vlinks)),
-      _c("br"),
-      _vm._v("\n\t\t    \tmenuitemsHide: " + _vm._s(_vm.numHide)),
-      _c("br"),
-      _vm._v("\n\t\t    \tmenuitemsVis: " + _vm._s(_vm.numVis)),
-      _c("br"),
-      _vm._v("\n\t\t    \tcompstylem: " + _vm._s(_vm.compstylem) + " "),
-      _c("br"),
-      _vm._v("\n\t\t    \ttoggle: " + _vm._s(_vm.toggle) + " "),
-      _c("br"),
-      _vm._v("\n\t\t    \ttoggle2: " + _vm._s(_vm.toggle2) + " "),
-      _c("br"),
-      _vm._v("\n\t\t    \tkostil: " + _vm._s(_vm.kostil)),
-      _c("br"),
-      _vm._v("\n\t\t    \tstick: " + _vm._s(_vm.stick)),
-      _c("br"),
-      _vm._v("\n\t\t    \tfixedClass: " + _vm._s(_vm.fixedClass)),
-      _c("br"),
-      _vm._v(
-        "\n\t\t    \ttelpanelSliderHeight: " +
-          _vm._s(_vm.telpanelSliderHeight) +
-          " \n    "
-      )
-    ])
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.switcher,
+            expression: "switcher"
+          }
+        ],
+        staticClass: "techinfo",
+        attrs: { id: "techinfo1" }
+      },
+      [
+        _vm._v("\n\t\t    \tmenuwidth: " + _vm._s(_vm.menuwidth)),
+        _c("br"),
+        _vm._v("\n\t\t    \tav space: " + _vm._s(_vm.availableSpace)),
+        _c("br"),
+        _vm._v("\n\t\t    \tvlink: " + _vm._s(_vm.vlinks)),
+        _c("br"),
+        _vm._v("\n\t\t    \tmenuitemsHide: " + _vm._s(_vm.numHide)),
+        _c("br"),
+        _vm._v("\n\t\t    \tmenuitemsVis: " + _vm._s(_vm.numVis)),
+        _c("br"),
+        _vm._v("\n\t\t    \tcompstylem: " + _vm._s(_vm.compstylem) + " "),
+        _c("br"),
+        _vm._v("\n\t\t    \ttoggle: " + _vm._s(_vm.toggle) + " "),
+        _c("br"),
+        _vm._v("\n\t\t    \ttoggle2: " + _vm._s(_vm.toggle2) + " "),
+        _c("br"),
+        _vm._v("\n\t\t    \tkostil: " + _vm._s(_vm.kostil)),
+        _c("br"),
+        _vm._v("\n\t\t    \tstick: " + _vm._s(_vm.stick)),
+        _c("br"),
+        _vm._v("\n\t\t    \tfixedClass: " + _vm._s(_vm.fixedClass)),
+        _c("br"),
+        _vm._v(
+          "\n\t\t    \ttelpanelSliderHeight: " +
+            _vm._s(_vm.telpanelSliderHeight) +
+            " \n    "
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = []
