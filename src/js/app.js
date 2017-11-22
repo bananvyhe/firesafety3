@@ -35,10 +35,10 @@ Vue.directive('scroll', {
   inserted: function(el, binding) {
     let f = function(evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f);
+        window.removeEventListener('scroll', _.throttle(f, 300));
       }
     };
-    window.addEventListener('scroll', f);
+    window.addEventListener('scroll', _.throttle(f, 300));
   },
 });
 

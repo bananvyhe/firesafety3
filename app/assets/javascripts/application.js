@@ -10822,10 +10822,10 @@ _vue2.default.directive('scroll', {
   inserted: function inserted(el, binding) {
     var f = function f(evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f);
+        window.removeEventListener('scroll', _.throttle(f, 300));
       }
     };
-    window.addEventListener('scroll', f);
+    window.addEventListener('scroll', _.throttle(f, 300));
   }
 });
 
@@ -12665,7 +12665,7 @@ function onScroll(e) {
   if (lastScrollTop > top) {
     console.log('top');
     stick.value = 'up';
-  } else if (lastScrollTop < top) {
+  } else {
     console.log('down');
     stick.value = 'down';
   }
@@ -13853,6 +13853,7 @@ exports.default = {
     this.scrollTop = window.scrollY;
     this.scrollBottom = window.scrollY + window.innerHeight;
     window.addEventListener('scroll', _.throttle(this.scrollHandler, 300));
+    this.animate = document.querySelectorAll(".grid-item");
   },
 
   methods: {
@@ -14825,7 +14826,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.bodyappi[data-v-2f0832e6] {\n  z-index: 30;\n  position: fixed;\n  top: 480px;\n  right: 300px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n  font-size: 0.8em;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.bodyappi[data-v-2f0832e6] {\n  z-index: 30;\n  position: fixed;\n  top: 480px;\n  right: 300px;\n  width: 300px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n  font-size: 0.8em;\n}\n.smalltext[data-v-2f0832e6] {\n  z-index: 30;\n  line-height: 1.2em;\n  font-size: 0.6em;\n}\n\n\n", ""]);
 
 // exports
 
@@ -14849,9 +14850,10 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 exports.default = {
-  props: ['scrollTop', 'scrollBottom'],
+  props: ['scrollTop', 'scrollBottom', 'animate'],
   data: function data() {
     return {
       switcher: true
@@ -14889,6 +14891,11 @@ var render = function() {
         _vm._v("\n\t\t    scrollTop: " + _vm._s(_vm.scrollTop)),
         _c("br"),
         _vm._v("\n        scrollBottom: " + _vm._s(_vm.scrollBottom)),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "smalltext" }, [
+          _vm._v("animate: " + _vm._s(_vm.animate))
+        ]),
         _c("br")
       ]
     )

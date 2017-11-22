@@ -77,10 +77,10 @@ _vue2.default.directive('scroll', {
   inserted: function inserted(el, binding) {
     var f = function f(evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f);
+        window.removeEventListener('scroll', _.throttle(f, 300));
       }
     };
-    window.addEventListener('scroll', f);
+    window.addEventListener('scroll', _.throttle(f, 300));
   }
 });
 

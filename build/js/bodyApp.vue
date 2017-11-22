@@ -85,6 +85,7 @@ export default {
   	this.scrollTop = window.scrollY;
     this.scrollBottom = window.scrollY + window.innerHeight;
     window.addEventListener('scroll', _.throttle(this.scrollHandler, 300))
+    this.animate = document.querySelectorAll(".grid-item")
   },
   methods: {
   	scrollHandler(){

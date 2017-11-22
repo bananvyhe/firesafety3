@@ -66,7 +66,7 @@
     if (lastScrollTop > top) {
       console.log('top');
       stick.value = 'up';
-    } else if (lastScrollTop < top) {
+    } else {
       console.log('down');
       stick.value = 'down';
     }
