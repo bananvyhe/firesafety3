@@ -11,6 +11,8 @@ import Techinfo from './Techinfo.vue'
 Vue.component('techinfo', Techinfo)
 import Logoappi from './Logoappi.vue'  
 Vue.component('logoappi', Logoappi)
+import Bodyappi from './Bodyappi.vue'  
+Vue.component('bodyappi', Bodyappi)
 Vue.use(ElementUI)
 
 Vue.directive('tack', {

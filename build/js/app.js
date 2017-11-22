@@ -44,11 +44,17 @@ var _Logoappi = require('./Logoappi.vue');
 
 var _Logoappi2 = _interopRequireDefault(_Logoappi);
 
+var _Bodyappi = require('./Bodyappi.vue');
+
+var _Bodyappi2 = _interopRequireDefault(_Bodyappi);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.component('techinfo', _Techinfo2.default);
 
 _vue2.default.component('logoappi', _Logoappi2.default);
+
+_vue2.default.component('bodyappi', _Bodyappi2.default);
 _vue2.default.use(_lib2.default);
 
 _vue2.default.directive('tack', {

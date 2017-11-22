@@ -130,13 +130,18 @@
         } 
       },
       handleScroll: function(evt, el) {
-        if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value+1200)
+        if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value + 50 && window.scrollY < this.telpanelSliderHeight.value+1200)
         {
+          var self = this;
+          setTimeout(function(){
+            self.fixedClass = 'unfixed';
+          },2000);
+          TweenLite.to(el, .5, {
+            top: '-60px',
+            ease: Linear.easeInOut
+          });
           this.fixedClass = 'fixed';
-          // var self = this;
-          // setTimeout(function(){
-          //   self.fixedClass = 'unfixed';
-          // },2000);
+          
         }else if(this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value+900){
           TweenLite.to(el, .1, {
             top: '-60px',
