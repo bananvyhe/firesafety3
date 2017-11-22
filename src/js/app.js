@@ -7,8 +7,10 @@ import LogoApp from './logoApp.vue'
 import Mainmenuapp from './mainmenuapp.vue'
 import VmBackTop from './back-top.vue'
 import BodyApp from './bodyApp.vue' 
-import Techinfo from './Techinfo.vue' 
+import Techinfo from './Techinfo.vue'
 Vue.component('techinfo', Techinfo)
+import Logoappi from './Logoappi.vue'  
+Vue.component('logoappi', Logoappi)
 Vue.use(ElementUI)
 
 Vue.directive('tack', {

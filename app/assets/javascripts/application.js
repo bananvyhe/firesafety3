@@ -10783,11 +10783,17 @@ var _Techinfo = __webpack_require__(69);
 
 var _Techinfo2 = _interopRequireDefault(_Techinfo);
 
+var _Logoappi = __webpack_require__(74);
+
+var _Logoappi2 = _interopRequireDefault(_Logoappi);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
 _vue2.default.component('techinfo', _Techinfo2.default);
+
+_vue2.default.component('logoappi', _Logoappi2.default);
 _vue2.default.use(_lib2.default);
 
 _vue2.default.directive('tack', {
@@ -12408,6 +12414,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 exports.default = {
   //после монтирования экземпляра, помещаем селектор в переменную для работы c GreenSock
@@ -12422,7 +12429,9 @@ exports.default = {
     });
   },
   data: function data() {
-    return {};
+    return {
+      logoinf: 4235
+    };
   }
 };
 
@@ -12435,22 +12444,35 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "mainLogoPanel" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("logoappi", { attrs: { logoinf: _vm.logoinf } })
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mainLogoPanel" }, [
-      _c("div", { staticClass: "logoContainer" }, [
-        _c("div", { staticClass: "logo" }, [_c("div")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "brandname" }, [_c("div")])
-      ]),
+    return _c("div", { staticClass: "logoContainer" }, [
+      _c("div", { staticClass: "logo" }, [_c("div")]),
       _vm._v(" "),
-      _c("div", { staticClass: "audit" }, [_c("br")])
+      _c("div", { staticClass: "brandname" }, [_c("div")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "audit" }, [_c("br")])
   }
 ]
 render._withStripped = true
@@ -13973,7 +13995,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.techinfo[data-v-cc927a72] {\n  z-index: 30;\n  position: fixed;\n  top: 400px;\n  left: 20px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.techinfo[data-v-cc927a72] {\n  z-index: 30;\n  position: fixed;\n  width: 250px;\n  top: 400px;\n  right: 20px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n}\n\n\n", ""]);
 
 // exports
 
@@ -13988,6 +14010,7 @@ exports.push([module.i, "\n.techinfo[data-v-cc927a72] {\n  z-index: 30;\n  posit
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
 //
 //
 //
@@ -14041,30 +14064,32 @@ var render = function() {
         attrs: { id: "techinfo1" }
       },
       [
-        _vm._v("\n\t\t    \tmenuwidth: " + _vm._s(_vm.menuwidth)),
+        _c("h3", [_vm._v("menu:")]),
+        _c("hr"),
+        _vm._v("\n    \tmenuwidth: " + _vm._s(_vm.menuwidth)),
         _c("br"),
-        _vm._v("\n\t\t    \tav space: " + _vm._s(_vm.availableSpace)),
+        _vm._v("\n    \tav space: " + _vm._s(_vm.availableSpace)),
         _c("br"),
-        _vm._v("\n\t\t    \tvlink: " + _vm._s(_vm.vlinks)),
+        _vm._v("\n    \tvlink: " + _vm._s(_vm.vlinks)),
         _c("br"),
-        _vm._v("\n\t\t    \tmenuitemsHide: " + _vm._s(_vm.numHide)),
+        _vm._v("\n    \tmenuitemsHide: " + _vm._s(_vm.numHide)),
         _c("br"),
-        _vm._v("\n\t\t    \tmenuitemsVis: " + _vm._s(_vm.numVis)),
+        _vm._v("\n    \tmenuitemsVis: " + _vm._s(_vm.numVis)),
         _c("br"),
-        _vm._v("\n\t\t    \tcompstylem: " + _vm._s(_vm.compstylem) + " "),
+        _vm._v("\n    \tcompstylem: " + _vm._s(_vm.compstylem) + " "),
         _c("br"),
-        _vm._v("\n\t\t    \ttoggle: " + _vm._s(_vm.toggle) + " "),
+        _vm._v("\n    \ttoggle: " + _vm._s(_vm.toggle) + " "),
         _c("br"),
-        _vm._v("\n\t\t    \ttoggle2: " + _vm._s(_vm.toggle2) + " "),
+        _vm._v("\n    \ttoggle2: " + _vm._s(_vm.toggle2) + " "),
         _c("br"),
-        _vm._v("\n\t\t    \tkostil: " + _vm._s(_vm.kostil)),
+        _vm._v("\n    \tkostil: " + _vm._s(_vm.kostil)),
         _c("br"),
-        _vm._v("\n\t\t    \tstick: " + _vm._s(_vm.stick)),
+        _vm._v("\n    \tstick: " + _vm._s(_vm.stick)),
         _c("br"),
-        _vm._v("\n\t\t    \tfixedClass: " + _vm._s(_vm.fixedClass)),
+        _vm._v("\n    \tfixedClass: " + _vm._s(_vm.fixedClass)),
         _c("br"),
         _vm._v(
-          "\n\t\t    \ttelpanelSliderHeight: " +
+          "\n    \ttelpanelSliderHeight: " +
             _vm._s(_vm.telpanelSliderHeight) +
             " \n    "
         )
@@ -14080,6 +14105,172 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-cc927a72", esExports)
+  }
+}
+
+/***/ }),
+/* 74 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Logoappi_vue__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Logoappi_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Logoappi_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_479c5996_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Logoappi_vue__ = __webpack_require__(78);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(75)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-479c5996"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Logoappi_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_479c5996_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Logoappi_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "build/js/Logoappi.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Logoappi.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-479c5996", Component.options)
+  } else {
+    hotAPI.reload("data-v-479c5996", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(76);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("0d4fdf48", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-479c5996\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Logoappi.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-479c5996\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Logoappi.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.logoappi[data-v-479c5996] {\n  z-index: 30;\n  position: fixed;\n  top: 400px;\n  right: 300px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n  font-size: 0.8em;\n}\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: ['logoinf'],
+  data: function data() {
+    return {
+      switcher: true
+    };
+  }
+};
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.switcher,
+            expression: "switcher"
+          }
+        ],
+        staticClass: "logoappi"
+      },
+      [
+        _c("h3", [_vm._v("Лого:")]),
+        _c("hr"),
+        _vm._v("\n\t  logoinf: " + _vm._s(_vm.logoinf)),
+        _c("br")
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-479c5996", esExports)
   }
 }
 

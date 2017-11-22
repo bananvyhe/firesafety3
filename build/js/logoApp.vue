@@ -11,6 +11,7 @@
     <div class="audit">
       <br>
     </div> 
+    <logoappi :logoinf="logoinf"></logoappi>
   </div>
 </template>
 <script>
@@ -27,7 +28,9 @@
       });
     },
     data: function () {
-      return {}
+      return {
+        logoinf: 4235
+      }
     }
   }
 </script>

@@ -40,9 +40,15 @@ var _Techinfo = require('./Techinfo.vue');
 
 var _Techinfo2 = _interopRequireDefault(_Techinfo);
 
+var _Logoappi = require('./Logoappi.vue');
+
+var _Logoappi2 = _interopRequireDefault(_Logoappi);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.component('techinfo', _Techinfo2.default);
+
+_vue2.default.component('logoappi', _Logoappi2.default);
 _vue2.default.use(_lib2.default);
 
 _vue2.default.directive('tack', {
