@@ -73,8 +73,6 @@
 </template>
 
 <script>
- 
-
 export default {
   data: function () {
     return {
@@ -84,7 +82,7 @@ export default {
     }
   },
   mounted(){
-    this.scrollTop = window.scrollY;
+  	this.scrollTop = window.scrollY;
     this.scrollBottom = window.scrollY + window.innerHeight;
     window.addEventListener('scroll', _.throttle(this.scrollHandler, 300))
   },
