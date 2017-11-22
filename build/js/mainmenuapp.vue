@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div v-if="fixedClass == 'fixed'"  class='greedy-nav'>
+      dergter
+    </div>
     <techinfo
     :menuwidth="menuwidth.value"
     :availableSpace="availableSpace.value"
