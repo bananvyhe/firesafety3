@@ -121,6 +121,10 @@ section {
     text-align: center;
     background-color: #fff;
   }
+  .productTitle {
+    font-family: "OswaldL"; 
+    adjust-font-size: fontsize medium;
+  }
 }
 @media (--only-big-screen) {
   .sliderText {

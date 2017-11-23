@@ -32516,7 +32516,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".products[data-v-117c1a6c] {\n}\n.sectionTitle[data-v-117c1a6c] {\n\t\tposition: relative;\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-pack: center;\n\t\t    -ms-flex-pack: center;\n\t\t        justify-content: center;\n}\n.titleBg[data-v-117c1a6c] {\n\t\tpadding-bottom: 0.25em;\n\t\tposition: relative;\n\t\tz-index: 7;\n\t\tpadding-right: 25px;\n\t\tpadding-left: 25px;\n\t\tbackground-color: #fff;\n\t\tline-height: 1.8em;\n}\n.itemsBox[data-v-117c1a6c] { \n\t\tpadding-left: 10%;\n\t\tpadding-right: 10%;\n}\n.item[data-v-117c1a6c] {\n\t\theight: 15em;\n\t\twidth: calc(33.3% - 20px);  \n    background: url(\"data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 760 812' enable-background='new 0 0 760 812' xml:space='preserve'%3E %3Cg id='Layer_2'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' fill-opacity='0' fill='%23FFFFFF' d='M81,114c70.36-25.021,472.96-25.901,600,0 c34.341,236-34,520-300,640C186,693,37,384,81,114z'/%3E %3C/g%3E %3Cg id='Layer_1'%3E %3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='570.6464' y1='93.0541' x2='36.882' y2='665.4464'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_1_)' d='M700.165,133.56 c23.055,149.119-3.768,307.375-86.079,435.06c-52.971,82.174-126.093,147.227-214.145,189.789l-20.438,9.878l-20.438-9.878 c-88.053-42.563-161.177-107.616-214.149-189.791C62.608,440.933,35.786,282.678,58.84,133.56l4.87-31.503l31.078-7.103 c187.371-42.83,382.058-42.83,569.429,0l31.078,7.103L700.165,133.56L700.165,133.56z M665.97,129.36l-9.14-2.09 c-182.595-41.738-372.06-41.738-554.654,0l-9.14,2.09l-1.434,9.265c-21.833,141.207,3.205,291.072,81.179,412.03 c49.697,77.096,118.094,137.973,200.71,177.904l6.011,2.906l6.012-2.906c82.615-39.929,151.011-100.807,200.708-177.901 c77.974-120.959,103.015-270.825,81.181-412.033L665.97,129.36z'/%3E %3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='474.7297' y1='194.2706' x2='57.9909' y2='625.8163'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_2_)' d='M692.552,128.019 c22.869,147.896-3.619,304.572-85.262,431.222c-52.448,81.362-124.72,145.668-211.906,187.807l-18.034,8.717l-18.033-8.717 c-87.187-42.139-159.46-106.446-211.909-187.809c-81.642-126.65-108.128-283.325-85.26-431.22l4.298-27.797l27.421-6.268 c186.645-42.664,380.322-42.664,566.967,0l27.421,6.268L692.552,128.019L692.552,128.019z M670.71,131.396l-2.006-12.971 l-12.796-2.925c-183.496-41.943-373.62-41.943-557.117,0l-12.797,2.925l-2.006,12.971c-22.052,142.58,3.261,293.729,81.994,415.869 c50.273,77.986,119.368,139.484,202.95,179.885l8.416,4.068l8.416-4.068c83.581-40.4,152.677-101.898,202.948-179.883 C667.448,425.127,692.762,273.977,670.71,131.396z'/%3E %3C/g%3E %3C/svg%3E\");\n    background-size: 70%;\n    background-position: center;\n    background-repeat: no-repeat;\n}\n.item[data-v-117c1a6c]:nth-child(1n) {\n\t\tfloat: left;\n\t\tmargin-right: 30px;\n\t\tclear: none;\n}\n.item[data-v-117c1a6c]:last-child {\n\t\tmargin-right: 0;\n}\n.item[data-v-117c1a6c]:nth-child(3n) {\n\t\tmargin-right: 0;\n\t\tfloat: right;\n}\n.item[data-v-117c1a6c]:nth-child(3n + 1) {\n\t\tclear: both;\n}\n.titlebackline[data-v-117c1a6c] {\n\t\tz-index: 2;\n\t\tbackground-color: #b3ddad;\n\t\theight: 0.7em;\n\t\twidth: 100%;\n\t\tposition: absolute;\n\t\t-ms-flex-item-align: center;\n\t\t    align-self: center;\n}\n", ""]);
+exports.push([module.i, ".products[data-v-117c1a6c] {\n}\n.sectionTitle[data-v-117c1a6c] {\n\t\tposition: relative;\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-pack: center;\n\t\t    -ms-flex-pack: center;\n\t\t        justify-content: center;\n}\n.titleBg[data-v-117c1a6c] {\n\t\tpadding-bottom: 0.25em;\n\t\tposition: relative;\n\t\tz-index: 7;\n\t\tpadding-right: 25px;\n\t\tpadding-left: 25px;\n\t\tbackground-color: #fff;\n\t\tline-height: 1.8em;\n}\n.itemsBox[data-v-117c1a6c] { \n\t\tpadding-left: 10%;\n\t\tpadding-right: 10%;\n}\n.item[data-v-117c1a6c] {\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\theight: 15vw;\n\t\twidth: calc(24.975% - 22.5px);  \n    background: url(\"data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 760 812' enable-background='new 0 0 760 812' xml:space='preserve'%3E %3Cg id='Layer_2'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' fill-opacity='0' fill='%23FFFFFF' d='M81,114c70.36-25.021,472.96-25.901,600,0 c34.341,236-34,520-300,640C186,693,37,384,81,114z'/%3E %3C/g%3E %3Cg id='Layer_1'%3E %3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='570.6464' y1='93.0541' x2='36.882' y2='665.4464'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_1_)' d='M700.165,133.56 c23.055,149.119-3.768,307.375-86.079,435.06c-52.971,82.174-126.093,147.227-214.145,189.789l-20.438,9.878l-20.438-9.878 c-88.053-42.563-161.177-107.616-214.149-189.791C62.608,440.933,35.786,282.678,58.84,133.56l4.87-31.503l31.078-7.103 c187.371-42.83,382.058-42.83,569.429,0l31.078,7.103L700.165,133.56L700.165,133.56z M665.97,129.36l-9.14-2.09 c-182.595-41.738-372.06-41.738-554.654,0l-9.14,2.09l-1.434,9.265c-21.833,141.207,3.205,291.072,81.179,412.03 c49.697,77.096,118.094,137.973,200.71,177.904l6.011,2.906l6.012-2.906c82.615-39.929,151.011-100.807,200.708-177.901 c77.974-120.959,103.015-270.825,81.181-412.033L665.97,129.36z'/%3E %3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='474.7297' y1='194.2706' x2='57.9909' y2='625.8163'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_2_)' d='M692.552,128.019 c22.869,147.896-3.619,304.572-85.262,431.222c-52.448,81.362-124.72,145.668-211.906,187.807l-18.034,8.717l-18.033-8.717 c-87.187-42.139-159.46-106.446-211.909-187.809c-81.642-126.65-108.128-283.325-85.26-431.22l4.298-27.797l27.421-6.268 c186.645-42.664,380.322-42.664,566.967,0l27.421,6.268L692.552,128.019L692.552,128.019z M670.71,131.396l-2.006-12.971 l-12.796-2.925c-183.496-41.943-373.62-41.943-557.117,0l-12.797,2.925l-2.006,12.971c-22.052,142.58,3.261,293.729,81.994,415.869 c50.273,77.986,119.368,139.484,202.95,179.885l8.416,4.068l8.416-4.068c83.581-40.4,152.677-101.898,202.948-179.883 C667.448,425.127,692.762,273.977,670.71,131.396z'/%3E %3C/g%3E %3C/svg%3E\");\n    background-size: 70%;\n    background-position: center;\n    background-repeat: no-repeat; background-color: #dad;\n}\n.item[data-v-117c1a6c]:nth-child(1n) {\n\t\tfloat: left;\n\t\tmargin-right: 30px;\n\t\tclear: none;\n}\n.item[data-v-117c1a6c]:last-child {\n\t\tmargin-right: 0;\n}\n.item[data-v-117c1a6c]:nth-child(4n) {\n\t\tmargin-right: 0;\n\t\tfloat: right;\n}\n.item[data-v-117c1a6c]:nth-child(4n + 1) {\n\t\tclear: both;\n}\n.item .productTitle[data-v-117c1a6c] {\n\t\t-ms-flex-item-align: end;\n\t\t    align-self: flex-end;\n\t\tbackground-color: #ada;\n\t\ttext-align: center;\n\t\tcolor: #3c8bce;\n\t\twidth: 100%;\n\t\tpadding: 10px;\n}\n.item .productImage[data-v-117c1a6c] {\n\t\tbackground-color: #ada;\n\t\tposition: absolute;\n}\n.titlebackline[data-v-117c1a6c] {\n\t\tz-index: 2;\n\t\tbackground-color: #b3ddad;\n\t\theight: 0.7em;\n\t\twidth: 100%;\n\t\tposition: absolute;\n\t\t-ms-flex-item-align: center;\n\t\t    align-self: center;\n}\n", ""]);
 
 // exports
 
@@ -32545,11 +32545,15 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
 exports.default = {
 	data: function data() {
 		return {
-			switcher: false
+			switcher: false,
+			products: [{ name: 'Пожарная безопасность', img: 'us1.jpg' }, { name: 'Видеонаблюдение', img: 'us2.jpg' }, { name: 'Контроль доступа', img: 'us3.jpg' }, { name: 'Охранная сигнализация', img: 'us4.jpg' }]
 		};
 	}
 };
@@ -32563,32 +32567,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "products" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "itemsBox" },
+      _vm._l(_vm.products, function(product, index) {
+        return _c("div", { key: index, staticClass: "item" }, [
+          _c("div", { staticClass: "productImage" }, [
+            _vm._v("\n\t\t\t\t" + _vm._s(product.img) + "\n\t\t\t")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "productTitle" }, [
+            _vm._v("\n\t\t\t\t" + _vm._s(product.name) + "\n\t\t\t")
+          ])
+        ])
+      })
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "products" }, [
-      _c("div", { staticClass: "sectionTitle" }, [
-        _c("div", { staticClass: "titleBg" }, [_vm._v("виды контроля:")]),
-        _c("div", { staticClass: "titlebackline" })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "itemsBox" }, [
-        _c("div", { staticClass: "item" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "item" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "item" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "item" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "item" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "item" })
-      ])
+    return _c("div", { staticClass: "sectionTitle" }, [
+      _c("div", { staticClass: "titleBg" }, [_vm._v("виды контроля:")]),
+      _c("div", { staticClass: "titlebackline" })
     ])
   }
 ]

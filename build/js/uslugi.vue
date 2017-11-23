@@ -2,13 +2,16 @@
 	<div class="products">
 		<div class="sectionTitle"><div class="titleBg">виды контроля:</div><div class="titlebackline"></div></div>
 		<div class="itemsBox">
-			<div class="item">
+
+			<div class="item" v-for="(product, index) in products" :key='index'>
+				<div class="productImage">
+					{{product.img}}
+				</div>
+				<div class="productTitle">
+					{{product.name}}
+				</div>
 			</div>
-			<div class="item"></div>
-			<div class="item"></div>
-			<div class="item"></div>
-			<div class="item"></div>
-			<div class="item"></div>
+
 		</div>
 	</div>
 </template>
@@ -17,6 +20,12 @@
 		data: function () {
 		  return {
 		    switcher: false,
+		    products: [
+		    	{name: 'Пожарная безопасность', img: 'us1.jpg'},
+		    	{name: 'Видеонаблюдение', img: 'us2.jpg'},
+		    	{name: 'Контроль доступа',  img: 'us3.jpg'},
+		    	{name: 'Охранная сигнализация',  img: 'us4.jpg'}
+		    ]
 		  }
 	  }
   }
@@ -45,12 +54,25 @@
 		padding-right: 10%;
 	}
 	.item {
-		height: 15em;
-		lost-column: 1/3;  
+		display: flex;
+		height: 15vw;
+		lost-column: 1/4;  
     background: svg-load('../../app/assets/images/shield.svg');
     background-size: 70%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; background-color: #dad;
+    .productTitle {
+			align-self: flex-end;
+			background-color: #ada;
+			text-align: center;
+			color: $blueTitle;
+			width: 100%;
+			padding: 10px;
+		}
+		.productImage {
+			background-color: #ada;
+			position: absolute;
+		}
 	}
 	.titlebackline {
 		z-index: 2;

@@ -256,6 +256,11 @@ section .trust:nth-child(1n) {
   text-align: center;
   background-color: #fff;
 }
+.products .productTitle {
+  font-family: "OswaldL";
+  font-size: 1.333em;
+  line-height: 1.0503em;
+}
 @media (min-width: 1424px) {
   .sliderText {
     font-size: 18px;
