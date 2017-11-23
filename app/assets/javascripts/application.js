@@ -10806,7 +10806,7 @@ var _bodyApp = __webpack_require__(64);
 
 var _bodyApp2 = _interopRequireDefault(_bodyApp);
 
-var _MenuInfo = __webpack_require__(86);
+var _MenuInfo = __webpack_require__(69);
 
 var _MenuInfo2 = _interopRequireDefault(_MenuInfo);
 
@@ -10832,7 +10832,6 @@ _vue2.default.use(_lib2.default);
 _vue2.default.directive('tack', {
   bind: function bind(el, binding, vnode) {
     el.style.position = 'absolute';
-
     // el.style.top = binding.value + 'px'  
   }
 });
@@ -10855,34 +10854,28 @@ _vue2.default.directive('scroll', {
     window.addEventListener('scroll', _.throttle(f, 300));
   }
 });
-
 document.addEventListener('DOMContentLoaded', function () {
-
   _vue2.default.component('onediv', {
     template: '<div><slot></slot></div>'
   });
-
   new _vue2.default({
     el: '#VmBackTop',
     render: function render(h) {
       return h(_backTop2.default);
     }
   });
-
   new _vue2.default({
     el: '#sliderapp',
     render: function render(h) {
       return h(_sliderapp2.default);
     }
   });
-
   new _vue2.default({
     el: '#telpanel',
     render: function render(h) {
       return h(_telpanel2.default);
     }
   });
-
   new _vue2.default({
     el: '#logoApp',
     render: function render(h) {
@@ -12661,8 +12654,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-
 
 var menuwidth = { value: '' };
 var availableSpace = { value: '' };
@@ -12680,7 +12671,7 @@ exports.default = {
       availableSpace: availableSpace,
       vlinks: vlinks,
       telpanelSliderHeight: telpanelSliderHeight,
-      stick: {},
+      stick: { value: '' },
       fixedClass: 'unfixed',
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', urs: '' }, { title: 'контроль доступа', url: '' }],
       menuitemsHide: [],
@@ -12708,12 +12699,11 @@ exports.default = {
     scrollHandler: function scrollHandler() {
       this.scrollBottom = window.scrollY + window.innerHeight;
       this.scrollTop = window.scrollY;
-
       var top1 = window.pageYOffset;
       if (this.lastScrollTop1 > top1) {
         console.log('top');
         this.stick.value = 'up';
-      } else {
+      } else if (this.lastScrollTop1 < top1) {
         console.log('down');
         this.stick.value = 'down';
       }
@@ -12739,29 +12729,37 @@ exports.default = {
       }
     },
     handleScroll: function handleScroll(evt, el) {
-      if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value + 50 && window.scrollY < this.telpanelSliderHeight.value + 1200) {
+      if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value - 60) {
         var self = this;
-        setTimeout(function () {
-          self.fixedClass = 'unfixed';
-        }, 2000);
-        TweenLite.to(el, .5, {
-          top: '-60px',
-          ease: Linear.easeInOut
-        });
-        this.fixedClass = 'fixed';
-      } else if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value + 900) {
-        TweenLite.to(el, .1, {
-          top: '-60px',
-          ease: Linear.easeInOut
-        });
-        this.fixedClass = 'fixed';
-      } else if (this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value) {
         TweenLite.to(el, .2, {
           top: '0px',
           ease: Linear.easeInOut
         });
         this.fixedClass = 'fixed';
-      } else {}
+      } else if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value + 1000) {
+        TweenLite.to(el, .2, {
+          top: '-60px',
+          ease: Linear.easeInOut
+        });
+        this.fixedClass = 'fixed';
+      } else if (this.stick.value == 'down' && window.scrollY < this.telpanelSliderHeight.value + 1000 && window.scrollY > this.telpanelSliderHeight.value) {
+        TweenLite.to(el, .2, {
+          top: '0px',
+          ease: Linear.easeInOut
+        });
+        this.fixedClass = 'fixed';
+      } else if (this.stick.value == 'up' && window.scrollY < this.telpanelSliderHeight.value + 80) {
+        TweenLite.to(el, .5, {
+          ease: Linear.easeInOut
+        });
+        this.fixedClass = 'unfixed';
+      } else if (this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value) {
+        TweenLite.to(el, .5, {
+          top: '0px',
+          ease: Linear.easeInOut
+        });
+        this.fixedClass = 'fixed';
+      }
     }
   },
   computed: {
@@ -12905,9 +12903,7 @@ var render = function() {
     "div",
     [
       _vm.fixedClass == "fixed"
-        ? _c("div", { staticClass: "greedy-nav" }, [
-            _vm._v("\n    dergter\n  ")
-          ])
+        ? _c("div", { staticClass: "greedy-nav" })
         : _vm._e(),
       _vm._v(" "),
       _c("menuinfo", {
@@ -13929,6 +13925,38 @@ var render = function() {
               "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
             )
           ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(" "),
           _c("h3", [
             _vm._v(
@@ -13948,6 +13976,38 @@ var render = function() {
         "div",
         { staticClass: "grid-item", class: { inview: _vm.checkView(1) } },
         [
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(
             " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
           ),
@@ -14010,6 +14070,38 @@ var render = function() {
               "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
             )
           ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(" "),
           _c("h3", [
             _vm._v(
@@ -14031,6 +14123,38 @@ var render = function() {
         [
           _vm._v(
             " BodyApp Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
           ),
           _c("h2", [
             _vm._v(
@@ -14083,6 +14207,38 @@ var render = function() {
         "div",
         { staticClass: "grid-item", class: { inview: _vm.checkView(6) } },
         [
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(
             " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
           ),
@@ -14145,6 +14301,38 @@ var render = function() {
               "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
             )
           ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(" "),
           _c("h3", [
             _vm._v(
@@ -14164,6 +14352,38 @@ var render = function() {
         "div",
         { staticClass: "grid-item", class: { inview: _vm.checkView(9) } },
         [
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(
             " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
           ),
@@ -14199,6 +14419,38 @@ var render = function() {
               "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
             )
           ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(" "),
           _c("h3", [
             _vm._v(
@@ -14218,6 +14470,38 @@ var render = function() {
         "div",
         { staticClass: "grid-item", class: { inview: _vm.checkView(11) } },
         [
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(
             " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
           ),
@@ -14280,6 +14564,38 @@ var render = function() {
               "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
             )
           ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(" "),
           _c("h3", [
             _vm._v(
@@ -14307,6 +14623,30 @@ var render = function() {
               "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
             )
           ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(" "),
           _c("h3", [
             _vm._v(
@@ -14326,6 +14666,30 @@ var render = function() {
         "div",
         { staticClass: "grid-item", class: { inview: _vm.checkView(15) } },
         [
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
+          _vm._v(
+            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
+          ),
+          _c("h2", [
+            _vm._v(
+              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
+            )
+          ]),
           _vm._v(
             " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
           ),
@@ -14372,11 +14736,213 @@ if (false) {
 }
 
 /***/ }),
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6e5720b0_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_MenuInfo_vue__ = __webpack_require__(73);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(70)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-6e5720b0"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6e5720b0_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_MenuInfo_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "build/js/MenuInfo.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] MenuInfo.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6e5720b0", Component.options)
+  } else {
+    hotAPI.reload("data-v-6e5720b0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(71);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("ae0785de", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6e5720b0\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuInfo.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6e5720b0\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuInfo.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.techinfo[data-v-6e5720b0] {\n  z-index: 30;\n  position: fixed;\n  width: 250px;\n  top: 400px;\n  right: 20px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n}\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: ['menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass', 'scrollTop', 'scrollBottom'],
+  data: function data() {
+    return {
+      switcher: true
+    };
+  }
+};
+
+/***/ }),
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.switcher,
+            expression: "switcher"
+          }
+        ],
+        staticClass: "techinfo",
+        attrs: { id: "techinfo1" }
+      },
+      [
+        _c("h3", [_vm._v("menu:")]),
+        _c("hr"),
+        _vm._v("\n    \tmenuwidth: " + _vm._s(_vm.menuwidth)),
+        _c("br"),
+        _vm._v("\n    \tav space: " + _vm._s(_vm.availableSpace)),
+        _c("br"),
+        _vm._v("\n    \tvlink: " + _vm._s(_vm.vlinks)),
+        _c("br"),
+        _vm._v("\n    \tmenuitemsHide: " + _vm._s(_vm.numHide)),
+        _c("br"),
+        _vm._v("\n    \tmenuitemsVis: " + _vm._s(_vm.numVis)),
+        _c("br"),
+        _vm._v("\n    \tcompstylem: " + _vm._s(_vm.compstylem) + " "),
+        _c("br"),
+        _vm._v("\n    \ttoggle: " + _vm._s(_vm.toggle) + " "),
+        _c("br"),
+        _vm._v("\n    \ttoggle2: " + _vm._s(_vm.toggle2) + " "),
+        _c("br"),
+        _vm._v("\n    \tkostil: " + _vm._s(_vm.kostil)),
+        _c("br"),
+        _vm._v("\n    \tstick: " + _vm._s(_vm.stick)),
+        _c("br"),
+        _vm._v("\n    \tfixedClass: " + _vm._s(_vm.fixedClass)),
+        _c("br"),
+        _vm._v(
+          "\n    \ttelpanelSliderHeight: " + _vm._s(_vm.telpanelSliderHeight)
+        ),
+        _c("br"),
+        _vm._v("\n      scrollTop: " + _vm._s(_vm.scrollTop)),
+        _c("br"),
+        _vm._v("\n      scrollBottom: " + _vm._s(_vm.scrollBottom) + " \n    ")
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6e5720b0", esExports)
+  }
+}
+
+/***/ }),
 /* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14632,7 +15198,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.bodyappi[data-v-2f0832e6] {\n  z-index: 30;\n  position: fixed;\n  top: 480px;\n  right: 300px;\n  width: 300px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n  font-size: 0.8em;\n}\n.smalltext[data-v-2f0832e6] {\n  z-index: 30;\n  line-height: 1.2em;\n  font-size: 0.6em;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.bodyappi[data-v-2f0832e6] {\n  z-index: 30;\n  position: fixed;\n  top: 480px;\n  right: 300px;\n  width: 300px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n  font-size: 0.8em;\n}\n.smalltext[data-v-2f0832e6] {\n  z-index: 30;\n  line-height: 1.2em;\n  font-size: 0.6em;\n}\n", ""]);
 
 // exports
 
@@ -14663,7 +15229,6 @@ exports.default = {
   data: function data() {
     return {
       switcher: true
-
     };
   }
 };
@@ -31837,213 +32402,6 @@ module.exports = function(module) {
 	return module;
 };
 
-
-/***/ }),
-/* 86 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6e5720b0_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_MenuInfo_vue__ = __webpack_require__(90);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(87)
-}
-var normalizeComponent = __webpack_require__(1)
-/* script */
-
-/* template */
-
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-6e5720b0"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MenuInfo_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6e5720b0_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_MenuInfo_vue__["a" /* default */],
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "build/js/MenuInfo.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] MenuInfo.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6e5720b0", Component.options)
-  } else {
-    hotAPI.reload("data-v-6e5720b0", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
-
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(88);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("ae0785de", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6e5720b0\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuInfo.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6e5720b0\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuInfo.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.techinfo[data-v-6e5720b0] {\n  z-index: 30;\n  position: fixed;\n  width: 250px;\n  top: 400px;\n  right: 20px;\n  padding: 8px;\n  background-color: #fff;\n  opacity: 0.9;\n}\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  props: ['menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass', 'scrollTop', 'scrollBottom'],
-  data: function data() {
-    return {
-      switcher: true
-    };
-  }
-};
-
-/***/ }),
-/* 90 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.switcher,
-            expression: "switcher"
-          }
-        ],
-        staticClass: "techinfo",
-        attrs: { id: "techinfo1" }
-      },
-      [
-        _c("h3", [_vm._v("menu:")]),
-        _c("hr"),
-        _vm._v("\n    \tmenuwidth: " + _vm._s(_vm.menuwidth)),
-        _c("br"),
-        _vm._v("\n    \tav space: " + _vm._s(_vm.availableSpace)),
-        _c("br"),
-        _vm._v("\n    \tvlink: " + _vm._s(_vm.vlinks)),
-        _c("br"),
-        _vm._v("\n    \tmenuitemsHide: " + _vm._s(_vm.numHide)),
-        _c("br"),
-        _vm._v("\n    \tmenuitemsVis: " + _vm._s(_vm.numVis)),
-        _c("br"),
-        _vm._v("\n    \tcompstylem: " + _vm._s(_vm.compstylem) + " "),
-        _c("br"),
-        _vm._v("\n    \ttoggle: " + _vm._s(_vm.toggle) + " "),
-        _c("br"),
-        _vm._v("\n    \ttoggle2: " + _vm._s(_vm.toggle2) + " "),
-        _c("br"),
-        _vm._v("\n    \tkostil: " + _vm._s(_vm.kostil)),
-        _c("br"),
-        _vm._v("\n    \tstick: " + _vm._s(_vm.stick)),
-        _c("br"),
-        _vm._v("\n    \tfixedClass: " + _vm._s(_vm.fixedClass)),
-        _c("br"),
-        _vm._v(
-          "\n    \ttelpanelSliderHeight: " + _vm._s(_vm.telpanelSliderHeight)
-        ),
-        _c("br"),
-        _vm._v("\n      scrollTop: " + _vm._s(_vm.scrollTop)),
-        _c("br"),
-        _vm._v("\n      scrollBottom: " + _vm._s(_vm.scrollBottom) + " \n    ")
-      ]
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6e5720b0", esExports)
-  }
-}
 
 /***/ })
 /******/ ]);

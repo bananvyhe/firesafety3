@@ -14,7 +14,6 @@
     data: function () {
       return {
           switcher: true,
-           
       }
     }
   }
@@ -31,12 +30,9 @@
   opacity: 0.9;
   font-size: 0.8em;
 }
-
 .smalltext {
   z-index: 30;
   line-height: 1.2em;
   font-size: 0.6em;
 }
-
-
 </style>

@@ -18,7 +18,6 @@ Vue.use(ElementUI)
 Vue.directive('tack', {
  bind(el, binding, vnode) {
     el.style.position = 'absolute'
-     
     // el.style.top = binding.value + 'px'  
   }
 });
@@ -41,28 +40,22 @@ Vue.directive('scroll', {
     window.addEventListener('scroll', _.throttle(f, 300));
   },
 });
-
 document.addEventListener('DOMContentLoaded', () => {
- 
   Vue.component('onediv', {
       template: '<div><slot></slot></div>'
   }); 
-
   new Vue({
     el: '#VmBackTop',
     render: h => h(VmBackTop)
   })
-   
   new Vue({
     el: '#sliderapp',
     render: h => h(Sliderapp)
   })
-
   new Vue({
     el: '#telpanel',
     render: h => h(Telpanel)
   })
- 
   new Vue({
     el: '#logoApp',
     render: h => h(LogoApp)

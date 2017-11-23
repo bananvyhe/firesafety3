@@ -1,7 +1,6 @@
 <template>
   <div>
     <div v-if="fixedClass == 'fixed'"  class='greedy-nav'>
-      dergter
     </div>
     <menuinfo
     :menuwidth="menuwidth.value"
@@ -64,8 +63,6 @@
 </template>
 
 <script>
-   
-   
   let menuwidth = {value:  ''};
   let availableSpace = {value:  ''};
   let vlinks = {value:  ''};
@@ -82,7 +79,7 @@
         availableSpace: availableSpace,
         vlinks: vlinks,
         telpanelSliderHeight: telpanelSliderHeight,
-        stick: {},
+        stick: {value: ''},
         fixedClass: 'unfixed',
         menuitems: [
           { title: 'главная', url: ''},
@@ -115,12 +112,11 @@
       scrollHandler(){
         this.scrollBottom = window.scrollY + window.innerHeight;
         this.scrollTop = window.scrollY;
-        
         var top1 = window.pageYOffset;
         if (this.lastScrollTop1 > top1) {
           console.log('top');
-           this.stick.value = 'up';
-        } else {
+          this.stick.value = 'up';
+        } else if (this.lastScrollTop1 < top1) {
           console.log('down');
           this.stick.value = 'down'; 
         }
@@ -145,32 +141,37 @@
         } 
       },
       handleScroll: function(evt, el) {
-        if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value + 50 && window.scrollY < this.telpanelSliderHeight.value+1200)
+        if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value-60)
         {
           var self = this;
-          setTimeout(function(){
-            self.fixedClass = 'unfixed';
-          },2000);
-          TweenLite.to(el, .5, {
-            top: '-60px',
-            ease: Linear.easeInOut
-          });
-          this.fixedClass = 'fixed';
-          
-        }else if(this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value+900){
-          TweenLite.to(el, .1, {
-            top: '-60px',
-            ease: Linear.easeInOut
-          });
-          this.fixedClass = 'fixed';
-        }else if(this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value){
           TweenLite.to(el, .2, {
             top: '0px',
             ease: Linear.easeInOut
           });
           this.fixedClass = 'fixed';
-        }else{
-          
+        }else if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value +1000) {
+          TweenLite.to(el, .2, {
+            top: '-60px',
+            ease: Linear.easeInOut
+          });
+          this.fixedClass = 'fixed';
+           }else if (this.stick.value == 'down' && window.scrollY < this.telpanelSliderHeight.value +1000 && window.scrollY > this.telpanelSliderHeight.value) {
+            TweenLite.to(el, .2, {
+              top: '0px',
+              ease: Linear.easeInOut
+            });
+          this.fixedClass = 'fixed';
+        }else if (this.stick.value == 'up' && window.scrollY < this.telpanelSliderHeight.value+80){
+          TweenLite.to(el, .5, {
+            ease: Linear.easeInOut
+          });
+          this.fixedClass = 'unfixed';
+        }else if(this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value){
+          TweenLite.to(el, .5, {
+            top: '0px',
+            ease: Linear.easeInOut
+          });
+          this.fixedClass = 'fixed';
         }
       }
     },

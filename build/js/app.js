@@ -60,7 +60,6 @@ _vue2.default.use(_lib2.default);
 _vue2.default.directive('tack', {
   bind: function bind(el, binding, vnode) {
     el.style.position = 'absolute';
-
     // el.style.top = binding.value + 'px'  
   }
 });
@@ -83,34 +82,28 @@ _vue2.default.directive('scroll', {
     window.addEventListener('scroll', _.throttle(f, 300));
   }
 });
-
 document.addEventListener('DOMContentLoaded', function () {
-
   _vue2.default.component('onediv', {
     template: '<div><slot></slot></div>'
   });
-
   new _vue2.default({
     el: '#VmBackTop',
     render: function render(h) {
       return h(_backTop2.default);
     }
   });
-
   new _vue2.default({
     el: '#sliderapp',
     render: function render(h) {
       return h(_sliderapp2.default);
     }
   });
-
   new _vue2.default({
     el: '#telpanel',
     render: function render(h) {
       return h(_telpanel2.default);
     }
   });
-
   new _vue2.default({
     el: '#logoApp',
     render: function render(h) {
