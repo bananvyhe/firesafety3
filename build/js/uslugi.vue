@@ -2,13 +2,13 @@
 	<div class="products">
 		<div class="sectionTitle"><div class="titleBg">способы контроля:</div><div class="titlebackline"></div></div>
 		<div class="itemsBox">
-			<div class="item">1</div>
-			<div class="item">2</div>
-			<div class="item">3</div>
-			<div class="item">4</div>
-			<div class="item">5</div>
-			<div class="item">6</div>
-			<div class="item">7</div>
+			<div class="item">
+			</div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
 		</div>
 	</div>
 </template>
@@ -23,6 +23,9 @@
 </script>
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
+	.products {
+
+	}
 	.sectionTitle {
 		position: relative;
 		display: flex;
@@ -37,11 +40,17 @@
 		background-color: #fff;
 		line-height: 1.8em;
 	}
-	.itemBox {
-
+	.itemsBox { 
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 	.item {
-
+		height: 15em;
+		lost-column: 1/3;  
+    background: svg-load('../../app/assets/images/shield.svg');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
 	}
 	.titlebackline {
 		z-index: 2;

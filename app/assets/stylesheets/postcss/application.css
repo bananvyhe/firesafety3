@@ -105,7 +105,7 @@ section {
 .grid-item {@ruler;
   opacity: 0;
   z-index: 1;
-  background-color: #dad;
+  
   position: relative;/*for hamster*/
   overflow: hidden;   
   @util border-top-radius(0.6em);

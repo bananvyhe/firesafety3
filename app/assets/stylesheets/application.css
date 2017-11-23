@@ -213,7 +213,7 @@ section .trust:nth-child(1n) {
   background-size: 4px 22px;}
   opacity: 0;
   z-index: 1;
-  background-color: #dad;
+  
   position: relative;
   overflow: hidden;   
   border-top-left-radius: 0.6em;   
