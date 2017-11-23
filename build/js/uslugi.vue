@@ -1,6 +1,6 @@
 <template>
 	<div class="products">
-		<div class="sectionTitle"><div class="titleBg">способы контроля:</div><div class="titlebackline"></div></div>
+		<div class="sectionTitle"><div class="titleBg">виды контроля:</div><div class="titlebackline"></div></div>
 		<div class="itemsBox">
 			<div class="item">
 			</div>
