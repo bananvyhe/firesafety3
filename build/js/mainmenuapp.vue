@@ -64,21 +64,8 @@
 </template>
 
 <script>
-  var lastScrollTop = 0;
-  var stick = {value:  ''};
-  window.onscroll = onScroll;
-  function onScroll (e) {
-    var top = window.pageYOffset;
-    if (lastScrollTop > top) {
-      
-      stick.value = 'up';
-    } else {
-       
-      stick.value = 'down';
-    }
-    lastScrollTop = top;
-  }
-
+   
+   
   let menuwidth = {value:  ''};
   let availableSpace = {value:  ''};
   let vlinks = {value:  ''};
@@ -95,7 +82,7 @@
         availableSpace: availableSpace,
         vlinks: vlinks,
         telpanelSliderHeight: telpanelSliderHeight,
-        stick: stick,
+        stick: {},
         fixedClass: 'unfixed',
         menuitems: [
           { title: 'главная', url: ''},
@@ -132,10 +119,10 @@
         var top1 = window.pageYOffset;
         if (this.lastScrollTop1 > top1) {
           console.log('top');
-           
+           this.stick.value = 'up';
         } else {
           console.log('down');
-           
+          this.stick.value = 'down'; 
         }
         this.lastScrollTop1 = top1;
       },

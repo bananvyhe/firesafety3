@@ -12663,20 +12663,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 
-var lastScrollTop = 0;
-var stick = { value: '' };
-window.onscroll = onScroll;
-function onScroll(e) {
-  var top = window.pageYOffset;
-  if (lastScrollTop > top) {
-
-    stick.value = 'up';
-  } else {
-
-    stick.value = 'down';
-  }
-  lastScrollTop = top;
-}
 
 var menuwidth = { value: '' };
 var availableSpace = { value: '' };
@@ -12694,7 +12680,7 @@ exports.default = {
       availableSpace: availableSpace,
       vlinks: vlinks,
       telpanelSliderHeight: telpanelSliderHeight,
-      stick: stick,
+      stick: {},
       fixedClass: 'unfixed',
       menuitems: [{ title: 'главная', url: '' }, { title: 'о нас', url: '' }, { title: 'противопожарные системы', url: '' }, { title: 'видеонаблюдение', urs: '' }, { title: 'контроль доступа', url: '' }],
       menuitemsHide: [],
@@ -12726,8 +12712,10 @@ exports.default = {
       var top1 = window.pageYOffset;
       if (this.lastScrollTop1 > top1) {
         console.log('top');
+        this.stick.value = 'up';
       } else {
         console.log('down');
+        this.stick.value = 'down';
       }
       this.lastScrollTop1 = top1;
     },
