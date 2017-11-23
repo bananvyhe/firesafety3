@@ -3,7 +3,7 @@
     <div v-if="fixedClass == 'fixed'"  class='greedy-nav'>
       dergter
     </div>
-    <techinfo
+    <menuinfo
     :menuwidth="menuwidth.value"
     :availableSpace="availableSpace.value"
     :vlinks="vlinks.value"
@@ -15,7 +15,10 @@
     :kostil='kostil'
     :stick='stick'
     :fixedClass='fixedClass'
-    :telpanelSliderHeight='telpanelSliderHeight'></techinfo>
+    :telpanelSliderHeight='telpanelSliderHeight'
+    :scrollTop="scrollTop"
+    :scrollBottom="scrollBottom"
+    ></menuinfo>
     <nav class='greedy-nav' 
       v-scroll="handleScroll" 
       v-bind:style="{styleObject, width: menuwidth.value + 'px'}"  
@@ -67,10 +70,10 @@
   function onScroll (e) {
     var top = window.pageYOffset;
     if (lastScrollTop > top) {
-      console.log('top');
+      
       stick.value = 'up';
     } else {
-      console.log('down');
+       
       stick.value = 'down';
     }
     lastScrollTop = top;
@@ -85,7 +88,7 @@
       return {
         fixedwidth: '',
         hoverbutton: {},
-        //выключатель показа индикации служебной информации
+        //выключатель показа индикации служебной информации----
         toggle2: false,
         toggle: false,
         menuwidth: menuwidth,
@@ -104,8 +107,16 @@
         menuitemsHide: [],
         styleObject: {},
         hiddenStyle: {},
-        kostil: []
+        kostil: [],
+        scrollTop: '',
+        scrollBottom: '',
+        lastScrollTop1: 0
       }
+    },
+    mounted(){
+      this.scrollTop = window.scrollY;
+      this.scrollBottom = window.scrollY + window.innerHeight;
+      window.addEventListener('scroll', _.throttle(this.scrollHandler, 300))
     },
     created(){ 
       document.addEventListener('click', this.dropdown) 
@@ -114,6 +125,20 @@
       document.removeEventListener('click', this.dropdown) 
     },
     methods:{
+      scrollHandler(){
+        this.scrollBottom = window.scrollY + window.innerHeight;
+        this.scrollTop = window.scrollY;
+        
+        var top1 = window.pageYOffset;
+        if (this.lastScrollTop1 > top1) {
+          console.log('top');
+           
+        } else {
+          console.log('down');
+           
+        }
+        this.lastScrollTop1 = top1;
+      },
       dropdown(e){ 
         let el = this.$refs.dropdown; 
         let target = e.target;
@@ -158,7 +183,7 @@
           });
           this.fixedClass = 'fixed';
         }else{
-          this.fixedClass = 'unfixed';
+          
         }
       }
     },

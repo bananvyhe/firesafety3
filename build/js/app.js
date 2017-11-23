@@ -36,9 +36,9 @@ var _bodyApp = require('./bodyApp.vue');
 
 var _bodyApp2 = _interopRequireDefault(_bodyApp);
 
-var _Techinfo = require('./Techinfo.vue');
+var _MenuInfo = require('./MenuInfo.vue');
 
-var _Techinfo2 = _interopRequireDefault(_Techinfo);
+var _MenuInfo2 = _interopRequireDefault(_MenuInfo);
 
 var _Logoappi = require('./Logoappi.vue');
 
@@ -50,7 +50,7 @@ var _Bodyappi2 = _interopRequireDefault(_Bodyappi);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_vue2.default.component('techinfo', _Techinfo2.default);
+_vue2.default.component('menuinfo', _MenuInfo2.default);
 
 _vue2.default.component('logoappi', _Logoappi2.default);
 

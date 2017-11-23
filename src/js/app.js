@@ -7,8 +7,8 @@ import LogoApp from './logoApp.vue'
 import Mainmenuapp from './mainmenuapp.vue'
 import VmBackTop from './back-top.vue'
 import BodyApp from './bodyApp.vue' 
-import Techinfo from './Techinfo.vue'
-Vue.component('techinfo', Techinfo)
+import MenuInfo from './MenuInfo.vue'
+Vue.component('menuinfo', MenuInfo)
 import Logoappi from './Logoappi.vue'  
 Vue.component('logoappi', Logoappi)
 import Bodyappi from './Bodyappi.vue'  

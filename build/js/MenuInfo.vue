@@ -13,13 +13,15 @@
     	kostil: {{kostil}}<br>
     	stick: {{stick}}<br>
     	fixedClass: {{fixedClass}}<br>
-    	telpanelSliderHeight: {{telpanelSliderHeight}} 
+    	telpanelSliderHeight: {{telpanelSliderHeight}}<br>
+      scrollTop: {{scrollTop}}<br>
+      scrollBottom: {{scrollBottom}} 
     </div>
 	</div>
 </template>
 <script>
 	export default {
-		props: ['menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass'],
+		props: ['menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass', 'scrollTop', 'scrollBottom'],
     data: function () {
       return {
           switcher: true 
