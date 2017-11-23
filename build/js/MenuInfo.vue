@@ -24,7 +24,7 @@
 		props: ['menuwidth', 'availableSpace', 'vlinks', 'numHide', 'numVis', 'compstylem', 'toggle', 'toggle2', 'kostil', 'stick', 'fixedwidth', 'telpanelSliderHeight', 'fixedClass', 'scrollTop', 'scrollBottom'],
     data: function () {
       return {
-          switcher: true 
+        switcher: false 
       }
     }
   }

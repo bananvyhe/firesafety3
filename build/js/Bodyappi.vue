@@ -13,7 +13,7 @@
 		props: ['scrollTop', 'scrollBottom', 'animate'],
     data: function () {
       return {
-          switcher: true,
+        switcher: false,
       }
     }
   }

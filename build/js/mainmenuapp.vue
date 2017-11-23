@@ -141,6 +141,7 @@
         } 
       },
       handleScroll: function(evt, el) {
+        //начальный скролл вниз с топа страницы
         if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value && window.scrollY < this.telpanelSliderHeight.value-60)
         {
           var self = this;
@@ -149,23 +150,27 @@
             ease: Linear.easeInOut
           });
           this.fixedClass = 'fixed';
+        //сокрытие при +1000 пкс
         }else if (this.stick.value == 'down' && window.scrollY > this.telpanelSliderHeight.value +1000) {
           TweenLite.to(el, .2, {
             top: '-60px',
             ease: Linear.easeInOut
           });
           this.fixedClass = 'fixed';
-           }else if (this.stick.value == 'down' && window.scrollY < this.telpanelSliderHeight.value +1000 && window.scrollY > this.telpanelSliderHeight.value) {
+        //первая фиксация после прокрутки до топ 0 меню и до <1000 пикс   
+        }else if (this.stick.value == 'down' && window.scrollY < this.telpanelSliderHeight.value +1000 && window.scrollY > this.telpanelSliderHeight.value) {
             TweenLite.to(el, .2, {
               top: '0px',
               ease: Linear.easeInOut
             });
           this.fixedClass = 'fixed';
+        // вернуть меню на позицию при попадании его в область видимости при проскролле вверх
         }else if (this.stick.value == 'up' && window.scrollY < this.telpanelSliderHeight.value+80){
           TweenLite.to(el, .5, {
             ease: Linear.easeInOut
           });
           this.fixedClass = 'unfixed';
+        // фиксация top 0 при скролла вверх на расстояниях больше шапки
         }else if(this.stick.value == 'up' && window.scrollY > this.telpanelSliderHeight.value){
           TweenLite.to(el, .5, {
             top: '0px',

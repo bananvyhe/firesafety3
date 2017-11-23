@@ -11,7 +11,7 @@
 		props: ['logoinf'],
     data: function () {
       return {
-          switcher: true 
+        switcher: false 
       }
     }
   }
