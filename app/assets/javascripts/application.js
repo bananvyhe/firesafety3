@@ -13910,9 +13910,6 @@ exports.default = {
 //
 //
 //
-//
-//
-//
 
 /***/ }),
 /* 68 */
@@ -13927,66 +13924,10 @@ var render = function() {
     "div",
     { staticClass: "bodyApp" },
     [
-      _c("uslugi"),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "grid-item", class: { inview: _vm.checkView(0) } },
-        [
-          _vm._v(
-            " BodyApp Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h3", [
-            _vm._v(
-              "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h4", [
-            _vm._v(
-              "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
-            )
-          ])
-        ]
-      ),
+      _c("uslugi", {
+        staticClass: "grid-item",
+        class: { inview: _vm.checkView(0) }
+      }),
       _vm._v(" "),
       _c(
         "div",
@@ -32509,7 +32450,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, ".sectionTitle[data-v-117c1a6c] {\n\tposition: relative;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n.titleBg[data-v-117c1a6c] {\n\tpadding-bottom: 0.25em;\n\tposition: relative;\n\tz-index: 7;\n\tpadding-right: 25px;\n\tpadding-left: 25px;\n\tbackground-color: #fff;\n\tline-height: 1.8em;\n}\n.itemBox[data-v-117c1a6c] {\n}\n.item[data-v-117c1a6c] {\n}\n.titlebackline[data-v-117c1a6c] {\n\tz-index: 2;\n\tbackground-color: #b3ddad;\n\theight: 0.7em;\n\twidth: 100%;\n\tposition: absolute;\n\t-ms-flex-item-align: center;\n\t    align-self: center;\n}\n", ""]);
 
 // exports
 
@@ -32563,23 +32504,26 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", [_vm._v("Услуги:")]),
+    return _c("div", { staticClass: "products" }, [
+      _c("div", { staticClass: "sectionTitle" }, [
+        _c("div", { staticClass: "titleBg" }, [_vm._v("способы контроля:")]),
+        _c("div", { staticClass: "titlebackline" })
+      ]),
       _vm._v(" "),
-      _c("div", [
-        _c("div", [_vm._v("1")]),
+      _c("div", { staticClass: "itemsBox" }, [
+        _c("div", { staticClass: "item" }, [_vm._v("1")]),
         _vm._v(" "),
-        _c("div", [_vm._v("2")]),
+        _c("div", { staticClass: "item" }, [_vm._v("2")]),
         _vm._v(" "),
-        _c("div", [_vm._v("3")]),
+        _c("div", { staticClass: "item" }, [_vm._v("3")]),
         _vm._v(" "),
-        _c("div", [_vm._v("4")]),
+        _c("div", { staticClass: "item" }, [_vm._v("4")]),
         _vm._v(" "),
-        _c("div", [_vm._v("5")]),
+        _c("div", { staticClass: "item" }, [_vm._v("5")]),
         _vm._v(" "),
-        _c("div", [_vm._v("6")]),
+        _c("div", { staticClass: "item" }, [_vm._v("6")]),
         _vm._v(" "),
-        _c("div", [_vm._v("7")])
+        _c("div", { staticClass: "item" }, [_vm._v("7")])
       ])
     ])
   }

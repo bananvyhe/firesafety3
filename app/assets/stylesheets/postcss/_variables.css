@@ -48,6 +48,10 @@ $stildegrainyellow: #F5CB5C;
 $campaginepink: #EDDDD4;
 $orangeyellow: #F3C969;
 
+$greenbg: #b3ddad;
+
+
+
 @custom-media --telpanel-small-screen (width <= 950px);
 
 @custom-media --only-small-screen (width >= 0px) and (width <= 601px);

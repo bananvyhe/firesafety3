@@ -102,11 +102,10 @@ section {
     height: 2.2em; 
   }
 }
- 
 .grid-item {@ruler;
   opacity: 0;
   z-index: 1;
-  background-color: #ada;
+  background-color: #dad;
   position: relative;/*for hamster*/
   overflow: hidden;   
   @util border-top-radius(0.6em);
@@ -114,7 +113,14 @@ section {
   text-align: justify;
   lost-column: 1/1 1  flex;
   adjust-font-size: fontsize base;
-
+}
+.products {
+  .sectionTitle {
+    font-family: "OswaldL";
+    adjust-font-size: fontsize large;
+    text-align: center;
+    background-color: #fff;
+  }
 }
 @media (--only-big-screen) {
   .sliderText {

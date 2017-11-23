@@ -195,7 +195,6 @@ section .trust:nth-child(1n) {
     height: 2.2em; 
   }
 }
- 
 .grid-item {
 .ruler-debug{
 
@@ -214,7 +213,7 @@ section .trust:nth-child(1n) {
   background-size: 4px 22px;}
   opacity: 0;
   z-index: 1;
-  background-color: #ada;
+  background-color: #dad;
   position: relative;
   overflow: hidden;   
   border-top-left-radius: 0.6em;   
@@ -229,9 +228,7 @@ section .trust:nth-child(1n) {
   width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
   font-size: 1em;
   line-height: 1.4em;
-
 }
- 
 .grid-item:nth-child(1n) {
   .ruler-debug {
    
@@ -239,20 +236,25 @@ section .trust:nth-child(1n) {
   margin-right: 30px;
   margin-left: 0;
 }
- 
 .grid-item:last-child {
   .ruler-debug {
    
 }
   margin-right: 0;
 }
- 
 .grid-item:nth-child(1n) {
   .ruler-debug {
    
 }
   margin-right: 0;
   margin-left: auto;
+}
+.products .sectionTitle {
+  font-family: "OswaldL";
+  font-size: 1.7769em;
+  line-height: 1.5758em;
+  text-align: center;
+  background-color: #fff;
 }
 @media (min-width: 1424px) {
   .sliderText {
