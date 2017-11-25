@@ -100,7 +100,7 @@ export default {
         let element = this.animate[e];
         let elTop = element.offsetTop;
         let elBottom = element.offsetTop + element.scrollHeight;
-        if(this.scrollBottom > (elTop + 200) && (elBottom - 100) > this.scrollTop){
+        if(this.scrollBottom > (elTop + 100) && (elBottom - 50) > this.scrollTop){
           let images = Array.prototype.slice.call(element.getElementsByTagName('img'));
           images.forEach(img => {
             if(img.getAttribute('data-src')){

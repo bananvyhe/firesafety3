@@ -118,12 +118,27 @@ section {
   }
 }
 .products {
+
   lost-center: 1366px;
   background-color: #fff;
+  padding-bottom: 3%;
   .sectionTitle {
     font-family: "UbuntuR";
     adjust-font-size: fontsize medium;
     text-align: center;
+  }
+   .item {height: 15vw;
+    lost-column: 1/4;
+    padding-top: 5%;
+   
+  }
+  @media (--only-small-screen) {
+    .item {
+      lost-column: 1/2;
+      height: 30vw;
+      padding-top: 10%;
+     
+    }
   }
   .productTitle {
     font-family: "OswaldL"; 

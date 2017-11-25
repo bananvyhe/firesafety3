@@ -57,8 +57,8 @@ $titleColor: #393e41;
 
 @custom-media --telpanel-small-screen (width <= 950px);
 
-@custom-media --only-small-screen (width >= 0px) and (width <= 601px);
-@custom-media --only-medium-screen (width >= 602px) and (width <= 1423px);
+@custom-media --only-small-screen (width >= 0px) and (width <= 767px);
+@custom-media --only-medium-screen (width >= 768px) and (width <= 1423px);
 @custom-media --only-big-screen (width >= 1424px);
 
 

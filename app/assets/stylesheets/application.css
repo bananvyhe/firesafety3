@@ -189,14 +189,14 @@ section .trust:nth-child(1n) {
   height: 3.6em; 
   border-top: 6px solid #f4d35e;
 }
-@media (min-width: 0px) and (max-width: 601px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .greedy-nav {
     border-top: 4px solid #f4d35e;
   }
 }
 
 
-@media (min-width: 0px) and (max-width: 601px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .mainLogoPanel {
     height: 2.2em; 
   }
@@ -256,10 +256,14 @@ section .trust:nth-child(1n) {
   border-top-right-radius: 0.6em
 }
 .products {
+
   max-width: 1366px;
+
   margin-left: auto;
+
   margin-right: auto;
   background-color: #fff;
+  padding-bottom: 3%;
 }
 .products:before {
   content: '';
@@ -276,6 +280,26 @@ section .trust:nth-child(1n) {
   line-height: 1.0503em;
   text-align: center;
 }
+.products .item {
+  height: 15vw;
+  width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
+  padding-top: 5%;
+}
+.products .item:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none;
+}
+.products .item:last-child {
+  margin-right: 0;
+}
+.products .item:nth-child(4n) {
+  margin-right: 0;
+  float: right;
+}
+.products .item:nth-child(4n + 1) {
+  clear: both;
+}
 .products .productTitle {
   font-family: "OswaldL";
   font-weight: 400;
@@ -286,6 +310,28 @@ section .trust:nth-child(1n) {
   font-size: 0.7502em;
   line-height: 1.8662em;
 }
+@media (min-width: 0px) and (max-width: 767px) {
+  .products .item {
+    width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+    height: 30vw;
+    padding-top: 10%;
+  }
+  .products .item:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .products .item:last-child {
+    margin-right: 0;
+  }
+  .products .item:nth-child(2n) {
+    margin-right: 0;
+    float: right;
+  }
+  .products .item:nth-child(2n + 1) {
+    clear: both;
+  }
+  }
 @media (min-width: 1424px) {
   .sliderText {
     font-size: 18px;
@@ -302,7 +348,7 @@ section .trust:nth-child(1n) {
     line-height: 1.2;
   }
 } 
-@media (min-width: 602px) and (max-width: 1423px) {
+@media (min-width: 768px) and (max-width: 1423px) {
   .sliderText div .titlefirst {
     font-size: 2.3686em;
     line-height: 1.1821em;
@@ -319,7 +365,7 @@ section .trust:nth-child(1n) {
     margin-right:-5%;
   }
 }
-@media (min-width: 0px) and (max-width: 601px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .sliderText div .titlefirst {
     font-size: 1.333em;
     line-height: 1.0503em;
