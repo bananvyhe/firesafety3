@@ -1,10 +1,9 @@
 <template>
 	<div class="products">
-		<div class="sectionTitle"><div class="titleBg">ВИДЫ КОНТРОЛЯ:</div><div class="titlebackline"></div></div>
+		<div class="sectionTitle"><div class="titleBg"><nobr>ВИДЫ КОНТРОЛЯ:</nobr></div><div class="titlebackline"></div></div>
 		<div class="itemsBox">
-
 			<div class="item" v-for="(product, index) in products" :key='index'>
-				<div class="productImage" > 
+				<div class="productImage" :class="product.style" > 
 				</div>
 				<div class="productTitle">
 					{{product.name.toUpperCase()}}
@@ -20,10 +19,10 @@
 		  return {
 		    switcher: false,
 		    products: [
-		    	{name: 'Пожарная безопасность', img: 'assets/images/us1.gif'},
-		    	{name: 'Видеонаблюдение', img: 'us2.jpg'},
-		    	{name: 'Контроль доступа',  img: 'us3.jpg'},
-		    	{name: 'Охранная сигнализация',  img: 'us4.jpg'}
+		    	{name: 'Пожарная безопасность', style: 'productImage1'},
+		    	{name: 'Видеонаблюдение', style: 'productImage2'},
+		    	{name: 'Контроль доступа', style: 'productImage3'},
+		    	{name: 'Охранная сигнализация', style: 'productImage4'}
 		    ]
 		  }
 	  }
@@ -34,30 +33,30 @@
 	.products {
 		
 	}
-	.sectionTitle { background-color: #dad;
+	.sectionTitle {
 		position: relative;
 		display: flex;
 		justify-content: center;
 	}
-	.titleBg {
-		color: $titleColor;
-		padding-bottom: 0.25em;
-		position: relative;
-		z-index: 7;
-		padding-right: 25px;
-		padding-left: 25px;
-		background-color: #fff;
-		line-height: 1.8em;
-	}
 	.titlebackline {
 		z-index: 2;
 		background-color: #b3ddad;
-		height: 0.7em;
+		height: 0.5em;
 		width: 100%;
 		position: absolute;
 		align-self: center;
 	}
+	.titleBg {
+		color: $titleColor;
+		position: relative;
+		z-index: 7;
+		padding-right: 7%;
+		padding-left: 7%;
+		background-color: #fff;
+		padding-top: 0.2em; 
+	}
 	.itemsBox { 
+		padding-top: 1em;
 		padding-left: 5%;
 		padding-right: 5%;
 		.item {
@@ -77,14 +76,25 @@
 				z-index: 2;
 				lost-column: 1/4;  
 				background-size: 85%; 
-				background-image:url('../../app/assets/images/us1.gif');
 				background-repeat: no-repeat;
 				background-position: center;
 				position: absolute;
 				height: 100%;
 				width: 100%;
 			}
-	    .productTitle {
+			.productImage1 {
+				background-image:url('../../app/assets/images/us1.gif');
+			}
+			.productImage2 {
+				background-image:url('../../app/assets/images/us2.png');
+			}
+			.productImage3 {
+				background-image:url('../../app/assets/images/us3.gif');
+			}
+			.productImage4 {
+				background-image:url('../../app/assets/images/us4.gif');
+			}
+			.productTitle {
 	    	z-index: 12;  
 				align-self: flex-end;
 				text-align: center;

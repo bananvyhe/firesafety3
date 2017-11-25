@@ -30,7 +30,7 @@ $block-font-size: xlarge@d2;
 /*Импорт общих настроек*/
 @import "variables";
 
-body { background-color: $siteBG;
+body { background-color: $x11gray;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -121,7 +121,7 @@ section {
   lost-center: 1366px;
   background-color: #fff;
   .sectionTitle {
-    font-family: "OswaldL";
+    font-family: "UbuntuR";
     adjust-font-size: fontsize medium;
     text-align: center;
   }

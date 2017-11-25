@@ -86,7 +86,7 @@ html {
   line-height: 1.4em;
 }
 
-body { background-color: #1f1e24;
+body { background-color: #C1BDB3;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -271,7 +271,7 @@ section .trust:nth-child(1n) {
   clear: both;
 }
 .products .sectionTitle {
-  font-family: "OswaldL";
+  font-family: "UbuntuR";
   font-size: 1.333em;
   line-height: 1.0503em;
   text-align: center;
