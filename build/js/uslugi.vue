@@ -1,14 +1,13 @@
 <template>
 	<div class="products">
-		<div class="sectionTitle"><div class="titleBg">виды контроля:</div><div class="titlebackline"></div></div>
+		<div class="sectionTitle"><div class="titleBg">ВИДЫ КОНТРОЛЯ:</div><div class="titlebackline"></div></div>
 		<div class="itemsBox">
 
 			<div class="item" v-for="(product, index) in products" :key='index'>
-				<div class="productImage">
-					{{product.img}}
+				<div class="productImage" > 
 				</div>
 				<div class="productTitle">
-					{{product.name}}
+					{{product.name.toUpperCase()}}
 				</div>
 			</div>
 
@@ -21,7 +20,7 @@
 		  return {
 		    switcher: false,
 		    products: [
-		    	{name: 'Пожарная безопасность', img: 'us1.jpg'},
+		    	{name: 'Пожарная безопасность', img: 'assets/images/us1.gif'},
 		    	{name: 'Видеонаблюдение', img: 'us2.jpg'},
 		    	{name: 'Контроль доступа',  img: 'us3.jpg'},
 		    	{name: 'Охранная сигнализация',  img: 'us4.jpg'}
@@ -33,14 +32,15 @@
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
 	.products {
-
+		
 	}
-	.sectionTitle {
+	.sectionTitle { background-color: #dad;
 		position: relative;
 		display: flex;
 		justify-content: center;
 	}
 	.titleBg {
+		color: $titleColor;
 		padding-bottom: 0.25em;
 		position: relative;
 		z-index: 7;
@@ -48,31 +48,6 @@
 		padding-left: 25px;
 		background-color: #fff;
 		line-height: 1.8em;
-	}
-	.itemsBox { 
-		padding-left: 10%;
-		padding-right: 10%;
-	}
-	.item {
-		display: flex;
-		height: 15vw;
-		lost-column: 1/4;  
-    background: svg-load('../../app/assets/images/shield.svg');
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat; background-color: #dad;
-    .productTitle {
-			align-self: flex-end;
-			background-color: #ada;
-			text-align: center;
-			color: $blueTitle;
-			width: 100%;
-			padding: 10px;
-		}
-		.productImage {
-			background-color: #ada;
-			position: absolute;
-		}
 	}
 	.titlebackline {
 		z-index: 2;
@@ -82,4 +57,43 @@
 		position: absolute;
 		align-self: center;
 	}
+	.itemsBox { 
+		padding-left: 5%;
+		padding-right: 5%;
+		.item {
+		padding-top: 5%;
+		margin-bottom: 5%;
+		position: relative;
+		display: flex;
+		height: 15vw;
+		lost-column: 1/4;  
+    background: svg-load('../../app/assets/images/shield.svg');
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+	    .productImage {
+	    	bottom: 3%;
+				z-index: 2;
+				lost-column: 1/4;  
+				background-size: 85%; 
+				background-image:url('../../app/assets/images/us1.gif');
+				background-repeat: no-repeat;
+				background-position: center;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+			}
+	    .productTitle {
+	    	z-index: 12;  
+				align-self: flex-end;
+				text-align: center;
+
+				color: $blueTitle;
+				width: 100%;
+				padding: 10px;
+			}
+	 	}
+	}
+
 </style>

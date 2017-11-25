@@ -12,6 +12,12 @@
 }
 @font-face {
   font-family: OswaldL;
+  font-style: regular;
+  font-weight: 400;
+  src: url(fonts/Oswald-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: OswaldL;
   font-style: light;
   font-weight: 300;
   src: url(fonts/Oswald-Light.woff2) format("woff2");
@@ -80,7 +86,7 @@ html {
   line-height: 1.4em;
 }
 
-body {
+body { background-color: #1f1e24;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -213,13 +219,9 @@ section .trust:nth-child(1n) {
   background-size: 4px 22px;}
   opacity: 0;
   z-index: 1;
-  
+  background-color: #fff;
   position: relative;
-  overflow: hidden;   
-  border-top-left-radius: 0.6em;   
-  border-top-right-radius: 0.6em;
-  border-bottom-left-radius: 0.6em;
-  border-bottom-right-radius: 0.6em;
+  overflow: hidden;
   text-align: justify;
   flex-grow: 0;
   flex-shrink: 0;
@@ -249,17 +251,40 @@ section .trust:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;
 }
-.products .sectionTitle {
-  font-family: "OswaldL";
-  font-size: 1.7769em;
-  line-height: 1.5758em;
-  text-align: center;
+.grid-item :first-child {
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em
+}
+.products {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #fff;
 }
-.products .productTitle {
+.products:before {
+  content: '';
+  display: table;
+}
+.products:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.products .sectionTitle {
   font-family: "OswaldL";
   font-size: 1.333em;
   line-height: 1.0503em;
+  text-align: center;
+}
+.products .productTitle {
+  font-family: "OswaldL";
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+.products .titleBg {
+  font-size: 0.7502em;
+  line-height: 1.8662em;
 }
 @media (min-width: 1424px) {
   .sliderText {

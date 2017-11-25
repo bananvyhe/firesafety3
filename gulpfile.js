@@ -139,6 +139,13 @@ var fonts = require('postcss-font-magician')({
     },
     'OswaldL': {
       variants: {
+        regular: {
+          400: {
+            url: {
+               woff2: 'fonts/Oswald-Regular.woff2'
+            }
+          }
+        },
         light: {
           300: {
             url: {

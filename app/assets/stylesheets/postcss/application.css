@@ -30,7 +30,7 @@ $block-font-size: xlarge@d2;
 /*Импорт общих настроек*/
 @import "variables";
 
-body {
+body { background-color: $siteBG;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -105,25 +105,33 @@ section {
 .grid-item {@ruler;
   opacity: 0;
   z-index: 1;
-  
+  background-color: #fff;
   position: relative;/*for hamster*/
   overflow: hidden;   
-  @util border-top-radius(0.6em);
-  @util border-bottom-radius(0.6em);
+ /* @util border-top-radius(0.6em);
+  @util border-bottom-radius(0.6em);*/
   text-align: justify;
   lost-column: 1/1 1  flex;
   adjust-font-size: fontsize base;
+  :first-child {
+    @util border-top-radius(0.6em)
+  }
 }
 .products {
+  lost-center: 1366px;
+  background-color: #fff;
   .sectionTitle {
     font-family: "OswaldL";
-    adjust-font-size: fontsize large;
+    adjust-font-size: fontsize medium;
     text-align: center;
-    background-color: #fff;
   }
   .productTitle {
     font-family: "OswaldL"; 
-    adjust-font-size: fontsize medium;
+    font-weight: 400;
+    adjust-font-size: fontsize base;
+  }
+  .titleBg {
+    adjust-font-size: fontsize small;
   }
 }
 @media (--only-big-screen) {
