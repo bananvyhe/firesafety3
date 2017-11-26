@@ -61,31 +61,13 @@
 		padding-top: 0.2em; 
 	}
 	.itemsBox { 
-		padding-top: 0.2em;
-		padding-left: 5%;
-		padding-right: 5%;
 		.item {
-			
 			position: relative;
-			display: flex;
-			
 			background: svg-load('../../app/assets/images/shield.svg');
-	    background-size: 85%;
+	    background-size: 13em;
 	    background-position: center;
 	    background-repeat: no-repeat;
-	    justify-content: center;
-	    .productImage {
-	    	bottom: 3%;
-				z-index: 2;
-				lost-column: 1/4;  
-				background-size: 85%; 
-				background-repeat: no-repeat;
-				background-position: center;
-				position: absolute;
-				height: 100%;
-				width: 100%;
-			}
-			.productImage1 {
+	    .productImage1 {
 				background-image:url('../../app/assets/images/us1.gif');
 			}
 			.productImage2 {
@@ -96,15 +78,6 @@
 			}
 			.productImage4 {
 				background-image:url('../../app/assets/images/us4.gif');
-			}
-			.productTitle {
-	    	z-index: 12;  
-				align-self: flex-end;
-				text-align: center;
-
-				color: $blueTitle;
-				width: 100%;
-				padding: 10px;
 			}
 	 	}
 	}

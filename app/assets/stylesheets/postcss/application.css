@@ -60,7 +60,6 @@ section {
 .sliderapp {
    
 }
- 
 .sliderText {
   font-weight: 400;
   font-style: bold;
@@ -68,6 +67,7 @@ section {
   .titlefirst {
     filter: drop-shadow(1px 1px 2px grey);  
     font-family: "OswaldL";
+    font-weight: 300;
     padding-left: 15%;
   }
   .titlesecond {
@@ -78,7 +78,6 @@ section {
 .mainLogoPanel {
   height: 2.5em; 
 }
-
 .greedy-nav {
   font-family: "UbuntuR"; 
   font-style: normal;
@@ -95,8 +94,6 @@ section {
     border-top: 4px solid #f4d35e;
   }
 }
-
-
 @media (--only-small-screen) {
   .mainLogoPanel {
     height: 2.2em; 
@@ -118,32 +115,67 @@ section {
   }
 }
 .products {
-
   lost-center: 1366px;
   background-color: #fff;
-  padding-bottom: 3%;
+  padding-bottom: 2em;
   .sectionTitle {
     font-family: "UbuntuR";
     adjust-font-size: fontsize medium;
     text-align: center;
   }
-   .item {height: 15vw;
-    lost-column: 1/4;
-    padding-top: 5%;
-   
+  .item {
+    display: flex;
+    height: 14em;
+    align-items: flex-end;
+    lost-column: 1/4 4 1em;
+    .productImage {
+      bottom: 0.5em;
+      z-index: 2;
+      lost-column: 1/4;  
+      background-size: 14em; 
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+    .productTitle {
+      font-family: "OswaldL"; 
+      font-weight: 400;
+      adjust-font-size: fontsize medium;
+      z-index: 12;  
+      align-self: center; 
+      text-align: center;
+      color: $blueTitle;
+      width: 100%;
+      padding-top: 8em;
+    }
   }
   @media (--only-small-screen) {
     .item {
-      lost-column: 1/2;
-      height: 30vw;
-      padding-top: 10%;
-     
+      lost-column: 1/1 1 0 flex;
+      height: 15em;
+      .productImage {
+        background-size: 14em; 
+      }
+      .productTitle {
+         padding-top: 8em;
+      }
     }
   }
-  .productTitle {
-    font-family: "OswaldL"; 
-    font-weight: 400;
-    adjust-font-size: fontsize base;
+  @media (--only-medium-screen) {
+    .itemsBox {
+      padding-top: 1em;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .item {
+      lost-column: 1/2 2 1em flex;
+      height: 16em;
+      .productImage {
+        background-size: 14em; 
+      }
+    }
   }
   .titleBg {
     adjust-font-size: fontsize small;
@@ -190,7 +222,7 @@ section {
      
     div {
       .titlefirst {
-        adjust-font-size: fontsize medium;
+        adjust-font-size: fontsize large;
         line-height: 0.8;
         padding-bottom: 0.2em;
         padding-left: 0%;
