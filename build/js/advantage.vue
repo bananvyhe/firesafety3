@@ -1,17 +1,18 @@
 <template>
-	<div class="advantage">
-		<div class="title">
-			НАШИ ПРЕИМУЩЕСТВА:
-		</div>
-		<div class="itemsBox">
-			<div class="item" v-for="(advantage, index) in advantages" :key='index'>
-				<div class="productImage" :class="advantage.style" > 
-				</div>
-				<div class="productTitle">
-					{{advantage.desc}}
+	<div class="advantage">		 
+			<div class="title">
+				НАШИ ПРЕИМУЩЕСТВА:
+			</div>
+			<div class="itemBox">
+				<div class="itemAdv" v-for="(advantage, index) in advantages" :key='index'>
+					<div class="productImage" > 
+						<div :class="advantage.style" ></div>
+					</div>
+					<div class="productDesc">
+						{{advantage.desc}}
+					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 </template>
 <script>
@@ -34,14 +35,72 @@
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
 	.advantage {
+		
 		padding-top: 1em;
 		padding-bottom: 2em;
 		background-color: $advantageBg;
 		color: $advantageFontColor;
-		.title {
-			text-align: center;
-			padding: 1em;
-		}
+
+		
+			.title {
+				text-align: center;
+				padding: 1em;
+			}
+			.itemBox { background-color: #ada; 
+				padding-top: 1em;
+				padding-bottom: 2em;
+				padding-left: 1em;
+				padding-right: 1em;
+				lost-utility: clearfix;
+				.itemAdv { background-color: #dad;
+					lost-column: 1/3 1 1em;
+					lost-column-cycle: 3;
+					 
+					.productImage {
+						padding: 1em;
+						display: flex;
+						justify-content: center; 
+						 
+							
+						 
+					}
+					.productDesc {
+						 
+					}
+				}
+			}
+		
+	}
+	
+	.descImage1 { background-color: #ada;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+	.descImage2 { background-color: #ada;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+	.descImage3 { background-color: #ada;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+	.descImage4 { background-color: #ada;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+	.descImage5 { background-color: #ada;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+	.descImage6 { background-color: #ada;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
 	}
 	
 </style>

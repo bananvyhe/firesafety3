@@ -13871,9 +13871,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
 
 exports.default = {
   components: {
@@ -14149,65 +14146,6 @@ var render = function() {
         { staticClass: "grid-item", class: { inview: _vm.checkView(1) } },
         [_c("advantage")],
         1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "grid-item", class: { inview: _vm.checkView(1) } },
-        [
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h3", [
-            _vm._v(
-              "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h4", [
-            _vm._v(
-              "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
-            )
-          ])
-        ]
       ),
       _vm._v(" "),
       _c(
@@ -32672,7 +32610,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".advantage[data-v-526c14d8] {\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tbackground-color: #393e41;\n\tcolor: #f1f9ee;\n}\n.advantage .title[data-v-526c14d8] {\n\ttext-align: center;\n\tpadding: 1em;\n}\n\n", ""]);
+exports.push([module.i, ".advantage[data-v-526c14d8] {\n\t\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tbackground-color: #393e41;\n\tcolor: #f1f9ee;\n}\n.advantage .title[data-v-526c14d8] {\n\t\n\ttext-align: center;\n\t\n\tpadding: 1em;\n}\n.advantage .itemBox[data-v-526c14d8] {\n\t\n\tbackground-color: #ada;\n\t\n\tpadding-top: 1em;\n\t\n\tpadding-bottom: 2em;\n\t\n\tpadding-left: 1em;\n\t\n\tpadding-right: 1em;\n}\n.advantage .itemBox[data-v-526c14d8]:before {\n\t\n\tcontent: '';\n\t\n\tdisplay: table;\n}\n.advantage .itemBox[data-v-526c14d8]:after {\n\t\n\tcontent: '';\n\t\n\tdisplay: table;\n\t\n\tclear: both;\n}\n.advantage .itemBox .itemAdv[data-v-526c14d8] {\n\t\n\tbackground-color: #dad;\n\t\n\twidth: calc(33.3% - 0.66667em);\n}\n.advantage .itemBox .itemAdv[data-v-526c14d8]:nth-child(1n) {\n\t\n\tfloat: left;\n\t\n\tmargin-right: 1em;\n\t\n\tclear: none;\n}\n.advantage .itemBox .itemAdv[data-v-526c14d8]:last-child {\n\t\n\tmargin-right: 0;\n}\n.advantage .itemBox .itemAdv[data-v-526c14d8]:nth-child(3n) {\n\t\n\tmargin-right: 0;\n\t\n\tfloat: right;\n}\n.advantage .itemBox .itemAdv[data-v-526c14d8]:nth-child(3n + 1) {\n\t\n\tclear: both;\n}\n.advantage .itemBox .itemAdv .productImage[data-v-526c14d8] {\n\t\n\tpadding: 1em;\n\t\n\tdisplay: -webkit-box;\n\t\n\tdisplay: -ms-flexbox;\n\t\n\tdisplay: flex;\n\t\n\t-webkit-box-pack: center;\n\t\n\t    -ms-flex-pack: center;\n\t\n\t        justify-content: center;\n}\n.advantage .itemBox .itemAdv .productDesc[data-v-526c14d8] {}\n.descImage1[data-v-526c14d8] { background-color: #ada;\n\twidth: 100px;\n\theight: 100px;\n\tborder-radius: 50%;\n}\n.descImage2[data-v-526c14d8] { background-color: #ada;\n\twidth: 100px;\n\theight: 100px;\n\tborder-radius: 50%;\n}\n.descImage3[data-v-526c14d8] { background-color: #ada;\n\twidth: 100px;\n\theight: 100px;\n\tborder-radius: 50%;\n}\n.descImage4[data-v-526c14d8] { background-color: #ada;\n\twidth: 100px;\n\theight: 100px;\n\tborder-radius: 50%;\n}\n.descImage5[data-v-526c14d8] { background-color: #ada;\n\twidth: 100px;\n\theight: 100px;\n\tborder-radius: 50%;\n}\n.descImage6[data-v-526c14d8] { background-color: #ada;\n\twidth: 100px;\n\theight: 100px;\n\tborder-radius: 50%;\n}\n\n", ""]);
 
 // exports
 
@@ -32687,6 +32625,7 @@ exports.push([module.i, ".advantage[data-v-526c14d8] {\n\tpadding-top: 1em;\n\tp
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+//
 //
 //
 //
@@ -32724,18 +32663,20 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "advantage" }, [
     _c("div", { staticClass: "title" }, [
-      _vm._v("\n\t\tНАШИ ПРЕИМУЩЕСТВА:\n\t")
+      _vm._v("\n\t\t\tНАШИ ПРЕИМУЩЕСТВА:\n\t\t")
     ]),
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "itemsBox" },
+      { staticClass: "itemBox" },
       _vm._l(_vm.advantages, function(advantage, index) {
-        return _c("div", { key: index, staticClass: "item" }, [
-          _c("div", { staticClass: "productImage", class: advantage.style }),
+        return _c("div", { key: index, staticClass: "itemAdv" }, [
+          _c("div", { staticClass: "productImage" }, [
+            _c("div", { class: advantage.style })
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "productTitle" }, [
-            _vm._v("\n\t\t\t\t" + _vm._s(advantage.desc) + "\n\t\t\t")
+          _c("div", { staticClass: "productDesc" }, [
+            _vm._v("\n\t\t\t\t\t" + _vm._s(advantage.desc) + "\n\t\t\t\t")
           ])
         ])
       })
