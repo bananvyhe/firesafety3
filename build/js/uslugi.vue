@@ -36,6 +36,8 @@
 	.products {
 		margin-top: 6px;	 
     border-top-left-radius: 1em;
+    background-color: #fff;
+  	padding-bottom: 2em;
 	}
 	.sectionTitle {
 		padding-top: 0.3em;

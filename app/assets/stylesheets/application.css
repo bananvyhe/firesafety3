@@ -250,8 +250,6 @@ section .trust:nth-child(1n) {
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #fff;
-  padding-bottom: 1em;
 }
 
 .products:before {
@@ -425,6 +423,8 @@ section .trust:nth-child(1n) {
     max-width: calc(99.9% * 1/2 - (1em - 1em * 1/2));
     width: calc(99.9% * 1/2 - (1em - 1em * 1/2));
     height: 16em;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
   .products .item:nth-child(1n) {
     margin-right: 1em;
@@ -441,6 +441,12 @@ section .trust:nth-child(1n) {
     background-size: 14em;
   }
   }
+.advantage .button {
+  font-family: "OswaldL";
+  font-weight: 400;
+  font-size: 1.333em;
+  line-height: 1.0503em;
+}
 @media (min-width: 980px) {
   .sliderText {
     font-size: 18px;

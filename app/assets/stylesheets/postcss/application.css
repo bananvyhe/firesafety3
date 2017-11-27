@@ -113,8 +113,6 @@ section {
 
 .products {
   lost-center: 1366px;
-  background-color: #fff;
-  padding-bottom: 1em;
   .sectionTitle {
     font-family: "UbuntuR";
     adjust-font-size: fontsize medium;
@@ -176,6 +174,7 @@ section {
     .item {
       lost-column: 1/2 2 1em flex;
       height: 16em;
+      align-self: center;
       .productImage {
         background-size: 14em; 
       }
@@ -185,7 +184,13 @@ section {
     adjust-font-size: fontsize small;
   }
 }
-
+.advantage {
+  .button {
+    font-family: "OswaldL"; 
+    font-weight: 400;
+    adjust-font-size: fontsize medium;
+  }
+}
 /*.advantage {
   .itemsBox {
     .items {
