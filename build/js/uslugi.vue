@@ -1,7 +1,7 @@
 <template>
 	<div class="products">
 		<div class="sectionTitle">
-			<div class="titleBg"><nobr>ВИДЫ КОНТРОЛЯ:</nobr>
+			<div class="titleBg"><div><nobr>ВИДЫ КОНТРОЛЯ:</nobr></div>
 			</div>
 			<div class="titlebackline"></div>
 		</div>
@@ -46,19 +46,24 @@
 	.titlebackline {
 		z-index: 2;
 		background-color: #b3ddad;
-		height: 0.7em;
+		height: 0.6em;
 		width: 100%;
 		position: absolute;
 		align-self: center;
 	}
-	.titleBg { 
+	.titleBg { width: 50;
+    height: 0;border-top: 1.2em solid #fff;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent; 
 		color: $titleColor;
 		position: relative;
 		z-index: 7;
-		padding-right: 4%;
-		padding-left: 4%;
-		background-color: #fff;
+		padding-right: 2%;
+		padding-left: 2%;
 		padding-top: 0.2em; 
+		div {
+			margin-top: -1.6em;
+		}
 	}
 	.itemsBox { 
 		.item {
