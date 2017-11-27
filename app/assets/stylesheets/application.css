@@ -214,7 +214,6 @@ section .trust:nth-child(1n) {
   background-size: 4px 22px;}
   opacity: 0;
   z-index: 1;
-  background-color: #fff;
   position: relative;
   overflow: hidden;
   text-align: justify;
@@ -246,9 +245,7 @@ section .trust:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;
 }
-.bodyApp :first-child {
-  border-top-left-radius: 1em;
-}
+
 .products {
   max-width: 1366px;
   margin-left: auto;
@@ -256,21 +253,25 @@ section .trust:nth-child(1n) {
   background-color: #fff;
   padding-bottom: 1em;
 }
+
 .products:before {
   content: '';
   display: table;
 }
+
 .products:after {
   content: '';
   display: table;
   clear: both;
 }
+
 .products .sectionTitle {
   font-family: "UbuntuR";
   font-size: 1.333em;
   line-height: 1.0503em;
   text-align: center;
 }
+
 .products .itemsBox {
   max-width: 1024px;
   margin-left: auto;
@@ -279,15 +280,18 @@ section .trust:nth-child(1n) {
   padding-left: 3%;
   padding-right: 3%;
 }
+
 .products .itemsBox:before {
   content: '';
   display: table;
 }
+
 .products .itemsBox:after {
   content: '';
   display: table;
   clear: both;
 }
+
 .products .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,21 +302,26 @@ section .trust:nth-child(1n) {
           align-items: flex-end;
   width: calc(99.9% * 1/4 - (1em - 1em * 1/4));
 }
+
 .products .item:nth-child(1n) {
   float: left;
   margin-right: 1em;
   clear: none;
 }
+
 .products .item:last-child {
   margin-right: 0;
 }
+
 .products .item:nth-child(4n) {
   margin-right: 0;
   float: right;
 }
+
 .products .item:nth-child(4n + 1) {
   clear: both;
 }
+
 .products .item .productImage {
   bottom: 0.5em;
   z-index: 2;
@@ -324,21 +333,26 @@ section .trust:nth-child(1n) {
   height: 100%;
   width: 100%;
 }
+
 .products .item .productImage:nth-child(1n) {
   float: left;
   margin-right: 30px;
   clear: none;
 }
+
 .products .item .productImage:last-child {
   margin-right: 0;
 }
+
 .products .item .productImage:nth-child(4n) {
   margin-right: 0;
   float: right;
 }
+
 .products .item .productImage:nth-child(4n + 1) {
   clear: both;
 }
+
 .products .item .productTitle {
   font-family: "OswaldL";
   font-weight: 400;
@@ -352,10 +366,12 @@ section .trust:nth-child(1n) {
   width: 100%;
   padding-top: 8em;
 }
+
 .products .titleBg {
   font-size: 0.7502em;
   line-height: 1.8662em;
 }
+
 @media (min-width: 0px) and (max-width: 580px) {
   .products .item {
     flex-grow: 0;
@@ -383,6 +399,7 @@ section .trust:nth-child(1n) {
     padding-top: 8em;
   }
   }
+
 @media (min-width: 581px) and (max-width: 979px) {
   .products .itemsBox {
     max-width: 560px;

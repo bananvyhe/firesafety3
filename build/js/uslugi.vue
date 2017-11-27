@@ -13,7 +13,6 @@
 					{{product.name.toUpperCase()}}
 				</div>
 			</div>
-
 		</div>
 	</div>
 </template>
@@ -35,7 +34,8 @@
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
 	.products {
-		
+		margin-top: 6px;	 
+    border-top-left-radius: 1em;
 	}
 	.sectionTitle {
 		padding-top: 0.3em;

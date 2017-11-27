@@ -13772,7 +13772,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".grid-item {\n\t-webkit-transition: 1s ease-in-out;\n\ttransition: 1s ease-in-out;\n  opacity: 0;\n}\n.inview {\n\topacity: 1;\n}\n", ""]);
+exports.push([module.i, ".bodyApp {\n}\n.grid-item {\n\t-webkit-transition: 1s ease-in-out;\n\ttransition: 1s ease-in-out;\n\topacity: 0;\n}\n.inview {\n\topacity: 1;\n}\n", ""]);
 
 // exports
 
@@ -13874,14 +13874,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
 
 exports.default = {
   components: {
     uslugi: _uslugi2.default,
     advantage: _advantage2.default
-
   },
   data: function data() {
     return {
@@ -13922,7 +13919,6 @@ exports.default = {
       this.scrollTop = window.scrollY;
     }
   }
-
 };
 
 /***/ }),
@@ -14015,7 +14011,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".products[data-v-117c1a6c] {\n}\n.sectionTitle[data-v-117c1a6c] {\n\tpadding-top: 0.3em;\n\tposition: relative;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n.titlebackline[data-v-117c1a6c] {\n\tz-index: 2;\n\tbackground-color: #b3ddad;\n\theight: 0.7em;\n\twidth: 100%;\n\tposition: absolute;\n\t-ms-flex-item-align: center;\n\t    align-self: center;\n}\n.titleBg[data-v-117c1a6c] { \n\tcolor: #393e41;\n\tposition: relative;\n\tz-index: 7;\n\tpadding-right: 4%;\n\tpadding-left: 4%;\n\tbackground-color: #fff;\n\tpadding-top: 0.2em;\n}\n.itemsBox .item[data-v-117c1a6c] {\n\tposition: relative;\n\tbackground: url(\"data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 760 812' enable-background='new 0 0 760 812' xml:space='preserve'%3E %3Cg id='Layer_2'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' fill-opacity='0' fill='%23FFFFFF' d='M81,114c70.36-25.021,472.96-25.901,600,0 c34.341,236-34,520-300,640C186,693,37,384,81,114z'/%3E %3C/g%3E %3Cg id='Layer_1'%3E %3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='570.6464' y1='93.0541' x2='36.882' y2='665.4464'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_1_)' d='M700.165,133.56 c23.055,149.119-3.768,307.375-86.079,435.06c-52.971,82.174-126.093,147.227-214.145,189.789l-20.438,9.878l-20.438-9.878 c-88.053-42.563-161.177-107.616-214.149-189.791C62.608,440.933,35.786,282.678,58.84,133.56l4.87-31.503l31.078-7.103 c187.371-42.83,382.058-42.83,569.429,0l31.078,7.103L700.165,133.56L700.165,133.56z M665.97,129.36l-9.14-2.09 c-182.595-41.738-372.06-41.738-554.654,0l-9.14,2.09l-1.434,9.265c-21.833,141.207,3.205,291.072,81.179,412.03 c49.697,77.096,118.094,137.973,200.71,177.904l6.011,2.906l6.012-2.906c82.615-39.929,151.011-100.807,200.708-177.901 c77.974-120.959,103.015-270.825,81.181-412.033L665.97,129.36z'/%3E %3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='474.7297' y1='194.2706' x2='57.9909' y2='625.8163'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_2_)' d='M692.552,128.019 c22.869,147.896-3.619,304.572-85.262,431.222c-52.448,81.362-124.72,145.668-211.906,187.807l-18.034,8.717l-18.033-8.717 c-87.187-42.139-159.46-106.446-211.909-187.809c-81.642-126.65-108.128-283.325-85.26-431.22l4.298-27.797l27.421-6.268 c186.645-42.664,380.322-42.664,566.967,0l27.421,6.268L692.552,128.019L692.552,128.019z M670.71,131.396l-2.006-12.971 l-12.796-2.925c-183.496-41.943-373.62-41.943-557.117,0l-12.797,2.925l-2.006,12.971c-22.052,142.58,3.261,293.729,81.994,415.869 c50.273,77.986,119.368,139.484,202.95,179.885l8.416,4.068l8.416-4.068c83.581-40.4,152.677-101.898,202.948-179.883 C667.448,425.127,692.762,273.977,670.71,131.396z'/%3E %3C/g%3E %3C/svg%3E\");\n\tbackground-size: 13em;\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n}\n.itemsBox .item .productImage1[data-v-117c1a6c] {\n\tbackground-image:url(" + __webpack_require__(71) + ");\n}\n.itemsBox .item .productImage2[data-v-117c1a6c] {\n\tbackground-image:url(" + __webpack_require__(72) + ");\n}\n.itemsBox .item .productImage3[data-v-117c1a6c] {\n\tbackground-image:url(" + __webpack_require__(73) + ");\n}\n.itemsBox .item .productImage4[data-v-117c1a6c] {\n\tbackground-image:url(" + __webpack_require__(74) + ");\n}\n\n", ""]);
+exports.push([module.i, ".products[data-v-117c1a6c] {\n\t\tmargin-top: 6px;\t \n    border-top-left-radius: 1em;\n}\n.sectionTitle[data-v-117c1a6c] {\n\t\tpadding-top: 0.3em;\n\t\tposition: relative;\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-pack: center;\n\t\t    -ms-flex-pack: center;\n\t\t        justify-content: center;\n}\n.titlebackline[data-v-117c1a6c] {\n\t\tz-index: 2;\n\t\tbackground-color: #b3ddad;\n\t\theight: 0.7em;\n\t\twidth: 100%;\n\t\tposition: absolute;\n\t\t-ms-flex-item-align: center;\n\t\t    align-self: center;\n}\n.titleBg[data-v-117c1a6c] { \n\t\tcolor: #393e41;\n\t\tposition: relative;\n\t\tz-index: 7;\n\t\tpadding-right: 4%;\n\t\tpadding-left: 4%;\n\t\tbackground-color: #fff;\n\t\tpadding-top: 0.2em;\n}\n.itemsBox .item[data-v-117c1a6c] {\n\t\tposition: relative;\n\t\tbackground: url(\"data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 760 812' enable-background='new 0 0 760 812' xml:space='preserve'%3E %3Cg id='Layer_2'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' fill-opacity='0' fill='%23FFFFFF' d='M81,114c70.36-25.021,472.96-25.901,600,0 c34.341,236-34,520-300,640C186,693,37,384,81,114z'/%3E %3C/g%3E %3Cg id='Layer_1'%3E %3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='570.6464' y1='93.0541' x2='36.882' y2='665.4464'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_1_)' d='M700.165,133.56 c23.055,149.119-3.768,307.375-86.079,435.06c-52.971,82.174-126.093,147.227-214.145,189.789l-20.438,9.878l-20.438-9.878 c-88.053-42.563-161.177-107.616-214.149-189.791C62.608,440.933,35.786,282.678,58.84,133.56l4.87-31.503l31.078-7.103 c187.371-42.83,382.058-42.83,569.429,0l31.078,7.103L700.165,133.56L700.165,133.56z M665.97,129.36l-9.14-2.09 c-182.595-41.738-372.06-41.738-554.654,0l-9.14,2.09l-1.434,9.265c-21.833,141.207,3.205,291.072,81.179,412.03 c49.697,77.096,118.094,137.973,200.71,177.904l6.011,2.906l6.012-2.906c82.615-39.929,151.011-100.807,200.708-177.901 c77.974-120.959,103.015-270.825,81.181-412.033L665.97,129.36z'/%3E %3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='474.7297' y1='194.2706' x2='57.9909' y2='625.8163'%3E %3Cstop offset='0' style='stop-color:%23332F2D'/%3E %3Cstop offset='0.34' style='stop-color:%2399989C'/%3E %3Cstop offset='0.69' style='stop-color:%23494444'/%3E %3Cstop offset='1' style='stop-color:%23332F2D'/%3E %3C/linearGradient%3E %3Cpath fill-opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' fill='url(%23SVGID_2_)' d='M692.552,128.019 c22.869,147.896-3.619,304.572-85.262,431.222c-52.448,81.362-124.72,145.668-211.906,187.807l-18.034,8.717l-18.033-8.717 c-87.187-42.139-159.46-106.446-211.909-187.809c-81.642-126.65-108.128-283.325-85.26-431.22l4.298-27.797l27.421-6.268 c186.645-42.664,380.322-42.664,566.967,0l27.421,6.268L692.552,128.019L692.552,128.019z M670.71,131.396l-2.006-12.971 l-12.796-2.925c-183.496-41.943-373.62-41.943-557.117,0l-12.797,2.925l-2.006,12.971c-22.052,142.58,3.261,293.729,81.994,415.869 c50.273,77.986,119.368,139.484,202.95,179.885l8.416,4.068l8.416-4.068c83.581-40.4,152.677-101.898,202.948-179.883 C667.448,425.127,692.762,273.977,670.71,131.396z'/%3E %3C/g%3E %3C/svg%3E\");\n\t\tbackground-size: 13em;\n\t\tbackground-position: center;\n\t\tbackground-repeat: no-repeat;\n}\n.itemsBox .item .productImage1[data-v-117c1a6c] {\n\t\tbackground-image:url(" + __webpack_require__(71) + ");\n}\n.itemsBox .item .productImage2[data-v-117c1a6c] {\n\t\tbackground-image:url(" + __webpack_require__(72) + ");\n}\n.itemsBox .item .productImage3[data-v-117c1a6c] {\n\t\tbackground-image:url(" + __webpack_require__(73) + ");\n}\n.itemsBox .item .productImage4[data-v-117c1a6c] {\n\t\tbackground-image:url(" + __webpack_require__(74) + ");\n}\n\n", ""]);
 
 // exports
 
@@ -14054,7 +14050,6 @@ module.exports = "data:image/gif;base64,R0lGODlhFwHTAPf/AO1pcTVEV/9ncf+ssVecWlZX
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-//
 //
 //
 //
@@ -14148,67 +14143,15 @@ var render = function() {
       _c(
         "div",
         { staticClass: "grid-item", class: { inview: _vm.checkView(0) } },
-        [_c("uslugi"), _vm._v(" "), _c("advantage")],
+        [_c("uslugi")],
         1
       ),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "grid-item", class: { inview: _vm.checkView(1) } },
-        [
-          _vm._v(
-            " BodyApp Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h3", [
-            _vm._v(
-              "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h4", [
-            _vm._v(
-              "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
-            )
-          ])
-        ]
+        [_c("advantage")],
+        1
       ),
       _vm._v(" "),
       _c(
@@ -32768,7 +32711,7 @@ exports.default = {
 	data: function data() {
 		return {
 			switcher: false,
-			advantages: [{ title: 'опыт', desc: '8 лет проектирования, монтажа и обслуживания более 200 объуктов на более чем 500 000 кв. метрах', style: 'descImage1' }, { title: 'ответственность', desc: 'На все обслуживаемые системы гарантируем прохождение пожарной инспекции с первого раза и без штрафов', style: 'descImage2' }, { title: 'гарантия', desc: 'Гарантия на работы до 3 лет', style: 'descImage3' }, { title: 'лицензия', desc: 'Деятельность лицензирована МЧС РФ за №66-Б.00124 от 23 июня 2009 года', style: 'descImage4' }, { title: 'оперативность', desc: 'Расчет сметы от 1 дня', style: 'descImage4' }, { title: 'сервисное обслуживание', desc: 'Сервисная поддержка', style: 'descImage4' }]
+			advantages: [{ title: 'опыт', desc: '8 лет проектирования, монтажа и обслуживания более 200 объектов на более чем 500 000 кв. метрах', style: 'descImage1' }, { title: 'ответственность', desc: 'На все обслуживаемые системы гарантируем прохождение пожарной инспекции с первого раза и без штрафов', style: 'descImage2' }, { title: 'гарантия', desc: 'Гарантия на работы до 3 лет', style: 'descImage3' }, { title: 'лицензия', desc: 'Деятельность лицензирована МЧС РФ за №66-Б.00124 от 23 июня 2009 года', style: 'descImage4' }, { title: 'оперативность', desc: 'Расчет сметы от 1 дня', style: 'descImage4' }, { title: 'сервисное обслуживание', desc: 'Сервисная поддержка', style: 'descImage4' }]
 		};
 	}
 };
