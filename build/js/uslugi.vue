@@ -51,7 +51,7 @@
 		position: absolute;
 		align-self: center;
 	}
-	.titleBg {
+	.titleBg { 
 		color: $titleColor;
 		position: relative;
 		z-index: 7;

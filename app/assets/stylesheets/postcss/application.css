@@ -30,7 +30,7 @@ $block-font-size: xlarge@d2;
 /*Импорт общих настроек*/
 @import "variables";
 
-body { background-color: $x11gray;
+body { background-color: $isabelline;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -110,18 +110,26 @@ section {
   text-align: justify;
   lost-column: 1/1 1  flex;
   adjust-font-size: fontsize base;
+}
+.bodyApp {
   :first-child {
-    @util border-top-radius(0.6em)
+     border-top-left-radius: 1em;
   }
 }
 .products {
   lost-center: 1366px;
   background-color: #fff;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   .sectionTitle {
     font-family: "UbuntuR";
     adjust-font-size: fontsize medium;
     text-align: center;
+  }
+  .itemsBox {
+      lost-center: 1024px;
+      padding-top: 1em;
+      padding-left: 3%;
+      padding-right: 3%;
   }
   .item {
     display: flex;
@@ -165,7 +173,8 @@ section {
   }
   @media (--only-medium-screen) {
     .itemsBox {
-      padding-top: 1em;
+      lost-center: 560px;
+      padding-top: 2em;
       padding-left: 10%;
       padding-right: 10%;
     }

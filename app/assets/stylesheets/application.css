@@ -86,7 +86,7 @@ html {
   line-height: 1.4em;
 }
 
-body { background-color: #C1BDB3;
+body { background-color: #F4F3EE;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -246,16 +246,15 @@ section .trust:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;
 }
-.grid-item :first-child {
-  border-top-left-radius: 0.6em;
-  border-top-right-radius: 0.6em
+.bodyApp :first-child {
+  border-top-left-radius: 1em;
 }
 .products {
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 .products:before {
   content: '';
@@ -271,6 +270,23 @@ section .trust:nth-child(1n) {
   font-size: 1.333em;
   line-height: 1.0503em;
   text-align: center;
+}
+.products .itemsBox {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.products .itemsBox:before {
+  content: '';
+  display: table;
+}
+.products .itemsBox:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 .products .item {
   display: -webkit-box;
@@ -369,9 +385,21 @@ section .trust:nth-child(1n) {
   }
 @media (min-width: 581px) and (max-width: 979px) {
   .products .itemsBox {
-    padding-top: 1em;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
     padding-left: 10%;
     padding-right: 10%;
+  }
+  .products .itemsBox:before {
+    content: '';
+    display: table;
+  }
+  .products .itemsBox:after {
+    content: '';
+    display: table;
+    clear: both;
   }
   .products .item {
     flex-grow: 0;
