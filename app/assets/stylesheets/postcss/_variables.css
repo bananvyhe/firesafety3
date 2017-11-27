@@ -60,7 +60,7 @@ $advantageFontColor: #f1f9ee;
 
 
 
-@custom-media --telpanel-small-screen (width <= 480px);
+@custom-media --telpanel-small-screen (width <= 720px);
 
 @custom-media --only-small-screen (width >= 0px) and (width <= 580px);
 @custom-media --only-medium-screen (width >= 581px) and (width <= 979px);
