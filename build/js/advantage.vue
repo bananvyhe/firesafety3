@@ -46,26 +46,28 @@
 				text-align: center;
 				padding: 1em;
 			}
-			.itemBox { background-color: #ada; 
-				padding-top: 1em;
+			.itemBox { 
+				background-color: $advantageBg; 
+				padding-top: 2em;
 				padding-bottom: 2em;
 				padding-left: 1em;
 				padding-right: 1em;
 				lost-utility: clearfix;
 				.itemAdv { background-color: #dad;
-					lost-column: 1/3 1 1em;
-					lost-column-cycle: 3;
+					lost-waffle: 1/3 no-flex;
+ 
 					 
 					.productImage {
 						padding: 1em;
 						display: flex;
 						justify-content: center; 
+
 						 
 							
 						 
 					}
 					.productDesc {
-						 
+						 text-align: center;
 					}
 				}
 			}
