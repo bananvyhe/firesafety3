@@ -32732,7 +32732,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n", ""]);
+exports.push([module.i, ".advantage[data-v-526c14d8] {\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tbackground-color: #393e41;\n\tcolor: #f1f9ee;\n}\n.advantage .title[data-v-526c14d8] {\n\ttext-align: center;\n\tpadding: 1em;\n}\n\n", ""]);
 
 // exports
 
@@ -32752,12 +32752,23 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 exports.default = {
 	data: function data() {
 		return {
 			switcher: false,
-			products: [{ name: 'Пожарная безопасность', style: 'productImage1' }, { name: 'Видеонаблюдение', style: 'productImage2' }, { name: 'Контроль доступа', style: 'productImage3' }, { name: 'Охранная сигнализация', style: 'productImage4' }]
+			advantages: [{ title: 'опыт', desc: '8 лет проектирования, монтажа и обслуживания более 200 объуктов на более чем 500 000 кв. метрах', style: 'descImage1' }, { title: 'ответственность', desc: 'На все обслуживаемые системы гарантируем прохождение пожарной инспекции с первого раза и без штрафов', style: 'descImage2' }, { title: 'гарантия', desc: 'Гарантия на работы до 3 лет', style: 'descImage3' }, { title: 'лицензия', desc: 'Деятельность лицензирована МЧС РФ за №66-Б.00124 от 23 июня 2009 года', style: 'descImage4' }, { title: 'оперативность', desc: 'Расчет сметы от 1 дня', style: 'descImage4' }, { title: 'сервисное обслуживание', desc: 'Сервисная поддержка', style: 'descImage4' }]
 		};
 	}
 };
@@ -32771,7 +32782,25 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "advantage" }, [_vm._v("\n\t123\n")])
+  return _c("div", { staticClass: "advantage" }, [
+    _c("div", { staticClass: "title" }, [
+      _vm._v("\n\t\tНАШИ ПРЕИМУЩЕСТВА:\n\t")
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "itemsBox" },
+      _vm._l(_vm.advantages, function(advantage, index) {
+        return _c("div", { key: index, staticClass: "item" }, [
+          _c("div", { staticClass: "productImage", class: advantage.style }),
+          _vm._v(" "),
+          _c("div", { staticClass: "productTitle" }, [
+            _vm._v("\n\t\t\t\t" + _vm._s(advantage.desc) + "\n\t\t\t")
+          ])
+        ])
+      })
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
