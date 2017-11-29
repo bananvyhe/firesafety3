@@ -95,10 +95,12 @@
 		border-radius: 50%;
 	}
 	.descImage1 { 
-		 
+		background: svg-load('../../app/assets/images/tools.svg' );
+    background-repeat: no-repeat;
 	}
 	.descImage2 { 
-		
+		background: svg-load('../../app/assets/images/fire-extinguisher.svg' );
+    background-repeat: no-repeat;
 	}
 	.descImage3 {  
 		 
