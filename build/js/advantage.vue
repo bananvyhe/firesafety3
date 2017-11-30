@@ -5,9 +5,12 @@
 			</div>
 			<div class="itemBox">
 				<div class="itemAdv" v-for="(advantage, index) in advantages" :key='index'>
-					<div class="productImage" > 
-						<div class="descImage" :class="advantage.style" ></div>
+					<div class="container">
+						<div class="productImage"> 
+							<div :class="advantage.style" class="descImage"></div>
+						</div>
 					</div>
+					
 					<div class="productDesc">
 						<p>{{advantage.desc}}</p>
 					</div>
@@ -38,36 +41,71 @@
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
 	.advantage {
-		
 		padding-top: 1em;
 		padding-bottom: 2em;
 		background-color: $advantageBg;
 		color: $advantageFontColor;
-			.title {
-				text-align: center;
-				padding: 1em;
-			}
-			.itemBox { 
-				background-color: $advantageBg; 
-				padding-top: 2em;
-				padding-bottom: 2em;
-				padding-left: 1em;
-				padding-right: 1em;
-				lost-utility: clearfix;
-				.itemAdv {
+		.title {
+			text-align: center;
+			padding: 1em;
+		}
+		.itemBox { 
+			background-color: $advantageBg; 
+			padding-top: 2em;
+			padding-bottom: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			lost-utility: clearfix;
+			.itemAdv {
 				lost-waffle: 1/3 no-flex;
-				.productImage {
-					padding: 1em;
+				.container {
 					display: flex;
-					justify-content: center; 
+					justify-content: center;
+					padding: 1em;
+					.productImage {
+						background-color: $greyInd; 
+						padding: 1em;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 80px;
+						height: 80px;
+						border-radius: 50%;
+						.descImage1 { 
+							background: svg-load('../../app/assets/images/tools.svg' );  
+						}
+						.descImage2 { 
+							background: svg-load('../../app/assets/images/fire-extinguisher.svg' );
+					  }
+						.descImage3 {  
+							background: svg-load('../../app/assets/images/gear.svg' );
+						}
+						.descImage4 { 
+					 		background: svg-load('../../app/assets/images/flame.svg' );
+						}
+						.descImage5 {  
+					 		background: svg-load('../../app/assets/images/file-text-o.svg' );
+						}
+						.descImage6 {
+					 		background: svg-load('../../app/assets/images/jersey.svg' );
+						}
+						.descImage {
+							background-repeat: no-repeat;
+							background-position: center;
+							width: 70px;
+							height: 70px;
+						}
+					}
 				}
+				
 				.productDesc {
 					text-align: center;
 					padding-left: 1em;
 					padding-right: 1em;
 					padding-bottom: 1em;
 				}
-				.button {display: flex;
+				.button {
+					display: flex;
 					justify-content: center; 
 					padding-bottom: 1em;
 					align-items: center;
@@ -83,36 +121,10 @@
 		        border-radius: 50%;
 		        border: 0px solid #fff;
 		        font-weight: bold;
-		      }					
+		    	}					
 				}
 			}
 		}
-	}
-	.descImage {  
-		background-color: $greyInd; 
-		width: 100px;
-		height: 100px;
-		border-radius: 50%;
-	}
-	.descImage1 { 
-		background: svg-load('../../app/assets/images/tools.svg' );
-    background-repeat: no-repeat;
-	}
-	.descImage2 { 
-		background: svg-load('../../app/assets/images/fire-extinguisher.svg' );
-    background-repeat: no-repeat;
-	}
-	.descImage3 {  
-		 
-	}
-	.descImage4 { 
- 
-	}
-	.descImage5 {  
- 
-	}
-	.descImage6 {
- 
 	}
 	
 </style>
