@@ -86,7 +86,7 @@ html {
   line-height: 1.4em;
 }
 
-body { background-color: #F4F3EE;
+body { background-color: #ebf0f3;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -261,8 +261,8 @@ section .trust:nth-child(1n) {
 }
 .products .sectionTitle {
   font-family: "UbuntuR";
-  font-size: 1.333em;
-  line-height: 1.0503em;
+  font-size: 1em;
+  line-height: 1.4em;
   text-align: center;
 }
 .products .itemsBox {
@@ -340,10 +340,6 @@ section .trust:nth-child(1n) {
   z-index: 12;
   -ms-flex-item-align: center;
       align-self: center;
-}
-.products .titleBg {
-  font-size: 0.7502em;
-  line-height: 1.8662em;
 }
 @media (min-width: 0px) and (max-width: 580px) {
   .products .itembox {
@@ -534,13 +530,13 @@ section .trust:nth-child(1n) {
 }
 @media (min-width: 581px) and (max-width: 979px) {
   .trusty .itemTru {
-    width: calc(99.9% * 1/2 - (1.2em - 1.2em * 1/2));
-    height: calc(99.9% * 1/2 - (1.2em - 1.2em * 1/2));
+    width: calc(99.9% * 1/2 - (1.1em - 1.1em * 1/2));
+    height: calc(99.9% * 1/2 - (1.1em - 1.1em * 1/2));
   }
   .trusty .itemTru:nth-child(1n) {
     float: left;
-    margin-right: 1.2em;
-    margin-bottom: 1.2em;
+    margin-right: 1.1em;
+    margin-bottom: 1.1em;
     clear: none;
   }
   .trusty .itemTru:last-child {
@@ -559,13 +555,13 @@ section .trust:nth-child(1n) {
 }
 @media (min-width: 0px) and (max-width: 580px) {
   .trusty .itemTru {
-    width: calc(99.9% * 1/1 - (2em - 2em * 1/1));
-    height: calc(99.9% * 1/1 - (2em - 2em * 1/1));
+    width: calc(99.9% * 1/1 - (1.2em - 1.2em * 1/1));
+    height: calc(99.9% * 1/1 - (1.2em - 1.2em * 1/1));
   }
   .trusty .itemTru:nth-child(1n) {
     float: left;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    margin-right: 1.2em;
+    margin-bottom: 1.2em;
     clear: none;
   }
   .trusty .itemTru:last-child {

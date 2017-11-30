@@ -30,7 +30,7 @@ $block-font-size: xlarge@d2;
 /*Импорт общих настроек*/
 @import "variables";
 
-body { background-color: $isabelline;
+body { background-color: $advBottomBorder;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -114,7 +114,7 @@ section {
   lost-center: 1366px;
   .sectionTitle {
     font-family: "UbuntuR";
-    adjust-font-size: fontsize medium;
+    adjust-font-size: fontsize base;
     text-align: center;
   }
   .itemsBox {
@@ -184,9 +184,6 @@ section {
       }
     }
   }
-  .titleBg {
-    adjust-font-size: fontsize small;
-  }
 }
 .advantage {
   .itemAdv {
@@ -222,14 +219,14 @@ section {
 @media (--only-medium-screen) {
   .trusty {
     .itemTru {
-      lost-waffle: 1/2 2 1.2em no-flex;
+      lost-waffle: 1/2 2 1.1em no-flex;
     }
   }
 }
 @media (--only-small-screen) {
   .trusty {
     .itemTru {
-      lost-waffle: 1/1 1 2em no-flex;
+      lost-waffle: 1/1 1 1.2em no-flex;
     }
   }
 }

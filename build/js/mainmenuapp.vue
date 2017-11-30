@@ -318,7 +318,6 @@
   align-items: center;
   position: relative;
   background-color: $color-5;
-
   a {
     display: block;
     padding: 10px 30px;
@@ -328,7 +327,8 @@
       color: $color-3;
     }
   }
-  button {z-index: 23;
+  button {
+    z-index: 23;
     position: absolute;
     height: 100%;
     right: 0px;

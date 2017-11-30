@@ -38,10 +38,10 @@ import titleblock from './components/titleblock.vue';
 @import "../../app/assets/stylesheets/postcss/variables";
  
 	.products {
+		border-top: 7px solid $advBottomBorder; 
 		border-top-left-radius: 1em;
     background-color: #fff;
   	padding-bottom: 3em;
-  	margin-top: -0.7em;
 	}
  
 	.itemsBox { 

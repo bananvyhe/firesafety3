@@ -18,7 +18,7 @@
 <style scoped>
 @import "../../../app/assets/stylesheets/postcss/variables";
 	.sectionTitle {
- 		padding-top: 1em;
+ 		padding-top: 15px;
 		position: relative;
 		display: flex;
 		justify-content: center;
@@ -26,7 +26,7 @@
 	.titlebackline {
 		z-index: 2;
 		background-color: $advBottomBorder;
-		height: 0.6em;
+		height: 8px;
 		width: 100%;
 		position: absolute;
 		align-self: center;
@@ -34,7 +34,7 @@
 	.titleBg { 
 		width: 50;
     height: 0;
-    border-top: 1.2em solid #fff;
+    border-top: 20px solid #fff;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent; 
 		color: $titleColor;
@@ -42,9 +42,9 @@
 		z-index: 7;
 		padding-right: 1%;
 		padding-left: 1%;
-		padding-top: 0.2em; 
+		 
 		div {
-			margin-top: -1.6em;
+			margin-top: -24px;
 		}
 	}
 </style>

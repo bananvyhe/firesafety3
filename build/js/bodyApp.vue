@@ -75,7 +75,7 @@ export default {
 <style>
 @import "../../app/assets/stylesheets/postcss/variables";
 .bodyApp {
-
+	 
 }
 .grid-item {
 	transition: 0.5s ease-in-out;
