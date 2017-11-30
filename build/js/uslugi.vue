@@ -22,10 +22,10 @@
 		  return {
 		    switcher: false,
 		    products: [
-		    	{name: 'Пожарная безопасность', style: 'productImage1'},
-		    	{name: 'Видеонаблюдение', style: 'productImage2'},
-		    	{name: 'Контроль доступа', style: 'productImage3'},
-		    	{name: 'Охранная сигнализация', style: 'productImage4'}
+		    	{name: 'Пожарная безопасность', style: 'icon-us1'},
+		    	{name: 'Видеонаблюдение', style: 'icon-us2'},
+		    	{name: 'Контроль доступа', style: 'icon-us3'},
+		    	{name: 'Охранная сигнализация', style: 'icon-us4'}
 		    ]
 		  }
 	  }
@@ -37,7 +37,7 @@
 		margin-top: 6px;	 
     border-top-left-radius: 1em;
     background-color: #fff;
-  	padding-bottom: 2em;
+  	padding-bottom: 3em;
 	}
 	.sectionTitle {
 		padding-top: 0.3em;
@@ -71,20 +71,22 @@
 		.item {
 			position: relative;
 			background: svg-load('../../app/assets/images/shield.svg');
-	    background-size: 13em;
+	    background-size: 11em;
 	    background-position: center;
 	    background-repeat: no-repeat;
-	    .productImage1 {
-				background-image:url('../../app/assets/images/us1.gif');
+			@each $icon in (us1, us2, us3, us4) {
+			  .icon-$(icon) {
+			    background-image: url('../../app/assets/images/$(icon).gif');
+			  }
 			}
-			.productImage2 {
-				background-image:url('../../app/assets/images/us2.png');
+			.icon-us1 {
+				background-size: 12em;
 			}
-			.productImage3 {
-				background-image:url('../../app/assets/images/us3.gif');
-			}
-			.productImage4 {
-				background-image:url('../../app/assets/images/us4.gif');
+			.productTitle {
+				text-align: center;
+	      color: $blueTitle;
+	      width: 100%;
+	      padding-top: 9em;
 			}
 	 	}
 	}

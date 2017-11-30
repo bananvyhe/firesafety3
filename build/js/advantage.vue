@@ -52,7 +52,7 @@
 		}
 		.itemBox { 
 			background-color: $advantageBg; 
-			padding-top: 2em;
+			padding-top: 0em;
 			padding-bottom: 2em;
 			padding-left: 1em;
 			padding-right: 1em;

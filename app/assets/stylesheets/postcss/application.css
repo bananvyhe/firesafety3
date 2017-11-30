@@ -118,10 +118,10 @@ section {
     text-align: center;
   }
   .itemsBox {
-      lost-center: 1024px;
+      lost-center: 1224px;
       padding-top: 1em;
-      padding-left: 3%;
-      padding-right: 3%;
+      padding-left: 4%;
+      padding-right: 4%;
   }
   .item {
     display: flex;
@@ -144,11 +144,7 @@ section {
       font-weight: 400;
       adjust-font-size: fontsize medium;
       z-index: 12;  
-      align-self: center; 
-      text-align: center;
-      color: $blueTitle;
-      width: 100%;
-      padding-top: 8em;
+      align-self: center;
     }
   }
   @media (--only-small-screen) {

@@ -16,7 +16,15 @@ import titleblock from './components/titleblock.vue';
 		},
 		data: function () {
 		  return {
-		  	title: 'Нам доверяют'
+		  	title: 'Нам доверяют',
+		  	products: [
+		    	{name: 'часовой молл "6624.ru"', style: 'productImage1'},
+		    	{name: 'ТК "Омега"', style: 'productImage2'},
+		    	{name: 'Гипермаркет Дом', style: 'productImage3'},
+		    	{name: 'Дом культуры им. Лаврова', style: 'productImage4'},
+		    	{name: 'ТРЦ "Экомолл Гранат"', style: 'productImage4'},
+		    	{name: 'Деловой центр "Маршал"', style: 'productImage4'}
+		    ]
 		  }
 	  }
   }
@@ -33,4 +41,5 @@ import titleblock from './components/titleblock.vue';
 		padding: 1em;
 	}
 }
+ 
 </style>

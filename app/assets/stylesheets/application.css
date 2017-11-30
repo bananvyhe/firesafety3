@@ -266,12 +266,12 @@ section .trust:nth-child(1n) {
   text-align: center;
 }
 .products .itemsBox {
-  max-width: 1024px;
+  max-width: 1224px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 1em;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 .products .itemsBox:before {
   content: '';
@@ -341,10 +341,6 @@ section .trust:nth-child(1n) {
   z-index: 12;
   -ms-flex-item-align: center;
       align-self: center;
-  text-align: center;
-  color: #3c8bce;
-  width: 100%;
-  padding-top: 8em;
 }
 .products .titleBg {
   font-size: 0.7502em;
