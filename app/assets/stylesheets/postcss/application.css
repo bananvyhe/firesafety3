@@ -110,7 +110,6 @@ section {
   lost-column: 1/1 1  flex;
   adjust-font-size: fontsize base;
 }
-
 .products {
   lost-center: 1366px;
   .sectionTitle {
@@ -163,6 +162,11 @@ section {
          padding-top: 8em;
       }
     }
+    .advantage {
+      .itemAdv {
+        lost-waffle: 1/1 no-flex;
+      }
+    }
   }
   @media (--only-medium-screen) {
     .itemsBox {
@@ -179,26 +183,38 @@ section {
         background-size: 14em; 
       }
     }
+    .advantage {
+      .button {
+        font-family: "OswaldL"; 
+        font-weight: 400;
+        adjust-font-size: fontsize medium;
+      }
+    }
   }
   .titleBg {
     adjust-font-size: fontsize small;
   }
 }
 .advantage {
+  .itemAdv {
+    lost-waffle: 1/3 no-flex;
+  }
   .button {
     font-family: "OswaldL"; 
     font-weight: 400;
     adjust-font-size: fontsize medium;
   }
-}
-/*.advantage {
-  .itemsBox {
-    .items {
-        lost-column: 1/3;
-
+  @media (--only-small-screen) {
+    .itemAdv {
+      lost-waffle: 1/1 no-flex;
     }
   }
-}*/
+  @media (--only-medium-screen) {
+    .itemAdv {
+      lost-waffle: 1/2 no-flex;
+    }
+  }
+}
 @media (--only-big-screen) {
   .sliderText {
     font-size: 18px;

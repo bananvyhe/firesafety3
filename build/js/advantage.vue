@@ -58,7 +58,6 @@
 			padding-right: 1em;
 			lost-utility: clearfix;
 			.itemAdv {
-				lost-waffle: 1/3 no-flex;
 				.container {
 					display: flex;
 					justify-content: center;
@@ -98,7 +97,6 @@
 						}
 					}
 				}
-				
 				.productDesc {
 					text-align: center;
 					padding-left: 1em;
