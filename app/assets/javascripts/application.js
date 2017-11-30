@@ -13827,12 +13827,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 exports.default = {
   components: {
@@ -14176,7 +14170,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".advantage[data-v-526c14d8] {\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tborder-bottom: 5px solid #FFF;\n\tbackground-color: #393e41;\n\tcolor: #f1f9ee;\n}\n.advantage .title[data-v-526c14d8] {\n\ttext-align: center;\n}\n.advantage .itemBox[data-v-526c14d8] {\n\tbackground-color: #393e41;\n\tpadding-top: 2em;\n\tpadding-bottom: 1em;\n\tpadding-left: 1em;\n\tpadding-right: 1em;\n}\n.advantage .itemBox[data-v-526c14d8]:before {\n\tcontent: '';\n\tdisplay: table;\n}\n.advantage .itemBox[data-v-526c14d8]:after {\n\tcontent: '';\n\tdisplay: table;\n\tclear: both;\n}\n.advantage .itemBox .itemAdv .container[data-v-526c14d8] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\tpadding: 1em;\n}\n.advantage .itemBox .itemAdv .container .productImage[data-v-526c14d8] {\n\tbackground-color: #b0b9b8;\n\tpadding: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\twidth: 60px;\n\theight: 60px;\n\tborder-radius: 50%;\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-tools[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(124) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-fire-extinguisher[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(125) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-gear[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(126) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-flame[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(127) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-file-text-o[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(128) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-jersey[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(129) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .descImage[data-v-526c14d8] {\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\twidth: 95%;\n\theight: 95%;\n}\n.advantage .itemBox .itemAdv .button[data-v-526c14d8] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\tpadding-bottom: 1em;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tposition: relative\n}\n.advantage .itemBox .itemAdv .button[data-v-526c14d8]::before {\n\tcontent: attr(count);\n\twidth: 18px;\n\theight: 18px;\n\ttext-align: center;\n\tbackground-color: #159f0b;\n\tcolor: #fff;\n\tfont-size: 0.8em;\n\tborder-radius: 50%;\n\tborder: 0px solid #fff;\n\tfont-weight: bold;\n}\n\n", ""]);
+exports.push([module.i, ".advantage[data-v-526c14d8] {\n\tpadding-top: 1.5em;\n\tpadding-bottom: 2em;\n\tborder-bottom: 5px solid #FFF;\n\tbackground-color: #393e41;\n\tcolor: #f1f9ee;\n}\n.advantage .title[data-v-526c14d8] {\n\ttext-align: center;\n}\n.advantage .itemBox[data-v-526c14d8] {\n\tbackground-color: #393e41;\n\tpadding-top: 2em;\n\tpadding-bottom: 1em;\n\tpadding-left: 1em;\n\tpadding-right: 1em;\n}\n.advantage .itemBox[data-v-526c14d8]:before {\n\tcontent: '';\n\tdisplay: table;\n}\n.advantage .itemBox[data-v-526c14d8]:after {\n\tcontent: '';\n\tdisplay: table;\n\tclear: both;\n}\n.advantage .itemBox .itemAdv .container[data-v-526c14d8] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\tpadding: 1em;\n}\n.advantage .itemBox .itemAdv .container .productImage[data-v-526c14d8] {\n\tbackground-color: #b0b9b8;\n\tpadding: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\twidth: 60px;\n\theight: 60px;\n\tborder-radius: 50%;\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-tools[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(124) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-fire-extinguisher[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(125) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-gear[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(126) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-flame[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(127) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-file-text-o[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(128) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .icon-jersey[data-v-526c14d8] {\n\tbackground-image: url(" + __webpack_require__(129) + ");\n}\n.advantage .itemBox .itemAdv .container .productImage .descImage[data-v-526c14d8] {\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\twidth: 95%;\n\theight: 95%;\n}\n.advantage .itemBox .itemAdv .button[data-v-526c14d8] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\tpadding-bottom: 1em;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tposition: relative\n}\n.advantage .itemBox .itemAdv .button[data-v-526c14d8]::before {\n\tcontent: attr(count);\n\twidth: 18px;\n\theight: 18px;\n\ttext-align: center;\n\tbackground-color: #159f0b;\n\tcolor: #fff;\n\tfont-size: 0.8em;\n\tborder-radius: 50%;\n\tborder: 0px solid #fff;\n\tfont-weight: bold;\n}\n\n", ""]);
 
 // exports
 
@@ -14311,65 +14305,6 @@ var render = function() {
         { staticClass: "grid-item", class: { inview: _vm.checkView(3) } },
         [_c("trusty")],
         1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "grid-item", class: { inview: _vm.checkView(4) } },
-        [
-          _vm._v(
-            " BodyApp Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(
-            " Я увижу поверхность Марса, так или иначе. Уверен, это будет незабываемо. Мне кажется, наблюдение в телескоп за небесными телами должно быть такой же частью хорошего образования, как путешествия по миру.  "
-          ),
-          _c("h2", [
-            _vm._v(
-              "Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009за словесными горами в стране,"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h3", [
-            _vm._v(
-              "гласных и согласныхМинистерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009Министерством ГО и ЧС РФ за №66-Б/00124 от 23 июня 2009"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h4", [
-            _vm._v(
-              "живут рыбные тексты. признанный эксперт в области проектирования, разработки, внедрения, обслуживания и ремонта оборудования систем безопастности. Деятельность предприятия по монтажу, техническому обслуживанию, и ремонту средств обеспечения пожарной "
-            )
-          ])
-        ]
       ),
       _vm._v(" "),
       _c("bodyappi", {
@@ -32490,7 +32425,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".sectionTitle[data-v-37f5897b] {\n \t\tpadding-top: 1em;\n\t\tposition: relative;\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-pack: center;\n\t\t    -ms-flex-pack: center;\n\t\t        justify-content: center;\n}\n.titlebackline[data-v-37f5897b] {\n\t\tz-index: 2;\n\t\tbackground-color: #b3ddad;\n\t\theight: 0.6em;\n\t\twidth: 100%;\n\t\tposition: absolute;\n\t\t-ms-flex-item-align: center;\n\t\t    align-self: center;\n}\n.titleBg[data-v-37f5897b] { \n\t\twidth: 50;\n    height: 0;\n    border-top: 1.2em solid #fff;\n    border-left: 70px solid transparent;\n    border-right: 70px solid transparent; \n\t\tcolor: #393e41;\n\t\tposition: relative;\n\t\tz-index: 7;\n\t\tpadding-right: 2%;\n\t\tpadding-left: 2%;\n\t\tpadding-top: 0.2em;\n}\n.titleBg div[data-v-37f5897b] {\n \t\tmargin-top: -1.6em;\n}\n", ""]);
+exports.push([module.i, ".sectionTitle[data-v-37f5897b] {\n \t\tpadding-top: 1em;\n\t\tposition: relative;\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-pack: center;\n\t\t    -ms-flex-pack: center;\n\t\t        justify-content: center;\n}\n.titlebackline[data-v-37f5897b] {\n\t\tz-index: 2;\n\t\tbackground-color: #ebf0f3;\n\t\theight: 0.6em;\n\t\twidth: 100%;\n\t\tposition: absolute;\n\t\t-ms-flex-item-align: center;\n\t\t    align-self: center;\n}\n.titleBg[data-v-37f5897b] { \n\t\twidth: 50;\n    height: 0;\n    border-top: 1.2em solid #fff;\n    border-left: 50px solid transparent;\n    border-right: 50px solid transparent; \n\t\tcolor: #393e41;\n\t\tposition: relative;\n\t\tz-index: 7;\n\t\tpadding-right: 1%;\n\t\tpadding-left: 1%;\n\t\tpadding-top: 0.2em;\n}\n.titleBg div[data-v-37f5897b] {\n \t\tmargin-top: -1.6em;\n}\n", ""]);
 
 // exports
 

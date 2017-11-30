@@ -41,7 +41,7 @@
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
 	.advantage {
-		padding-top: 1em;
+		padding-top: 1.5em;
 		padding-bottom: 2em;
 		border-bottom: 5px solid $color-1;
 		background-color: $advantageBg;
