@@ -40,14 +40,12 @@ import titleblock from './components/titleblock.vue';
 @import "../../app/assets/stylesheets/postcss/variables";
 .trusty {
 	background-color: #fff;
-	height: 600px;
 	padding-bottom: 2em;
 	.itemBox { 
-		height: 100px;
-		padding-left: 3%;
-		padding-right: 3%;
-		padding-top: 2em;
-		 
+		lost-utility: clearfix;
+		padding-left: 8%;
+		padding-right: 8%;
+		padding-top: 4em;
 		.itemTru {
 			background-color: #ada;
 			height: 200px;
@@ -55,11 +53,26 @@ import titleblock from './components/titleblock.vue';
 				.clientImage {
 					background-size: cover;
 					background-repeat: no-repeat;
+					background-position: center;
 					height: 200px;
 				}
 			}
 		}
 	}
+	@media (--only-medium-screen) {
+    .itemBox {
+      padding-left: 10%;
+			padding-right: 10%;
+			padding-top: 3em;
+    }
+  }
+  @media (--only-small-screen) {
+    .itemBox {
+      padding-left: 12%;
+			padding-right: 12%;
+			padding-top: 2em;
+    }
+  }
 }
 
 @each $icon in (client1, client2, client3, client4, client5, client6) {
