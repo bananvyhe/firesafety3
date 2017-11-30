@@ -43,6 +43,7 @@
 	.advantage {
 		padding-top: 1em;
 		padding-bottom: 2em;
+		border-bottom: 5px solid $color-1;
 		background-color: $advantageBg;
 		color: $advantageFontColor;
 		.title {
@@ -112,8 +113,8 @@
 					position: relative;
 					&::before {
 		        content: attr(count);
-		        width: 30px;
-		        height: 30px;
+		        width: 18px;
+		        height: 18px;
 		        text-align: center;
 		        background-color: $greenInd;
 		        color: #fff;
