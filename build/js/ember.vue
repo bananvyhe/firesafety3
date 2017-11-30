@@ -19,6 +19,6 @@ export default {
 .ember {
 	height: 300px;
 	background-image: url('../../app/assets/images/amber.jpg');
+	border-bottom: 8px solid $advBottomBorder;
 }
-
 </style>

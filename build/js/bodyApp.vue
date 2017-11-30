@@ -99,7 +99,7 @@ export default {
         let element = this.animate[e];
         let elTop = element.offsetTop;
         let elBottom = element.offsetTop + element.scrollHeight;
-        if(this.scrollBottom > (elTop + 100) && (elBottom - 50) > this.scrollTop){
+        if(this.scrollBottom > (elTop + 70) && (elBottom - 50) > this.scrollTop){
           let images = Array.prototype.slice.call(element.getElementsByTagName('img'));
           images.forEach(img => {
             if(img.getAttribute('data-src')){
@@ -127,7 +127,7 @@ export default {
 
 }
 .grid-item {
-	transition: 1s ease-in-out;
+	transition: 0.5s ease-in-out;
 	opacity: 0;
 }
 .inview {

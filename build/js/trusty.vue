@@ -1,18 +1,22 @@
 <template>
 	<div class="trusty">		 
-			<div class="title">
-				НАМ ДОВЕРЯЮТ:
-			</div>
+			<titleblock
+				:title="title"
+			></titleblock>
 			<div class="itemBox">
 				
 			</div>
 	</div>
 </template>
 <script>
+import titleblock from './components/titleblock.vue';
 	export default {
+		components: {
+			titleblock: titleblock
+		},
 		data: function () {
 		  return {
-		   
+		  	title: 'Нам доверяют'
 		  }
 	  }
   }
@@ -20,6 +24,7 @@
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 .trusty {
+	background-color: #fff;
 	height: 600px;
 	padding-top: 1em;
 	padding-bottom: 2em;
