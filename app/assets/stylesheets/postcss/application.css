@@ -118,8 +118,7 @@ section {
     text-align: center;
   }
   .itemsBox {
-      lost-center: 1224px;
-      padding-top: 1em;
+      lost-center: 1024px;
       padding-left: 4%;
       padding-right: 4%;
   }
@@ -148,6 +147,9 @@ section {
     }
   }
   @media (--only-small-screen) {
+    .itembox {
+
+    }
     .item {
       lost-column: 1/1 1 0 flex;
       height: 15em;
@@ -158,21 +160,16 @@ section {
          padding-top: 8em;
       }
     }
-    .advantage {
-      .itemAdv {
-        lost-waffle: 1/1 no-flex;
-      }
-    }
   }
   @media (--only-medium-screen) {
     .itemsBox {
       lost-center: 560px;
-      padding-top: 2em;
+      padding-top: 0em;
       padding-left: 10%;
       padding-right: 10%;
     }
     .item {
-      lost-column: 1/2 2 1em flex;
+      lost-column: 1/2 2 0.5em flex;
       height: 16em;
       align-self: center;
       .productImage {
@@ -193,6 +190,12 @@ section {
 }
 .advantage {
   .itemAdv {
+    .productDesc {
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 1em;
+    }
     lost-waffle: 1/3 no-flex;
   }
   .button {

@@ -16,8 +16,9 @@
   }
 </script>
 <style scoped>
+@import "../../../app/assets/stylesheets/postcss/variables";
 	.sectionTitle {
-		padding-top: 0.3em;
+ 		padding-top: 1em;
 		position: relative;
 		display: flex;
 		justify-content: center;
@@ -30,8 +31,10 @@
 		position: absolute;
 		align-self: center;
 	}
-	.titleBg { width: 50;
-    height: 0;border-top: 1.2em solid #fff;
+	.titleBg { 
+		width: 50;
+    height: 0;
+    border-top: 1.2em solid #fff;
     border-left: 70px solid transparent;
     border-right: 70px solid transparent; 
 		color: $titleColor;

@@ -266,10 +266,9 @@ section .trust:nth-child(1n) {
   text-align: center;
 }
 .products .itemsBox {
-  max-width: 1224px;
+  max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 1em;
   padding-left: 4%;
   padding-right: 4%;
 }
@@ -347,6 +346,9 @@ section .trust:nth-child(1n) {
   line-height: 1.8662em;
 }
 @media (min-width: 0px) and (max-width: 580px) {
+  .products .itembox {
+   
+}
   .products .item {
     flex-grow: 0;
     flex-shrink: 0;
@@ -372,36 +374,13 @@ section .trust:nth-child(1n) {
   .products .item .productTitle {
     padding-top: 8em;
   }
-  .products .advantage .itemAdv {
-    width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
-    height: calc(99.9% * 1/1 - (30px - 30px * 1/1));
-  }
-  .products .advantage .itemAdv:nth-child(1n) {
-    float: left;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    clear: none;
-  }
-  .products .advantage .itemAdv:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-  .products .advantage .itemAdv:nth-child(1n) {
-    margin-right: 0;
-  }
-  .products .advantage .itemAdv:nth-child(1n + 1) {
-    clear: both;
-  }
-  .products .advantage .itemAdv:nth-last-child(-n + 1) {
-    margin-bottom: 0;
-  }
   }
 @media (min-width: 581px) and (max-width: 979px) {
   .products .itemsBox {
     max-width: 560px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2em;
+    padding-top: 0em;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -417,15 +396,15 @@ section .trust:nth-child(1n) {
   .products .item {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: calc(99.9% * 1/2 - (1em - 1em * 1/2));
-    max-width: calc(99.9% * 1/2 - (1em - 1em * 1/2));
-    width: calc(99.9% * 1/2 - (1em - 1em * 1/2));
+    flex-basis: calc(99.9% * 1/2 - (0.5em - 0.5em * 1/2));
+    max-width: calc(99.9% * 1/2 - (0.5em - 0.5em * 1/2));
+    width: calc(99.9% * 1/2 - (0.5em - 0.5em * 1/2));
     height: 16em;
     -ms-flex-item-align: center;
         align-self: center;
   }
   .products .item:nth-child(1n) {
-    margin-right: 1em;
+    margin-right: 0.5em;
     margin-left: 0;
   }
   .products .item:last-child {
@@ -467,6 +446,12 @@ section .trust:nth-child(1n) {
 }
 .advantage .itemAdv:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+.advantage .itemAdv .productDesc {
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
 .advantage .button {
   font-family: "OswaldL";

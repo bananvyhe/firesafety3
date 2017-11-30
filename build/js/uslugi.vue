@@ -1,10 +1,8 @@
 <template>
 	<div class="products">
-		<div class="sectionTitle">
-			<div class="titleBg"><div><nobr>ВИДЫ КОНТРОЛЯ:</nobr></div>
-			</div>
-			<div class="titlebackline"></div>
-		</div>
+		<titleblock
+			:title="title"
+		></titleblock>
 		<div class="itemsBox">
 			<div class="item" v-for="(product, index) in products" :key='index'>
 				<div class="productImage" :class="product.style" > 
@@ -17,9 +15,14 @@
 	</div>
 </template>
 <script>
+import titleblock from './components/titleblock.vue';
 	export default {
+		components: {
+			titleblock: titleblock
+		},
 		data: function () {
 		  return {
+		  	title: 'Виды контроля:',
 		    switcher: false,
 		    products: [
 		    	{name: 'Пожарная безопасность', style: 'icon-us1'},
@@ -32,41 +35,15 @@
   }
 </script>
 <style scoped>
-	@import "../../app/assets/stylesheets/postcss/variables";
+@import "../../app/assets/stylesheets/postcss/variables";
+ 
 	.products {
-		margin-top: 6px;	 
-    border-top-left-radius: 1em;
+		border-top-left-radius: 1em;
     background-color: #fff;
   	padding-bottom: 3em;
+  	margin-top: -0.7em;
 	}
-	.sectionTitle {
-		padding-top: 0.3em;
-		position: relative;
-		display: flex;
-		justify-content: center;
-	}
-	.titlebackline {
-		z-index: 2;
-		background-color: #b3ddad;
-		height: 0.6em;
-		width: 100%;
-		position: absolute;
-		align-self: center;
-	}
-	.titleBg { width: 50;
-    height: 0;border-top: 1.2em solid #fff;
-    border-left: 70px solid transparent;
-    border-right: 70px solid transparent; 
-		color: $titleColor;
-		position: relative;
-		z-index: 7;
-		padding-right: 2%;
-		padding-left: 2%;
-		padding-top: 0.2em; 
-		div {
-			margin-top: -1.6em;
-		}
-	}
+ 
 	.itemsBox { 
 		.item {
 			position: relative;

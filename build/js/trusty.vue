@@ -34,12 +34,7 @@ import titleblock from './components/titleblock.vue';
 .trusty {
 	background-color: #fff;
 	height: 600px;
-	padding-top: 1em;
 	padding-bottom: 2em;
-	.title {
-		text-align: center;
-		padding: 1em;
-	}
 }
- 
+
 </style>
