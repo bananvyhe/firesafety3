@@ -23,7 +23,7 @@ import writeUs from './components/writeUs.vue';
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 .footer {display: flex;
-	height: 500px;
+	 
 
 	.writeUsSlot, .map, .us {
 		background-color: #dad;

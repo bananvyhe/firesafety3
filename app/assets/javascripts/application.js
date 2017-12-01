@@ -13838,7 +13838,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".bodyApp {\n\toverflow: visible;\n\t/*border-top-left-radius: 1em;*/\n\tbackground-color: #FBFBFF;\n}\n.grid-item {\n\toverflow: visible;\n\t-webkit-transition: 0.5s ease-in-out;\n\ttransition: 0.5s ease-in-out;\n\topacity: 0;\n}\n.lightning {\n\tposition:relative;\n}\n.lightning :before, .lightning :after\t{\n\tcontent:\"\";\n\tposition:absolute;\n\tz-index:-1;\n\t-webkit-box-shadow:0 0 250px rgba(255, 214, 214, .3);\n\t        box-shadow:0 0 250px rgba(255, 214, 214, .3);\n\ttop:30px;\n\tbottom:30px;\n\tleft:0;\n\tright:0;\n\tborder-radius:100px / 10px;\n}\n.lightning :after {\n\tright:10px;\n\tleft:auto;\n\t-webkit-transform:skew(8deg) rotate(3deg);\n\t        transform:skew(8deg) rotate(3deg);\n}\n.inview {\n\topacity: 1;\n}\n", ""]);
+exports.push([module.i, ".bodyApp {\n\toverflow: visible;\n\t/*border-top-left-radius: 1em;*/\n\tbackground-color: #FBFBFF;\n}\n.grid-item {\n\toverflow: visible;\n\t-webkit-transition: 0.5s ease-in-out;\n\ttransition: 0.5s ease-in-out;\n\topacity: 0;\n}\n.inview {\n\topacity: 1;\n}\n", ""]);
 
 // exports
 
@@ -14572,7 +14572,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".ember[data-v-73cc7014] {\n  /*-webkit-filter: saturate(160%);*/\n\theight: 300px;\n\tbackground-image: url(" + __webpack_require__(96) + ");\n  border-bottom: 8px solid #313638;\n  -webkit-box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n          box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n}\n/*==================================================\n * Effect 8\n * ===============================================*/\n.ember .effect8[data-v-73cc7014]\n  {\n  position:relative;\n  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;\n          box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;\n}\n.ember .effect8[data-v-73cc7014]:before, .ember .effect8[data-v-73cc7014]:after\n  {\n  content:\"\";\n  position:absolute;\n  z-index:-1;\n  -webkit-box-shadow:0 0 20px rgba(0, 0, 0, .8);\n          box-shadow:0 0 20px rgba(0, 0, 0, .8);\n  top:10px;\n  bottom:10px;\n  left:0;\n  right:0;\n  border-radius:100px / 10px;\n}\n.ember .effect8[data-v-73cc7014]:after\n  {\n  right:10px;\n  left:auto;\n  -webkit-transform:skew(8deg) rotate(3deg);\n          transform:skew(8deg) rotate(3deg);\n}\n", ""]);
+exports.push([module.i, ".light[data-v-73cc7014] { \n  -webkit-box-shadow: 0px 0px 343px 0px rgba(255, 255, 255, .2); \n          box-shadow: 0px 0px 343px 0px rgba(255, 255, 255, .2);\n}\n.ember[data-v-73cc7014] {\n  /*-webkit-filter: saturate(160%);*/\n\theight: 300px;\n\tbackground-image: url(" + __webpack_require__(96) + ");\n  border-bottom: 8px solid #313638;\n  -webkit-box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n          box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n}\n/*==================================================\n * Effect 8\n * ===============================================*/\n.ember .effect8[data-v-73cc7014]\n  { \n  position:relative; \n  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset; \n          box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;\n}\n.ember .effect8[data-v-73cc7014]:before, .ember .effect8[data-v-73cc7014]:after\n  { \n  content:\"\"; \n  position:absolute; \n  z-index:-1; \n  -webkit-box-shadow:0 0 20px rgba(0, 0, 0, .8); \n          box-shadow:0 0 20px rgba(0, 0, 0, .8); \n  top:10px; \n  bottom:10px; \n  left:0; \n  right:0; \n  border-radius:100px / 10px;\n}\n.ember .effect8[data-v-73cc7014]:after\n  { \n  right:10px; \n  left:auto; \n  -webkit-transform:skew(8deg) rotate(3deg); \n          transform:skew(8deg) rotate(3deg);\n}\n", ""]);
 
 // exports
 
@@ -14599,6 +14599,9 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
 exports.default = {
   data: function data() {
@@ -14615,9 +14618,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "ember" })
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "light" }, [
+      _c("div", { staticClass: "ember" })
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -32673,7 +32685,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".footer[data-v-6fef2b3e] {display: -webkit-box;display: -ms-flexbox;display: flex;\n\theight: 500px;\n}\n.footer .writeUsSlot[data-v-6fef2b3e], .footer .map[data-v-6fef2b3e], .footer .us[data-v-6fef2b3e] {background-color: #dad;width: calc(33.3% - 0.66667em);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(1n), .footer .map[data-v-6fef2b3e]:nth-child(1n), .footer .us[data-v-6fef2b3e]:nth-child(1n) {float: left;margin-right: 1em;clear: none;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:last-child, .footer .map[data-v-6fef2b3e]:last-child, .footer .us[data-v-6fef2b3e]:last-child {margin-right: 0;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n), .footer .map[data-v-6fef2b3e]:nth-child(3n), .footer .us[data-v-6fef2b3e]:nth-child(3n) {margin-right: 0;float: right;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n + 1), .footer .map[data-v-6fef2b3e]:nth-child(3n + 1), .footer .us[data-v-6fef2b3e]:nth-child(3n + 1) {clear: both;\n}\n", ""]);
+exports.push([module.i, ".footer[data-v-6fef2b3e] {display: -webkit-box;display: -ms-flexbox;display: flex;\n}\n.footer .writeUsSlot[data-v-6fef2b3e], .footer .map[data-v-6fef2b3e], .footer .us[data-v-6fef2b3e] {background-color: #dad;width: calc(33.3% - 0.66667em);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(1n), .footer .map[data-v-6fef2b3e]:nth-child(1n), .footer .us[data-v-6fef2b3e]:nth-child(1n) {float: left;margin-right: 1em;clear: none;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:last-child, .footer .map[data-v-6fef2b3e]:last-child, .footer .us[data-v-6fef2b3e]:last-child {margin-right: 0;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n), .footer .map[data-v-6fef2b3e]:nth-child(3n), .footer .us[data-v-6fef2b3e]:nth-child(3n) {margin-right: 0;float: right;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n + 1), .footer .map[data-v-6fef2b3e]:nth-child(3n + 1), .footer .us[data-v-6fef2b3e]:nth-child(3n + 1) {clear: both;\n}\n", ""]);
 
 // exports
 

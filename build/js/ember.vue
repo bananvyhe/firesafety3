@@ -1,7 +1,10 @@
 <template>
-  <div class="ember">
+  <div class="light">
+    <div class="ember">
     
+    </div>  
   </div>
+
 </template>
 
 <script>
@@ -16,6 +19,9 @@ export default {
 
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
+.light { 
+  box-shadow: 0px 0px 343px 0px rgba(255,255,255, 0.2);
+}
 .ember {
   /*-webkit-filter: saturate(160%);*/
 	height: 300px;
