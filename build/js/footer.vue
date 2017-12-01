@@ -26,7 +26,7 @@ import writeUs from './components/writeUs.vue';
 	 
 
 	.writeUsSlot, .map, .us {
-		background-color: #dad;
+		 
 		lost-column: 1/3 3 1em;
 		display: flex;
 		justify-content: center;
