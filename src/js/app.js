@@ -13,6 +13,7 @@ import Logoappi from './Logoappi.vue'
 Vue.component('logoappi', Logoappi)
 import Bodyappi from './Bodyappi.vue'  
 Vue.component('bodyappi', Bodyappi)
+import Footer from './footer.vue'
 Vue.use(ElementUI)
 
 Vue.directive('tack', {
@@ -67,5 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: '#bodyApp',
     render: h => h(BodyApp)
+  })
+    new Vue({
+    el: '#footer',
+    render: h => h(Footer)
   })
 })   

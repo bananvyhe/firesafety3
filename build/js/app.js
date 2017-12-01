@@ -48,6 +48,10 @@ var _Bodyappi = require('./Bodyappi.vue');
 
 var _Bodyappi2 = _interopRequireDefault(_Bodyappi);
 
+var _footer = require('./footer.vue');
+
+var _footer2 = _interopRequireDefault(_footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.component('menuinfo', _MenuInfo2.default);
@@ -55,6 +59,7 @@ _vue2.default.component('menuinfo', _MenuInfo2.default);
 _vue2.default.component('logoappi', _Logoappi2.default);
 
 _vue2.default.component('bodyappi', _Bodyappi2.default);
+
 _vue2.default.use(_lib2.default);
 
 _vue2.default.directive('tack', {
@@ -120,6 +125,12 @@ document.addEventListener('DOMContentLoaded', function () {
     el: '#bodyApp',
     render: function render(h) {
       return h(_bodyApp2.default);
+    }
+  });
+  new _vue2.default({
+    el: '#footer',
+    render: function render(h) {
+      return h(_footer2.default);
     }
   });
 });

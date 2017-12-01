@@ -17,5 +17,7 @@ import titleblock from './components/titleblock.vue';
 </script>
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-
+.footer {
+	height: 500px;
+}
 </style>
