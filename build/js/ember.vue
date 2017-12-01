@@ -20,6 +20,6 @@ export default {
 	border-bottom-left-radius: 1em;
 	height: 300px;
 	background-image: url('../../app/assets/images/amber.jpg');
-	border-bottom: 8px solid $advBottomBorder;
+	margin-bottom: 6px;
 }
 </style>

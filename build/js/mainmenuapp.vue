@@ -312,12 +312,15 @@
 @import "../../app/assets/stylesheets/postcss/variables";
 
 .greedy-nav {
+  border-bottom-left-radius: 1.3em; 
+  border-top: 6px solid #f4d35e;
   z-index: 3;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
   background-color: $color-5;
+  margin-bottom: 5px;
   a {
     display: block;
     padding: 10px 30px;

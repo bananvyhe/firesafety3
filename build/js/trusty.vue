@@ -42,7 +42,7 @@ import titleblock from './components/titleblock.vue';
 .trusty {
 	border-top-left-radius: 1em;
 	background-color: #fff;
-	padding-bottom: 2em;
+	padding-bottom: 5em;
 	.itemBox { 
 		lost-utility: clearfix;
 		padding-left: 8%;

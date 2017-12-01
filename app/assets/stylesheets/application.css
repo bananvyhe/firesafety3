@@ -86,7 +86,8 @@ html {
   line-height: 1.4em;
 }
 
-body { background-color: #ebf0f3;
+body { margin-left: 5px;
+  background-color: #000;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -131,8 +132,6 @@ section .trust {
   flex-basis: calc(99.9% * 1/1 - (1em - 1em * 1/1));
   max-width: calc(99.9% * 1/1 - (1em - 1em * 1/1));
   width: calc(99.9% * 1/1 - (1em - 1em * 1/1));
-  border-top-left-radius: 1.6em;
-  border-top-right-radius: 1.6em;
 }
 section .trust:nth-child(1n) {
   margin-right: 1em;
@@ -182,9 +181,9 @@ section .trust:nth-child(1n) {
   font-style: bold;
   letter-spacing: 0.05em;
   font-size: 0.8em;
-  border-bottom-left-radius: 1.3em; 
+
   height: 3.6em; 
-  border-top: 6px solid #f4d35e;
+
 }
 @media (min-width: 0px) and (max-width: 580px) {
   .greedy-nav {
@@ -245,7 +244,7 @@ section .trust:nth-child(1n) {
   margin-right: 0;
   margin-left: auto;
 }
-.products {
+.products { background-color: #dad;
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;

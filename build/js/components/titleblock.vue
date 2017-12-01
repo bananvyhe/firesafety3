@@ -1,6 +1,12 @@
 <template>
 	<div class="sectionTitle">
-		<div class="titleBg"><div><nobr>{{title.toUpperCase()}}</nobr></div>
+		<div class="titleBg">
+			<div><nobr>{{title.toUpperCase()}}</nobr></div>
+			<div class="lines">
+				<div class="one">________________</div>
+				<div class="two">________</div>
+				<div class="three">____</div>
+			</div>
 		</div>
 		<div class="titlebackline"></div>
 	</div>
@@ -17,6 +23,21 @@
 </script>
 <style scoped>
 @import "../../../app/assets/stylesheets/postcss/variables";
+	.lines {
+		color: color($advGreyBorder blackness(15%));
+		text-align: center;
+		padding-top: 35px;
+		height: 50px;
+		.one {
+			padding-top: 0px;
+		}
+		.two {
+			padding-top: 11px;
+		}
+		.three {
+			padding-top: 11px;
+		}
+	}
 	.sectionTitle {
  		padding-top: 15px;
 		position: relative;
@@ -25,13 +46,13 @@
 	}
 	.titlebackline {
 		z-index: 2;
-		background-color: $advBottomBorder;
+		background-color: $advGreyBorder;
 		height: 8px;
 		width: 100%;
 		position: absolute;
 		align-self: center;
 	}
-	.titleBg { 
+	.titleBg {
 		width: 50;
     height: 0;
     border-top: 20px solid #fff;

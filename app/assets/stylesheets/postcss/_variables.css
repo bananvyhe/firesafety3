@@ -58,6 +58,7 @@ $greenInd: #159f0b;
 $greyInd: #b0b9b8;
 $advantageFontColor: #f1f9ee;
 $advBottomBorder: #ebf0f3;
+$advGreyBorder: #ebf0f3;
 
 @custom-media --telpanel-small-screen (width <= 720px);
 

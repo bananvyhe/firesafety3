@@ -38,12 +38,10 @@ import titleblock from './components/titleblock.vue';
 @import "../../app/assets/stylesheets/postcss/variables";
  
 	.products {
-		border-top: 7px solid $advBottomBorder; 
 		border-top-left-radius: 1em;
     background-color: #fff;
   	padding-bottom: 3em;
 	}
- 
 	.itemsBox { 
 		.item {
 			position: relative;
@@ -63,7 +61,7 @@ import titleblock from './components/titleblock.vue';
 				text-align: center;
 	      color: $blueTitle;
 	      width: 100%;
-	      padding-top: 9em;
+	      padding-top: 10em;
 			}
 	 	}
 	}
