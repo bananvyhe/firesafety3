@@ -32425,7 +32425,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".lines[data-v-37f5897b] {\n\t\tcolor: rgb(219, 219, 219);\n\t\ttext-align: center;\n\t\tpadding-top: 35px;\n\t\theight: 50px;\n}\n.lines .one[data-v-37f5897b] {\n\t\tpadding-top: 0px;\n}\n.lines .two[data-v-37f5897b] {\n\t\tpadding-top: 11px;\n}\n.lines .three[data-v-37f5897b] {\n\t\tpadding-top: 11px;\n}\n.sectionTitle[data-v-37f5897b] {\n \t\tpadding-top: 15px;\n\t\tposition: relative;\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-pack: center;\n\t\t    -ms-flex-pack: center;\n\t\t        justify-content: center;\n}\n.titlebackline[data-v-37f5897b] {\n\t\tz-index: 2;\n\t\tbackground-color: #ebf0f3;\n\t\theight: 8px;\n\t\twidth: 100%;\n\t\tposition: absolute;\n\t\t-ms-flex-item-align: center;\n\t\t    align-self: center;\n}\n.titleBg[data-v-37f5897b] {\n\t\twidth: 50;\n    height: 0;\n    border-top: 20px solid #fff;\n    border-left: 50px solid transparent;\n    border-right: 50px solid transparent; \n\t\tcolor: #393e41;\n\t\tposition: relative;\n\t\tz-index: 7;\n\t\tpadding-right: 1%;\n\t\tpadding-left: 1%;\n}\n.titleBg div[data-v-37f5897b] {\n\t\tmargin-top: -24px;\n}\n", ""]);
+exports.push([module.i, ".lines[data-v-37f5897b] {\n\tcolor: rgb(219, 219, 219);\n\ttext-align: center;\n\tpadding-top: 0px;\n\t width: 100%;\n}\n.lines div[data-v-37f5897b] {\n\tborder-bottom: 1px solid rgb(209, 209, 209);\n}\n.lines .one[data-v-37f5897b] {\n\theight: 6px;\n\tpadding-top: 0px;\n\tmargin-left: 10%;\n\tmargin-right: 10%;\n}\n.lines .two[data-v-37f5897b] {\n\theight: 7px;\n\tpadding-top: 0px;\n\tmargin-left: 25%;\n\tmargin-right: 25%;\n}\n.lines .three[data-v-37f5897b] {\n\theight: 7px;\n\tpadding-top: 0px;\n\tmargin-left: 40%;\n\tmargin-right: 40%;\n}\n.sectionTitle[data-v-37f5897b] {\n\t\tpadding-top: 15px;\n\tposition: relative;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n.titlebackline[data-v-37f5897b] {\n\tz-index: 2;\n\tbackground-color: #ebf0f3;\n\theight: 8px;\n\twidth: 100%;\n\tposition: absolute;\n\t-ms-flex-item-align: center;\n\t    align-self: center;\n}\n.titleBg[data-v-37f5897b] {\n\twidth: 50;\n  height: 0;\n  border-top: 20px solid #fff;\n  border-left: 50px solid transparent;\n  border-right: 50px solid transparent; \n\tcolor: #393e41;\n\tposition: relative;\n\tz-index: 7;\n\tpadding-right: 1%;\n\tpadding-left: 1%;\n}\n.titleBg .title[data-v-37f5897b] {\n\tmargin-top: -20px;\n}\n", ""]);
 
 // exports
 
@@ -32441,9 +32441,16 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "sectionTitle" }, [
     _c("div", { staticClass: "titleBg" }, [
-      _c("div", [_c("nobr", [_vm._v(_vm._s(_vm.title.toUpperCase()))])], 1),
-      _vm._v(" "),
-      _vm._m(0)
+      _c(
+        "div",
+        { staticClass: "title" },
+        [
+          _c("nobr", [_vm._v(_vm._s(_vm.title.toUpperCase()))]),
+          _vm._v(" "),
+          _vm._m(0)
+        ],
+        1
+      )
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "titlebackline" })
@@ -32455,11 +32462,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "lines" }, [
-      _c("div", { staticClass: "one" }, [_vm._v("________________")]),
+      _c("div", { staticClass: "one" }),
       _vm._v(" "),
-      _c("div", { staticClass: "two" }, [_vm._v("________")]),
+      _c("div", { staticClass: "two" }),
       _vm._v(" "),
-      _c("div", { staticClass: "three" }, [_vm._v("____")])
+      _c("div", { staticClass: "three" })
     ])
   }
 ]
@@ -32483,6 +32490,9 @@ if (false) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
 //
 //
 //

@@ -57,7 +57,7 @@ import titleblock from './components/titleblock.vue';
 			.icon-us1 {
 				background-size: 12em;
 			}
-			.productTitle {
+			.productTitle { ;
 				text-align: center;
 	      color: $blueTitle;
 	      width: 100%;
