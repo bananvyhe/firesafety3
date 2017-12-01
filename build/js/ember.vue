@@ -20,7 +20,11 @@ export default {
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 .light { 
-  box-shadow: 0px 0px 343px 0px rgba(255,255,255, 0.2);
+    box-shadow:
+   0 1px 250px rgba(255, 255, 255, .2),
+   -23px 0 20px -23px rgba(255, 211, 211, .1),
+   23px 0 250px -23px rgba(255, 255, 255, .1),
+   0 0 20px rgba(255, 211, 211, .1) inset;
 }
 .ember {
   /*-webkit-filter: saturate(160%);*/
@@ -29,31 +33,6 @@ export default {
   border-bottom: 8px solid $onyx;
   box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,0.8);
 
-  /*==================================================
- * Effect 8
- * ===============================================*/
-.effect8
-  {
-      position:relative;
-      box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  }
-  .effect8:before, .effect8:after
-  {
-    content:"";
-      position:absolute; 
-      z-index:-1;
-      box-shadow:0 0 20px rgba(0,0,0,0.8);
-      top:10px;
-      bottom:10px;
-      left:0;
-      right:0;
-      border-radius:100px / 10px;
-  } 
-  .effect8:after
-  {
-      right:10px; 
-      left:auto; 
-      transform:skew(8deg) rotate(3deg);
-  }
+   
 }
 </style>

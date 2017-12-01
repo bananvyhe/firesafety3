@@ -40,7 +40,8 @@
 </script>
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
-	.advantage {
+	.advantage { 
+		z-index: 5; position: relative;
 		padding-top: 1.5em;
 		padding-bottom: 2em;
 		border-bottom: 5px solid $onyx;
