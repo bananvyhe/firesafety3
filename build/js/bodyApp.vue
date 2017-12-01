@@ -6,7 +6,7 @@
 		<div class="grid-item" :class="{inview: checkView(1)}">
 			<advantage></advantage>
 	  </div>
-		<div class="grid-item" :class="{inview: checkView(2)}">
+		<div class="grid-item lightning" :class="{inview: checkView(2)}">
 			<ember></ember>
 	  </div>
 		<div class="grid-item" :class="{inview: checkView(3)}">
@@ -75,11 +75,34 @@ export default {
 <style>
 @import "../../app/assets/stylesheets/postcss/variables";
 .bodyApp {
+	overflow: visible;
+	/*border-top-left-radius: 1em;*/
+	background-color: $ghostwhite;
 	 
 }
 .grid-item {
+	overflow: visible;
 	transition: 0.5s ease-in-out;
 	opacity: 0;
+}
+.lightning {
+	position:relative;
+ 	:before, :after	{
+		content:"";
+    position:absolute; 
+    z-index:-1;
+    box-shadow:0 0 250px rgba(255,214,214,0.3);
+    top:30px;
+    bottom:30px;
+    left:0;
+    right:0;
+    border-radius:100px / 10px;
+	} 
+	:after {
+	   right:10px; 
+    left:auto; 
+    transform:skew(8deg) rotate(3deg);
+	}
 }
 .inview {
 	opacity: 1;

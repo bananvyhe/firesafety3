@@ -43,7 +43,7 @@
 	.advantage {
 		padding-top: 1.5em;
 		padding-bottom: 2em;
-		border-bottom: 5px solid $color-1;
+		border-bottom: 5px solid $onyx;
 		background-color: $advantageBg;
 		color: $advantageFontColor;
 		.title {

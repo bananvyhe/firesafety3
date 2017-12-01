@@ -30,8 +30,15 @@ $block-font-size: xlarge@d2;
 /*Импорт общих настроек*/
 @import "variables";
 
-body { margin-left: 5px;
-  background-color: #000;
+body {
+  background: repeating-linear-gradient(
+    -55deg,
+    color(#04151F blackness(80%)),
+    color(#04151F blackness(80%)) 1px,
+    #04151F 3px,
+    #04151F 6px
+  );
+  background-color: $x11gray;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -46,10 +53,10 @@ body { margin-left: 5px;
 /*Настройки шрифтов и высоты апплетов*/
 /*-----------------------------------------*/
 section {
+  
   lost-center: 1366px;
   .trust {
     lost-column: 1/1 1 1em flex;
-    
   }
 }
 .telpanel {
@@ -86,9 +93,7 @@ section {
   font-style: bold;
   letter-spacing: 0.05em;
   font-size: 0.8em;
-
   height: 3.6em; 
-
 }
 @media (--only-small-screen) {
   .greedy-nav {
@@ -100,7 +105,7 @@ section {
     height: 2.2em; 
   }
 }
-.grid-item {@ruler;
+.grid-item { 
   opacity: 0;
   z-index: 1;
   position: relative;/*for hamster*/
@@ -108,7 +113,6 @@ section {
  /* @util border-top-radius(0.6em);
   @util border-bottom-radius(0.6em);*/
   text-align: justify;
-  lost-column: 1/1 1  flex;
   adjust-font-size: fontsize base;
 }
 .products { background-color: #dad;
@@ -129,15 +133,8 @@ section {
     align-items: flex-end;
     lost-column: 1/4 4 1em;
     .productImage {
-      bottom: 0.5em;
       z-index: 2;
       lost-column: 1/4;  
-      background-size: 14em; 
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      height: 100%;
-      width: 100%;
     }
     .productTitle {
       font-family: "OswaldL"; 

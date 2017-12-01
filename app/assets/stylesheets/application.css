@@ -86,8 +86,15 @@ html {
   line-height: 1.4em;
 }
 
-body { margin-left: 5px;
-  background-color: #000;
+body {
+  background: repeating-linear-gradient(
+    -55deg,
+    rgb(5, 34, 51),
+    rgb(5, 34, 51) 1px,
+    #04151F 3px,
+    #04151F 6px
+  );
+  background-color: #C1BDB3;
   font-family: "RobotoR"; 
   font-style: normal;
   font-weight: 400;
@@ -113,8 +120,11 @@ body { margin-left: 5px;
   line-height: 1.5;
 }
 section {
+  
   max-width: 1366px;
+  
   margin-left: auto;
+  
   margin-right: auto;
 }
 section:before {
@@ -181,9 +191,7 @@ section .trust:nth-child(1n) {
   font-style: bold;
   letter-spacing: 0.05em;
   font-size: 0.8em;
-
   height: 3.6em; 
-
 }
 @media (min-width: 0px) and (max-width: 580px) {
   .greedy-nav {
@@ -195,54 +203,14 @@ section .trust:nth-child(1n) {
     height: 2.2em; 
   }
 }
-.grid-item {
-.ruler-debug{
-
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9900;
-  pointer-events: none;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAWCAYAAADn7z3uAAAAE0lEQVR42mNgGAW0B8Jt+88g8wEfTgIl1iJ2+AAAAABJRU5ErkJggg==");
-  background-position: left top;
-  background-repeat: repeat;
-  background-size: 4px 22px;}
+.grid-item { 
   opacity: 0;
   z-index: 1;
   position: relative;
   overflow: hidden;
   text-align: justify;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: calc(99.9% * 1/1 - (30px - 30px * 1/1));
-  max-width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
-  width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
   font-size: 1em;
   line-height: 1.4em;
-}
-.grid-item:nth-child(1n) {
-  .ruler-debug {
-   
-}
-  margin-right: 30px;
-  margin-left: 0;
-}
-.grid-item:last-child {
-  .ruler-debug {
-   
-}
-  margin-right: 0;
-}
-.grid-item:nth-child(1n) {
-  .ruler-debug {
-   
-}
-  margin-right: 0;
-  margin-left: auto;
 }
 .products { background-color: #dad;
   max-width: 1366px;
@@ -306,15 +274,8 @@ section .trust:nth-child(1n) {
   clear: both;
 }
 .products .item .productImage {
-  bottom: 0.5em;
   z-index: 2;
   width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-  background-size: 14em;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  height: 100%;
-  width: 100%;
 }
 .products .item .productImage:nth-child(1n) {
   float: left;

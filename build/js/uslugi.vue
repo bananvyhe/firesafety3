@@ -10,6 +10,7 @@
 				<div class="productTitle">
 					{{product.name.toUpperCase()}}
 				</div>
+				<div class="shadow"></div>
 			</div>
 		</div>
 	</div>
@@ -36,14 +37,14 @@ import titleblock from './components/titleblock.vue';
 </script>
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
- 
-	.products {
+ 	.products {
 		border-top-left-radius: 1em;
-    background-color: #fff;
+    background-color: $ghostwhite;
   	padding-bottom: 3em;
 	}
 	.itemsBox { 
 		.item {
+			z-index: 2;
 			position: relative;
 			background: svg-load('../../app/assets/images/shield.svg');
 	    background-size: 11em;
@@ -57,6 +58,16 @@ import titleblock from './components/titleblock.vue';
 			.icon-us1 {
 				background-size: 12em;
 			}
+			.productImage {
+	      bottom: 0.5em;
+	      z-index: 2;
+	      background-size: 180px; 
+	      background-repeat: no-repeat;
+	      background-position: center;
+	      position: absolute;
+	      height: 100%;
+	      width: 100%;
+    	}
 			.productTitle { ;
 				text-align: center;
 	      color: $blueTitle;

@@ -39,8 +39,8 @@ import titleblock from './components/titleblock.vue';
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
 
-.trusty {
-	border-top-left-radius: 1em;
+.trusty { 
+	/*border-top-left-radius: 1em;*/
 	background-color: #fff;
 	padding-bottom: 5em;
 	.itemBox { 
