@@ -47,7 +47,7 @@ import titleblock from './components/titleblock.vue';
 		lost-utility: clearfix;
 		padding-left: 8%;
 		padding-right: 8%;
-		padding-top: 4em;
+		padding-top: 3em;
 		.itemTru {
 			background-color: #ada;
 			height: 200px;

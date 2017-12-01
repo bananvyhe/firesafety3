@@ -226,12 +226,6 @@ section .trust:nth-child(1n) {
   display: table;
   clear: both;
 }
-.products .sectionTitle {
-  font-family: "UbuntuR";
-  font-size: 1em;
-  line-height: 1.4em;
-  text-align: center;
-}
 .products .itemsBox {
   max-width: 1024px;
   margin-left: auto;
@@ -587,6 +581,12 @@ section .trust:nth-child(1n) {
     padding-left: 0%;
     margin-right:-15%;
   }
+} 
+
+.writeUs .title {
+  font-family: "RobotoR";
+  font-size: 1.333em;
+  line-height: 1.0503em;
 }
 
 .dropshadow {

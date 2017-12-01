@@ -14142,7 +14142,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".lines[data-v-37f5897b] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\tcolor: rgb(220, 220, 220);\n\ttext-align: center;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tpadding-top: 0em;\n\twidth: 100%;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n}\n.lines div[data-v-37f5897b] {\n\tborder-bottom: 2px solid rgb(168, 224, 161);\n}\n.lines .one[data-v-37f5897b] {\n\theight: 2px;\n\tpadding-top: 0px;\n\twidth: 100%;\n}\n.lines .two[data-v-37f5897b] {\n\theight: 6px;\n\tpadding-top: 0px;\n\twidth: 40%;\n}\n.lines .three[data-v-37f5897b] {\n\theight: 6px;\n\tpadding-top: 0px;\n\twidth: 10%;\n}\n.sectionTitle[data-v-37f5897b] {\n\tpadding-top: 1em; \n\tposition: relative;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n.titlebackline[data-v-37f5897b] {\n\tz-index: 2;\n\tbackground-color: #b3ddad; height: 0.2em;\n\t \n\twidth: 100%;\n\tposition: absolute;\n\t-ms-flex-item-align: center;\n\t    align-self: center;\n}\n.titleBg[data-v-37f5897b] {\n\t/*width: 50;\n  height: 0;\n  border-top: 20px solid #fff;\n  border-left: 50px solid transparent;\n  border-right: 50px solid transparent; */\n\tcolor: #393e41;\n\tposition: relative;\n\tz-index: 7;\n\tpadding-right: 2vw;\n\tpadding-left: 2vw;\n\tbackground-color: #fff;\n}\n.titleBg .title[data-v-37f5897b] {\n\tmargin-top: 0em;\n}\n", ""]);
+exports.push([module.i, ".lines[data-v-37f5897b] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\tcolor: rgb(220, 220, 220);\n\ttext-align: center;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tpadding-top: 0em;\n\twidth: 100%;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n}\n.lines div[data-v-37f5897b] {\n\tborder-bottom: 2px solid rgb(168, 224, 161);\n}\n.lines .one[data-v-37f5897b] {\n\theight: 2px;\n\tpadding-top: 0px;\n\twidth: 100%;\n}\n.lines .two[data-v-37f5897b] {\n\theight: 6px;\n\tpadding-top: 0px;\n\twidth: 40%;\n}\n.lines .three[data-v-37f5897b] {\n\theight: 6px;\n\tpadding-top: 0px;\n\twidth: 10%;\n}\n.sectionTitle[data-v-37f5897b] {\n\tpadding-top: 2em; \n\tposition: relative;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n.titlebackline[data-v-37f5897b] {\n\tz-index: 2;\n\tbackground-color: #b3ddad; height: 0.2em;\n\t \n\twidth: 100%;\n\tposition: absolute;\n\t-ms-flex-item-align: center;\n\t    align-self: center;\n}\n.titleBg[data-v-37f5897b] {\n\t/*width: 50;\n  height: 0;\n  border-top: 20px solid #fff;\n  border-left: 50px solid transparent;\n  border-right: 50px solid transparent; */\n\tcolor: #393e41;\n\tposition: relative;\n\tz-index: 7;\n\tpadding-right: 2vw;\n\tpadding-left: 2vw;\n\tbackground-color: #fff;\n}\n.titleBg .title[data-v-37f5897b] {\n\tmargin-top: 0em;\n}\n", ""]);
 
 // exports
 
@@ -14718,7 +14718,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".trusty[data-v-45c66078] { \n\t/*border-top-left-radius: 1em;*/\n\tbackground-color: #fff;\n\tpadding-bottom: 5em;\n}\n.trusty .itemBox[data-v-45c66078] {\n\tpadding-left: 8%;\n\tpadding-right: 8%;\n\tpadding-top: 4em;\n}\n.trusty .itemBox[data-v-45c66078]:before {\n\tcontent: '';\n\tdisplay: table;\n}\n.trusty .itemBox[data-v-45c66078]:after {\n\tcontent: '';\n\tdisplay: table;\n\tclear: both;\n}\n.trusty .itemBox .itemTru[data-v-45c66078] {\n\tbackground-color: #ada;\n\theight: 200px;\n\tpadding-bottom: 12px;\n}\n.trusty .itemBox .itemTru .productImage .clientImage[data-v-45c66078] {\n\tborder: 7px solid #fff;\n\tbackground-size: cover;\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\theight: 200px;\n}\n@media (min-width: 581px) and (max-width: 979px) {\n\t.trusty .itemBox[data-v-45c66078] {\n\t\tpadding-left: 10%;\n\t\tpadding-right: 10%;\n\t\tpadding-top: 3em;\n\t}\n}\n@media (min-width: 0px) and (max-width: 580px) {\n\t.trusty .itemBox[data-v-45c66078] {\n\t\tpadding-left: 12%;\n\t\tpadding-right: 12%;\n\t\tpadding-top: 2em;\n\t}\n}\n.icon-client1[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(102) + ");\n}\n.icon-client2[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(103) + ");\n}\n.icon-client3[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(104) + ");\n}\n.icon-client4[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(105) + ");\n}\n.icon-client5[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(106) + ");\n}\n.icon-client6[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(107) + ");\n}\n/*==================================================\n * Effect 7\n * ===============================================*/\n.effect7[data-v-45c66078]\n{\n    position:relative;\n    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;\n            box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;\n}\n.effect7[data-v-45c66078]:before, .effect7[data-v-45c66078]:after\n{\n\tcontent:\"\";\n    position:absolute; \n    z-index:-1;\n    -webkit-box-shadow:0 0 20px rgba(0, 0, 0, .8);\n            box-shadow:0 0 20px rgba(0, 0, 0, .8);\n    top:0;\n    bottom:0;\n    left:10px;\n    right:10px;\n    border-radius:100px / 10px;\n}\n.effect7[data-v-45c66078]:after\n{\n    right:10px; \n    left:auto; \n    -webkit-transform:skew(8deg) rotate(3deg); \n            transform:skew(8deg) rotate(3deg);\n}\n", ""]);
+exports.push([module.i, ".trusty[data-v-45c66078] { \n\t/*border-top-left-radius: 1em;*/\n\tbackground-color: #fff;\n\tpadding-bottom: 5em;\n}\n.trusty .itemBox[data-v-45c66078] {\n\tpadding-left: 8%;\n\tpadding-right: 8%;\n\tpadding-top: 3em;\n}\n.trusty .itemBox[data-v-45c66078]:before {\n\tcontent: '';\n\tdisplay: table;\n}\n.trusty .itemBox[data-v-45c66078]:after {\n\tcontent: '';\n\tdisplay: table;\n\tclear: both;\n}\n.trusty .itemBox .itemTru[data-v-45c66078] {\n\tbackground-color: #ada;\n\theight: 200px;\n\tpadding-bottom: 12px;\n}\n.trusty .itemBox .itemTru .productImage .clientImage[data-v-45c66078] {\n\tborder: 7px solid #fff;\n\tbackground-size: cover;\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n\theight: 200px;\n}\n@media (min-width: 581px) and (max-width: 979px) {\n\t.trusty .itemBox[data-v-45c66078] {\n\t\tpadding-left: 10%;\n\t\tpadding-right: 10%;\n\t\tpadding-top: 3em;\n\t}\n}\n@media (min-width: 0px) and (max-width: 580px) {\n\t.trusty .itemBox[data-v-45c66078] {\n\t\tpadding-left: 12%;\n\t\tpadding-right: 12%;\n\t\tpadding-top: 2em;\n\t}\n}\n.icon-client1[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(102) + ");\n}\n.icon-client2[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(103) + ");\n}\n.icon-client3[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(104) + ");\n}\n.icon-client4[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(105) + ");\n}\n.icon-client5[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(106) + ");\n}\n.icon-client6[data-v-45c66078] {\n    background-image: url(" + __webpack_require__(107) + ");\n}\n/*==================================================\n * Effect 7\n * ===============================================*/\n.effect7[data-v-45c66078]\n{\n    position:relative;\n    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;\n            box-shadow:0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;\n}\n.effect7[data-v-45c66078]:before, .effect7[data-v-45c66078]:after\n{\n\tcontent:\"\";\n    position:absolute; \n    z-index:-1;\n    -webkit-box-shadow:0 0 20px rgba(0, 0, 0, .8);\n            box-shadow:0 0 20px rgba(0, 0, 0, .8);\n    top:0;\n    bottom:0;\n    left:10px;\n    right:10px;\n    border-radius:100px / 10px;\n}\n.effect7[data-v-45c66078]:after\n{\n    right:10px; \n    left:auto; \n    -webkit-transform:skew(8deg) rotate(3deg); \n            transform:skew(8deg) rotate(3deg);\n}\n", ""]);
 
 // exports
 
@@ -32673,7 +32673,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".footer[data-v-6fef2b3e] {display: -webkit-box;display: -ms-flexbox;display: flex;\n\theight: 500px;\n}\n.footer div[data-v-6fef2b3e] {background-color: #dad;width: calc(33.3% - 20px);\n}\n.footer div[data-v-6fef2b3e]:nth-child(1n) {float: left;margin-right: 30px;clear: none;\n}\n.footer div[data-v-6fef2b3e]:last-child {margin-right: 0;\n}\n.footer div[data-v-6fef2b3e]:nth-child(3n) {margin-right: 0;float: right;\n}\n.footer div[data-v-6fef2b3e]:nth-child(3n + 1) {clear: both;\n}\n", ""]);
+exports.push([module.i, ".footer[data-v-6fef2b3e] {display: -webkit-box;display: -ms-flexbox;display: flex;\n\theight: 500px;\n}\n.footer .writeUsSlot[data-v-6fef2b3e], .footer .map[data-v-6fef2b3e], .footer .us[data-v-6fef2b3e] {background-color: #dad;width: calc(33.3% - 0.66667em);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(1n), .footer .map[data-v-6fef2b3e]:nth-child(1n), .footer .us[data-v-6fef2b3e]:nth-child(1n) {float: left;margin-right: 1em;clear: none;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:last-child, .footer .map[data-v-6fef2b3e]:last-child, .footer .us[data-v-6fef2b3e]:last-child {margin-right: 0;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n), .footer .map[data-v-6fef2b3e]:nth-child(3n), .footer .us[data-v-6fef2b3e]:nth-child(3n) {margin-right: 0;float: right;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n + 1), .footer .map[data-v-6fef2b3e]:nth-child(3n + 1), .footer .us[data-v-6fef2b3e]:nth-child(3n + 1) {clear: both;\n}\n", ""]);
 
 // exports
 
@@ -32689,20 +32689,22 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _titleblock = __webpack_require__(11);
+var _writeUs = __webpack_require__(133);
 
-var _titleblock2 = _interopRequireDefault(_titleblock);
+var _writeUs2 = _interopRequireDefault(_writeUs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
 	components: {
-		titleblock: _titleblock2.default
+		writeus: _writeUs2.default
 	},
 	data: function data() {
 		return {};
 	}
 }; //
+//
+//
 //
 //
 //
@@ -32719,6 +32721,154 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "footer" }, [
+    _c("div", { staticClass: "writeUsSlot" }, [_c("writeus")], 1),
+    _vm._v(" "),
+    _c("div", { staticClass: "map" }, [_vm._v("2")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "us" }, [_vm._v("3")])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6fef2b3e", esExports)
+  }
+}
+
+/***/ }),
+/* 133 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_writeUs_vue__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_writeUs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_writeUs_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2a9e6187_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_writeUs_vue__ = __webpack_require__(137);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(134)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-2a9e6187"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_writeUs_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2a9e6187_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_writeUs_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "build/js/components/writeUs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] writeUs.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2a9e6187", Component.options)
+  } else {
+    hotAPI.reload("data-v-2a9e6187", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(135);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("b8bcce74", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2a9e6187\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./writeUs.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2a9e6187\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./writeUs.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".writeUs[data-v-2a9e6187] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.writeUs .title[data-v-2a9e6187] {\n\tpadding-top: 2em;\n}\n.writeUs div[data-v-2a9e6187] {\n\tbackground-color: #ada;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	data: function data() {
+		return {};
+	}
+};
+
+/***/ }),
+/* 137 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
   return _vm._m(0)
 }
 var staticRenderFns = [
@@ -32726,12 +32876,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "footer" }, [
-      _c("div", [_vm._v("1")]),
+    return _c("div", { staticClass: "writeUs" }, [
+      _c("div", { staticClass: "title" }, [_vm._v("НАПИШИТЕ НАМ")]),
       _vm._v(" "),
-      _c("div", [_vm._v("2")]),
+      _c("div", { staticClass: "form" }, [_vm._v("123")]),
       _vm._v(" "),
-      _c("div", [_vm._v("3")])
+      _c("div", { staticClass: "form" }, [_vm._v("прикрепить фаел")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form" }, [_vm._v("отправить")])
     ])
   }
 ]
@@ -32741,7 +32893,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6fef2b3e", esExports)
+     require("vue-hot-reload-api").rerender("data-v-2a9e6187", esExports)
   }
 }
 

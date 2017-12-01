@@ -1,15 +1,17 @@
 <template>
 	<div class="footer">
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
+		<div class="writeUsSlot">
+			<writeus></writeus>
+		</div>
+		<div class="map">2</div>
+		<div class="us">3</div>
 	</div>
 </template>
 <script>
-import titleblock from './components/titleblock.vue';
+import writeUs from './components/writeUs.vue';
 	export default {
 		components: {
-			titleblock: titleblock
+			writeus: writeUs
 		},
 		data: function () {
 		  return {
@@ -22,9 +24,12 @@ import titleblock from './components/titleblock.vue';
 @import "../../app/assets/stylesheets/postcss/variables";
 .footer {display: flex;
 	height: 500px;
-	div {
+
+	.writeUsSlot, .map, .us {
 		background-color: #dad;
-		lost-column: 1/3;
+		lost-column: 1/3 3 1em;
+		display: flex;
+		justify-content: center;
 	}
 }
 </style>

@@ -117,11 +117,6 @@ section {
 }
 .products { background-color: #dad;
   lost-center: 1366px;
-  .sectionTitle {
-    font-family: "UbuntuR";
-    adjust-font-size: fontsize base;
-    text-align: center;
-  }
   .itemsBox {
       lost-center: 1024px;
       padding-left: 4%;
@@ -283,7 +278,16 @@ section {
       }
     }
   }
-}  
+} 
+
+.writeUs {
+  .title {
+    font-family: "RobotoR";
+ 
+    adjust-font-size: fontsize medium;
+  }
+  
+} 
 
 /*-------------------------------------------*/
 /*end Настройки шрифтов и высоты апплетов*/

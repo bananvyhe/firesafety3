@@ -53,7 +53,7 @@
 	}
 }
 .sectionTitle {
-	padding-top: 1em; 
+	padding-top: 2em; 
 	position: relative;
 	display: flex;
 	justify-content: center;
