@@ -32673,7 +32673,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".footer[data-v-6fef2b3e] {\n\theight: 500px;\n}\n", ""]);
+exports.push([module.i, ".footer[data-v-6fef2b3e] {display: -webkit-box;display: -ms-flexbox;display: flex;\n\theight: 500px;\n}\n.footer div[data-v-6fef2b3e] {background-color: #dad;width: calc(33.3% - 20px);\n}\n.footer div[data-v-6fef2b3e]:nth-child(1n) {float: left;margin-right: 30px;clear: none;\n}\n.footer div[data-v-6fef2b3e]:last-child {margin-right: 0;\n}\n.footer div[data-v-6fef2b3e]:nth-child(3n) {margin-right: 0;float: right;\n}\n.footer div[data-v-6fef2b3e]:nth-child(3n + 1) {clear: both;\n}\n", ""]);
 
 // exports
 
@@ -32706,6 +32706,9 @@ exports.default = {
 //
 //
 //
+//
+//
+//
 
 /***/ }),
 /* 132 */
@@ -32716,9 +32719,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "footer" })
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "footer" }, [
+      _c("div", [_vm._v("1")]),
+      _vm._v(" "),
+      _c("div", [_vm._v("2")]),
+      _vm._v(" "),
+      _c("div", [_vm._v("3")])
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
