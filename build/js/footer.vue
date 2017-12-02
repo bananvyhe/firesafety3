@@ -3,15 +3,19 @@
 		<div class="writeUsSlot">
 			<writeus></writeus>
 		</div>
-		<div class="map">2</div>
+		<div class="mapSlot">
+			<mapa></mapa>
+		</div>
 		<div class="us">3</div>
 	</div>
 </template>
 <script>
 import writeUs from './components/writeUs.vue';
+import mapa from './components/map.vue';
 	export default {
 		components: {
-			writeus: writeUs
+			writeus: writeUs,
+			mapa: mapa
 		},
 		data: function () {
 		  return {
@@ -25,8 +29,8 @@ import writeUs from './components/writeUs.vue';
 .footer {display: flex;
 	 
 
-	.writeUsSlot, .map, .us {
-		 
+	.writeUsSlot, .mapSlot, .us {
+		padding-top: 3em; 
 		lost-column: 1/3 3 1em;
 		display: flex;
 		justify-content: center;

@@ -101,7 +101,6 @@
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 2em;
-	padding-top: 2em;
 	padding-right: 1em;
 	padding-left: 1em;
 	.title { text-align: right;
