@@ -13838,7 +13838,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".bodyApp {\n\toverflow: visible;\n\t/*border-top-left-radius: 1em;*/\n\tbackground-color: #FBFBFF;\n}\n.grid-item {\n\toverflow: visible;\n\t-webkit-transition: 0.5s ease-in-out;\n\ttransition: 0.5s ease-in-out;\n\topacity: 0;\n}\n.inview {\n\topacity: 1;\n}\n", ""]);
+exports.push([module.i, ".bodyApp {\n\toverflow: visible;\n\t/*border-top-left-radius: 1em;*/\n\tbackground-color: #FBFBFF;\n}\n.advz {\n  position: relative;\n  z-index: 2;\n}\n.lightning {\n`  position: relative;\n  z-index: 1;\n}\n.grid-item {\n\toverflow: visible;\n\t-webkit-transition: 0.5s ease-in-out;\n\ttransition: 0.5s ease-in-out;\n\topacity: 0;\n}\n.inview {\n\topacity: 1;\n}\n", ""]);
 
 // exports
 
@@ -14572,7 +14572,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".light[data-v-73cc7014] { \n    -webkit-box-shadow:\n   0 1px 250px rgba(255, 255, 255, .2),\n   -23px 0 20px -23px rgba(255, 211, 211, .1),\n   23px 0 250px -23px rgba(255, 255, 255, .1),\n   0 0 20px rgba(255, 211, 211, .1) inset; \n            box-shadow:\n   0 1px 250px rgba(255, 255, 255, .2),\n   -23px 0 20px -23px rgba(255, 211, 211, .1),\n   23px 0 250px -23px rgba(255, 255, 255, .1),\n   0 0 20px rgba(255, 211, 211, .1) inset;\n}\n.ember[data-v-73cc7014] {\n  /*-webkit-filter: saturate(160%);*/\n\theight: 300px;\n\tbackground-image: url(" + __webpack_require__(96) + ");\n  border-bottom: 8px solid #313638;\n  -webkit-box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n          box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n}\n", ""]);
+exports.push([module.i, "/*.light { \n  box-shadow:\n   0 1px 150px rgba(255, 255, 255, .2),\n   -23px 0 20px -23px rgba(255, 211, 211, .1),\n   23px 0 250px -23px rgba(255, 255, 255, .1),\n   0 0 20px rgba(255, 211, 211, .1) inset;\n}*/\n.ember[data-v-73cc7014] {\n  /*-webkit-filter: saturate(160%);*/\n\theight: 300px;\n\tbackground-image: url(" + __webpack_require__(96) + ");\n  border-bottom: 8px solid #313638;\n  -webkit-box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n          box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n}\n.box-shadow-preview[data-v-73cc7014]{ \n    position: relative; \n    background-color: #FFFFFF; \n    border-radius: 40px; \n    -webkit-box-shadow: \n      0 1px 250px rgba(255, 255, 255, .2),\n      -23px 0 20px -23px rgba(255, 211, 211, .1),\n      23px 0 250px -23px rgba(255, 255, 255, .1),\n      0 0 20px rgba(255, 211, 211, .1)  inset; \n            box-shadow: \n      0 1px 250px rgba(255, 255, 255, .2),\n      -23px 0 20px -23px rgba(255, 211, 211, .1),\n      23px 0 250px -23px rgba(255, 255, 255, .1),\n      0 0 20px rgba(255, 211, 211, .1)  inset;\n} \n/*.box-shadow-preview:before{ \n    content: \"\"; \n    z-index: -1; \n    position: absolute; \n    width: 95%; \n    top: 50px; \n    right: 0px; \n    bottom: 50px; \n    left: 2px; \n    border-radius: 26px; \n    transform: rotate(0deg) skew(0deg); \n    box-shadow: 0px 0px 250px -28px rgba(255, 255, 255, .4); \n}*/\n", ""]);
 
 // exports
 
@@ -14625,7 +14625,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "light" }, [
+    return _c("div", { staticClass: " box-shadow-preview" }, [
       _c("div", { staticClass: "ember" })
     ])
   }
@@ -14883,7 +14883,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "grid-item", class: { inview: _vm.checkView(1) } },
+        { staticClass: "grid-item advz", class: { inview: _vm.checkView(1) } },
         [_c("advantage")],
         1
       ),

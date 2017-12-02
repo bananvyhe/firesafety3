@@ -3,7 +3,7 @@
   	<div class="grid-item" :class="{inview: checkView(0)}">
   		<uslugi></uslugi>
   	</div>
-		<div class="grid-item" :class="{inview: checkView(1)}">
+		<div class="grid-item advz" :class="{inview: checkView(1)}">
 			<advantage></advantage>
 	  </div>
 		<div class="grid-item lightning" :class="{inview: checkView(2)}">
@@ -79,6 +79,14 @@ export default {
 	/*border-top-left-radius: 1em;*/
 	background-color: $ghostwhite;
 	 
+}
+.advz {
+  position: relative;
+  z-index: 2;
+}
+.lightning {
+`  position: relative;
+  z-index: 1;
 }
 .grid-item {
 	overflow: visible;
