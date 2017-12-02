@@ -157,9 +157,7 @@ section .trust:nth-child(1n) {
 }
 .telpanel {
   height: 2.2em;
-  background-color: #1d3557;
-  color: #FFF; 
-  font-size: 0.7502em; 
+  font-size: 0.7502em;
   line-height: 1.8662em;
 } 
 .sliderapp {

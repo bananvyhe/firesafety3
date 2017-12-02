@@ -8,25 +8,23 @@
 		  <el-form-item label="Сообщение" prop="desc">
 		    <el-input type="textarea" v-model="ruleForm.desc"></el-input>
 		  </el-form-item>
-			 
-			<el-upload
-			  class="upload-demo"
-			  action="https://jsonplaceholder.typicode.com/posts/"
-			  :on-preview="handlePreview"
-			  :on-remove="handleRemove"
-			  multiple
-			  :limit="3"
-			  :on-exceed="handleExceed"
-			  :file-list="fileList">
-			  <el-button class="pickfile" size="small" type="primary">
-			  	Прикрепить фаел
-			  </el-button>
-			  <div slot="tip" class="el-upload__tip">
-			  	jpg/png размером меньше 500kb
-			  </div>
-			</el-upload>
-
 		  <el-form-item>
+		  	<el-upload
+				  class="upload-demo"
+				  action="https://jsonplaceholder.typicode.com/posts/"
+				  :on-preview="handlePreview"
+				  :on-remove="handleRemove"
+				  multiple
+				  :limit="3"
+				  :on-exceed="handleExceed"
+				  :file-list="fileList">
+				  <el-button class="pickfile" size="small" type="primary">
+				  	Прикрепить фаел
+				  </el-button>
+				  <div slot="tip" class="el-upload__tip">
+				  	jpg/png размером меньше 500kb
+				  </div>
+				</el-upload>
 		    <nobr><el-button type="primary" @click="submitForm('ruleForm')">Отправить</el-button>
 		    <el-button @click="resetForm('ruleForm')">Стереть</el-button></nobr>
 		  </el-form-item>

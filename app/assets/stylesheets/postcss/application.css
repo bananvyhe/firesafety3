@@ -61,8 +61,6 @@ section {
 }
 .telpanel {
   height: 2.2em;
-  background-color: $color-5;
-  color: $color-1; 
   adjust-font-size: fontsize small;
 } 
 .sliderapp {

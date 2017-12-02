@@ -1,7 +1,7 @@
 <template>
   <div class="bodyApp">
-  	<div class="grid-item" :class="{inview: checkView(0)}">
-  		<uslugi></uslugi>
+  	<div >
+  		<uslugi class="grid-item uslugi" :class="{inview: checkView(0)}"></uslugi>
   	</div>
 		<div class="grid-item advz" :class="{inview: checkView(1)}">
 			<advantage></advantage>
@@ -75,10 +75,13 @@ export default {
 <style>
 @import "../../app/assets/stylesheets/postcss/variables";
 .bodyApp {
-	overflow: visible;
-	/*border-top-left-radius: 1em;*/
-	background-color: $ghostwhite;
+  
+  overflow: visible;
 	 
+
+	.uslugi {
+    background-color: $ghostwhite;     
+  } 
 }
 .advz {
   position: relative;

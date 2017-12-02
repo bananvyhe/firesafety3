@@ -2,7 +2,6 @@ $color-1: #FFF;
 $color-2: #f57c00;
 $color-3: #ef6c00;
 $color-4: #d64933;
-$color-5: #1d3557;
 $color-6: #b9d6f2;
 $HeadBackColor: #2a303a;
 $onyx: #313638;
@@ -59,6 +58,16 @@ $greyInd: #b0b9b8;
 $advantageFontColor: #f1f9ee;
 $advBottomBorder: #ebf0f3;
 $advGreyBorder: #ebf0f3;
+/*$color-5: #1d3557;*/
+$color-5: #1d3557;
+
+$advantageLight: #E3D26F;
+$almond: #E7DECD;
+
+$advColor: #393e41;
+$silverPink: #D0ADA7;
+$bones: #E8D6CB;
+$copperPenny: #AD6A6C;
 
 @custom-media --telpanel-small-screen (width <= 720px);
 
