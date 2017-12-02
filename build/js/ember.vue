@@ -1,7 +1,15 @@
 <template>
   <div class=" box-shadow-preview">
     <div class="ember">
-    
+      <div class="centered">
+         
+          <h1>Аудит пожарной безопасности бесплатно*!</h1>
+         
+        <div>
+          * При заказе одной из услуг по монтажу или обслуживанию систем безопастности
+        </div>
+        <el-button type="primary" @click="submitForm('ruleForm')">Отправить</el-button>
+      </div>
     </div>  
   </div>
 
@@ -28,13 +36,22 @@ export default {
 }*/
 .ember {
   /*-webkit-filter: saturate(160%);*/
-	height: 300px;
+	height: 350px;
 	background-image: url('../../app/assets/images/amber.jpg');
   border-bottom: 8px solid $onyx;
   box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,0.8);
-
-  
-   
+  color: $advantageFontColor;
+  @util clearfix;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  .centered {
+    filter: drop-shadow(0 0 3px rgba(0,0,0,1));  
+    align-self: center;
+    div {
+      padding-bottom: 10px;
+    }
+  }
 }
 .box-shadow-preview{ 
     position: relative; 

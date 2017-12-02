@@ -85,7 +85,9 @@
 </script>
 <style scoped>
 @import "../../../app/assets/stylesheets/postcss/variables";
-.upload-demo {float: right;
+ 
+.upload-demo {
+	float: right;
 	margin-bottom: 1em;
 	display: flex;
  	justify-content: flex-end;
@@ -109,7 +111,7 @@
 		 
 	}
 	.demo-ruleForm{
-
+		
 	}
 }
 </style>

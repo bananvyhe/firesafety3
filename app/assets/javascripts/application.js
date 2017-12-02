@@ -14572,7 +14572,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "/*.light { \n  box-shadow:\n   0 1px 150px rgba(255, 255, 255, .2),\n   -23px 0 20px -23px rgba(255, 211, 211, .1),\n   23px 0 250px -23px rgba(255, 255, 255, .1),\n   0 0 20px rgba(255, 211, 211, .1) inset;\n}*/\n.ember[data-v-73cc7014] {\n  /*-webkit-filter: saturate(160%);*/\n\theight: 300px;\n\tbackground-image: url(" + __webpack_require__(96) + ");\n  border-bottom: 8px solid #313638;\n  -webkit-box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n          box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n}\n.box-shadow-preview[data-v-73cc7014]{ \n    position: relative; \n    background-color: #FFFFFF; \n    border-radius: 40px; \n    -webkit-box-shadow: \n      0 1px 250px rgba(255, 255, 255, .2),\n      -23px 0 20px -23px rgba(255, 211, 211, .1),\n      23px 0 250px -23px rgba(255, 255, 255, .1),\n      0 0 20px rgba(255, 211, 211, .1)  inset; \n            box-shadow: \n      0 1px 250px rgba(255, 255, 255, .2),\n      -23px 0 20px -23px rgba(255, 211, 211, .1),\n      23px 0 250px -23px rgba(255, 255, 255, .1),\n      0 0 20px rgba(255, 211, 211, .1)  inset;\n} \n/*.box-shadow-preview:before{ \n    content: \"\"; \n    z-index: -1; \n    position: absolute; \n    width: 95%; \n    top: 50px; \n    right: 0px; \n    bottom: 50px; \n    left: 2px; \n    border-radius: 26px; \n    transform: rotate(0deg) skew(0deg); \n    box-shadow: 0px 0px 250px -28px rgba(255, 255, 255, .4); \n}*/\n", ""]);
+exports.push([module.i, "/*$color-5: #1d3557;*/\n/*.light { \n  box-shadow:\n   0 1px 150px rgba(255, 255, 255, .2),\n   -23px 0 20px -23px rgba(255, 211, 211, .1),\n   23px 0 250px -23px rgba(255, 255, 255, .1),\n   0 0 20px rgba(255, 211, 211, .1) inset;\n}*/\n.ember[data-v-73cc7014] {\n  /*-webkit-filter: saturate(160%);*/\n\theight: 350px;\n\tbackground-image: url(" + __webpack_require__(96) + ");\n  border-bottom: 8px solid #313638;\n  -webkit-box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n          box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, .8);\n  color: #f1f9ee;\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.ember[data-v-73cc7014]:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n.ember .centered[data-v-73cc7014] {\n  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"3\" /><feOffset dx=\"1\" dy=\"1\" result=\"offsetblur\" /><feFlood flood-color=\"rgba(0,0,0,1)\" /><feComposite in2=\"offsetblur\" operator=\"in\" /><feMerge><feMergeNode /><feMergeNode in=\"SourceGraphic\" /></feMerge></filter></svg>#filter');\n  -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1));\n          filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1));\n  -ms-flex-item-align: center;\n      align-self: center;\n}\n.ember .centered div[data-v-73cc7014] {\n  padding-bottom: 10px;\n}\n.box-shadow-preview[data-v-73cc7014]{ \n    position: relative; \n    background-color: #FFFFFF; \n    border-radius: 40px; \n    -webkit-box-shadow: \n      0 1px 250px rgba(255, 255, 255, .2),\n      -23px 0 20px -23px rgba(255, 211, 211, .1),\n      23px 0 250px -23px rgba(255, 255, 255, .1),\n      0 0 20px rgba(255, 211, 211, .1)  inset; \n            box-shadow: \n      0 1px 250px rgba(255, 255, 255, .2),\n      -23px 0 20px -23px rgba(255, 211, 211, .1),\n      23px 0 250px -23px rgba(255, 255, 255, .1),\n      0 0 20px rgba(255, 211, 211, .1)  inset;\n} \n/*.box-shadow-preview:before{ \n    content: \"\"; \n    z-index: -1; \n    position: absolute; \n    width: 95%; \n    top: 50px; \n    right: 0px; \n    bottom: 50px; \n    left: 2px; \n    border-radius: 26px; \n    transform: rotate(0deg) skew(0deg); \n    box-shadow: 0px 0px 250px -28px rgba(255, 255, 255, .4); \n}*/\n", ""]);
 
 // exports
 
@@ -14602,6 +14602,14 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 exports.default = {
   data: function data() {
@@ -14618,18 +14626,39 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " box-shadow-preview" }, [
-      _c("div", { staticClass: "ember" })
+  return _c("div", { staticClass: " box-shadow-preview" }, [
+    _c("div", { staticClass: "ember" }, [
+      _c(
+        "div",
+        { staticClass: "centered" },
+        [
+          _c("h1", [_vm._v("Аудит пожарной безопасности бесплатно*!")]),
+          _vm._v(" "),
+          _c("div", [
+            _vm._v(
+              "\n        * При заказе одной из услуг по монтажу или обслуживанию систем безопастности\n      "
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "el-button",
+            {
+              attrs: { type: "primary" },
+              on: {
+                click: function($event) {
+                  _vm.submitForm("ruleForm")
+                }
+              }
+            },
+            [_vm._v("Отправить")]
+          )
+        ],
+        1
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -15707,7 +15736,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "/*$color-5: #1d3557;*/\n.upload-demo[data-v-2a9e6187] {float: right;\n\tmargin-bottom: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n \t-webkit-box-pack: end;\n \t    -ms-flex-pack: end;\n \t        justify-content: flex-end;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.upload-demo .pickfile[data-v-2a9e6187] {float: right;\n}\n.writeUs[data-v-2a9e6187] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tpadding-bottom: 2em;\n\tpadding-right: 1em;\n\tpadding-left: 1em;\n}\n.writeUs .title[data-v-2a9e6187] {text-align: right;padding-bottom: 0.7em;color: #f1f9ee;\n}\n.writeUs div[data-v-2a9e6187] {}\n.writeUs .demo-ruleForm[data-v-2a9e6187]{}\n", ""]);
+exports.push([module.i, "/*$color-5: #1d3557;*/\n.upload-demo[data-v-2a9e6187] {\n\tfloat: right;\n\tmargin-bottom: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n \t-webkit-box-pack: end;\n \t    -ms-flex-pack: end;\n \t        justify-content: flex-end;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.upload-demo .pickfile[data-v-2a9e6187] {\n\tfloat: right;\n}\n.writeUs[data-v-2a9e6187] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tpadding-bottom: 2em;\n\tpadding-right: 1em;\n\tpadding-left: 1em;\n}\n.writeUs .title[data-v-2a9e6187] {\n\ttext-align: right;\n\tpadding-bottom: 0.7em;\n\tcolor: #f1f9ee;\n}\n.writeUs div[data-v-2a9e6187] {}\n.writeUs .demo-ruleForm[data-v-2a9e6187]{}\n", ""]);
 
 // exports
 
