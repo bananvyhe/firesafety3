@@ -7,7 +7,7 @@
     @mouseleave="hideNav">
     <slot>
         <div :class="innerClasses">
-            <i class="vm-backtop-icon-een">вверх</i>
+            <i class="vm-backtop-icon-een">^</i>
         </div>
     </slot>
     <div v-show="navShow" :class="nav">

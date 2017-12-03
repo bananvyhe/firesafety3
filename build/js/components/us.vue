@@ -24,10 +24,13 @@
 	color: $advantageFontColor;
 	padding-top: 1em;
 	padding-bottom: 2em;
-	padding-right: 1em;
-	padding-left: 1em;
+	padding-right: 2em;
+	 
 	display: flex;
 	flex-direction: column;
+	div {
+
+	}
 }
 
 </style>

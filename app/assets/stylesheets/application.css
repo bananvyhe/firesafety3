@@ -528,6 +528,83 @@ section .trust:nth-child(1n) {
     margin-bottom: 0;
   }
 }
+
+.writeUsSlot, .mapSlot, .us {
+  width: calc(99.9% * 1/3 - (1em - 1em * 1/3));
+}
+
+.writeUsSlot:nth-child(1n), .mapSlot:nth-child(1n), .us:nth-child(1n) {
+  float: left;
+  margin-right: 1em;
+  clear: none;
+}
+
+.writeUsSlot:last-child, .mapSlot:last-child, .us:last-child {
+  margin-right: 0;
+}
+
+.writeUsSlot:nth-child(3n), .mapSlot:nth-child(3n), .us:nth-child(3n) {
+  margin-right: 0;
+  float: right;
+}
+
+.writeUsSlot:nth-child(3n + 1), .mapSlot:nth-child(3n + 1), .us:nth-child(3n + 1) {
+  clear: both;
+}
+@media (min-width: 581px) and (max-width: 979px) {
+  .aboutus {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .aboutus div {
+   
+}
+  .writeUsSlot, .mapSlot, .us {
+    width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
+  }
+  .writeUsSlot:nth-child(1n), .mapSlot:nth-child(1n), .us:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .writeUsSlot:last-child, .mapSlot:last-child, .us:last-child {
+    margin-right: 0;
+  }
+  .writeUsSlot:nth-child(1n), .mapSlot:nth-child(1n), .us:nth-child(1n) {
+    margin-right: 0;
+    float: right;
+  }
+  .writeUsSlot:nth-child(1n + 1), .mapSlot:nth-child(1n + 1), .us:nth-child(1n + 1) {
+    clear: both;
+  }
+}
+ @media (min-width: 0px) and (max-width: 580px) {
+  .aboutus {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .aboutus div {
+   
+}
+  .writeUsSlot, .mapSlot, .us {
+    width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
+  }
+  .writeUsSlot:nth-child(1n), .mapSlot:nth-child(1n), .us:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .writeUsSlot:last-child, .mapSlot:last-child, .us:last-child {
+    margin-right: 0;
+  }
+  .writeUsSlot:nth-child(1n), .mapSlot:nth-child(1n), .us:nth-child(1n) {
+    margin-right: 0;
+    float: right;
+  }
+  .writeUsSlot:nth-child(1n + 1), .mapSlot:nth-child(1n + 1), .us:nth-child(1n + 1) {
+    clear: both;
+  }
+}
 @media (min-width: 980px) {
   .sliderText {
     font-size: 18px;

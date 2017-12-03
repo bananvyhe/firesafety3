@@ -13702,7 +13702,7 @@ var render = function() {
     [
       _vm._t("default", [
         _c("div", { class: _vm.innerClasses }, [
-          _c("i", { staticClass: "vm-backtop-icon-een" }, [_vm._v("вверх")])
+          _c("i", { staticClass: "vm-backtop-icon-een" }, [_vm._v("^")])
         ])
       ]),
       _vm._v(" "),
@@ -15569,7 +15569,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "/*$color-5: #1d3557;*/\n.footer[data-v-6fef2b3e] {\n\tbackground-color: #1d3557;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n}\n.footer .writeUsSlot[data-v-6fef2b3e], .footer .mapSlot[data-v-6fef2b3e], .footer .us[data-v-6fef2b3e] {\n\tpadding-top: 2em;\n\twidth: calc(33.3% - 0.66667em);\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(1n), .footer .mapSlot[data-v-6fef2b3e]:nth-child(1n), .footer .us[data-v-6fef2b3e]:nth-child(1n) {\n\tfloat: left;\n\tmargin-right: 1em;\n\tclear: none;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:last-child, .footer .mapSlot[data-v-6fef2b3e]:last-child, .footer .us[data-v-6fef2b3e]:last-child {\n\tmargin-right: 0;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n), .footer .mapSlot[data-v-6fef2b3e]:nth-child(3n), .footer .us[data-v-6fef2b3e]:nth-child(3n) {\n\tmargin-right: 0;\n\tfloat: right;\n}\n.footer .writeUsSlot[data-v-6fef2b3e]:nth-child(3n + 1), .footer .mapSlot[data-v-6fef2b3e]:nth-child(3n + 1), .footer .us[data-v-6fef2b3e]:nth-child(3n + 1) {\n\tclear: both;\n}\n", ""]);
+exports.push([module.i, "/*$color-5: #1d3557;*/\n.footer[data-v-6fef2b3e] {\n\tbackground-color: #1d3557;\n}\n.footer[data-v-6fef2b3e]:before {content: '';display: table;\n}\n.footer[data-v-6fef2b3e]:after {content: '';display: table;clear: both;\n}\n.footer .writeUsSlot[data-v-6fef2b3e], .footer .mapSlot[data-v-6fef2b3e], .footer .us[data-v-6fef2b3e] {\n\tpadding-top: 2em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n\n", ""]);
 
 // exports
 
@@ -15712,7 +15712,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "/*$color-5: #1d3557;*/\n.upload-demo[data-v-2a9e6187] {\n\tfloat: right;\n\tmargin-bottom: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n \t-webkit-box-pack: end;\n \t    -ms-flex-pack: end;\n \t        justify-content: flex-end;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.upload-demo .pickfile[data-v-2a9e6187] {\n\tfloat: right;\n}\n.writeUs[data-v-2a9e6187] {\n\n\tdisplay: -webkit-box;\n\n\tdisplay: -ms-flexbox;\n\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tpadding-right: 1em;\n\tpadding-left: 1em;\n}\n.writeUs .title[data-v-2a9e6187] {\n\ttext-align: right;\n\tpadding-bottom: 1em;\n\tcolor: #f1f9ee;\n}\n.writeUs div[data-v-2a9e6187] {}\n.writeUs .demo-ruleForm[data-v-2a9e6187]{}\n", ""]);
+exports.push([module.i, "/*$color-5: #1d3557;*/\n.upload-demo[data-v-2a9e6187] {\n\tfloat: right;\n\tmargin-bottom: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n \t-webkit-box-pack: end;\n \t    -ms-flex-pack: end;\n \t        justify-content: flex-end;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.upload-demo .pickfile[data-v-2a9e6187] {\n\tfloat: right;\n}\n.writeUs[data-v-2a9e6187] {\n\n\tdisplay: -webkit-box;\n\n\tdisplay: -ms-flexbox;\n\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tpadding-left: 2em;\n}\n.writeUs .title[data-v-2a9e6187] {\n\ttext-align: right;\n\tpadding-bottom: 1em;\n\tcolor: #f1f9ee;\n}\n.writeUs div[data-v-2a9e6187] {}\n.writeUs .demo-ruleForm[data-v-2a9e6187]{}\n", ""]);
 
 // exports
 
@@ -16113,7 +16113,7 @@ var staticRenderFns = [
       _c("div", [
         _c("iframe", {
           attrs: {
-            src: "https://yandex.ru/map-widget/v1/-/CBaGMVHuHC",
+            src: "https://yandex.ru/map-widget/v1/-/CBaGMOelOC",
             frameborder: "0"
           }
         })
@@ -33426,7 +33426,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "/*$color-5: #1d3557;*/\n.aboutus[data-v-e2ad1f38] {\n\tcolor: #f1f9ee;\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tpadding-right: 1em;\n\tpadding-left: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.aboutus .title[data-v-e2ad1f38] {\n\tpadding-bottom: 1em;\n}\n\n", ""]);
+exports.push([module.i, "/*$color-5: #1d3557;*/\n.aboutus[data-v-e2ad1f38] {\n\tcolor: #f1f9ee;\n\tpadding-top: 1em;\n\tpadding-bottom: 2em;\n\tpadding-right: 2em;\n\t \n\tdisplay: -webkit-box;\n\t \n\tdisplay: -ms-flexbox;\n\t \n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.aboutus .title[data-v-e2ad1f38] {\n\tpadding-bottom: 1em;\n}\n.aboutus div[data-v-e2ad1f38] {}\n\n", ""]);
 
 // exports
 

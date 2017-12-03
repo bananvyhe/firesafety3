@@ -100,8 +100,7 @@
 	flex-direction: column;
 	padding-top: 1em;
 	padding-bottom: 2em;
-	padding-right: 1em;
-	padding-left: 1em;
+	padding-left: 2em; 
 	.title { text-align: right;
 		padding-bottom: 1em;
 		color: $advantageFontColor;

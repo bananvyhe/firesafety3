@@ -3,7 +3,7 @@
 		<div>+7 (343)382-24-61</div>
 		<div>ООО "ЛИДЕР", Россия, г. Екатеринбург, ул. Старых Большевиков д.54, 620135</div>
 		<div>lider-1-00@mail.ru</div>
-		<div><iframe src="https://yandex.ru/map-widget/v1/-/CBaGMVHuHC" frameborder="0"></iframe></div>
+		<div><iframe src="https://yandex.ru/map-widget/v1/-/CBaGMOelOC" frameborder="0"></iframe></div>
 	</div>
 </template>
 <script>
