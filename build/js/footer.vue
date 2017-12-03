@@ -26,9 +26,9 @@ import mapa from './components/map.vue';
 </script>
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-.footer {display: flex;
-	 
-
+.footer {
+	background-color: $color-5;
+	display: flex;
 	.writeUsSlot, .mapSlot, .us {
 		padding-top: 3em; 
 		lost-column: 1/3 3 1em;

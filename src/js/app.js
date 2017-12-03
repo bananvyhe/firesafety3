@@ -1,6 +1,8 @@
-import Vue from 'vue'  
+
+import '../../theme/index.css'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import Vue from 'vue'  
+
 import Sliderapp from './sliderapp.vue' 
 import Telpanel from './telpanel.vue' 
 import LogoApp from './logoApp.vue'
@@ -14,6 +16,7 @@ Vue.component('logoappi', Logoappi)
 import Bodyappi from './Bodyappi.vue'  
 Vue.component('bodyappi', Bodyappi)
 import Footer from './footer.vue'
+
 Vue.use(ElementUI)
 
 Vue.directive('tack', {

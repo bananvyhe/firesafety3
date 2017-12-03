@@ -2,9 +2,7 @@
   <div class=" box-shadow-preview">
     <div class="ember">
       <div class="centered">
-         
-          <h1>Аудит пожарной безопасности бесплатно*!</h1>
-         
+        <h1>Аудит пожарной безопасности бесплатно*!</h1>
         <div>
           * При заказе одной из услуг по монтажу или обслуживанию систем безопастности
         </div>
@@ -12,7 +10,6 @@
       </div>
     </div>  
   </div>
-
 </template>
 
 <script>
@@ -35,11 +32,11 @@ export default {
    0 0 20px rgba(255, 211, 211, .1) inset;
 }*/
 .ember {
-  /*-webkit-filter: saturate(160%);*/
+ /* -webkit-filter: saturate(160%);*/
 	height: 350px;
 	background-image: url('../../app/assets/images/amber.jpg');
   border-bottom: 8px solid $onyx;
-  box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,0.8);
+  box-shadow: inset 0px 0px 50px 50px rgba(0,0,0,0.5);
   color: $advantageFontColor;
   @util clearfix;
   text-align: center;

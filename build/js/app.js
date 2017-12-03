@@ -8,6 +8,8 @@ var _lib = require('element-ui/lib');
 
 var _lib2 = _interopRequireDefault(_lib);
 
+require('../../theme/index.css');
+
 var _vue = require('vue');
 
 var _vue2 = _interopRequireDefault(_vue);
@@ -59,6 +61,7 @@ _vue2.default.component('menuinfo', _MenuInfo2.default);
 _vue2.default.component('logoappi', _Logoappi2.default);
 
 _vue2.default.component('bodyappi', _Bodyappi2.default);
+
 
 _vue2.default.use(_lib2.default);
 

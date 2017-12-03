@@ -21,6 +21,7 @@
     "babel-preset-vue": "^1.0.2",
     "babel-preset-vue-app": "^1.2.0",
     "css-loader": "^0.28.4",
+    "element-theme-chalk": "^2.0.7",
     "file-loader": "^0.11.2",
     "graceful-fs": "^4.0.0",
     "gulp": "^3.9.1",

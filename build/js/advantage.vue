@@ -29,8 +29,9 @@
 		    advantages: [
 		    	{title: 'опыт', desc: '8 лет проектирования, монтажа и обслуживания более 200 объектов на более чем 500 000 кв. метрах', style: 'icon-tools'},
 		    	{title: 'ответственность', desc: 'На все обслуживаемые системы гарантируем прохождение пожарной инспекции с первого раза и без штрафов', style: 'icon-fire-extinguisher'},
-		    	{title: 'гарантия', desc: 'Гарантия на работы до 3 лет', style: 'icon-gear'},
+		    	
 		    	{title: 'лицензия', desc: 'Деятельность лицензирована МЧС РФ за №66-Б.00124 от 23 июня 2009 года', style: 'icon-flame'},
+		    	{title: 'гарантия', desc: 'Гарантия на работы до 3 лет', style: 'icon-gear'},
 		    	{title: 'оперативность', desc: 'Расчет сметы от 1 дня', style: 'icon-file-text-o'},
 		    	{title: 'сервисное обслуживание', desc: 'Сервисная поддержка', style: 'icon-jersey'}
 		    ]
@@ -42,8 +43,8 @@
 	@import "../../app/assets/stylesheets/postcss/variables";
 	.advantage { 
 		z-index: 5; position: relative;
-		padding-top: 1.5em;
-		padding-bottom: 2em;
+		padding-top: 2em;
+		padding-bottom: 3em;
 		border-bottom: 5px solid $onyx;
 		background-color: $advantageBg;
 		color: $advantageFontColor;
@@ -52,7 +53,7 @@
 		}
 		.itemBox { 
 			background-color: $advantageBg; 
-			padding-top: 2em;
+			padding-top: 3em;
 			padding-bottom: 1em;
 			padding-left: 1em;
 			padding-right: 1em;

@@ -29,8 +29,6 @@
 		    <el-button @click="resetForm('ruleForm')">Стереть</el-button></nobr>
 		  </el-form-item>
 		</el-form>
-
-
 	</div>
 </template>
 <script>
