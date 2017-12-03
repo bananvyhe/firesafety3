@@ -19,7 +19,7 @@
 				  :on-exceed="handleExceed"
 				  :file-list="fileList">
 				  <el-button class="pickfile" size="small" type="primary">
-				  	Прикрепить фаел
+				  	Прикрепить файл
 				  </el-button>
 				  <div slot="tip" class="el-upload__tip">
 				  	jpg/png размером меньше 500kb
@@ -83,7 +83,9 @@
 </script>
 <style scoped>
 @import "../../../app/assets/stylesheets/postcss/variables";
- 
+ .123 {
+ 	color: #ada;
+ }
 .upload-demo {
 	float: right;
 	margin-bottom: 1em;
@@ -96,6 +98,7 @@
 
 }
 .writeUs {
+
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 2em;

@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<div  v-show="switcher" class="bodyappi" >
+	<!-- 	<div  v-show="switcher" class="bodyappi" >
 			<h3>body:</h3><hr>
 		    scrollTop: {{scrollTop}}<br>
         scrollBottom: {{scrollBottom}}<br>
         <div class="smalltext">animate: {{animate}}</div><br>
-		</div>
+		</div> -->
 	</div>
 </template>
 <script>
@@ -13,7 +13,7 @@
 		props: ['scrollTop', 'scrollBottom', 'animate'],
     data: function () {
       return {
-        switcher: false,
+        switcher: false
       }
     }
   }
