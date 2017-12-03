@@ -83,9 +83,6 @@
 </script>
 <style scoped>
 @import "../../../app/assets/stylesheets/postcss/variables";
- .123 {
- 	color: #ada;
- }
 .upload-demo {
 	float: right;
 	margin-bottom: 1em;
@@ -101,11 +98,12 @@
 
 	display: flex;
 	flex-direction: column;
+	padding-top: 1em;
 	padding-bottom: 2em;
 	padding-right: 1em;
 	padding-left: 1em;
 	.title { text-align: right;
-		padding-bottom: 0.7em;
+		padding-bottom: 1em;
 		color: $advantageFontColor;
 	}
 	div {

@@ -579,7 +579,7 @@ section .trust:nth-child(1n) {
   }
 } 
 
-.writeUs .title {
+.footer .title {
   font-family: "RobotoR";
   font-size: 1.333em;
   line-height: 1.0503em;
