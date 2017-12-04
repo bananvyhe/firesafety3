@@ -134,6 +134,13 @@ var fonts = require('postcss-font-magician')({
                  woff2: 'fonts/Roboto-Regular.woff2'
               }
            }
+        },
+        bold: {
+          700: {
+            url: {
+               woff2: 'fonts/Roboto-Bold.woff2'
+            }
+          }
         }
       }
     },

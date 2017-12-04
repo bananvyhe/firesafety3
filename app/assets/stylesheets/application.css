@@ -34,6 +34,12 @@
   font-weight: 400;
   src: url(fonts/Roboto-Regular.woff2) format("woff2");
 }
+@font-face {
+  font-family: RobotoR;
+  font-style: bold;
+  font-weight: 700;
+  src: url(fonts/Roboto-Bold.woff2) format("woff2");
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -527,6 +533,12 @@ section .trust:nth-child(1n) {
   .trusty .itemTru:nth-last-child(-n + 1) {
     margin-bottom: 0;
   }
+}
+
+.ember h1 {
+  font-family: "RobotoR";
+  font-style: bold;
+  font-weight: 700;
 }
 
 .writeUsSlot, .mapSlot, .us {

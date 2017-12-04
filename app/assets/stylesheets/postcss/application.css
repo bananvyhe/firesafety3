@@ -221,6 +221,14 @@ section {
   }
 }
 
+.ember {
+  h1 {
+    font-family: "RobotoR"; 
+    font-style: bold;
+    font-weight: 700;
+  }
+}
+
 .writeUsSlot, .mapSlot, .us {
   lost-column: 1/3 3 1em;
 }

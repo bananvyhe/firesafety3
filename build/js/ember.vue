@@ -44,7 +44,6 @@ export default {
   display: flex;
   justify-content: center;
   .centered { 
-    
     text-shadow: 
     -0   -1px 2px #000000,
      0   -1px 2px #000000,
@@ -62,15 +61,12 @@ export default {
      1px -1px 2px #000000,
     -1px  1px 2px #000000,
      1px  1px 2px #000000;
-
     align-self: center;
     h1 {
-      padding-top: 1em;
+      padding-top: 0.5em;
     }
     div {  
-        
-      
-      padding-bottom: 1em;
+      padding-bottom: 2em;
     }
   }
 }
