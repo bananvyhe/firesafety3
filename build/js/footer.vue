@@ -30,16 +30,14 @@ import us from './components/us.vue';
 </script>
 <style scoped>
 @import "../../app/assets/stylesheets/postcss/variables";
-.footer {lost-utility: clearfix;
+.footer {
+	lost-utility: clearfix;
 	background-color: $color-5;
-	 
+	padding-bottom: 3em;
 	.writeUsSlot, .mapSlot, .us {
 		padding-top: 2em; 
-		
 		display: flex;
 		justify-content: center;
 	}
-	
 }
-
 </style>

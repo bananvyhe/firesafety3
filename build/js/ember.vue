@@ -2,11 +2,12 @@
   <div class=" box-shadow-preview">
     <div class="ember">
       <div class="centered">
-        <h1>Аудит пожарной безопасности бесплатно*!</h1>
         <div>
-          * При заказе одной из услуг по монтажу или обслуживанию систем безопастности
+          <h1>Аудит пожарной безопасности бесплатно*!</h1>
+         <p>* При заказе одной из услуг по монтажу или обслуживанию систем безопастности</p>
         </div>
-        <el-button type="primary" @click="submitForm('ruleForm')">Отправить</el-button>
+        
+        <el-button type="primary" @click="submitForm('ruleForm')">Узнать больше</el-button>
       </div>
     </div>  
   </div>
@@ -42,11 +43,34 @@ export default {
   text-align: center;
   display: flex;
   justify-content: center;
-  .centered {
-    filter: drop-shadow(0 0 3px rgba(0,0,0,1));  
+  .centered { 
+    
+    text-shadow: 
+    -0   -1px 2px #000000,
+     0   -1px 2px #000000,
+    -0    1px 2px #000000,
+     0    1px 2px #000000,
+    -1px -0   2px #000000,
+     1px -0   2px #000000,
+    -1px  0   2px #000000,
+     1px  0   2px #000000,
+    -1px -1px 2px #000000,
+     1px -1px 2px #000000,
+    -1px  1px 2px #000000,
+     1px  1px 2px #000000,
+    -1px -1px 2px #000000,
+     1px -1px 2px #000000,
+    -1px  1px 2px #000000,
+     1px  1px 2px #000000;
+
     align-self: center;
-    div {
-      padding-bottom: 10px;
+    h1 {
+      padding-top: 1em;
+    }
+    div {  
+        
+      
+      padding-bottom: 1em;
     }
   }
 }

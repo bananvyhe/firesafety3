@@ -10,7 +10,6 @@
 						<div :class="advantage.style" class="descImage"></div>
 					</div>
 				</div>
-				
 				<div class="productDesc">
 					<p>{{advantage.desc}}</p>
 				</div>
@@ -19,6 +18,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="warnline">123</div>
 	</div>
 </template>
 <script>
@@ -42,10 +42,21 @@
 <style scoped>
 	@import "../../app/assets/stylesheets/postcss/variables";
 	.advantage { 
+		.warnline {
+			border-top: 3px solid $onyx;
+			height: 1em;
+			 
+			background: repeating-linear-gradient(
+			  45deg,
+			  $HeadBackColor,
+			  $HeadBackColor 12px,
+			  #F2AF29 12px,
+			  #F2AF29 24px
+			);
+		}
 		z-index: 5; position: relative;
 		padding-top: 2em;
-		padding-bottom: 3em;
-		border-bottom: 5px solid $onyx;
+		border-bottom: 3px solid $onyx;
 		background-color: $advantageBg;
 		color: $advantageFontColor;
 		.title {
@@ -54,7 +65,7 @@
 		.itemBox { 
 			background-color: $advantageBg; 
 			padding-top: 3em;
-			padding-bottom: 1em;
+			padding-bottom: 4em;
 			padding-left: 1em;
 			padding-right: 1em;
 			lost-utility: clearfix;

@@ -3,10 +3,10 @@
 		<div class="title">НАПИШИТЕ НАМ:</div>
 		<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
 		  <el-form-item label="Ваше имя" prop="name">
-		    <el-input v-model="ruleForm.name"></el-input>
+		    <el-input size="small" v-model="ruleForm.name"></el-input>
 		  </el-form-item>
-		  <el-form-item label="Сообщение" prop="desc">
-		    <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+		  <el-form-item size="small" label="Сообщение" prop="desc">
+		    <el-input  :autosize="{ minRows: 2, maxRows: 4}" type="textarea" v-model="ruleForm.desc"></el-input>
 		  </el-form-item>
 		  <el-form-item>
 		  	<el-upload
@@ -18,15 +18,15 @@
 				  :limit="3"
 				  :on-exceed="handleExceed"
 				  :file-list="fileList">
-				  <el-button class="pickfile" size="small" type="primary">
+				  <el-button  class="pickfile" size="mini" type="primary" >
 				  	Прикрепить файл
 				  </el-button>
 				  <div slot="tip" class="el-upload__tip">
 				  	jpg/png размером меньше 500kb
 				  </div>
 				</el-upload>
-		    <nobr><el-button type="primary" @click="submitForm('ruleForm')">Отправить</el-button>
-		    <el-button @click="resetForm('ruleForm')">Стереть</el-button></nobr>
+		    <nobr><el-button size="small" type="primary" @click="submitForm('ruleForm')">Отправить</el-button>
+		    <el-button size="small" @click="resetForm('ruleForm')">Стереть</el-button></nobr>
 		  </el-form-item>
 		</el-form>
 	</div>
@@ -90,17 +90,15 @@
  	justify-content: flex-end;
 	flex-direction: column;
 	.pickfile {
-		float: right;
+		 
 	}
-
 }
 .writeUs {
-
 	display: flex;
 	flex-direction: column;
 	padding-top: 1em;
-	padding-bottom: 2em;
-	padding-left: 2em; 
+	 
+	padding-left: 1em; 
 	.title { text-align: right;
 		padding-bottom: 1em;
 		color: $advantageFontColor;

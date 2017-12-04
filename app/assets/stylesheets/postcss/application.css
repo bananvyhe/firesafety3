@@ -352,6 +352,7 @@ section1 {
 }
 h1 {
   adjust-font-size: fontsize xlarge;
+  line-height: 1em;
 }
 h2 {
   adjust-font-size: fontsize large;
