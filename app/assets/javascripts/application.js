@@ -16127,7 +16127,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "/*$color-5: #1d3557;*/\n.mapa[data-v-f7c63cf4] {\n\tcolor: #f1f9ee; \n\ttext-align: center;\n\t \n\tpadding-right: 1em;\n\tpadding-left: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.mapa iframe[data-v-f7c63cf4] {\n\tpadding-top: 2em;\n\twidth: 100%;\n\theight: 350px;\n}\n.mapa div[data-v-f7c63cf4] {\n\twidth: 100%;\n}\n\n", ""]);
+exports.push([module.i, "/*$color-5: #1d3557;*/\n.mapa[data-v-f7c63cf4] {\n\tcolor: #f1f9ee; \n\ttext-align: center;\n\t \n\tpadding-right: 1em;\n\tpadding-left: 1em;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n}\n.mapa[data-v-f7c63cf4] :first-child {\n\tpadding-bottom: 1em;\n}\n.mapa iframe[data-v-f7c63cf4] {\n\tpadding-top: 1em;\n\twidth: 100%;\n\theight: 350px;\n}\n.mapa div[data-v-f7c63cf4] {\n\twidth: 100%;\n}\n\n", ""]);
 
 // exports
 

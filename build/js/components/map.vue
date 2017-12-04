@@ -21,8 +21,11 @@
 .mapa {
 	color: $advantageFontColor; 
 	text-align: center;
+	:first-child {
+		padding-bottom: 1em;
+	}
 	iframe {
-		padding-top: 2em;
+		padding-top: 1em;
 		width: 100%; 
 		height: 350px;
 	}
