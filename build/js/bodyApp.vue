@@ -7,11 +7,14 @@
 			<advantage></advantage>
 	  </div>
 		<div class="grid-item lightning" :class="{inview: checkView(2)}">
+      <div class="parallax"></div> 
 			<ember></ember>
+ 
 	  </div>
 		<div class="grid-item" :class="{inview: checkView(3)}">
 			<trusty></trusty>
-	  </div>	  	 	
+	  </div>	  
+	
 	  <bodyappi 
 	  	:scrollTop="scrollTop"
 	  	:scrollBottom="scrollBottom"
@@ -38,6 +41,12 @@ export default {
       animate: ''
     }
   },
+  created () {
+    document.addEventListener('scroll', () => {
+      requestAnimationFrame(this.parallax)
+    })
+  },
+
   mounted(){
   	this.scrollTop = window.scrollY;
     this.scrollBottom = window.scrollY + window.innerHeight;
@@ -45,6 +54,16 @@ export default {
     this.animate = document.querySelectorAll(".grid-item")
   },
   methods: {
+
+    parallax () {
+      let parallax1 = document.querySelector('.parallax')
+       
+      // function parallaxbubbles(){
+        let scrolltop = window.pageYOffset-1400
+        parallax1.style.top = scrolltop * .3 + 'px'
+    
+      // requestAnimationFrame(parallaxbubbles)
+    },
   	checkView(e){
       if(this.animate){
         let element = this.animate[e];
@@ -74,10 +93,14 @@ export default {
 
 <style>
 @import "../../app/assets/stylesheets/postcss/variables";
+.parallax {background-image: url('../../app/assets/images/amber.jpg');
+    position: absolute; height: 500px; width: 100%; background-repeat: no-repeat;
+ 
+  } 
 .bodyApp {
-  
+ 
   overflow: visible;
-	 
+	
 
 	.uslugi {
     background-color: $ghostwhite;     
@@ -88,8 +111,8 @@ export default {
   z-index: 2;
 }
 .lightning {
-`  position: relative;
-  z-index: 1;
+  position: relative;
+  z-index: 1;overflow: hidden;
 }
 .grid-item {
 	overflow: visible;

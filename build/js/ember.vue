@@ -44,7 +44,7 @@ export default {
 .ember {
  /* -webkit-filter: saturate(160%);*/
 	height: 350px;
-	background-image: url('../../app/assets/images/amber.jpg');
+	/*background-image: url('../../app/assets/images/amber.jpg');*/
   border-bottom: 3px solid $onyx;
   box-shadow: inset 0px 0px 50px 50px rgba(0,0,0,0.5);
   color: $advantageFontColor;
@@ -53,10 +53,7 @@ export default {
   display: flex;
   justify-content: center;
   .centered { 
-text-shadow: 
-    -0   -2px 6px #000000;
-     
-
+    text-shadow: -0   -2px 6px #000000;
     align-self: center;
     h1 {
       padding: 0.25em;
@@ -65,23 +62,23 @@ text-shadow:
       background-color: rgba(0, 120, 201, 0.5);
     }
     p {
-  text-shadow: 
-    -0   -1px 2px #000D42,
-     0   -1px 2px #000D42,
-    -0    1px 2px #000D42,
-     0    1px 2px #000D42,
-    -1px -0   2px #000D42,
-     1px -0   2px #000D42,
-    -1px  0   2px #000D42,
-     1px  0   2px #000D42,
-    -1px -1px 2px #000D42,
-     1px -1px 2px #000D42,
-    -1px  1px 2px #000D42,
-     1px  1px 2px #000D42,
-    -1px -1px 2px #000D42,
-     1px -1px 2px #000D42,
-    -1px  1px 2px #000D42,
-     1px  1px 2px #000D42;
+      text-shadow: 
+        -0   -1px 2px #000D42,
+         0   -1px 2px #000D42,
+        -0    1px 2px #000D42,
+         0    1px 2px #000D42,
+        -1px -0   2px #000D42,
+         1px -0   2px #000D42,
+        -1px  0   2px #000D42,
+         1px  0   2px #000D42,
+        -1px -1px 2px #000D42,
+         1px -1px 2px #000D42,
+        -1px  1px 2px #000D42,
+         1px  1px 2px #000D42,
+        -1px -1px 2px #000D42,
+         1px -1px 2px #000D42,
+        -1px  1px 2px #000D42,
+         1px  1px 2px #000D42;
     }
     div {  
       padding-bottom: 1em;
@@ -90,7 +87,7 @@ text-shadow:
 }
 .box-shadow-preview{ 
     position: relative; 
-    background-color: #FFFFFF; 
+    
     border-radius: 40px; 
     box-shadow: 
       0 1px 250px rgba(255, 255, 255, .2),
