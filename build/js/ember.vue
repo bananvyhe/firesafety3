@@ -1,5 +1,6 @@
 <template>
   <div class=" box-shadow-preview">
+     
     <div class="ember">
       <div class="centered">
         <div>
@@ -9,17 +10,22 @@
         
         <el-button type="primary" @click="submitForm('ruleForm')">Узнать больше</el-button>
       </div>
-    </div>  
+
+    </div>        
+     
+
   </div>
 </template>
 
 <script>
+ 
 export default {
+ 
   data: function () {
     return {
       
     }
-  }
+  } 
 }
 </script>
 
@@ -32,11 +38,14 @@ export default {
    23px 0 250px -23px rgba(255, 255, 255, .1),
    0 0 20px rgba(255, 211, 211, .1) inset;
 }*/
+.par {
+  height: 400px;
+}
 .ember {
  /* -webkit-filter: saturate(160%);*/
 	height: 350px;
 	background-image: url('../../app/assets/images/amber.jpg');
-  border-bottom: 8px solid $onyx;
+  border-bottom: 3px solid $onyx;
   box-shadow: inset 0px 0px 50px 50px rgba(0,0,0,0.5);
   color: $advantageFontColor;
   @util clearfix;
@@ -44,29 +53,38 @@ export default {
   display: flex;
   justify-content: center;
   .centered { 
-    text-shadow: 
-    -0   -1px 2px #000000,
-     0   -1px 2px #000000,
-    -0    1px 2px #000000,
-     0    1px 2px #000000,
-    -1px -0   2px #000000,
-     1px -0   2px #000000,
-    -1px  0   2px #000000,
-     1px  0   2px #000000,
-    -1px -1px 2px #000000,
-     1px -1px 2px #000000,
-    -1px  1px 2px #000000,
-     1px  1px 2px #000000,
-    -1px -1px 2px #000000,
-     1px -1px 2px #000000,
-    -1px  1px 2px #000000,
-     1px  1px 2px #000000;
+text-shadow: 
+    -0   -2px 6px #000000;
+     
+
     align-self: center;
     h1 {
-      padding-top: 0.5em;
+      padding: 0.25em;
+      padding-left: 0.5em;
+      padding-right: 0.8em;
+      background-color: rgba(0, 120, 201, 0.5);
+    }
+    p {
+  text-shadow: 
+    -0   -1px 2px #000D42,
+     0   -1px 2px #000D42,
+    -0    1px 2px #000D42,
+     0    1px 2px #000D42,
+    -1px -0   2px #000D42,
+     1px -0   2px #000D42,
+    -1px  0   2px #000D42,
+     1px  0   2px #000D42,
+    -1px -1px 2px #000D42,
+     1px -1px 2px #000D42,
+    -1px  1px 2px #000D42,
+     1px  1px 2px #000D42,
+    -1px -1px 2px #000D42,
+     1px -1px 2px #000D42,
+    -1px  1px 2px #000D42,
+     1px  1px 2px #000D42;
     }
     div {  
-      padding-bottom: 2em;
+      padding-bottom: 1em;
     }
   }
 }

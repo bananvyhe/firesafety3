@@ -69,6 +69,8 @@ $silverPink: #D0ADA7;
 $bones: #E8D6CB;
 $copperPenny: #AD6A6C;
 
+$warningLine: #F2AF29;
+
 @custom-media --telpanel-small-screen (width <= 720px);
 
 @custom-media --only-small-screen (width >= 0px) and (width <= 580px);

@@ -313,8 +313,8 @@
 
 .greedy-nav {
   /*border-bottom-left-radius: 1.3em; */
-  border-bottom: 2px solid #fff;
-  border-top: 6px solid #f4d35e;
+  border-bottom: 1px solid #fff;
+  border-top: 6px solid $warningLine;
   z-index: 3;
   display: flex;
   justify-content: flex-end;
