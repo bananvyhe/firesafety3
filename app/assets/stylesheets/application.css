@@ -122,8 +122,8 @@ body {
   background-repeat: repeat;
   background-size: 4px 22px;}
 .techinfo {
-  font-size: 0.7502em;
-  line-height: 1.8662em;
+  font-size: 0.8333em;
+  line-height: 1.6801em;
   line-height: 1.5;
 }
 section {
@@ -160,8 +160,8 @@ section .trust:nth-child(1n) {
 }
 .telpanel {
   height: 2.2em;
-  font-size: 0.7502em;
-  line-height: 1.8662em;
+  font-size: 0.8333em;
+  line-height: 1.6801em;
 } 
 .sliderapp {
    
@@ -291,8 +291,8 @@ section .trust:nth-child(1n) {
 .products .item .productTitle {
   font-family: "OswaldL";
   font-weight: 400;
-  font-size: 1.333em;
-  line-height: 1.0503em;
+  font-size: 1.2em;
+  line-height: 1.1667em;
   z-index: 12;
   -ms-flex-item-align: center;
       align-self: center;
@@ -372,8 +372,8 @@ section .trust:nth-child(1n) {
   .products .advantage .button {
     font-family: "OswaldL";
     font-weight: 400;
-    font-size: 1.333em;
-    line-height: 1.0503em;
+    font-size: 1.2em;
+    line-height: 1.1667em;
   }
   }
 .advantage .itemAdv {
@@ -408,8 +408,8 @@ section .trust:nth-child(1n) {
 .advantage .button {
   font-family: "OswaldL";
   font-weight: 400;
-  font-size: 1.333em;
-  line-height: 1.0503em;
+  font-size: 1.2em;
+  line-height: 1.1667em;
 }
 @media (min-width: 0px) and (max-width: 580px) {
   .advantage .itemAdv {
@@ -622,8 +622,8 @@ section .trust:nth-child(1n) {
     font-size: 18px;
   }
   .sliderText div .titlefirst {
-    font-size: 2.3686em;
-    line-height: 1.1821em;
+    font-size: 1.728em;
+    line-height: 1.6204em;
     line-height: 0.8;
     padding-bottom: 0.2em;
   }
@@ -635,8 +635,8 @@ section .trust:nth-child(1n) {
 } 
 @media (min-width: 581px) and (max-width: 979px) {
   .sliderText div .titlefirst {
-    font-size: 2.3686em;
-    line-height: 1.1821em;
+    font-size: 1.728em;
+    line-height: 1.6204em;
     line-height: 0.8;
     padding-bottom: 0.2em;
     padding-left: 5%;
@@ -652,26 +652,42 @@ section .trust:nth-child(1n) {
 }
 @media (min-width: 0px) and (max-width: 580px) {
   .sliderText div .titlefirst {
-    font-size: 1.7769em;
-    line-height: 1.5758em;
+    font-size: 1.44em;
+    line-height: 1.9444em;
     line-height: 0.8;
     padding-bottom: 0.2em;
     padding-left: 0%;
     margin-right:-15%;
   }
   .sliderText div .titlesecond {
-    font-size: 0.7502em;
-    line-height: 1.8662em;
+    font-size: 0.8333em;
+    line-height: 1.6801em;
     line-height: 0.9;
     padding-left: 0%;
     margin-right:-15%;
   }
 } 
 
+.footer {
+  font-size: 0.8333em;
+  line-height: 1.6801em;
+  line-height: 1.45;
+} 
+
+.footer .mapa :first-child {
+  font-size: 1.2em;
+  line-height: 1.1667em;
+  padding-bottom: 1em;
+} 
+
+.footer p {
+   
+} 
+
 .footer .title {
   font-family: "RobotoR";
-  font-size: 1.333em;
-  line-height: 1.0503em;
+  font-size: 1.44em;
+  line-height: 1.9444em;
 }
 
 .dropshadow {
@@ -740,29 +756,29 @@ section1 .trust:nth-child(3n) {
    
 }
 h1 {
-  font-size: 2.3686em;
-  line-height: 1.1821em;
+  font-size: 1.728em;
+  line-height: 1.6204em;
   line-height: 1em;
 }
 h2 {
-  font-size: 1.7769em;
-  line-height: 1.5758em;
+  font-size: 1.44em;
+  line-height: 1.9444em;
 }
 h3 {
-  font-size: 1.333em;
-  line-height: 1.0503em;
+  font-size: 1.2em;
+  line-height: 1.1667em;
 }
 h4 {
   font-size: 1em;
   line-height: 1.4em;
 }
 h5 {
-  font-size: 0.7502em;
-  line-height: 1.8662em;
+  font-size: 0.8333em;
+  line-height: 1.6801em;
 }
 h6 {
-  font-size: 0.5628em;
-  line-height: 2.4876em;
+  font-size: 0.6944em;
+  line-height: 2.0161em;
 }
 p {
 

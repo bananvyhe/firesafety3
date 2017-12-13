@@ -1,9 +1,9 @@
 @hamster {
   /*  Base settings */
   font-size: 16px;
-  line-height: 1.4;
-  font-ratio: 1.333;
-  min-line-padding: 8px;
+  --line-height: 1.4;
+  --font-ratio: 1.2;
+  min-line-padding: 1px;
   remove-comments: true;
  /*  Vertical Rythm settings */
   unit: em;
@@ -314,12 +314,23 @@ section {
 } 
 
 .footer {
+  adjust-font-size: fs small;
+  line-height: 1.45;
+  .mapa {
+    :first-child {
+     adjust-font-size: fs medium;
+     padding-bottom: 1em;
+
+    } 
+  } 
+  p {
+     
+  }
   .title {
     font-family: "RobotoR";
  
-    adjust-font-size: fontsize medium;
+    adjust-font-size: fs l;
   }
-  
 } 
 
 /*-------------------------------------------*/

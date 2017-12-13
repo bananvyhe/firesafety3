@@ -35,7 +35,7 @@ import us from './components/us.vue';
 	background-color: $color-5;
 	padding-bottom: 3em;
 	.writeUsSlot, .mapSlot, .us {
-		padding-top: 2em; 
+		padding-top: 1em; 
 		display: flex;
 		justify-content: center;
 	}

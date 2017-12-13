@@ -19,17 +19,14 @@
 @import "../../../app/assets/stylesheets/postcss/variables";
 
 .mapa {
+	padding-top: 1em;
 	color: $advantageFontColor; 
 	text-align: center;
-	:first-child {
-		padding-bottom: 1em;
-	}
 	iframe {
 		padding-top: 1em;
 		width: 100%; 
 		height: 350px;
 	}
-	 
 	padding-right: 1em;
 	padding-left: 1em;
 	display: flex;

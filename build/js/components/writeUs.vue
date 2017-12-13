@@ -100,7 +100,7 @@
 	 
 	padding-left: 1em; 
 	.title { text-align: right;
-		padding-bottom: 1em;
+		 
 		color: $advantageFontColor;
 	}
 	div {
