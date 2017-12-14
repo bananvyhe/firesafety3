@@ -1,12 +1,12 @@
 <template>
 	<div class="writeUs">
-		<div class="title">НАПИШИТЕ НАМ:</div>
-		<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
-		  <el-form-item label="Ваше имя" prop="name">
-		    <el-input size="small" v-model="ruleForm.name"></el-input>
+		<div class="title">НАПИШИТЕ НАМ</div>
+		<el-form :model="ruleForm" :rules="rules" ref="ruleForm"   class="demo-ruleForm">
+		  <el-form-item prop="name">
+		    <el-input size="small" placeholder="Ваше имя" v-model="ruleForm.name" type="text"></el-input>
 		  </el-form-item>
-		  <el-form-item size="small" label="Сообщение" prop="desc">
-		    <el-input  :autosize="{ minRows: 2, maxRows: 4}" type="textarea" v-model="ruleForm.desc"></el-input>
+		  <el-form-item    prop="desc">
+		    <el-input class="inputfont" placeholder="Напишите что-нибудь тут..." :autosize="{ minRows: 2, maxRows: 4}" type="textarea" v-model="ruleForm.desc"></el-input>
 		  </el-form-item>
 		  <el-form-item>
 		  	<el-upload
@@ -25,8 +25,8 @@
 				  	jpg/png размером меньше 500kb
 				  </div>
 				</el-upload>
-		    <nobr><el-button size="small" type="primary" @click="submitForm('ruleForm')">Отправить</el-button>
-		    <el-button size="small" @click="resetForm('ruleForm')">Стереть</el-button></nobr>
+		    <div class="sendbutton"><nobr>
+		    <el-button size="small" @click="resetForm('ruleForm')">Стереть</el-button><el-button size="small" type="primary" @click="submitForm('ruleForm')">Отправить</el-button></nobr></div>
 		  </el-form-item>
 		</el-form>
 	</div>
@@ -83,31 +83,34 @@
 </script>
 <style scoped>
 @import "../../../app/assets/stylesheets/postcss/variables";
+.title {
+	padding-bottom: 0.2em;
+}
+
 .upload-demo {
-	float: right;
-	margin-bottom: 1em;
-	display: flex;
- 	justify-content: flex-end;
-	flex-direction: column;
-	.pickfile {
-		 
+	.pickfile { 
 	}
 }
 .writeUs {
 	display: flex;
-	flex-direction: column;
+	width: 100%;
 	padding-top: 1em;
-	 
-	padding-left: 1em; 
-	.title { text-align: right;
-		 
+	flex-direction: column;
+	.sendbutton {
+		padding-top: 0.5em;
+		justify-content: flex-end;
+	 	display: flex;
+ 	}  
+	.title { 
+		text-align: right;
 		color: $advantageFontColor;
 	}
 	div {
 		 
 	}
 	.demo-ruleForm{
-		
+		justify-content: flex-end; 
+ 		 
 	}
 }
 </style>

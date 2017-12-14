@@ -34,8 +34,23 @@ import us from './components/us.vue';
 	lost-utility: clearfix;
 	background-color: $color-5;
 	padding-bottom: 3em;
+	padding-top: 2em;
+	@media (--only-medium-screen) {
+		padding-top: 0em;
+	}
+	@media (--only-small-screen) {
+		padding-top: 0em;
+	}	
+	padding-left: 4em;
+	padding-right: 4em;
+	@media (--only-big-screen) {
+		.writeUsSlot, .us {
+			padding-top: 1em;
+		}
+	}	
+	
 	.writeUsSlot, .mapSlot, .us {
-		padding-top: 1em; 
+		 
 		display: flex;
 		justify-content: center;
 	}

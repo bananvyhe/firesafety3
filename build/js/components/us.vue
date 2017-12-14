@@ -20,20 +20,20 @@
 <style scoped>
 @import "../../../app/assets/stylesheets/postcss/variables";
 .aboutus {
-
 	.title {
-		
+		 padding-bottom: 0.2em;
+	}
+	p {
+		 
+		 
+		text-indent: 1.33em;
 	}
 	color: $advantageFontColor;
 	padding-top: 1em;
 	padding-bottom: 2em;
-	padding-right: 2em;
 	 
 	display: flex;
 	flex-direction: column;
-	div {
-
-	}
 }
 
 </style>

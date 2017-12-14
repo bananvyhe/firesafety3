@@ -591,7 +591,7 @@
   -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
-  border-radius: 4px; }
+  border-radius: 2px; }
   .el-button + .el-button {
     margin-left: 10px; }
   .el-button.is-round {
@@ -841,19 +841,19 @@
   .el-button--medium {
     padding: 10px 20px;
     font-size: 14px;
-    border-radius: 4px; }
+    border-radius: 2px; }
     .el-button--medium.is-round {
       padding: 10px 20px; }
   .el-button--small {
     padding: 9px 15px;
     font-size: 12px;
-    border-radius: 3px; }
+    border-radius: 1px; }
     .el-button--small.is-round {
       padding: 9px 15px; }
   .el-button--mini {
     padding: 7px 15px;
     font-size: 12px;
-    border-radius: 3px; }
+    border-radius: 1px; }
     .el-button--mini.is-round {
       padding: 7px 15px; }
   .el-button--text {
@@ -1288,7 +1288,7 @@
   margin: 5px 0;
   background-color: #fff;
   border: 1px solid #e6ebf5;
-  border-radius: 4px;
+  border-radius: 2px;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); }
   .el-dropdown-menu__item {

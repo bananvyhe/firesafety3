@@ -493,7 +493,7 @@
     -webkit-appearance: none;
     background-color: #fff;
     background-image: none;
-    border-radius: 4px;
+    border-radius: 2px;
     border: 1px solid #d8dce5;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -612,7 +612,7 @@
     display: table-cell;
     position: relative;
     border: 1px solid #d8dce5;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 0 20px;
     width: 1px;
     white-space: nowrap; }
@@ -661,7 +661,7 @@
     background-color: #fff;
     background-image: none;
     border: 1px solid #d8dce5;
-    border-radius: 4px;
+    border-radius: 2px;
     -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
     .el-textarea__inner::-webkit-input-placeholder {
@@ -1054,7 +1054,7 @@
   -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
-  border-radius: 4px; }
+  border-radius: 2px; }
   .el-button + .el-button {
     margin-left: 10px; }
   .el-button.is-round {
@@ -1304,19 +1304,19 @@
   .el-button--medium {
     padding: 10px 20px;
     font-size: 14px;
-    border-radius: 4px; }
+    border-radius: 2px; }
     .el-button--medium.is-round {
       padding: 10px 20px; }
   .el-button--small {
     padding: 9px 15px;
     font-size: 12px;
-    border-radius: 3px; }
+    border-radius: 1px; }
     .el-button--small.is-round {
       padding: 9px 15px; }
   .el-button--mini {
     padding: 7px 15px;
     font-size: 12px;
-    border-radius: 3px; }
+    border-radius: 1px; }
     .el-button--mini.is-round {
       padding: 7px 15px; }
   .el-button--text {
@@ -1753,7 +1753,7 @@
   user-select: none; }
   .el-checkbox.is-bordered {
     padding: 9px 20px 9px 10px;
-    border-radius: 4px;
+    border-radius: 2px;
     border: 1px solid #d8dce5;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1768,7 +1768,7 @@
       margin-left: 10px; }
     .el-checkbox.is-bordered.el-checkbox--medium {
       padding: 7px 20px 7px 10px;
-      border-radius: 4px;
+      border-radius: 2px;
       height: 36px; }
       .el-checkbox.is-bordered.el-checkbox--medium .el-checkbox__label {
         line-height: 17px;
@@ -1778,7 +1778,7 @@
         width: 14px; }
     .el-checkbox.is-bordered.el-checkbox--small {
       padding: 5px 15px 5px 10px;
-      border-radius: 3px;
+      border-radius: 1px;
       height: 32px; }
       .el-checkbox.is-bordered.el-checkbox--small .el-checkbox__label {
         line-height: 15px;
@@ -1791,7 +1791,7 @@
           width: 2px; }
     .el-checkbox.is-bordered.el-checkbox--mini {
       padding: 3px 15px 3px 10px;
-      border-radius: 3px;
+      border-radius: 1px;
       height: 28px; }
       .el-checkbox.is-bordered.el-checkbox--mini .el-checkbox__label {
         line-height: 12px;
@@ -1971,13 +1971,13 @@
     box-shadow: none; }
   .el-checkbox-button:first-child .el-checkbox-button__inner {
     border-left: 1px solid #d8dce5;
-    border-radius: 4px 0 0 4px;
+    border-radius: 2px 0 0 2px;
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
   .el-checkbox-button.is-focus .el-checkbox-button__inner {
     border-color: #409EFF; }
   .el-checkbox-button:last-child .el-checkbox-button__inner {
-    border-radius: 0 4px 4px 0; }
+    border-radius: 0 2px 2px 0; }
   .el-checkbox-button--medium .el-checkbox-button__inner {
     padding: 10px 20px;
     font-size: 14px;
@@ -2015,7 +2015,7 @@
     background-color: #409EFF;
     font-size: 0; }
     .el-transfer__button.is-with-texts {
-      border-radius: 4px; }
+      border-radius: 2px; }
     .el-transfer__button.is-disabled {
       border: 1px solid #d8dce5;
       background-color: #f5f7fa;
@@ -2035,7 +2035,7 @@
 
 .el-transfer-panel {
   border: 1px solid #e6ebf5;
-  border-radius: 4px;
+  border-radius: 2px;
   overflow: hidden;
   background: #fff;
   display: inline-block;

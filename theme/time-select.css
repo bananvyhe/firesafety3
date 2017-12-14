@@ -1035,7 +1035,7 @@
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
-  border-radius: 4px;
+  border-radius: 2px;
   line-height: 30px;
   margin: 5px 0; }
   .el-picker-panel__body::after, .el-picker-panel__body-wrapper::after {
