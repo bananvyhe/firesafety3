@@ -45,7 +45,8 @@ import us from './components/us.vue';
 	padding-right: 4em;
 	@media (--only-big-screen) {
 		.writeUsSlot, .us {
-			padding-top: 1em;
+			
+			padding-top: 1 em;
 		}
 	}	
 	
