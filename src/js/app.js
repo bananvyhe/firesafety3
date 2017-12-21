@@ -1,4 +1,5 @@
-
+var Turbolinks = require("turbolinks")
+Turbolinks.start()
 import '../../theme/index.css'
 import ElementUI from 'element-ui'
 import Vue from 'vue'  
@@ -44,7 +45,7 @@ Vue.directive('scroll', {
     window.addEventListener('scroll', _.throttle(f, 300));
   },
 });
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
   Vue.component('onediv', {
       template: '<div><slot></slot></div>'
   }); 

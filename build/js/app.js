@@ -56,6 +56,9 @@ var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var Turbolinks = require("turbolinks");
+Turbolinks.start();
+
 _vue2.default.component('menuinfo', _MenuInfo2.default);
 
 _vue2.default.component('logoappi', _Logoappi2.default);
@@ -90,7 +93,7 @@ _vue2.default.directive('scroll', {
     window.addEventListener('scroll', _.throttle(f, 300));
   }
 });
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('turbolinks:load', function () {
   _vue2.default.component('onediv', {
     template: '<div><slot></slot></div>'
   });
@@ -141,7 +144,7 @@ var _ = require('lodash');
 // window.addEventListener("scroll", function(){
 //    console.log('scrolling');
 // });
-//-------------------------  --- ---
+//------------------------------------
 
         // window.sr = ScrollReveal();
         // sr.reveal('.grid-item', {
