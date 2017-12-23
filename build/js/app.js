@@ -54,6 +54,14 @@ var _footer = require('./footer.vue');
 
 var _footer2 = _interopRequireDefault(_footer);
 
+var _vueTurbolinks = require('vue-turbolinks');
+
+var _vueTurbolinks2 = _interopRequireDefault(_vueTurbolinks);
+
+var _vueResource = require('vue-resource');
+
+var _vueResource2 = _interopRequireDefault(_vueResource);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Turbolinks = require("turbolinks");
@@ -66,6 +74,7 @@ _vue2.default.component('logoappi', _Logoappi2.default);
 _vue2.default.component('bodyappi', _Bodyappi2.default);
 
 
+_vue2.default.use(_vueResource2.default);
 _vue2.default.use(_lib2.default);
 
 _vue2.default.directive('tack', {

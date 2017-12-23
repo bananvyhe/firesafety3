@@ -3,7 +3,6 @@ Turbolinks.start()
 import '../../theme/index.css'
 import ElementUI from 'element-ui'
 import Vue from 'vue'  
-
 import Sliderapp from './sliderapp.vue' 
 import Telpanel from './telpanel.vue' 
 import LogoApp from './logoApp.vue'
@@ -17,7 +16,10 @@ Vue.component('logoappi', Logoappi)
 import Bodyappi from './Bodyappi.vue'  
 Vue.component('bodyappi', Bodyappi)
 import Footer from './footer.vue'
+import TurboliunksAdapter from 'vue-turbolinks'
+import VueResource from 'vue-resource'
 
+Vue.use(VueResource)
 Vue.use(ElementUI)
 
 Vue.directive('tack', {
