@@ -47,7 +47,7 @@
         rules: {
           name: [
             { required: true, message: 'Введите имя', trigger: 'blur' },
-            { min: 3, max: 5, message: 'Длина должна быть от 3х до 5и символов', trigger: 'blur' }
+            { min: 2, max: 5, message: 'Длина должна быть от 3х до 5и символов', trigger: 'blur' }
           ],
           desc: [
             { required: true, message: 'Введите сообщение', trigger: 'blur' }
