@@ -1,6 +1,10 @@
 
 <section>
 	<%= current_user %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
+    <%= link_to "Sign out", destroy_user_session_url %>
   <div id="bodyApp">
   </div>  
 </section>
